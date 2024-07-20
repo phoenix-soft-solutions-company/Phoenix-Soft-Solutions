@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { LINKS } from "../constants/Links";
 import { Link } from "react-router-dom";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "../constants/images/logo.jpg";
 
 const Navbar = () => {
@@ -22,24 +22,25 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 text-white p-4">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className="bg-gray-800 text-white py-4 px-10">
+      <div className="container flex justify-between items-center">
         <div className="flex items-center">
           <img src={Logo} alt="Company Logo" className="h-8 mr-2" />
           <span className="text-xl font-bold">Xcrop</span>
         </div>
-        <div className="hidden md:flex space-x-4">
+        <div className="hidden xl:flex space-x-1">
           {LINKS?.map((link, index) => (
             <div
               key={index}
-              className="relative"
+              className="relative group"
               onMouseEnter={() => toggleDropdown(index)}
               onMouseLeave={() => toggleDropdown(null)}>
-              <Link to={link.path} className="hover:bg-gray-700 px-3 py-2 rounded">
+              <Link to={link.path} className="flex flex-row hover:bg-gray-700 px-3 py-2 rounded">
                 {link.name}
+                {link.subpages && <ChevronDownIcon className="w-6 h-6 text-white" />}
               </Link>
               {link.subpages && dropdownOpen === index && (
-                <div className="absolute left-0 mt-2 w-48 bg-gray-800 border border-gray-700 rounded shadow-lg">
+                <div className="absolute left-0 w-48 bg-gray-800 border border-gray-700 rounded shadow-lg group-hover:block">
                   {link.subpages.map((subpage, subIndex) => (
                     <Link
                       key={subIndex}
@@ -54,20 +55,16 @@ const Navbar = () => {
             </div>
           ))}
         </div>
-        <div className="md:hidden">
+        <div className="xl:hidden">
           <button onClick={toggleNavbar}>
-            {isOpen ? (
-              <XMarkIcon className="w-6 h-6 text-white" />
-            ) : (
-              <Bars3Icon className="w-6 h-6 text-white" />
-            )}
+            <Bars3Icon className="w-6 h-6 text-white" />
           </button>
         </div>
       </div>
       <div
         className={`fixed top-0 right-0 h-full bg-gray-800 text-white transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } md:hidden w-full sm:w-96 p-4`}>
+        } xl:hidden w-full sm:w-96 p-4`}>
         <div className="flex justify-between items-center mb-4">
           <button onClick={toggleNavbar}>
             <XMarkIcon className="w-6 h-6 text-white" />
@@ -77,9 +74,11 @@ const Navbar = () => {
           <div key={index} className="relative mb-2">
             <div
               onClick={() => toggleMobileDropdown(index)}
-              className="cursor-pointer block px-4 py-2 hover:bg-gray-700">
+              className="flex flex-row justify-between cursor-pointer block px-4 py-2 hover:bg-gray-700">
               {link.name}
+              {link.subpages && <ChevronDownIcon className="w-6 h-6 text-white" />}
             </div>
+
             {link.subpages && mobileDropdownOpen === index && (
               <div className="ml-4">
                 {link.subpages.map((subpage, subIndex) => (
