@@ -35,10 +35,17 @@ const Navbar = () => {
               className="relative group"
               onMouseEnter={() => toggleDropdown(index)}
               onMouseLeave={() => toggleDropdown(null)}>
-              <Link to={link.path} className="flex flex-row hover:bg-gray-700 px-3 py-2 rounded">
-                {link.name}
-                {link.subpages && <ChevronDownIcon className="w-6 h-6 text-white" />}
+              <Link
+                to={link.path}
+                className="flex flex-row items-center gap-1 hover:bg-gray-700 px-3 py-2 rounded">
+                <span>{link.name}</span>
+                {link.subpages && (
+                  <div className="flex items-center h-full">
+                    <ChevronDownIcon className="w-5 h-5 text-white" />
+                  </div>
+                )}
               </Link>
+
               {link.subpages && dropdownOpen === index && (
                 <div className="absolute left-0 w-48 bg-gray-800 border border-gray-700 rounded shadow-lg group-hover:block">
                   {link.subpages.map((subpage, subIndex) => (
@@ -72,15 +79,18 @@ const Navbar = () => {
         </div>
         {LINKS.map((link, index) => (
           <div key={index} className="relative mb-2">
-            <div
-              onClick={() => toggleMobileDropdown(index)}
-              className="flex flex-row justify-between cursor-pointer block px-4 py-2 hover:bg-gray-700">
-              {link.name}
-              {link.subpages && <ChevronDownIcon className="w-6 h-6 text-white" />}
+            <div className="flex flex-row justify-between items-center cursor-pointer px-4 py-2 hover:bg-gray-700">
+              <Link to={link.path} className="block px-4 py-2" onClick={toggleNavbar}>
+                {link.name}
+              </Link>
+
+              {link.subpages && (
+                <ChevronDownIcon onClick={() => toggleMobileDropdown(index)} className="w-5 h-5 text-white" />
+              )}
             </div>
 
             {link.subpages && mobileDropdownOpen === index && (
-              <div className="ml-4">
+              <div className="pl-10">
                 {link.subpages.map((subpage, subIndex) => (
                   <Link
                     key={subIndex}

@@ -25,7 +25,7 @@ function Footer() {
               <br />
               <span>66, Fieldside Road,</span> <br />
               <span>Bromley,</span> <br />
-              <span>United Kingdom BR14LA.</span>
+              <span>United Kingdom.</span>
             </p>
           </div>
           <div className="mt-5 sm:mt-0">
