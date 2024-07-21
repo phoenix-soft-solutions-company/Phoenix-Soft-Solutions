@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Company from "./pages/Company";
 import Service from "./pages/Service";
@@ -51,6 +52,7 @@ const App = () => {
           <Route path="/hosting/business-email" element={<BusinessEmail />} />
         </Routes>
       </div>
+      <Footer />
     </div>
   );
 };
