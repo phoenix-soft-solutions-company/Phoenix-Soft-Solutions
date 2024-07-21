@@ -5,7 +5,7 @@ import Logo from "../constants/images/logo.jpg";
 
 function Footer() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-8 px-4 md:px-10 bg-gray-800 text-white">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 xl:gap-16 py-8 px-4 md:px-10 bg-gray-800 text-white">
       <div className="md:pr-10">
         <h1 className="text-xl font-bold tracking-wider">ABOUT US</h1>
         <p className="text-justify">
@@ -18,7 +18,7 @@ function Footer() {
 
       <div>
         <h1 className="text-xl font-bold tracking-wider">CONTACT US</h1>
-        <div className="flex flex-col sm:flex-row gap-0 sm:gap-10 lg:gap-0 lg:justify-between">
+        <div className="flex flex-col sm:flex-row gap-0 sm:gap-10">
           <div>
             <p>
               <span>Xcrop (Pvt) Ltd,</span>
@@ -49,7 +49,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="flex items-center justify-start lg:justify-center">
+      <div className="flex items-center justify-start">
         <img src={Logo} alt="Company Logo" className="h-32 lg:h-48 w-32 lg:w-48" />
       </div>
     </div>
