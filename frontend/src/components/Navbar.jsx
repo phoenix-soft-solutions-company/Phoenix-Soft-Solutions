@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gray-800 text-white py-4 px-10">
-      <div className="container flex justify-between items-center">
+      <div className="flex justify-between items-center">
         <div className="flex items-center">
           <img src={Logo} alt="Company Logo" className="h-8 mr-2" />
           <span className="text-xl font-bold tracking-widest">Xcrop</span>
@@ -37,8 +37,8 @@ const Navbar = () => {
               onMouseLeave={() => toggleDropdown(null)}>
               <Link
                 to={link.path}
-                className="flex flex-row items-center gap-1 hover:bg-gray-700 px-3 py-2 rounded">
-                <span>{link.name}</span>
+                className="flex flex-row items-center gap-1 hover:bg-gray-700  hover:underline underline-offset-8 px-3 py-2 rounded">
+                <span className="tracking-wide font-semibold">{link.name}</span>
                 {link.subpages && (
                   <div className="flex items-center h-full">
                     <ChevronDownIcon className="w-5 h-5 text-white" />
@@ -54,7 +54,10 @@ const Navbar = () => {
                       to={subpage.path}
                       className="block px-4 py-2 hover:bg-gray-700"
                       onClick={toggleNavbar}>
-                      {subpage.name}
+                      <span className="tracking-wide font-semibold hover:underline underline-offset-8">
+                        {" "}
+                        {subpage.name}
+                      </span>
                     </Link>
                   ))}
                 </div>
@@ -81,7 +84,9 @@ const Navbar = () => {
           <div key={index} className="relative mb-2">
             <div className="flex flex-row justify-between items-center cursor-pointer px-4 py-2 hover:bg-gray-700">
               <Link to={link.path} className="block px-4 py-2" onClick={toggleNavbar}>
-                {link.name}
+                <span className="tracking-wide font-semibold hover:underline underline-offset-8">
+                  {link.name}
+                </span>
               </Link>
 
               {link.subpages && (
@@ -97,7 +102,9 @@ const Navbar = () => {
                     to={subpage.path}
                     className="block px-4 py-2 hover:bg-gray-700"
                     onClick={toggleNavbar}>
-                    {subpage.name}
+                    <span className="tracking-wide font-semibold hover:underline underline-offset-8">
+                      {subpage.name}
+                    </span>
                   </Link>
                 ))}
               </div>
