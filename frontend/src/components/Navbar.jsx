@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="container flex justify-between items-center">
         <div className="flex items-center">
           <img src={Logo} alt="Company Logo" className="h-8 mr-2" />
-          <span className="text-xl font-bold">Xcrop</span>
+          <span className="text-xl font-bold tracking-widest">Xcrop</span>
         </div>
         <div className="hidden xl:flex space-x-1">
           {LINKS?.map((link, index) => (
