@@ -54,7 +54,7 @@ const Navbar = () => {
                       to={subpage.path}
                       className="block px-4 py-2 hover:bg-gray-700"
                       onClick={toggleNavbar}>
-                      <span className="tracking-wide font-semibold hover:underline underline-offset-8">
+                      <span className="tracking-wide font-semibold hover:underline underline-offset-8 font-mono uppercase text-md">
                         {" "}
                         {subpage.name}
                       </span>
@@ -71,10 +71,12 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+
+      {/* Side bar */}
       <div
         className={`fixed top-0 right-0 h-full bg-gray-800 text-white transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } xl:hidden w-full sm:w-96 p-4`}>
+        } xl:hidden w-full sm:w-96 p-4 z-[1000]`}>
         <div className="flex justify-between items-center mb-4">
           <button onClick={toggleNavbar}>
             <XMarkIcon className="w-6 h-6 text-white" />
@@ -84,7 +86,7 @@ const Navbar = () => {
           <div key={index} className="relative mb-2">
             <div className="flex flex-row justify-between items-center cursor-pointer px-4 py-2 hover:bg-gray-700">
               <Link to={link.path} className="block px-4 py-2" onClick={toggleNavbar}>
-                <span className="tracking-wide font-semibold hover:underline underline-offset-8">
+                <span className="tracking-wide font-semibold hover:underline underline-offset-8 font-mono uppercase text-md">
                   {link.name}
                 </span>
               </Link>
@@ -102,7 +104,7 @@ const Navbar = () => {
                     to={subpage.path}
                     className="block px-4 py-2 hover:bg-gray-700"
                     onClick={toggleNavbar}>
-                    <span className="tracking-wide font-semibold hover:underline underline-offset-8">
+                    <span className="tracking-wide font-semibold hover:underline underline-offset-8 font-mono uppercase text-md">
                       {subpage.name}
                     </span>
                   </Link>
