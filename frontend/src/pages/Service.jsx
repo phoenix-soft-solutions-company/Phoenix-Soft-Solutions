@@ -143,7 +143,7 @@ const ServicePage = () => {
                 index % 2 === 0 ? "" : "sm:flex-row-reverse"
               }`}>
               <div className="flex-1">
-                <h2 className="text-2xl mb-4 underline text-red-700">{service.name}</h2>
+                <h2 className="text-2xl mb-4 underline text-red-700 font-mono">{service.name}</h2>
                 <p className="text-lg mb-4">{service.description}</p>
                 <button
                   className="border-2 border-red-700 bg-red-700 text-white py-2 px-6 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
