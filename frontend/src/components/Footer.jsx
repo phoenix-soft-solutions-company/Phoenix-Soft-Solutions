@@ -7,20 +7,20 @@ function Footer() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 xl:gap-16 py-8 px-4 md:px-10 bg-gray-800 text-white">
       <div className="md:pr-10">
-        <h1 className="text-xl font-bold tracking-wider">ABOUT US</h1>
-        <p className="text-justify">
+        <h1 className="text-xl font-bold tracking-wider font-mono">ABOUT US</h1>
+        <p className="text-justify text-md">
           Learn more about our company and values.Learn more about our company and values.Learn more about our
           company and values.Learn more about our company and values.
         </p>
         <br />
-        <p>&copy; {new Date().getFullYear()} Xcrop. All Rights Reserved.</p>
+        <p className="text-sm font-mono">&copy; {new Date().getFullYear()} Xcrop. All Rights Reserved.</p>
       </div>
 
       <div>
-        <h1 className="text-xl font-bold tracking-wider">CONTACT US</h1>
+        <h1 className="text-xl font-bold tracking-wider font-mono">CONTACT US</h1>
         <div className="flex flex-col sm:flex-row gap-0 sm:gap-10">
           <div>
-            <p>
+            <p className="text-md">
               <span>Xcrop (Pvt) Ltd,</span>
               <br />
               <span>66, Fieldside Road,</span> <br />
@@ -29,12 +29,12 @@ function Footer() {
             </p>
           </div>
           <div className="mt-5 sm:mt-0">
-            <p>
+            <p className="text-md">
               <span>Email: contact@xcrop.com</span>
               <br />
               <span>Phone: +123 456 7890</span>
             </p>
-            <div className="flex flex-row gap-6 mt-5">
+            <div className="flex flex-row gap-3 lg:gap-5 mt-5">
               <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faFacebook} size="lg" />
               </a>

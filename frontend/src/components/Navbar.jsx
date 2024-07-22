@@ -25,8 +25,8 @@ const Navbar = () => {
     <nav className="bg-gray-800 text-white py-4 px-10">
       <div className="flex justify-between items-center">
         <div className="flex items-center">
-          <img src={Logo} alt="Company Logo" className="h-8 mr-2" />
-          <span className="text-xl font-bold tracking-widest">Xcrop</span>
+          <img src={Logo} alt="Company Logo" className="h-8 lg:h-10 mr-4" />
+          <span className="text-xl lg:text-2xl font-bold tracking-widest font-serif">Xcrop</span>
         </div>
         <div className="hidden xl:flex space-x-1">
           {LINKS?.map((link, index) => (
@@ -38,7 +38,7 @@ const Navbar = () => {
               <Link
                 to={link.path}
                 className="flex flex-row items-center gap-1 hover:bg-gray-700  hover:underline underline-offset-8 px-3 py-2 rounded">
-                <span className="tracking-wide font-semibold">{link.name}</span>
+                <span className="tracking-wide font-semibold font-mono uppercase text-md">{link.name}</span>
                 {link.subpages && (
                   <div className="flex items-center h-full">
                     <ChevronDownIcon className="w-5 h-5 text-white" />
