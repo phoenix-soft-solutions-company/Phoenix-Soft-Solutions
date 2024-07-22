@@ -36,7 +36,7 @@ const serviceNames = [
     description:
       "Our expertise is in building scalable and effective software solutions for businesses of all sizes, with a focus on meeting their unique needs in order to encourage expansion and innovative concepts.",
     image: service3,
-    link: "/services/custom-software",
+    link: "/services/custom",
   },
   {
     name: "DevOps Services",
@@ -57,28 +57,28 @@ const serviceNames = [
     description:
       "Saigon Technology offers thorough testing and bug-fixing to improve overall performance and guarantee the quality, stability, and functioning of software programs as part of our services.",
     image: service6,
-    link: "/services/qa-testing",
+    link: "/services/qa",
   },
   {
     name: "Cloud Migration Services",
     description:
       "Experience a seamless transition to the cloud with our exceptional services. We empower businesses to effortlessly move their software and infrastructure, unlocking the incredible benefits of scalability, top-notch security, and remarkable cost-efficiency.",
     image: service7,
-    link: "/services/cloud-migration",
+    link: "/services/cloud",
   },
   {
     name: "PoC Development Services",
     description:
       "With our exceptional expertise, we empower you to embark on a journey of innovation, ensuring that your concepts are thoroughly tested and validated before embarking on full-scale development.",
     image: service8,
-    link: "/services/poc-development",
+    link: "/services/poc",
   },
   {
     name: "AI Development Services",
     description:
       "By combining cutting-edge AI with machine learning, we can create smart software that can streamline business operations and enhance decision-making. Let us transform your business into a realm of efficiency and innovation.",
     image: service9,
-    link: "/services/ai-development",
+    link: "/services/ai",
   },
   {
     name: "Front-end Development Services",
