@@ -54,7 +54,7 @@ const Navbar = () => {
                       to={subpage.path}
                       className="block px-4 py-2 hover:bg-gray-700"
                       onClick={toggleNavbar}>
-                      <span className="tracking-wide font-semibold hover:underline underline-offset-8">
+                      <span className="tracking-wide font-semibold hover:underline underline-offset-8 font-mono uppercase text-md">
                         {" "}
                         {subpage.name}
                       </span>
@@ -84,7 +84,7 @@ const Navbar = () => {
           <div key={index} className="relative mb-2">
             <div className="flex flex-row justify-between items-center cursor-pointer px-4 py-2 hover:bg-gray-700">
               <Link to={link.path} className="block px-4 py-2" onClick={toggleNavbar}>
-                <span className="tracking-wide font-semibold hover:underline underline-offset-8">
+                <span className="tracking-wide font-semibold hover:underline underline-offset-8 font-mono uppercase text-md">
                   {link.name}
                 </span>
               </Link>
@@ -102,7 +102,7 @@ const Navbar = () => {
                     to={subpage.path}
                     className="block px-4 py-2 hover:bg-gray-700"
                     onClick={toggleNavbar}>
-                    <span className="tracking-wide font-semibold hover:underline underline-offset-8">
+                    <span className="tracking-wide font-semibold hover:underline underline-offset-8 font-mono uppercase text-md">
                       {subpage.name}
                     </span>
                   </Link>
