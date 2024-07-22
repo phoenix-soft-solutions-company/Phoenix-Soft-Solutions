@@ -1,4 +1,3 @@
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { useRef } from "react";
@@ -120,11 +119,7 @@ const ServicePage = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="relative w-full h-[50vh]">
-        <img
-          src={slide3}
-          alt="Header Image"
-          className="object-cover w-full h-full"
-        />
+        <img src={slide3} alt="Header-Service" className="object-cover w-full h-full" />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
           <h1 className="text-4xl">Our Services</h1>
         </div>
@@ -135,8 +130,7 @@ const ServicePage = () => {
             <div
               className="bg-gray-100 p-4 border border-red-800 text-center cursor-pointer transition-transform transform hover:translate-y-[-10px] hover:text-red-700"
               key={index}
-              onClick={() => handleBoxClick(index)}
-            >
+              onClick={() => handleBoxClick(index)}>
               <h5 className="flex items-center justify-between">
                 {service.name}
                 <FontAwesomeIcon icon={faChevronDown} />
@@ -149,22 +143,14 @@ const ServicePage = () => {
           <div
             key={index}
             className={`my-8 ${index % 2 === 0 ? "text-left" : "text-right"}`}
-            ref={(el) => (sectionsRefs.current[index] = el)}
-          >
-            <div
-              className={`flex items-center ${
-                index % 2 === 0 ? "" : "flex-row-reverse"
-              }`}
-            >
+            ref={(el) => (sectionsRefs.current[index] = el)}>
+            <div className={`flex items-center ${index % 2 === 0 ? "" : "flex-row-reverse"}`}>
               <div className="flex-1 px-4">
-                <h2 className="text-2xl mb-4 underline text-red-700">
-                  {service.name}
-                </h2>
+                <h2 className="text-2xl mb-4 underline text-red-700">{service.name}</h2>
                 <p className="text-lg mb-4">{service.description}</p>
                 <button
                   className="bg-red-700 text-white py-2 px-4 text-base rounded hover:bg-red-500"
-                  onClick={() => handleReadMoreClick(service.link)}
-                >
+                  onClick={() => handleReadMoreClick(service.link)}>
                   Read More
                 </button>
               </div>
