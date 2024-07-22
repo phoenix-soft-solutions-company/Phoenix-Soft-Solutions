@@ -2,102 +2,91 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import slide3 from "../constants/images/services/web.png";
-import service1 from "../constants/images/services/web.png";
-import service2 from "../constants/images/services/web.png";
-import service3 from "../constants/images/services/web.png";
-import service4 from "../constants/images/services/web.png";
-import service5 from "../constants/images/services/web.png";
-import service6 from "../constants/images/services/web.png";
-import service7 from "../constants/images/services/web.png";
-import service8 from "../constants/images/services/web.png";
-import service9 from "../constants/images/services/web.png";
-import service10 from "../constants/images/services/web.png";
-import service11 from "../constants/images/services/web.png";
-import service12 from "../constants/images/services/web.png";
+import webService from "../constants/images/services/web.png";
+
 const serviceNames = [
   {
     name: "Web Application Development",
     description:
       "To help businesses successfully communicate with their intended demographic, Xcrop Technology provides services that include the complete spectrum of the software development life cycle.",
-    image: service1,
+    image: webService,
     link: "/services/web",
   },
   {
     name: "Mobile App Development",
     description:
       "To achieve our client's business objectives, we design and build feature-rich handheld apps for a wide range of mobile platforms, with a particular emphasis on delivering superior user experiences and making use of cutting-edge mobile technology.",
-    image: service2,
+    image: webService,
     link: "/services/mobile",
   },
   {
     name: "Custom Software Development",
     description:
       "Our expertise is in building scalable and effective software solutions for businesses of all sizes, with a focus on meeting their unique needs in order to encourage expansion and innovative concepts.",
-    image: service3,
+    image: webService,
     link: "/services/custom-software",
   },
   {
     name: "DevOps Services",
     description:
       "We provide appropriate services to facilitate communication and coordination between the software development and IT operations departments. Experience the power of seamless coordination, as we accelerate software delivery and supercharge efficiency.",
-    image: service4,
+    image: webService,
     link: "/services/devops",
   },
   {
     name: "Software Development Outsourcing",
     description:
       "By utilizing Saigon Technology’s services, businesses may make use of our expertise and infrastructure for the smooth completion of their projects at a lower overall cost.",
-    image: service5,
+    image: webService,
     link: "/services/outsourcing",
   },
   {
     name: "Software QA Testing",
     description:
       "Saigon Technology offers thorough testing and bug-fixing to improve overall performance and guarantee the quality, stability, and functioning of software programs as part of our services.",
-    image: service6,
+    image: webService,
     link: "/services/qa-testing",
   },
   {
     name: "Cloud Migration Services",
     description:
       "Experience a seamless transition to the cloud with our exceptional services. We empower businesses to effortlessly move their software and infrastructure, unlocking the incredible benefits of scalability, top-notch security, and remarkable cost-efficiency.",
-    image: service7,
+    image: webService,
     link: "/services/cloud-migration",
   },
   {
     name: "PoC Development Services",
     description:
       "With our exceptional expertise, we empower you to embark on a journey of innovation, ensuring that your concepts are thoroughly tested and validated before embarking on full-scale development.",
-    image: service8,
+    image: webService,
     link: "/services/poc-development",
   },
   {
     name: "AI Development Services",
     description:
       "By combining cutting-edge AI with machine learning, we can create smart software that can streamline business operations and enhance decision-making. Let us transform your business into a realm of efficiency and innovation.",
-    image: service9,
+    image: webService,
     link: "/services/ai-development",
   },
   {
     name: "Front-end Development Services",
     description:
       "Experience superior front-end development services with Saigon Technology. Elevate your digital presence by outsourcing front-end development to us.",
-    image: service10,
+    image: webService,
     link: "/services/frontend-development",
   },
   {
     name: "Back-end Development Services",
     description:
       "Discover how Saigon Technology's superior back-end development services can accelerate your business growth. Your vision, our expertise.",
-    image: service11,
+    image: webService,
     link: "/services/backend-development",
   },
   {
     name: "Software Maintenance and Support",
     description:
       "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
-    image: service12,
+    image: webService,
     link: "/services/maintenance-support",
   },
 ];
@@ -119,47 +108,52 @@ const ServicePage = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="relative w-full h-[50vh]">
-        <img src={slide3} alt="Header-Service" className="object-cover w-full h-full" />
+        <img src={webService} alt="Header-Service" className="object-cover w-full h-full" />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
-          <h1 className="text-4xl">Our Services</h1>
+          <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest uppercase">
+            Our Services
+          </h1>
         </div>
       </header>
-      <div className="flex-1 p-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+
+      <div className="flex-1 py-4 lg:py-8 px-4 lg:px-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {serviceNames.map((service, index) => (
             <div
-              className="bg-gray-100 p-4 border border-red-800 text-center cursor-pointer transition-transform transform hover:translate-y-[-10px] hover:text-red-700"
+              className="bg-gray-100 p-4 border border-red-800 text-center cursor-pointer transition-transform transform hover:-translate-y-2 hover:text-red-700 min-w-76 duration-300 ease-in-out"
               key={index}
               onClick={() => handleBoxClick(index)}>
-              <h5 className="flex items-center justify-between">
+              <h5 className="flex items-center justify-between text-md font-sans">
                 {service.name}
                 <FontAwesomeIcon icon={faChevronDown} />
               </h5>
             </div>
           ))}
         </div>
-        <hr className="my-4" />
+
+        <hr className="my-4 lg:my-8 border border-gray-300" />
+
         {serviceNames.map((service, index) => (
           <div
             key={index}
-            className={`my-8 ${index % 2 === 0 ? "text-left" : "text-right"}`}
+            className={`my-4 lg:my-8 ${index % 2 === 0 ? "sm:text-left" : "sm:text-right"}`}
             ref={(el) => (sectionsRefs.current[index] = el)}>
-            <div className={`flex items-center ${index % 2 === 0 ? "" : "flex-row-reverse"}`}>
-              <div className="flex-1 px-4">
+            <div
+              className={`flex flex-col sm:flex-row items-center border border-gray-100 rounded-xl shadow-md p-3 sm:p-4 md:px-8 lg:px-20  ${
+                index % 2 === 0 ? "" : "sm:flex-row-reverse"
+              }`}>
+              <div className="flex-1">
                 <h2 className="text-2xl mb-4 underline text-red-700">{service.name}</h2>
                 <p className="text-lg mb-4">{service.description}</p>
                 <button
-                  className="bg-red-700 text-white py-2 px-4 text-base rounded hover:bg-red-500"
+                  className="border-2 border-red-700 bg-red-700 text-white py-2 px-6 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
                   onClick={() => handleReadMoreClick(service.link)}>
                   Read More
                 </button>
               </div>
-              <div className="flex-1 text-center">
-                <img
-                  src={service.image}
-                  alt={service.name}
-                  className="max-w-full h-auto border-2 border-blue-700 rounded-lg"
-                />
+
+              <div className="flex-1 flex items-center justify-center mt-2 sm:mt-0">
+                <img src={service.image} alt={service.name} className="w-full h-auto max-w-80 mx-auto" />
               </div>
             </div>
           </div>
