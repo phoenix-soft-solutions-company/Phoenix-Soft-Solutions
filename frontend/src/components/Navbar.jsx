@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gray-800 text-white py-4 px-10">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center z-[999]">
         <div className="flex items-center">
           <img src={Logo} alt="Company Logo" className="h-8 lg:h-10 mr-4" />
           <span className="text-xl lg:text-2xl font-bold tracking-widest font-serif">Xcrop</span>

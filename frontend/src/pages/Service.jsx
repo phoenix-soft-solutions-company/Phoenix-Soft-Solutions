@@ -58,14 +58,14 @@ const serviceNames = [
     name: "PoC Development Services",
     description:
       "With our exceptional expertise, we empower you to embark on a journey of innovation, ensuring that your concepts are thoroughly tested and validated before embarking on full-scale development.",
-    image: webService,
+    image: service8,
     link: "/services/poc-development",
   },
   {
     name: "AI Development Services",
     description:
       "By combining cutting-edge AI with machine learning, we can create smart software that can streamline business operations and enhance decision-making. Let us transform your business into a realm of efficiency and innovation.",
-    image: webService,
+    image: service9,
     link: "/services/ai-development",
   },
   {
