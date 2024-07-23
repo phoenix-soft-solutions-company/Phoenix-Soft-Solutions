@@ -5,17 +5,22 @@ import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import slide1 from "../constants/images/slides/slide1.jpg";
 import slide3 from "../constants/images/slides/slide3.jpg";
 import slide4 from "../constants/images/slides/slide4.jpg";
-import icon1 from "../constants/images/icons/ico1.png";
-import icon2 from "../constants/images/icons/ico1.png";
-import icon3 from "../constants/images/icons/ico1.png";
-import icon4 from "../constants/images/icons/ico1.png";
-import icon5 from "../constants/images/icons/ico1.png";
-import icon6 from "../constants/images/icons/ico1.png";
-import icon7 from "../constants/images/icons/ico1.png";
-import icon8 from "../constants/images/icons/ico1.png";
-import icon9 from "../constants/images/icons/ico1.png";
+import icon1 from "../constants/images/icons/Icon1.png";
+import icon2 from "../constants/images/icons/Icon2.png";
+import icon3 from "../constants/images/icons/Icon3.png";
+import icon4 from "../constants/images/icons/Icon4.png";
+import icon5 from "../constants/images/icons/Icon5.png";
+import icon6 from "../constants/images/icons/Icon6.png";
+import icon7 from "../constants/images/icons/Icon7.png";
+import icon8 from "../constants/images/icons/Icon8.png";
+import icon9 from "../constants/images/icons/Icon9.png";
 import leftImage from "../constants/images/left_home.jpg";
 import rightImage from "../constants/images/RightHome.jpg";
+import icon11 from "../constants/images/icons/ico1.png";
+import icon12 from "../constants/images/icons/ico2.png";
+import icon13 from "../constants/images/icons/ico3.png";
+import icon14 from "../constants/images/icons/ico4.png";
+
 
 function Home() {
   return (
@@ -169,7 +174,7 @@ function Home() {
           <div className="bg-white p-5 rounded shadow hover:bg-pink-100 hover:border-red-700">
             <img
               src={icon4}
-              alt="Digital Marketing"
+              alt="DevOps Services"
               className="mx-auto mb-3 w-16"
             />
             <h2 className="text-2xl mb-2">DevOps Services</h2>
@@ -183,7 +188,7 @@ function Home() {
           <div className="bg-white p-5 rounded shadow hover:bg-pink-100 hover:border-red-700">
             <img
               src={icon5}
-              alt="IT Consulting"
+              alt="Software Development Outsourcing"
               className="mx-auto mb-3 w-16"
             />
             <h2 className="text-2xl mb-2">Software Development Outsourcing</h2>
@@ -194,7 +199,11 @@ function Home() {
             </p>
           </div>
           <div className="bg-white p-5 rounded shadow hover:bg-pink-100 hover:border-red-700">
-            <img src={icon6} alt="Testing & QA" className="mx-auto mb-3 w-16" />
+            <img
+              src={icon6}
+              alt="Software QA Testing"
+              className="mx-auto mb-3 w-16"
+            />
             <h2 className="text-2xl mb-2">Software QA Testing</h2>
             <p className="text-lg">
               Xcrop Technology offers thorough testing and bug-fixing to improve
@@ -211,7 +220,7 @@ function Home() {
                 <img
                   src={icon7}
                   alt="Cloud Migration Services"
-                  className="mb-3 max-w-xs mx-auto"
+                  className="mx-auto mb-3 w-16"
                 />
                 <h2 className="text-2xl font-semibold mb-2">
                   Cloud Migration Services
@@ -230,7 +239,7 @@ function Home() {
                 <img
                   src={icon8}
                   alt="PoC Development Services"
-                  className="mb-3 max-w-xs mx-auto"
+                  className="mx-auto mb-3 w-16"
                 />
                 <h2 className="text-2xl font-semibold mb-2">
                   PoC Development Services
@@ -247,8 +256,8 @@ function Home() {
               <div className="service-card h-full bg-white p-5 rounded shadow">
                 <img
                   src={icon9}
-                  alt="ERP Solutions"
-                  className="mb-3 max-w-xs mx-auto"
+                  alt="AI Development Services"
+                  className="mx-auto mb-3 w-16"
                 />
                 <h2 className="text-2xl font-semibold mb-2">
                   AI Development Services
@@ -263,9 +272,12 @@ function Home() {
             </div>
           </div>
           <div className="flex justify-center mt-6">
-            <button className="text-lg px-6 py-3 bg-red-600 text-white hover:bg-red-700 rounded">
+            <a
+              href="/service" // Replace with your desired URL
+              className="text-lg px-6 py-3 bg-red-600 text-white hover:bg-red-700 rounded"
+            >
               Explore in detail
-            </button>
+            </a>
           </div>
 
           <div className="py-10 text-center">
@@ -288,7 +300,7 @@ function Home() {
           <div className="w-full md:w-1/2 p-4">
             <div className="text-center">
               <img
-                src={icon1}
+                src={icon11}
                 alt="Icon 1"
                 className="w-24 h-24 mb-2 mx-auto"
               />
@@ -305,7 +317,7 @@ function Home() {
           <div className="w-full md:w-1/2 p-4">
             <div className="text-center">
               <img
-                src={icon2}
+                src={icon12}
                 alt="Icon 2"
                 className="w-24 h-24 mb-2 mx-auto"
               />
@@ -323,7 +335,7 @@ function Home() {
           <div className="w-full md:w-1/2 p-4">
             <div className="text-center">
               <img
-                src={icon1}
+                src={icon13}
                 alt="Icon 3"
                 className="w-24 h-24 mb-2 mx-auto"
               />
@@ -337,7 +349,7 @@ function Home() {
           <div className="w-full md:w-1/2 p-4">
             <div className="text-center">
               <img
-                src={icon1}
+                src={icon14}
                 alt="Icon 4"
                 className="w-24 h-24 mb-2 mx-auto"
               />
