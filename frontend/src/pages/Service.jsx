@@ -59,12 +59,14 @@ const serviceNames = [
     description:
       "With our exceptional expertise, we empower you to embark on a journey of innovation, ensuring that your concepts are thoroughly tested and validated before embarking on full-scale development.",
     image: webService,
+    image: webService,
     link: "/services/poc-development",
   },
   {
     name: "AI Development Services",
     description:
       "By combining cutting-edge AI with machine learning, we can create smart software that can streamline business operations and enhance decision-making. Let us transform your business into a realm of efficiency and innovation.",
+    image: webService,
     image: webService,
     link: "/services/ai-development",
   },
@@ -152,9 +154,7 @@ const ServicePage = () => {
               }`}
             >
               <div className="flex-1">
-                <h2 className="text-2xl mb-4 underline text-red-700">
-                  {service.name}
-                </h2>
+                <h2 className="text-2xl mb-4 underline text-red-700 font-mono">{service.name}</h2>
                 <p className="text-lg mb-4">{service.description}</p>
                 <button
                   className="border-2 border-red-700 bg-red-700 text-white py-2 px-6 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
