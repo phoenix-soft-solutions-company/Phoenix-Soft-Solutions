@@ -32,7 +32,7 @@ const App = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <div className="flex-grow">
+      <div className="flex-grow pt-16">
         <Routes>
           {/* main pages */}
           <Route path="/" element={<Home />} />
@@ -45,22 +45,22 @@ const App = () => {
           <Route path="/domain" element={<Domain />} />
           <Route path="/hosting" element={<Hosting />} />
           <Route path="/login" element={<Login />} />
+
           {/* service sub pages */}
-          <Route path="/services/web" element={<WebService />} />
-          <Route path="/services/mobile" element={<MobileService />} />
-          <Route path="/services/custom" element={<CustomService />} />
-          <Route path="/services/devops" element={<DevopsService />} />
-          <Route path="/services/cloud" element={<CloudService />} />
-          <Route path="/services/ai" element={<AiService />} />
-          <Route path="/services/outsourcing" element={<OutsourcingService />} />
-          <Route path="/services/poc" element={<PocService />} />
-          <Route path="/services/qa" element={<QAService />} />
+          <Route path="/service/web" element={<WebService />} />
+          <Route path="/service/mobile" element={<MobileService />} />
+          <Route path="/service/custom" element={<CustomService />} />
+          <Route path="/service/devops" element={<DevopsService />} />
+          <Route path="/service/cloud" element={<CloudService />} />
+          <Route path="/service/ai" element={<AiService />} />
+          <Route path="/service/outsourcing" element={<OutsourcingService />} />
+          <Route path="/service/poc" element={<PocService />} />
+          <Route path="/service/qa" element={<QAService />} />
+
           {/* domain sub pages */}
           <Route path="/domain/lk" element={<LkDomain />} />
-          <Route
-            path="/domain/international"
-            element={<InternationalDomain />}
-          />
+          <Route path="/domain/international" element={<InternationalDomain />} />
+
           {/* hosting sub pages */}
           <Route path="/hosting/web" element={<WebHosting />} />
           <Route path="/hosting/cloud" element={<CloudHosting />} />

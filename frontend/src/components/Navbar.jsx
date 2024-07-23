@@ -22,8 +22,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 text-white py-4 px-10">
-      <div className="flex justify-between items-center z-[999]">
+    <nav className="bg-gray-800 text-white py-4 px-10 fixed left-0 top-0 right-0 z-[1000]">
+      <div className="flex justify-between items-center">
         <div className="flex items-center">
           <img src={Logo} alt="Company Logo" className="h-8 lg:h-10 mr-4" />
           <span className="text-xl lg:text-2xl font-bold tracking-widest font-serif">Xcrop</span>
@@ -47,7 +47,7 @@ const Navbar = () => {
               </Link>
 
               {link.subpages && dropdownOpen === index && (
-                <div className="absolute left-0 w-48 bg-gray-800 border border-gray-700 rounded shadow-lg group-hover:block">
+                <div className="absolute left-0 z-[999] w-48 bg-gray-800 border border-gray-700 rounded shadow-lg group-hover:block">
                   {link.subpages.map((subpage, subIndex) => (
                     <Link
                       key={subIndex}
