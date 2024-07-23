@@ -1,5 +1,5 @@
 import React from "react";
-import headimg from "../constants/images/tech/technology-heading.jpg";
+import heading from "../constants/images/tech/technology-heading.jpg";
 import nodejs from "../constants/images/tech/nodejs.png";
 import php from "../constants/images/tech/php.png";
 import python from "../constants/images/tech/python.png";
@@ -30,7 +30,7 @@ const Technology = () => {
   return (
     <div className="min-h-screen relative">
       <header className="relative w-full h-[50vh]">
-        <img src={headimg} alt="header" className="object-cover w-full h-full" />
+        <img src={heading} alt="header" className="object-cover w-full h-full" />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
           <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest">TECHNOLOGIES</h1>
         </div>
