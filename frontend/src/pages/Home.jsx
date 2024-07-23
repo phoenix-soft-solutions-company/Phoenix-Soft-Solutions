@@ -128,7 +128,7 @@ function Home() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-5 rounded shadow hover:bg-pink-100 hover:border-red-700">
+          <div className="bg-white p-5 rounded shadow hover:bg-red-200 hover:border-red-700 border border-transparent">
             <img
               src={icon1}
               alt="Web Application Development"
