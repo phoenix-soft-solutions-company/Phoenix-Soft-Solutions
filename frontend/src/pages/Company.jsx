@@ -25,8 +25,8 @@ const CompanyPage = () => {
           className="w-full h-96 object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-white text-3xl md:text-5xl font-bold">
-            About Us
+          <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest">
+            ABOUT US
           </h1>
         </div>
       </div>
