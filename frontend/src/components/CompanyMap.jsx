@@ -11,8 +11,7 @@ const redIconOptions = {
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
   shadowSize: [41, 41],
-  shadowUrl:
-    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
+  shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
 };
 
 // Create custom icon using Leaflet's Icon class
@@ -31,12 +30,8 @@ const CompanyMap = () => {
         center={[20, 0]}
         zoom={2}
         style={{ height: "500px", width: "100%" }}
-        className="rounded-lg shadow-lg"
-      >
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        />
+        className="rounded-lg shadow-lg">
+        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         {locations.map((location, index) => (
           <Marker
             key={index}
