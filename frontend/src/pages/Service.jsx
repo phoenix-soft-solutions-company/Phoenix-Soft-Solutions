@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import webService from "../constants/images/services/web.png";
@@ -58,14 +58,14 @@ const serviceNames = [
     name: "PoC Development Services",
     description:
       "With our exceptional expertise, we empower you to embark on a journey of innovation, ensuring that your concepts are thoroughly tested and validated before embarking on full-scale development.",
-    image: service8,
+    image: webService,
     link: "/services/poc-development",
   },
   {
     name: "AI Development Services",
     description:
       "By combining cutting-edge AI with machine learning, we can create smart software that can streamline business operations and enhance decision-making. Let us transform your business into a realm of efficiency and innovation.",
-    image: service9,
+    image: webService,
     link: "/services/ai-development",
   },
   {
@@ -108,7 +108,11 @@ const ServicePage = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="relative w-full h-[50vh]">
-        <img src={webService} alt="Header-Service" className="object-cover w-full h-full" />
+        <img
+          src={webService}
+          alt="Header-Service"
+          className="object-cover w-full h-full"
+        />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
           <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest uppercase">
             Our Services
@@ -122,7 +126,8 @@ const ServicePage = () => {
             <div
               className="bg-gray-100 p-4 border border-red-800 text-center cursor-pointer transition-transform transform hover:-translate-y-2 hover:text-red-700 min-w-76 duration-300 ease-in-out"
               key={index}
-              onClick={() => handleBoxClick(index)}>
+              onClick={() => handleBoxClick(index)}
+            >
               <h5 className="flex items-center justify-between text-md font-sans">
                 {service.name}
                 <FontAwesomeIcon icon={faChevronDown} />
@@ -136,24 +141,35 @@ const ServicePage = () => {
         {serviceNames.map((service, index) => (
           <div
             key={index}
-            className={`my-4 lg:my-8 ${index % 2 === 0 ? "sm:text-left" : "sm:text-right"}`}
-            ref={(el) => (sectionsRefs.current[index] = el)}>
+            className={`my-4 lg:my-8 ${
+              index % 2 === 0 ? "sm:text-left" : "sm:text-right"
+            }`}
+            ref={(el) => (sectionsRefs.current[index] = el)}
+          >
             <div
               className={`flex flex-col sm:flex-row items-center border border-gray-100 rounded-xl shadow-md p-3 sm:p-4 md:px-8 lg:px-20  ${
                 index % 2 === 0 ? "" : "sm:flex-row-reverse"
-              }`}>
+              }`}
+            >
               <div className="flex-1">
-                <h2 className="text-2xl mb-4 underline text-red-700">{service.name}</h2>
+                <h2 className="text-2xl mb-4 underline text-red-700">
+                  {service.name}
+                </h2>
                 <p className="text-lg mb-4">{service.description}</p>
                 <button
                   className="border-2 border-red-700 bg-red-700 text-white py-2 px-6 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
-                  onClick={() => handleReadMoreClick(service.link)}>
+                  onClick={() => handleReadMoreClick(service.link)}
+                >
                   Read More
                 </button>
               </div>
 
               <div className="flex-1 flex items-center justify-center mt-2 sm:mt-0">
-                <img src={service.image} alt={service.name} className="w-full h-auto max-w-80 mx-auto" />
+                <img
+                  src={service.image}
+                  alt={service.name}
+                  className="w-full h-auto max-w-80 mx-auto"
+                />
               </div>
             </div>
           </div>
