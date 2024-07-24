@@ -33,7 +33,7 @@ function Home() {
         </div>
         <div className="w-full lg:w-1/2 bg-gray-100 flex flex-col justify-center items-center p-4">
           <div>
-            <h1 className="mb-4 lg:mb-10">
+            <h1 className="mb-4 lg:mb-10 font-bold">
               <span className="text-red-600 text-2xl lg:text-4xl xl:text-5xl">We provide the best </span>
               <span className="text-red-800 text-3xl lg:text-5xl xl:text-6xl">IT </span>
               <br />
