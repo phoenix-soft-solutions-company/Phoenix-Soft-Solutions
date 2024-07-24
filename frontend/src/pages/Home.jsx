@@ -27,21 +27,24 @@ function Home() {
     <div>
       <SlideShow slides={[slide1, slide3, slide4]} />
 
-      <div className="flex flex-col-reverse md:flex-row md:pb-5 xl:pb-20">
-        <div className="w-full md:w-1/2 bg-gray-100 flex justify-center items-center p-4">
+      <div className="flex flex-col-reverse lg:flex-row md:pb-5 xl:pb-20">
+        <div className="w-full lg:w-1/2 bg-gray-100 flex justify-center items-center p-4">
           <img src={leftImage} alt="Description" className="max-w-full max-h-full h-auto" />
         </div>
-        <div className="w-full md:w-1/2 bg-gray-100 flex flex-col justify-center items-center p-4">
+        <div className="w-full lg:w-1/2 bg-gray-100 flex flex-col justify-center items-center p-4">
           <div>
-            <h1 className="text-red-600 text-2xl lg:text-3xl mb-4 lg:mb-10">
-              We provide the best <span className="text-3xl lg:text-4xl text-red-800">IT Solution</span>{" "}
-              services
+            <h1 className="mb-4 lg:mb-10">
+              <span className="text-red-600 text-2xl lg:text-4xl xl:text-5xl">We provide the best </span>
+              <span className="text-red-800 text-3xl lg:text-5xl xl:text-6xl">IT </span>
+              <br />
+              <span className="text-red-800 text-3xl lg:text-5xl xl:text-6xl">Solution</span>
+              <span className="text-red-600 text-2xl lg:text-4xl xl:text-5xl"> services</span>
             </h1>
             <p className="text-black text-lg lg:text-xl">
               We offer one of the most comprehensive, affordably-priced service and maintenance IT support
               plans in the IT industry.
             </p>
-            <div className="flex flex-col xl:flex-row xl:gap-x-2 mt-5">
+            <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row md:gap-x-10 lg:gap-x-0 xl:gap-x-4 mt-5">
               <div className="">
                 <ul className="list-none text-lg text-black lg:text-xl">
                   <li>
@@ -80,13 +83,13 @@ function Home() {
       </div>
 
       <div className="flex flex-col justify-center">
-        <div className="text-center py-4 sm:py-6">
+        <div className="text-center py-4">
           <h1 className="font-bold text-2xl lg:text-3xl pb-1 sm:pb-2 lg:pb-3 border-b-4 border-red-600 inline-block font-serif">
             OUR SERVICES
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto px-2">
           <div className="bg-white p-4 m-2 rounded shadow-lg max-w-[400px] hover:bg-red-200 hover:border-red-700 border border-transparent">
             <img src={icon1} alt="Web Application Development" className="mx-auto mb-3 w-16" />
             <h2 className="text-2xl mb-2">Web Application Development</h2>
@@ -176,14 +179,16 @@ function Home() {
         </div>
 
         <div className="flex justify-center mt-6">
-          <a href="/service" className="text-lg px-6 py-3 bg-red-600 text-white hover:bg-red-700 rounded">
+          <a
+            href="/service"
+            className="border-2 border-red-700 bg-red-700 text-white py-2 px-6 text-base rounded hover:bg-white hover:text-red-700 transition duration-500">
             Explore in detail
           </a>
         </div>
       </div>
 
       <div className="p-2">
-        <div className="text-center py-4 sm:py-6">
+        <div className="text-center py-4">
           <h1 className="font-bold text-2xl lg:text-3xl pb-1 sm:pb-2 lg:pb-3 border-b-4 border-red-600 inline-block font-serif">
             OUR RETAINED CLIENTS
           </h1>
@@ -192,20 +197,20 @@ function Home() {
             growth as our slogan: Your success is our mission.
           </p>
         </div>
-        <div className="p-4 sm:px-10 lg:px-20">
+        <div className="p-4 lg:px-10 xl:px-12">
           <CompanyMap />
         </div>
       </div>
 
       <div className="flex flex-col p-4 lg:px-8">
-        <div className="sm:px-10">
+        <div className="2xl:pl-8">
           <h2 className="text-[#780a15] text-2xl mb-2">Our Benefits...</h2>
           <h1 className="text-[#e81c30] text-4xl mb-4">Why Choose Us?</h1>
         </div>
 
-        <div className="flex flex-col-reverse xl:flex-row">
+        <div className="flex flex-col-reverse xl:flex-row-reverse">
           <div className="w-full xl:w-1/2 py-2 flex items-center justify-center">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xmd:grid-cols-3 xl:grid-cols-2 gap-4">
               <div className="w-full sm:w-72 p-2 text-center border border-black">
                 <img src={icon11} alt="Icon 1" className="w-24 h-24 mb-2 mx-auto" />
                 <h3 className="text-[#e81c30] text-xl mb-2">Best Technological Solutions</h3>
@@ -242,8 +247,8 @@ function Home() {
             </div>
           </div>
 
-          <div className="w-full xl:w-1/2 flex items-center justify-center">
-            <img src={rightImage} alt="Example" className="w-full sm:w-[600px] lg:w-[800px] h-auto" />
+          <div className="w-full xl:w-1/2 flex items-center justify-center 2xl:pl-8">
+            <img src={rightImage} alt="Example" className="w-full  h-auto" />
           </div>
         </div>
       </div>
