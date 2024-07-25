@@ -5,7 +5,7 @@ import Logo from "../constants/images/logo.jpg";
 
 function Footer() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 xl:gap-16 py-8 px-4 md:px-10 bg-gray-800 text-white">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 xl:gap-16 py-8 px-4 md:px-10 bg-red-800 text-white">
       <div className="md:pr-10">
         <h1 className="text-xl font-bold tracking-wider font-mono">ABOUT US</h1>
         <p className="text-md">

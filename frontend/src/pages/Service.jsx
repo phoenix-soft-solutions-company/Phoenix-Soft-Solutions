@@ -2,7 +2,9 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import Service from "../constants/images/services/service.jpg";
 import webService from "../constants/images/services/web.png";
+import mobileService from "../constants/images/services/mobile.jpg";
 
 const serviceNames = [
   {
@@ -16,7 +18,7 @@ const serviceNames = [
     name: "Mobile App Development",
     description:
       "To achieve our client's business objectives, we design and build feature-rich handheld apps for a wide range of mobile platforms, with a particular emphasis on delivering superior user experiences and making use of cutting-edge mobile technology.",
-    image: webService,
+    image: mobileService,
     link: "/service/mobile",
   },
   {
@@ -108,7 +110,7 @@ const ServicePage = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="relative w-full h-[50vh]">
-        <img src={webService} alt="Header-Service" className="object-cover w-full h-full" />
+        <img src={Service} alt="Header-Service" className="object-cover w-full h-full" />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
           <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest uppercase">
             Our Services
