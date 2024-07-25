@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { LINKS } from "../constants/Links";
 import { Link } from "react-router-dom";
 import { Bars3Icon, ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import Logo from "../constants/images/logo.jpg";
+import Logo from "../constants/images/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
