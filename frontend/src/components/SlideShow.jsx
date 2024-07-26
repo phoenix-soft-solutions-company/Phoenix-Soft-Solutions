@@ -14,8 +14,8 @@ const SlideShow = ({ slides = [] }) => {
       setTimeout(() => {
         setIsTransitioning(false);
         setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-      }, 1500); // Time for zoom-in effect
-    }, 6000); // Total time per slide (including zoom-in and zoom-out)
+      }, 3000); // Time for zoom-in effect
+    }, 3000); // Total time per slide (including zoom-in and zoom-out)
 
     return () => clearInterval(slideInterval);
   }, [slides.length]);
@@ -25,7 +25,7 @@ const SlideShow = ({ slides = [] }) => {
   }
 
   return (
-    <div className="w-full overflow-hidden relative">
+    <div className="w-full overflow-hidden relative h-screen">
       <div
         ref={slideshowRef}
         className={`flex ${isTransitioning ? "transition-transform duration-1000 ease-in-out" : ""}`}
