@@ -10,16 +10,16 @@ import android from "../constants/images/tech/Android.png";
 import java from "../constants/images/tech/java.png";
 import ios from "../constants/images/tech/IOS.png";
 import js from "../constants/images/tech/js.png";
-import webapp from "../constants/images/tech/web_application.png";
+import webapp from "../constants/images/tech/web_app.png";
 import mobileapp from "../constants/images/tech/mobile_app.png";
 import bussinessapp from "../constants/images/tech/Busines_app.png";
 import custom from "../constants/images/tech/Busines_app.png";
-import service1 from "../constants/images/tech/Busines_app.png";
-import service2 from "../constants/images/tech/Busines_app.png";
-import service3 from "../constants/images/tech/Busines_app.png";
-import service4 from "../constants/images/tech/Busines_app.png";
-import service5 from "../constants/images/tech/Busines_app.png";
-import service6 from "../constants/images/tech/Busines_app.png";
+import service1 from "../constants/images/tech/transport.png";
+import service2 from "../constants/images/tech/account.png";
+import service3 from "../constants/images/tech/health.png";
+import service4 from "../constants/images/tech/bussines.png";
+import service5 from "../constants/images/tech/bank.png";
+import service6 from "../constants/images/tech/ecommernce.png";
 
 const images = [
   nodejs,
