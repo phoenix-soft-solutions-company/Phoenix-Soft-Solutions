@@ -269,7 +269,7 @@ function Home() {
         <div className="flex justify-center mt-6">
           <a
             href="/service"
-            className="border-2 border-red-700 bg-red-700 text-white py-2 px-6 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
+            className="border-2 border-red-700 bg-red-700 text-white py-6 px-10 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
           >
             Explore in detail
           </a>
@@ -294,8 +294,10 @@ function Home() {
 
       <div className="flex flex-col p-4 lg:px-8">
         <div className="2xl:pl-8">
-          <h2 className="text-[#780a15] text-2xl mb-2">Our Benefits...</h2>
-          <h1 className="text-[#e81c30] text-4xl mb-4">Why Choose Us?</h1>
+          <h2 className="text-[#780a15] text-3xl mb-2">Our Benefits...</h2>
+          <h1 className="text-[#e81c30] text-5xl font-bold mb-4">
+            Why Choose Us?
+          </h1>
         </div>
 
         <div className="flex flex-col-reverse xl:flex-row-reverse">

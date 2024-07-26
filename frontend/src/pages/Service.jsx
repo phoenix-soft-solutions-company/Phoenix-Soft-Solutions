@@ -4,7 +4,8 @@ import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Service from "../constants/images/services/service.jpg";
 import webService from "../constants/images/services/web.png";
-import mobileService from "../constants/images/services/mobile.jpg";
+import mobileService from "../constants/images/services/mobile_app.png";
+
 
 const serviceNames = [
   {

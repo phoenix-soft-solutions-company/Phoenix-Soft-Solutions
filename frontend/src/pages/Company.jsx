@@ -10,6 +10,7 @@ import {
   FaTwitter,
   FaLinkedin,
   FaInstagram,
+  FaDotCircle,
 } from "react-icons/fa";
 import heading from "../constants/images/tech/technology-heading.jpg";
 import leftImage from "../constants/images/left_home.jpg";
@@ -176,7 +177,7 @@ const CompanyPage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="w-full">
               <h3 className="text-2xl md:text-3xl font-semibold mb-3 flex items-center">
-                <FaCircle className="text-red-600 mr-2 lg:mr-4" />
+                <FaDotCircle className="text-red-600 mr-2 lg:mr-4" />
                 Our Vision
               </h3>
               <p className="text-lg lg:text-xl">
@@ -188,7 +189,7 @@ const CompanyPage = () => {
 
             <div className="w-full">
               <h3 className="text-2xl md:text-3xl font-semibold mb-3 flex items-center">
-                <FaCircle className="text-red-600 mr-2 lg:mr-4" />
+                <FaDotCircle className="text-red-600 mr-2 lg:mr-4" />
                 Our Mission
               </h3>
               <p className="text-lg lg:text-xl">
@@ -200,7 +201,7 @@ const CompanyPage = () => {
 
             <div className="w-full">
               <h3 className="text-2xl md:text-3xl font-semibold mb-3 flex items-center">
-                <FaCircle className="text-red-600 mr-2 lg:mr-4" />
+                <FaDotCircle className="text-red-600 mr-2 lg:mr-4" />
                 Our Values
               </h3>
               <p className="text-lg lg:text-xl">
@@ -223,6 +224,8 @@ const CompanyPage = () => {
         <h2 className="text-4xl md:text-6xl font-bold mb-4 text-center">
           Contact Us
         </h2>
+       
+
         <div className="flex flex-col lg:flex-row justify-center  gap-3 mb-12">
           {/* Address Box */}
           <div className="w-full lg:w-1/2 p-6 flex items-center border border-red-300 rounded-lg shadow-md bg-white">
