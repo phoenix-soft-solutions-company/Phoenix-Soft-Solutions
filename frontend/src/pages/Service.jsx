@@ -5,7 +5,16 @@ import { useNavigate } from "react-router-dom";
 import Service from "../constants/images/services/service.jpg";
 import webService from "../constants/images/services/web.png";
 import mobileService from "../constants/images/services/mobile_app.png";
-
+import devopService from "../constants/images/services/devops.png";
+import qaService from "../constants/images/services/qa.png";
+import aiService from "../constants/images/services/ai.png";
+import softwaremanitainService from "../constants/images/services/software-maintain.png";
+import customService from "../constants/images/services/custom.png";
+import backendService from "../constants/images/services/backend.png";
+import sedevelopmentService from "../constants/images/services/sedevelopment.png";
+import frontendService from "../constants/images/services/frontend.png";
+import cloudService from "../constants/images/services/cloud.png";
+import pocService from "../constants/images/services/poc.png";
 
 const serviceNames = [
   {
@@ -26,70 +35,98 @@ const serviceNames = [
     name: "Custom Software Development",
     description:
       "Our expertise is in building scalable and effective software solutions for businesses of all sizes, with a focus on meeting their unique needs in order to encourage expansion and innovative concepts.",
-    image: webService,
+    image: customService,
     link: "/service/custom-software",
   },
   {
     name: "DevOps Services",
     description:
       "We provide appropriate services to facilitate communication and coordination between the software development and IT operations departments. Experience the power of seamless coordination, as we accelerate software delivery and supercharge efficiency.",
-    image: webService,
+    image: devopService,
     link: "/service/devops",
   },
   {
     name: "Software Development Outsourcing",
     description:
       "By utilizing Saigon Technology’s services, businesses may make use of our expertise and infrastructure for the smooth completion of their projects at a lower overall cost.",
-    image: webService,
+    image: sedevelopmentService,
     link: "/service/outsourcing",
   },
   {
     name: "Software QA Testing",
     description:
       "Saigon Technology offers thorough testing and bug-fixing to improve overall performance and guarantee the quality, stability, and functioning of software programs as part of our services.",
-    image: webService,
+    image: qaService,
     link: "/service/qa-testing",
   },
   {
     name: "Cloud Migration Services",
     description:
       "Experience a seamless transition to the cloud with our exceptional services. We empower businesses to effortlessly move their software and infrastructure, unlocking the incredible benefits of scalability, top-notch security, and remarkable cost-efficiency.",
-    image: webService,
+    image: cloudService,
     link: "/service/cloud-migration",
   },
   {
     name: "PoC Development Services",
     description:
       "With our exceptional expertise, we empower you to embark on a journey of innovation, ensuring that your concepts are thoroughly tested and validated before embarking on full-scale development.",
-    image: webService,
+    image: pocService,
     link: "/service/poc-development",
   },
   {
     name: "AI Development Services",
     description:
       "By combining cutting-edge AI with machine learning, we can create smart software that can streamline business operations and enhance decision-making. Let us transform your business into a realm of efficiency and innovation.",
-    image: webService,
+    image: aiService,
     link: "/service/ai-development",
   },
   {
     name: "Front-end Development Services",
     description:
       "Experience superior front-end development services with Saigon Technology. Elevate your digital presence by outsourcing front-end development to us.",
-    image: webService,
+    image: frontendService,
     link: "/service/frontend-development",
   },
   {
     name: "Back-end Development Services",
     description:
       "Discover how Saigon Technology's superior back-end development services can accelerate your business growth. Your vision, our expertise.",
-    image: webService,
+    image: backendService,
     link: "/service/backend-development",
   },
   {
     name: "Software Maintenance and Support",
     description:
       "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
-    image: webService,
+    image: softwaremanitainService,
+    link: "/service/maintenance-support",
+  },
+  {
+    name: "Digital Marketing and Social Media Marketing",
+    description:
+      "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
+    image: softwaremanitainService,
+    link: "/service/maintenance-support",
+  },
+  {
+    name: "Cyber Security System Development",
+    description:
+      "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
+    image: softwaremanitainService,
+    link: "/service/maintenance-support",
+  },
+  {
+    name: "Business Managements",
+    description:
+      "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
+    image: softwaremanitainService,
+    link: "/service/maintenance-support",
+  },
+  {
+    name: "Graphic Design",
+    description:
+      "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
+    image: softwaremanitainService,
     link: "/service/maintenance-support",
   },
 ];
@@ -111,7 +148,11 @@ const ServicePage = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="relative w-full h-[50vh]">
-        <img src={Service} alt="Header-Service" className="object-cover w-full h-full" />
+        <img
+          src={Service}
+          alt="Header-Service"
+          className="object-cover w-full h-full"
+        />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
           <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest uppercase">
             Our Services
@@ -123,9 +164,10 @@ const ServicePage = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
           {serviceNames.map((service, index) => (
             <div
-              className="bg-gray-100 p-4 border border-red-800 text-center cursor-pointer transition-transform transform hover:-translate-y-2 hover:text-red-700 min-w-76 duration-300 ease-in-out"
+              className="bg-grey-100 p-4 border border-red-800 text-center cursor-pointer transition-transform transform hover:-translate-y-2 hover:text-red-700 min-w-76 duration-300 ease-in-out"
               key={index}
-              onClick={() => handleBoxClick(index)}>
+              onClick={() => handleBoxClick(index)}
+            >
               <h5 className="flex items-center justify-between text-md xl:text-lg font-sans">
                 {service.name}
                 <FontAwesomeIcon icon={faChevronDown} />
@@ -139,18 +181,27 @@ const ServicePage = () => {
         {serviceNames.map((service, index) => (
           <div
             key={index}
-            className={`my-4 lg:my-8 ${index % 2 === 0 ? "sm:text-left" : "sm:text-right"}`}
-            ref={(el) => (sectionsRefs.current[index] = el)}>
+            className={`my-4 lg:my-8 ${
+              index % 2 === 0 ? "sm:text-left" : "sm:text-right"
+            }`}
+            ref={(el) => (sectionsRefs.current[index] = el)}
+          >
             <div
-              className={`flex flex-col sm:flex-row items-center border border-gray-100 rounded-xl shadow-md p-3 sm:p-4 md:px-8 lg:px-20  ${
+              className={`flex flex-col sm:flex-row items-center bg-red-100 border border-gray-100 rounded-xl shadow-md p-3 sm:p-4 md:px-8 lg:px-20  ${
                 index % 2 === 0 ? "" : "sm:flex-row-reverse"
-              }`}>
+              }`}
+            >
               <div className="flex-1">
-                <h2 className="text-2xl mb-4 underline text-red-700 font-mono">{service.name}</h2>
-                <p className="text-lg text-gray-600 mb-4">{service.description}</p>
+                <h2 className="text-2xl mb-4 underline text-red-700 font-mono">
+                  {service.name}
+                </h2>
+                <p className="text-lg text-gray-600 mb-4">
+                  {service.description}
+                </p>
                 <button
                   className="border-2 border-red-700 bg-red-700 text-white py-2 px-6 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
-                  onClick={() => handleReadMoreClick(service.link)}>
+                  onClick={() => handleReadMoreClick(service.link)}
+                >
                   Read More
                 </button>
               </div>
