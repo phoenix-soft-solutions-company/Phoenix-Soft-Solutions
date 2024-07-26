@@ -1,5 +1,5 @@
 import React from "react";
-import service1 from "../../constants/images/services/web.png";
+import service1 from "../../constants/images/services/web about 2.jpg";
 import icon1 from "../../constants/images/icons/ico1.png";
 import icon2 from "../../constants/images/icons/ico1.png";
 // import icon3 from "../../constants/images/icons/ico1.png";

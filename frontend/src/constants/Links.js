@@ -4,7 +4,10 @@ export const LINKS = [
   {
     name: "Service",
     path: "/service",
-    subpages: [{ name: "Web Service", path: "/service/web" }],
+    subpages: [
+      { name: "Web Service", path: "/service/web" },
+      { name: "Mobile Service", path: "/service/mobile" },
+    ],
   },
   { name: "Project", path: "/project" },
   { name: "Technology", path: "/technology" },
