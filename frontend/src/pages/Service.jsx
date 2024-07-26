@@ -15,6 +15,10 @@ import sedevelopmentService from "../constants/images/services/sedevelopment.png
 import frontendService from "../constants/images/services/frontend.png";
 import cloudService from "../constants/images/services/cloud.png";
 import pocService from "../constants/images/services/poc.png";
+import marketingService from "../constants/images/services/marketing.png";
+import cyberService from "../constants/images/services/cyber.png";
+import managementService from "../constants/images/services/management.png";
+import graphicService from "../constants/images/services/graphic.png";
 
 const serviceNames = [
   {
@@ -105,28 +109,28 @@ const serviceNames = [
     name: "Digital Marketing and Social Media Marketing",
     description:
       "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
-    image: softwaremanitainService,
+    image: marketingService,
     link: "/service/maintenance-support",
   },
   {
     name: "Cyber Security System Development",
     description:
       "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
-    image: softwaremanitainService,
+    image: cyberService,
     link: "/service/maintenance-support",
   },
   {
     name: "Business Managements",
     description:
       "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
-    image: softwaremanitainService,
+    image: managementService,
     link: "/service/maintenance-support",
   },
   {
     name: "Graphic Design",
     description:
       "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
-    image: softwaremanitainService,
+    image: graphicService,
     link: "/service/maintenance-support",
   },
 ];
