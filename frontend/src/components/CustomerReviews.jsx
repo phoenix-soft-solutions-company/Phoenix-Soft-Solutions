@@ -5,7 +5,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper/modules";
 
-function MinimalSlider() {
+function CustomerReviews() {
   return (
     <div>
       <Swiper
@@ -73,4 +73,4 @@ function MinimalSlider() {
   );
 }
 
-export default MinimalSlider;
+export default CustomerReviews;

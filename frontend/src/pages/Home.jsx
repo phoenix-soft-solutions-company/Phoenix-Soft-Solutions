@@ -21,7 +21,8 @@ import icon11 from "../constants/images/icons/ico1.png";
 import icon12 from "../constants/images/icons/ico2.png";
 import icon13 from "../constants/images/icons/ico3.png";
 import icon14 from "../constants/images/icons/ico4.png";
-import Slider from "../components/Slider";
+import CustomerReviews from "../components/CustomerReviews";
+import LeatestProjects from "../components/LeatestProjects";
 
 function Home() {
   return (
@@ -202,7 +203,18 @@ function Home() {
           </h1>
         </div>
         <div className="p-4 sm:px-10 lg:px-20 xl:Px-32">
-          <Slider />
+          <CustomerReviews />
+        </div>
+      </div>
+
+      <div className="flex flex-col py-5">
+        <div className="text-center py-4">
+          <h1 className="font-bold text-2xl lg:text-3xl pb-1 sm:pb-2 lg:pb-3 border-b-4 border-red-600 inline-block font-serif">
+            OUR PROJECTS
+          </h1>
+        </div>
+        <div className="p-4 sm:px-10 lg:px-20 xl:Px-32">
+          <LeatestProjects />
         </div>
       </div>
 
