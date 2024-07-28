@@ -6,7 +6,3 @@
 .zoom-in {
   transform: scale(1.1); /* Adjust the scale factor as needed */
 }
-
-.transition-transform {
-  transition: transform 10s ease-in-out;
-}
