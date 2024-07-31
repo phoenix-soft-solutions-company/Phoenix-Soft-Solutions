@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CompanyMap from "../components/CompanyMap";
 import SlideShow from "../components/SlideShow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,6 +18,7 @@ import icon8 from "../constants/images/icons/Icon8.png";
 import icon9 from "../constants/images/icons/Icon9.png";
 import leftImage from "../constants/images/left_home.jpg";
 import rightImage from "../constants/images/RightHome.jpg";
+import leftTopImage from "../constants/images/home_head_1.jpg";
 import icon11 from "../constants/images/icons/ico1.png";
 import icon12 from "../constants/images/icons/ico2.png";
 import icon13 from "../constants/images/icons/ico3.png";
@@ -29,14 +31,30 @@ function Home() {
     <div>
       <SlideShow slides={[slide1, slide3, slide4]} />
 
-      <div className="flex flex-col-reverse lg:flex-row md:pb-5 xl:pb-20">
-        <div className="w-full lg:w-1/2 bg-gray-100 flex justify-center items-center p-4">
-          <img src={leftImage} alt="Description" className="max-w-full max-h-full h-auto" />
+      <div className="flex flex-col lg:flex-row md:pb-5 xl:pb-20">
+        <div className="w-full lg:w-1/2 bg-gray-100 flex justify-center items-center p-4 relative">
+          <img src={leftImage} alt="Description" className="max-w-full max-h-full h-auto p-4" />
+          <div className="w-full absolute top-4 left-4">
+            <img
+              src={leftTopImage}
+              alt="Icon 1"
+              className="w-2/5 h-auto transform transition-transform duration-300 hover:scale-110"
+            />
+          </div>
+          <div className="w-full flex absolute bottom-4 right-4 justify-end">
+            <img
+              src={leftTopImage}
+              alt="Icon 4"
+              className="w-2/5 h-auto transform transition-transform duration-300 hover:scale-110"
+            />
+          </div>
         </div>
         <div className="w-full lg:w-1/2 bg-gray-100 flex flex-col justify-center items-center p-4">
-          <div>
+          <div className="cursor-defalt">
             <h1 className="mb-4 lg:mb-10 font-bold">
-              <span className="text-red-600 text-2xl lg:text-4xl xl:text-5xl">We provide the best </span>
+              <span className="text-red-600 text-2xl lg:text-4xl xl:text-5xl transform transition-transform duration-300 hover:translate-x-2">
+                We provide the best{" "}
+              </span>
               <span className="text-red-800 text-3xl lg:text-5xl xl:text-6xl">IT </span>
               <br />
               <span className="text-red-800 text-3xl lg:text-5xl xl:text-6xl">Solution</span>
@@ -49,15 +67,15 @@ function Home() {
             <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row md:gap-x-10 lg:gap-x-0 xl:gap-x-4 mt-5">
               <div className="">
                 <ul className="list-none text-lg text-black lg:text-xl">
-                  <li>
+                  <li className="transform transition-transform duration-300 hover:translate-x-2">
                     <FontAwesomeIcon icon={faCheckCircle} className="text-red-600 mr-2" />
                     We Understand Customer Challenges
                   </li>
-                  <li>
+                  <li className="transform transition-transform duration-300 hover:translate-x-2">
                     <FontAwesomeIcon icon={faCheckCircle} className="text-red-600 mr-2" />
                     We Collect Clients Needs
                   </li>
-                  <li>
+                  <li className="transform transition-transform duration-300 hover:translate-x-2">
                     <FontAwesomeIcon icon={faCheckCircle} className="text-red-600 mr-2" />
                     We Craft the right solutions
                   </li>
@@ -65,15 +83,15 @@ function Home() {
               </div>
               <div className="">
                 <ul className="list-none text-lg text-black lg:text-xl">
-                  <li>
+                  <li className="transform transition-transform duration-300 hover:translate-x-2">
                     <FontAwesomeIcon icon={faCheckCircle} className="text-red-600 mr-2" />
                     We Deliver Quality Services
                   </li>
-                  <li>
+                  <li className="transform transition-transform duration-300 hover:translate-x-2">
                     <FontAwesomeIcon icon={faCheckCircle} className="text-red-600 mr-2" />
                     We Ensure Customer Satisfaction
                   </li>
-                  <li>
+                  <li className="transform transition-transform duration-300 hover:translate-x-2">
                     <FontAwesomeIcon icon={faCheckCircle} className="text-red-600 mr-2" />
                     We Provide Ongoing Support
                   </li>
@@ -98,8 +116,8 @@ function Home() {
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto px-2">
-          <div className="bg-white p-4 m-2 rounded shadow-lg max-w-[400px] hover:bg-red-200 hover:border-red-700 border border-transparent">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto px-2 cursor-defalt">
+          <div className="bg-white p-4 m-2 rounded shadow-lg max-w-[400px] transform transition-colors duration-300 hover:bg-red-200 hover:border-red-700 border border-transparent">
             <img src={icon1} alt="Web Application Development" className="mx-auto mb-3 w-16" />
             <h2 className="text-2xl mb-2">Web Application Development</h2>
             <p className="text-lg">
@@ -108,7 +126,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="bg-white p-4 m-2 rounded shadow-lg max-w-[400px] hover:bg-red-200 hover:border-red-700 border border-transparent">
+          <div className="bg-white p-4 m-2 rounded shadow-lg max-w-[400px] transform transition-colors duration-300 hover:bg-red-200 hover:border-red-700 border border-transparent">
             <img src={icon2} alt="Mobile App Development" className="mx-auto mb-3 w-16" />
             <h2 className="text-2xl mb-2">Mobile App Development</h2>
             <p className="text-lg">
@@ -118,7 +136,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="bg-white p-4 m-2 rounded shadow-lg max-w-[400px] hover:bg-red-200 hover:border-red-700 border border-transparent">
+          <div className="bg-white p-4 m-2 rounded shadow-lg max-w-[400px] transform transition-colors duration-300 hover:bg-red-200 hover:border-red-700 border border-transparent">
             <img src={icon3} alt="Custom Software Development" className="mx-auto mb-3 w-16" />
             <h2 className="text-2xl mb-2">Custom Software Development</h2>
             <p className="text-lg">
@@ -128,7 +146,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="bg-white p-4 m-2 rounded shadow-lg max-w-[400px] hover:bg-red-200 hover:border-red-700 border border-transparent">
+          <div className="bg-white p-4 m-2 rounded shadow-lg max-w-[400px] transform transition-colors duration-300 hover:bg-red-200 hover:border-red-700 border border-transparent">
             <img src={icon4} alt="DevOps Services" className="mx-auto mb-3 w-16" />
             <h2 className="text-2xl mb-2">DevOps Services</h2>
             <p className="text-lg">
@@ -138,7 +156,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="bg-white p-4 m-2 rounded shadow-lg max-w-[400px] hover:bg-red-200 hover:border-red-700 border border-transparent">
+          <div className="bg-white p-4 m-2 rounded shadow-lg max-w-[400px] transform transition-colors duration-300 hover:bg-red-200 hover:border-red-700 border border-transparent">
             <img src={icon5} alt="Software Development Outsourcing" className="mx-auto mb-3 w-16" />
             <h2 className="text-2xl mb-2">Software Development Outsourcing</h2>
             <p className="text-lg">
@@ -147,7 +165,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="bg-white p-4 m-2 rounded shadow-lg max-w-[400px] hover:bg-red-200 hover:border-red-700 border border-transparent">
+          <div className="bg-white p-4 m-2 rounded shadow-lg max-w-[400px] transform transition-colors duration-300 hover:bg-red-200 hover:border-red-700 border border-transparent">
             <img src={icon6} alt="Software QA Testing" className="mx-auto mb-3 w-16" />
             <h2 className="text-2xl mb-2">Software QA Testing</h2>
             <p className="text-lg">
@@ -156,7 +174,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="bg-white p-4 m-2 rounded shadow-lg max-w-[400px] hover:bg-red-200 hover:border-red-700 border border-transparent">
+          <div className="bg-white p-4 m-2 rounded shadow-lg max-w-[400px] transform transition-colors duration-300 hover:bg-red-200 hover:border-red-700 border border-transparent">
             <img src={icon7} alt="Cloud Migration Services" className="mx-auto mb-3 w-16" />
             <h2 className="text-2xl font-semibold mb-2">Cloud Migration Services</h2>
             <p className="text-lg">
@@ -166,7 +184,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="bg-white p-4 m-2 rounded shadow-lg max-w-[400px] hover:bg-red-200 hover:border-red-700 border border-transparent">
+          <div className="bg-white p-4 m-2 rounded shadow-lg max-w-[400px] transform transition-colors duration-300 hover:bg-red-200 hover:border-red-700 border border-transparent">
             <img src={icon8} alt="PoC Development Services" className="mx-auto mb-3 w-16" />
             <h2 className="text-2xl font-semibold mb-2">PoC Development Services</h2>
             <p className="text-lg">
@@ -176,7 +194,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="bg-white p-4 m-2 rounded shadow-lg max-w-[400px] hover:bg-red-200 hover:border-red-700 border border-transparent">
+          <div className="bg-white p-4 m-2 rounded shadow-lg max-w-[400px] transform transition-colors duration-300 hover:bg-red-200 hover:border-red-700 border border-transparent">
             <img src={icon9} alt="AI Development Services" className="mx-auto mb-3 w-16" />
             <h2 className="text-2xl font-semibold mb-2">AI Development Services</h2>
             <p className="text-lg">
@@ -188,19 +206,23 @@ function Home() {
         </div>
 
         <div className="flex justify-center mt-6">
-          <a
-            href="/service"
-            className="border-2 border-red-700 bg-red-700 text-white py-6 px-10 text-md rounded hover:bg-white hover:text-red-700 transition duration-500">
+          <Link
+            to="/service"
+            className="border-2 border-red-700 bg-red-700 text-white py-4 px-8 text-base rounded hover:bg-white hover:text-red-700 transition duration-500">
             Explore in detail
-          </a>
+          </Link>
         </div>
       </div>
 
       <div className="flex flex-col py-5">
-        <div className="text-center py-4">
+        <div className="text-center py-6">
           <h1 className="font-bold text-2xl lg:text-3xl pb-1 sm:pb-2 lg:pb-3 border-b-4 border-red-600 inline-block font-serif">
             OUR VALUES
           </h1>
+          <p className="text-lg pt-4 px-4 sm:px-20 lg:px-40 xl:px-60">
+            Their commitment to customer satisfaction is evident in every interaction. They listen to our
+            needs, respond promptly, and go above and beyond to ensure we're completely satisfied.
+          </p>
         </div>
         <div className="p-4 sm:px-10 lg:px-20 xl:Px-32">
           <CustomerReviews />
@@ -212,6 +234,11 @@ function Home() {
           <h1 className="font-bold text-2xl lg:text-3xl pb-1 sm:pb-2 lg:pb-3 border-b-4 border-red-600 inline-block font-serif">
             OUR PROJECTS
           </h1>
+          <p className="text-lg pt-4 px-4 sm:px-20 lg:px-40 xl:px-60">
+            We create bespoke web solutions that cater to unique business needs and objectives. From highly
+            interactive websites to complex web applications, our projects are designed to deliver exceptional
+            user experiences and functionality.
+          </p>
         </div>
         <div className="p-4 sm:px-10 lg:px-20 xl:Px-32">
           <LeatestProjects />
