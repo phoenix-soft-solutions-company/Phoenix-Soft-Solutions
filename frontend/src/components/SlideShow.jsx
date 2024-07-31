@@ -7,28 +7,22 @@ const SlideShow = ({ slides = [] }) => {
   const slideshowRef = useRef();
 
   useEffect(() => {
-    if (slides.length === 0) return;
-
     const slideInterval = setInterval(() => {
       setIsTransitioning(true);
       setTimeout(() => {
         setIsTransitioning(false);
         setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-      }, 3000); // Time for zoom-in effect
+      }, 1000); // Time for zoom-in effect
     }, 3000); // Total time per slide (including zoom-in and zoom-out)
 
     return () => clearInterval(slideInterval);
   }, [slides.length]);
 
-  if (slides.length === 0) {
-    return <div>No slides available</div>;
-  }
-
   return (
     <div className="w-full overflow-hidden relative h-screen">
       <div
         ref={slideshowRef}
-        className={`flex ${isTransitioning ? "transition-transform duration-1000 ease-in-out" : ""}`}
+        className={`flex ${isTransitioning ? "transition-transform duration-10000 ease-in-out" : ""}`}
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {slides.concat(slides[0]).map((slide, index) => (
           <div key={index} className="w-full flex-shrink-0">

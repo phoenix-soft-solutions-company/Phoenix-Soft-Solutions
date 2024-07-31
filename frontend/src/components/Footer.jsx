@@ -25,14 +25,14 @@ function Footer() {
               <br />
               <span>66, Fieldside Road,</span> <br />
               <span>Bromley,</span> <br />
-              <span>United Kingdom.</span>
+              <span>United Kingdom BR14LA.</span>
             </p>
           </div>
           <div className="mt-5 sm:mt-0">
             <p className="text-md">
               <span>Email: contact@xcrop.com</span>
               <br />
-              <span>Phone: +123 456 7890</span>
+              <span>Phone: +44 7308 296025</span>
             </p>
             <div className="flex flex-row gap-3 lg:gap-5 mt-5">
               <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
