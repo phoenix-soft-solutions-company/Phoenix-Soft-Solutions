@@ -13,7 +13,7 @@ import {
   FaDotCircle,
 } from "react-icons/fa";
 import heading from "../constants/images/tech/technology-heading.jpg";
-import leftImage from "../constants/images/left_home.jpg";
+import leftImage from "../constants/images/leftBottom.jpg";
 import rightImage from "../constants/images/vision & mission.jpg";
 
 const CompanyPage = () => {

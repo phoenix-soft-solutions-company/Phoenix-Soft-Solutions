@@ -16,9 +16,10 @@ import icon6 from "../constants/images/icons/Icon6.png";
 import icon7 from "../constants/images/icons/Icon7.png";
 import icon8 from "../constants/images/icons/Icon8.png";
 import icon9 from "../constants/images/icons/Icon9.png";
-import leftImage from "../constants/images/left_home.jpg";
+import leftImage from "../constants/images/left.jpg";
 import rightImage from "../constants/images/RightHome.jpg";
 import leftTopImage from "../constants/images/home_head_1.jpg";
+import leftBottomImage from "../constants/images/leftBottom.jpg";
 import icon11 from "../constants/images/icons/ico1.png";
 import icon12 from "../constants/images/icons/ico2.png";
 import icon13 from "../constants/images/icons/ico3.png";
@@ -43,7 +44,7 @@ function Home() {
           </div>
           <div className="w-full flex absolute bottom-4 right-4 justify-end">
             <img
-              src={leftTopImage}
+              src={leftBottomImage}
               alt="Icon 4"
               className="w-2/5 h-auto transform transition-transform duration-300 hover:scale-110"
             />
