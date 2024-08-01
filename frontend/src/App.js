@@ -12,6 +12,8 @@ import Event from "./pages/Event";
 import Domain from "./pages/Domain";
 import Hosting from "./pages/Hosting";
 import Login from "./pages/Login";
+import Aboutus from "./sub-pages/company/Contactus";
+import Contactus from "./sub-pages/company/Aboutus";
 import WebService from "./sub-pages/services/WebService";
 import MobileService from "./sub-pages/services/MobileService";
 import CustomService from "./sub-pages/services/CustomService";
@@ -46,6 +48,10 @@ const App = () => {
           <Route path="/hosting" element={<Hosting />} />
           <Route path="/login" element={<Login />} />
 
+          {/*company sub pages*/}
+          <Route path="/company/Aboutus" element={<Aboutus />} />
+          <Route path="/company/Contactus" element={<Contactus/>}/>
+
           {/* service sub pages */}
           <Route path="/service/web" element={<WebService />} />
           <Route path="/service/mobile" element={<MobileService />} />
@@ -59,7 +65,10 @@ const App = () => {
 
           {/* domain sub pages */}
           <Route path="/domain/lk" element={<LkDomain />} />
-          <Route path="/domain/international" element={<InternationalDomain />} />
+          <Route
+            path="/domain/international"
+            element={<InternationalDomain />}
+          />
 
           {/* hosting sub pages */}
           <Route path="/hosting/web" element={<WebHosting />} />

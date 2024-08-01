@@ -1,6 +1,13 @@
 export const LINKS = [
   { name: "Home", path: "/" },
-  { name: "Company", path: "/company" },
+  {
+    name: "Company",
+    path: "/company",
+    subpages: [
+      { name: "About Us", path: "/company/Aboutus" },
+      { name: "Contact Us", path: "/company/Contactus" },
+    ],
+  },
   {
     name: "Service",
     path: "/service",
