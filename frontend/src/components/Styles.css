@@ -1,0 +1,52 @@
+/* Footer */
+@keyframes ballMove {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(72px);
+  }
+  100% {
+    transform: translateX(0); 
+  }
+}
+
+.underline-animation {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.underline-animation::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 0.25rem;
+  background-color: #ffffff; /* Change color as needed */
+  border-radius: 0.125rem; /* Adjust if needed */
+}
+
+.underline-animation::before {
+  content: " ";
+  position: absolute;
+  top: 2;
+  left: 0;
+  width: 0.5rem; /* Ball width */
+  height: 0.5rem; /* Ball height */
+  background-color: #ffffff; /* Ball color */
+  border-radius: 50%;
+  animation: ballMove 10s infinite ease-in-out;
+  bottom: -1.5px; /* Position the ball on the underline */
+}
+
+/* Slide Show */
+.zoom {
+  transition: transform 5s ease-in-out;
+  transform-origin: top left;
+}
+
+.zoom-in {
+  transform: scale(1.1); /* Adjust the scale factor as needed */
+}

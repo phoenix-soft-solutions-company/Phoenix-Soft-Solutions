@@ -305,8 +305,22 @@ function Home() {
             </div>
           </div>
 
-          <div className="w-full xl:w-1/2 flex items-center justify-center 2xl:pl-8">
-            <img src={rightImage} alt="Example" className="w-full  h-auto" />
+          <div className="w-full xl:w-1/2 flex justify-center items-center p-4 relative 2xl:pl-8">
+            <img src={leftImage} alt="Description" className="max-w-full max-h-full h-auto p-4" />
+            <div className="w-full absolute bottom-4 left-4">
+              <img
+                src={rightImage}
+                alt="Icon 1"
+                className="w-2/5 h-auto transform transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+            <div className="w-full flex absolute top-4 right-4 justify-end">
+              <img
+                src={leftTopImage}
+                alt="Icon 4"
+                className="w-2/5 h-auto transform transition-transform duration-300 hover:scale-110"
+              />
+            </div>
           </div>
         </div>
       </div>
