@@ -4,15 +4,15 @@ import "./Styles.css";
 const images = [
   {
     url: "https://img.freepik.com/free-photo/autumn-leaf-falling-revealing-intricate-leaf-vein-generated-by-ai_188544-9869.jpg",
-    text: "This is the first slide text.",
+    text: "We Provide the Best IT Solution Services.",
   },
   {
     url: "https://img.freepik.com/free-photo/vibrant-autumn-maple-leaves-nature-beauty-showcased-generated-by-ai_188544-15039.jpg",
-    text: "This is the second slide text.",
+    text: "We Provide the Best IT Solution Services.",
   },
   {
     url: "https://img.freepik.com/free-photo/autumn-tree-forest-leaves-bright-yellow-generative-ai_188544-12668.jpg",
-    text: "This is the third slide text.",
+    text: "We Provide the Best IT Solution Services.",
   },
 ];
 

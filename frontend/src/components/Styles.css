@@ -1,5 +1,5 @@
 /* Footer */
-@keyframes ballMove {
+@keyframes ballMoveSmall {
   0% {
     transform: translateX(-2px);
   }
@@ -38,10 +38,11 @@
   height: 0.5rem; /* Ball height */
   background-color: #9f2911; /* Ball color */
   border-radius: 0.125rem;
-  animation: ballMove 10s infinite ease-in-out;
+  animation: ballMoveSmall 10s infinite ease-in-out;
   bottom: -0.5px; /* Position the ball on the underline */
   z-index: 2;
 }
+
 /* Slide Show */
 .slide-container {
   position: relative;
