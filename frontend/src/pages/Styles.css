@@ -1,0 +1,47 @@
+/* Header underline text animation */
+@keyframes ballMove {
+  0% {
+    transform: translateX(-100px);
+  }
+  50% {
+    transform: translateX(90px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
+.header-underline-animation {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.header-underline-animation::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px; /* Adjust width as needed */
+  height: 0.25rem;
+  background-color: #9f2911; /* Change color as needed */
+  border-radius: 0.125rem; /* Adjust if needed */
+  z-index: 1;
+}
+
+.header-underline-animation::before {
+  content: "";
+  position: absolute;
+  top: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.6rem; /* Ball width */
+  height: 0.5rem; /* Ball height */
+  background-color: #ffffff; /* Ball color */
+  border-radius: 0.125rem;
+  animation: ballMove 10s infinite ease-in-out;
+  bottom: -0.5px; /* Position the ball on the underline */
+  z-index: 2;
+}
