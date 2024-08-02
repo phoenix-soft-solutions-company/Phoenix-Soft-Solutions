@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Service from "../constants/images/services/service.jpg";
-import webService from "../constants/images/services/web.png";
+import webService from "../constants/images/services/webabout.jpg";
 import mobileService from "../constants/images/services/mobile_app.png";
 import devopService from "../constants/images/services/devops.png";
 import qaService from "../constants/images/services/qa.png";

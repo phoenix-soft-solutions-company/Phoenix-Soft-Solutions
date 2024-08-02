@@ -1,5 +1,5 @@
 import React from "react";
-import heading from "../constants/images/tech/technology-heading.jpg";
+import heading from "../constants/images/tech/tech-header.jpg";
 import nodejs from "../constants/images/tech/nodejs.png";
 import php from "../constants/images/tech/php.png";
 import python from "../constants/images/tech/python.png";
