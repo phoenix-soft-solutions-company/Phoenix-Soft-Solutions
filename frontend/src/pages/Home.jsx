@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CompanyMap from "../components/CompanyMap";
 import SlideShow from "../components/SlideShow";
+import Counter from "../components/Counter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import icon1 from "../constants/images/icons/Icon1.png";
@@ -253,21 +254,6 @@ function Home() {
         </div>
       </div>
 
-      <div className="p-2">
-        <div className="text-center py-4">
-          <h1 className="header-underline-animation font-bold text-2xl lg:text-3xl pb-1 sm:pb-2 lg:pb-3 font-serif">
-            OUR RETAINED CLIENTS
-          </h1>
-          <p className="text-lg pt-4 px-4 sm:px-20 lg:px-40 xl:px-60">
-            Thank you for your precious feedback and support. We always do our best to contribute to your
-            growth as our slogan: Your success is our mission.
-          </p>
-        </div>
-        <div className="p-4 lg:px-10 xl:px-12">
-          <CompanyMap />
-        </div>
-      </div>
-
       <div className="flex flex-col p-4 lg:px-8">
         <div className="2xl:pl-8">
           <h2 className="text-[#780a15] text-3xl mb-2">Our Benefits...</h2>
@@ -330,6 +316,38 @@ function Home() {
               />
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col sm:flex-row justify-between px-40 w-full h-40 border border-black">
+        <div>
+          <h2>Expirence</h2>
+          <Counter threshold={5} increment={1} />
+        </div>
+
+        <div>
+          <h2>Projects</h2>
+          <Counter threshold={20} increment={1} />
+        </div>
+
+        <div>
+          <h2>Clients</h2>
+          <Counter threshold={50} increment={1} />
+        </div>
+      </div>
+
+      <div className="p-2">
+        <div className="text-center py-4">
+          <h1 className="header-underline-animation font-bold text-2xl lg:text-3xl pb-1 sm:pb-2 lg:pb-3 font-serif">
+            OUR RETAINED CLIENTS
+          </h1>
+          <p className="text-lg pt-4 px-4 sm:px-20 lg:px-40 xl:px-60">
+            Thank you for your precious feedback and support. We always do our best to contribute to your
+            growth as our slogan: Your success is our mission.
+          </p>
+        </div>
+        <div className="p-4 lg:px-10 xl:px-12">
+          <CompanyMap />
         </div>
       </div>
     </div>
