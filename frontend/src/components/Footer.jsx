@@ -13,9 +13,9 @@ function Footer() {
           <h1 className="text-xl font-bold tracking-wider font-mono underline-animation">ABOUT US</h1>
           <div className="flex flex-row mt-2">
             <p className="text-md pr-8 lg:text-justify">
-              Xcrop is one of the reputed and leading IT companies of new zealand d We provide next
-              generation digital services that look great and are easy-to-use which helps our clients to grow
-              their business successfully.
+              Xcrop is one of the reputed and leading IT companies of new zealand d We provide next generation
+              digital services that look great and are easy-to-use which helps our clients to grow their
+              business successfully.
             </p>
           </div>
         </div>

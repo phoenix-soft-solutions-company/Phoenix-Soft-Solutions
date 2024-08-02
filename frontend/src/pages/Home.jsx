@@ -26,6 +26,7 @@ import icon13 from "../constants/images/icons/ico3.png";
 import icon14 from "../constants/images/icons/ico4.png";
 import CustomerReviews from "../components/CustomerReviews";
 import LeatestProjects from "../components/LeatestProjects";
+import './Styles.css';
 
 function Home() {
   return (
@@ -112,7 +113,7 @@ function Home() {
 
       <div className="flex flex-col justify-center">
         <div className="text-center py-4">
-          <h1 className="font-bold text-2xl lg:text-3xl pb-1 sm:pb-2 lg:pb-3 border-b-4 border-red-600 inline-block font-serif">
+          <h1 className="header-underline-animation font-bold text-2xl lg:text-3xl pb-1 sm:pb-2 lg:pb-3 font-serif">
             OUR SERVICES
           </h1>
         </div>
@@ -217,7 +218,7 @@ function Home() {
 
       <div className="flex flex-col py-5">
         <div className="text-center py-6">
-          <h1 className="font-bold text-2xl lg:text-3xl pb-1 sm:pb-2 lg:pb-3 border-b-4 border-red-600 inline-block font-serif">
+          <h1 className="header-underline-animation font-bold text-2xl lg:text-3xl pb-1 sm:pb-2 lg:pb-3 font-serif">
             OUR VALUES
           </h1>
           <p className="text-lg pt-4 px-4 sm:px-20 lg:px-40 xl:px-60">
@@ -232,7 +233,7 @@ function Home() {
 
       <div className="flex flex-col py-5">
         <div className="text-center py-4">
-          <h1 className="font-bold text-2xl lg:text-3xl pb-1 sm:pb-2 lg:pb-3 border-b-4 border-red-600 inline-block font-serif">
+          <h1 className="header-underline-animation font-bold text-2xl lg:text-3xl pb-1 sm:pb-2 lg:pb-3 font-serif">
             OUR PROJECTS
           </h1>
           <p className="text-lg pt-4 px-4 sm:px-20 lg:px-40 xl:px-60">
@@ -244,11 +245,18 @@ function Home() {
         <div className="p-4 sm:px-10 lg:px-20 xl:Px-32">
           <LeatestProjects />
         </div>
+        <div className="flex justify-center">
+          <Link
+            to="/service"
+            className="border-2 border-red-700 bg-red-700 text-white py-4 px-8 text-base rounded hover:bg-white hover:text-red-700 transition duration-500">
+            Explore more projects
+          </Link>
+        </div>
       </div>
 
       <div className="p-2">
         <div className="text-center py-4">
-          <h1 className="font-bold text-2xl lg:text-3xl pb-1 sm:pb-2 lg:pb-3 border-b-4 border-red-600 inline-block font-serif">
+          <h1 className="header-underline-animation font-bold text-2xl lg:text-3xl pb-1 sm:pb-2 lg:pb-3 font-serif">
             OUR RETAINED CLIENTS
           </h1>
           <p className="text-lg pt-4 px-4 sm:px-20 lg:px-40 xl:px-60">
