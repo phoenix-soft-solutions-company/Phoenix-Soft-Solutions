@@ -33,7 +33,7 @@ function Home() {
       <SlideShow slides={[slide1, slide3, slide4]} />
 
       <div className="flex flex-col lg:flex-row md:pb-5 xl:pb-20">
-        <div className="w-full lg:w-1/2 bg-gray-100 flex justify-center items-center p-4 relative">
+        <div className="w-full lg:w-1/2  flex justify-center items-center p-4 relative">
           <img src={leftImage} alt="Description" className="max-w-full max-h-full h-auto p-4" />
           <div className="w-full absolute top-4 left-4">
             <img
@@ -50,7 +50,7 @@ function Home() {
             />
           </div>
         </div>
-        <div className="w-full lg:w-1/2 bg-gray-100 flex flex-col justify-center items-center p-4">
+        <div className="w-full lg:w-1/2  flex flex-col justify-center items-center p-4">
           <div className="cursor-defalt">
             <h1 className="mb-4 lg:mb-10 font-bold">
               <span className="text-red-600 text-2xl lg:text-4xl xl:text-5xl transform transition-transform duration-300 hover:translate-x-2">
