@@ -23,6 +23,13 @@ import AiService from "./sub-pages/services/AiService";
 import PocService from "./sub-pages/services/PocService";
 import QAService from "./sub-pages/services/QAService";
 import CloudService from "./sub-pages/services/CloudService";
+import GraphicService from "./sub-pages/services/GraphicService";
+import BusinessService from "./sub-pages/services/BusinessService";
+import MarketingService from "./sub-pages/services/MarketingService";
+import CyberService from "./sub-pages/services/CyberService";
+import SoftwareService from "./sub-pages/services/SoftwareService";
+import BackendService from "./sub-pages/services/BackendService";
+import FrontendService from "./sub-pages/services/FrontendService";
 import LkDomain from "./sub-pages/domains/LkDomain";
 import InternationalDomain from "./sub-pages/domains/InternationalDomain";
 import WebHosting from "./sub-pages/hosting/WebHosting";
@@ -50,7 +57,7 @@ const App = () => {
 
           {/*company sub pages*/}
           <Route path="/company/Aboutus" element={<Aboutus />} />
-          <Route path="/company/Contactus" element={<Contactus/>}/>
+          <Route path="/company/Contactus" element={<Contactus />} />
 
           {/* service sub pages */}
           <Route path="/service/web" element={<WebService />} />
@@ -62,6 +69,13 @@ const App = () => {
           <Route path="/service/outsourcing" element={<OutsourcingService />} />
           <Route path="/service/poc" element={<PocService />} />
           <Route path="/service/qa" element={<QAService />} />
+          <Route path="/service/graphic" element={<GraphicService />} />
+          <Route path="/service/business" element={<BusinessService />} />
+          <Route path="/service/backend" element={<BackendService />} />
+          <Route path="/service/frontend" element={<FrontendService />} />
+          <Route path="/service/marketing" element={<MarketingService />} />
+          <Route path="/service/cyber" element={<CyberService />} />
+          <Route path="/service/software" element={<SoftwareService />} />
 
           {/* domain sub pages */}
           <Route path="/domain/lk" element={<LkDomain />} />

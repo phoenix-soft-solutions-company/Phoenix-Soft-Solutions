@@ -1,7 +1,7 @@
 import React from "react";
 
 function AiService() {
-  return <div>CloudHosting</div>;
+  return <div>ai</div>;
 }
 
 export default AiService;

@@ -1,7 +1,7 @@
 import React from "react";
 
 function OutsourcingService() {
-  return <div>CloudHosting</div>;
+  return <div>out</div>;
 }
 
 export default OutsourcingService;

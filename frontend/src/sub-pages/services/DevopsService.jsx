@@ -1,7 +1,7 @@
 import React from "react";
 
 function DevopsService() {
-  return <div>CloudHosting</div>;
+  return <div>devop</div>;
 }
 
 export default DevopsService;

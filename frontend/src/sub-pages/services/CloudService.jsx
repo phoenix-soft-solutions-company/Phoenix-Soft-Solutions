@@ -1,7 +1,7 @@
 import React from "react";
 
 function CloudService() {
-  return <div>CloudHosting</div>;
+  return <div>Cloud</div>;
 }
 
 export default CloudService;

@@ -1,7 +1,7 @@
 import React from "react";
 
 function PocService() {
-  return <div>CloudHosting</div>;
+  return <div>poc</div>;
 }
 
 export default PocService;

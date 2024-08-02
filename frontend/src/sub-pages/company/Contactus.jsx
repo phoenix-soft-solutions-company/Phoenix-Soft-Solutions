@@ -40,7 +40,7 @@ const Contactus = () => {
                 {/* Address */}
                 <div className="w-full lg:w-1/3 flex mb-6 lg:mb-0 lg:mr-4">
                   <FaMapMarkerAlt
-                    style={{ fontSize: "1.5rem" }}
+                    style={{ fontSize: "2rem" }}
                     className="text-red-600 mr-4 mt-1"
                   />
                   <div>
@@ -55,7 +55,7 @@ const Contactus = () => {
                 {/* Email */}
                 <div className="w-full lg:w-1/3 flex mb-6 lg:mb-0 lg:mr-4">
                   <FaEnvelope
-                    style={{ fontSize: "1.5rem" }}
+                    style={{ fontSize: "2rem" }}
                     className="text-red-600 mr-4 mt-1"
                   />
                   <div>
@@ -66,7 +66,7 @@ const Contactus = () => {
                 {/* Phone */}
                 <div className="w-full lg:w-1/3 flex">
                   <FaMobileAlt
-                    style={{ fontSize: "1.5rem" }}
+                    style={{ fontSize: "2rem" }}
                     className="text-red-600 mr-4 mt-1"
                   />
                   <div>
