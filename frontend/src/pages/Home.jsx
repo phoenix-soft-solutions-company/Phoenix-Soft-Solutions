@@ -4,9 +4,6 @@ import CompanyMap from "../components/CompanyMap";
 import SlideShow from "../components/SlideShow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
-import slide1 from "../constants/images/slides/slide1.jpg";
-import slide3 from "../constants/images/slides/slide3.jpg";
-import slide4 from "../constants/images/slides/slide4.jpg";
 import icon1 from "../constants/images/icons/Icon1.png";
 import icon2 from "../constants/images/icons/Icon2.png";
 import icon3 from "../constants/images/icons/Icon3.png";
@@ -31,7 +28,9 @@ import './Styles.css';
 function Home() {
   return (
     <div>
-      <SlideShow slides={[slide1, slide3, slide4]} />
+      <div className="h-[50vh] sm:h-[90vh]">
+        <SlideShow />
+      </div>
 
       <div className="flex flex-col lg:flex-row md:pb-5 xl:pb-20">
         <div className="w-full lg:w-1/2  flex justify-center items-center p-4 relative">
@@ -247,7 +246,7 @@ function Home() {
         </div>
         <div className="flex justify-center">
           <Link
-            to="/service"
+            to="/project"
             className="border-2 border-red-700 bg-red-700 text-white py-4 px-8 text-base rounded hover:bg-white hover:text-red-700 transition duration-500">
             Explore more projects
           </Link>

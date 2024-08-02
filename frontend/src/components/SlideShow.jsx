@@ -1,51 +1,47 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "./Styles.css";
 
-const SlideShow = ({ slides = [] }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(true);
-  const slideshowRef = useRef();
+const images = [
+  {
+    url: "https://img.freepik.com/free-photo/autumn-leaf-falling-revealing-intricate-leaf-vein-generated-by-ai_188544-9869.jpg",
+    text: "This is the first slide text.",
+  },
+  {
+    url: "https://img.freepik.com/free-photo/vibrant-autumn-maple-leaves-nature-beauty-showcased-generated-by-ai_188544-15039.jpg",
+    text: "This is the second slide text.",
+  },
+  {
+    url: "https://img.freepik.com/free-photo/autumn-tree-forest-leaves-bright-yellow-generative-ai_188544-12668.jpg",
+    text: "This is the third slide text.",
+  },
+];
+
+function SlideShow() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
-    const slideInterval = setInterval(() => {
-      setIsTransitioning(true);
-      setTimeout(() => {
-        setIsTransitioning(false);
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-      }, 1000); // Time for zoom-in effect
-    }, 3000); // Total time per slide (including zoom-in and zoom-out)
-
-    return () => clearInterval(slideInterval);
-  }, [slides.length]);
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Change image every 3 seconds
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="w-full overflow-hidden relative h-screen">
-      <div
-        ref={slideshowRef}
-        className={`flex ${isTransitioning ? "transition-transform duration-10000 ease-in-out" : ""}`}
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-        {slides.concat(slides[0]).map((slide, index) => (
-          <div key={index} className="w-full flex-shrink-0">
-            <img
-              src={slide}
-              alt={`Slide ${index + 1}`}
-              className={`w-full h-auto zoom ${index === currentIndex ? "zoom-in" : ""}`}
-            />
-          </div>
-        ))}
-      </div>
-
-      <div className="absolute bottom-0 left-0 right-0 flex justify-center space-x-2 p-4">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            className={`w-8 h-1 rounded-full ${index === currentIndex ? "bg-white" : "bg-gray-400"}`}
-            onClick={() => setCurrentIndex(index)}
+    <div className="slide-container">
+      {images.map((image, index) => (
+        <div key={index} className={`slide ${index === currentImageIndex ? "slide-active" : ""}`}>
+          <img
+            src={image.url}
+            alt={`Slide ${index}`}
+            className={`slide-image ${index === currentImageIndex ? "slide-image-active" : ""}`}
           />
-        ))}
-      </div>
+          <div className={`slide-text ${index === currentImageIndex ? "slide-text-active" : ""}`}>
+            {image.text}
+          </div>
+        </div>
+      ))}
     </div>
   );
-};
+}
 
 export default SlideShow;
