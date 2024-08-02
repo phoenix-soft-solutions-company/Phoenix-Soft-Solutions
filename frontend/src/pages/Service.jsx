@@ -40,7 +40,7 @@ const serviceNames = [
     description:
       "Our expertise is in building scalable and effective software solutions for businesses of all sizes, with a focus on meeting their unique needs in order to encourage expansion and innovative concepts.",
     image: customService,
-    link: "/service/custom-software",
+    link: "/service/custom",
   },
   {
     name: "DevOps Services",
@@ -61,77 +61,77 @@ const serviceNames = [
     description:
       "Saigon Technology offers thorough testing and bug-fixing to improve overall performance and guarantee the quality, stability, and functioning of software programs as part of our services.",
     image: qaService,
-    link: "/service/qa-testing",
+    link: "/service/qa",
   },
   {
     name: "Cloud Migration Services",
     description:
       "Experience a seamless transition to the cloud with our exceptional services. We empower businesses to effortlessly move their software and infrastructure, unlocking the incredible benefits of scalability, top-notch security, and remarkable cost-efficiency.",
     image: cloudService,
-    link: "/service/cloud-migration",
+    link: "/service/cloud",
   },
   {
     name: "PoC Development Services",
     description:
       "With our exceptional expertise, we empower you to embark on a journey of innovation, ensuring that your concepts are thoroughly tested and validated before embarking on full-scale development.",
     image: pocService,
-    link: "/service/poc-development",
+    link: "/service/poc",
   },
   {
     name: "AI Development Services",
     description:
       "By combining cutting-edge AI with machine learning, we can create smart software that can streamline business operations and enhance decision-making. Let us transform your business into a realm of efficiency and innovation.",
     image: aiService,
-    link: "/service/ai-development",
+    link: "/service/ai",
   },
   {
     name: "Front-end Development Services",
     description:
       "Experience superior front-end development services with Saigon Technology. Elevate your digital presence by outsourcing front-end development to us.",
     image: frontendService,
-    link: "/service/frontend-development",
+    link: "/service/frontend",
   },
   {
     name: "Back-end Development Services",
     description:
       "Discover how Saigon Technology's superior back-end development services can accelerate your business growth. Your vision, our expertise.",
     image: backendService,
-    link: "/service/backend-development",
+    link: "/service/backend",
   },
   {
     name: "Software Maintenance and Support",
     description:
       "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
     image: softwaremanitainService,
-    link: "/service/maintenance-support",
+    link: "/service/software",
   },
   {
     name: "Digital Marketing and Social Media Marketing",
     description:
       "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
     image: marketingService,
-    link: "/service/maintenance-support",
+    link: "/service/marketing",
   },
   {
     name: "Cyber Security System Development",
     description:
       "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
     image: cyberService,
-    link: "/service/maintenance-support",
+    link: "/service/cyber",
   },
   {
     name: "Business Managements",
     description:
       "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
     image: managementService,
-    link: "/service/maintenance-support",
+    link: "/service/business",
   },
   {
     name: "Graphic Design",
     description:
       "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
     image: graphicService,
-    link: "/service/maintenance-support",
+    link: "/service/graphic",
   },
 ];
 
