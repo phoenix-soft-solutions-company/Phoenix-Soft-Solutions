@@ -70,7 +70,7 @@ const Contactus = () => {
                     className="text-red-600 mr-4 mt-1"
                   />
                   <div>
-                    <p className="text-lg">+1 234 567 890</p>
+                    <p className="text-lg">+1 </p>
                   </div>
                 </div>
               </div>

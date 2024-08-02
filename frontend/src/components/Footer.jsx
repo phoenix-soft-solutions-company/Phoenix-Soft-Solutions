@@ -71,6 +71,49 @@ function Footer() {
                 Company
               </Link>
             </span>
+            <br />
+            <span>
+              <Link to="/service" className="">
+                Service
+              </Link>
+            </span>
+            <br />
+            <span>
+              <Link to="/project" className="">
+                Project
+              </Link>
+            </span>
+            <br />
+            <span>
+              <Link to="/technology" className="">
+                Technology
+              </Link>
+            </span>
+            <br />
+            <span>
+              <Link to="/career" className="">
+                Career
+              </Link>
+            </span>
+            <br />
+            <span>
+              <Link to="/event" className="">
+                Event
+              </Link>
+            </span>
+            <br />
+            <span>
+              <Link to="/domain" className="">
+                Domain
+              </Link>
+            </span>
+            <br />
+            <span>
+              <Link to="/hosting" className="">
+                Hosting
+              </Link>
+            </span>
+          
           </p>
         </div>
       </div>
