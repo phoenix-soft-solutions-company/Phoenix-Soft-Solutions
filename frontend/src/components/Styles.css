@@ -91,3 +91,31 @@
 .slide-text-active {
   left: 20px; /* Animate into view */
 }
+
+/* ImageCarousel */
+.carousel {
+  overflow: hidden;
+  width: 100%; /* Adjust to the desired width */
+  white-space: nowrap;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-image {
+  width: 200px; /* Adjust the width of your images */
+  height: 200px; /* Adjust the height of your images */
+  margin-right: 10px; /* Adjust the spacing between images */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

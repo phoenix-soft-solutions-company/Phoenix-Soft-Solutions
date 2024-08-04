@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CompanyMap from "../components/CompanyMap";
 import SlideShow from "../components/SlideShow";
+import ImageCarousel from "../components/ImageCarousel";
 import Counter from "../components/Counter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
@@ -24,13 +25,17 @@ import icon13 from "../constants/images/icons/ico3.png";
 import icon14 from "../constants/images/icons/ico4.png";
 import CustomerReviews from "../components/CustomerReviews";
 import LeatestProjects from "../components/LeatestProjects";
-import './Styles.css';
+import "./Styles.css";
 
 function Home() {
   return (
     <div>
       <div className="h-[50vh] sm:h-[90vh]">
         <SlideShow />
+      </div>
+
+      <div className="py-4 px-2 sm:px-4">
+        <ImageCarousel />
       </div>
 
       <div className="flex flex-col lg:flex-row md:pb-5 xl:pb-20">
