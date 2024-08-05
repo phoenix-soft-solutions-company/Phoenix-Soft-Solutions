@@ -86,9 +86,31 @@ function Footer() {
       </div>
 
       <div className="pl-4 sm:pl-0">
-        <p className="text-sm font-mono text-start sm:text-center">
+        <p className="text-base font-mono text-start sm:text-center">
           &copy; {new Date().getFullYear()} Xcrop. All Rights Reserved.
         </p>
+        <div className="flex flex-row justify-start sm:justify-center mt-2 mb-5 text-sm">
+          <a
+            className="mr-4"
+            href="https://www.termsfeed.com/live/5a224dd5-578c-41ff-b204-65c76070d75b"
+            target="_blank"
+            rel="noreferrer">
+            Cookies Policy
+          </a>
+          <a
+            className="mr-4"
+            href="https://www.termsfeed.com/live/54489c69-9a77-493c-ae5b-4ddfce02f7ce"
+            target="_blank"
+            rel="noreferrer">
+            Terms & Conditions
+          </a>
+          <a
+            href="https://www.termsfeed.com/live/072f03ab-4e8f-409f-95e3-190ba13ed2b0"
+            target="_blank"
+            rel="noreferrer">
+            Privacy Policy
+          </a>
+        </div>
         <div className="flex flex-row justify-start sm:justify-center gap-3 lg:gap-5 mt-2 mb-5">
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faFacebook} size="lg" />
