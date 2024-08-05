@@ -30,7 +30,7 @@ import "./Styles.css";
 function Home() {
   return (
     <div>
-      <div className="h-[50vh] sm:h-[90vh]">
+      <div className="h-[60vh] sm:h-[90vh]">
         <SlideShow />
       </div>
 
