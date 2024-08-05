@@ -3,6 +3,7 @@ import { FaInfoCircle, FaDotCircle, FaCheckCircle } from "react-icons/fa";
 import heading from "../../constants/images/tech/technology-heading.jpg";
 import leftImage from "../../constants/images/leftBottom.jpg";
 import rightImage from "../../constants/images/vision & mission.jpg";
+import CounterExp from "../../components/CounterExp";
 
 const Aboutus = ({ showHeaderImage = true }) => {
   return (
@@ -97,6 +98,10 @@ const Aboutus = ({ showHeaderImage = true }) => {
             </a>
           </div>
         </div>
+      </div>
+
+      <div className="px-2 sm:px-4 lg:px-10 py-4 ">
+        <CounterExp />
       </div>
 
       <div className="flex flex-col-reverse xl:flex-row-reverse gap-2 xl:gap-10 p-4 md:p-8 bg-gray-100 mt-2 lg:mt-8">
