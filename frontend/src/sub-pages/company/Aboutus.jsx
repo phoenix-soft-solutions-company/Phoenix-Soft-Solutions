@@ -4,6 +4,7 @@ import heading from "../../constants/images/tech/technology-heading.jpg";
 import leftImage from "../../constants/images/leftBottom.jpg";
 import rightImage from "../../constants/images/vision & mission.jpg";
 import CounterExp from "../../components/CounterExp";
+import DevPlan from "../../components/DevPlan"
 
 const Aboutus = ({ showHeaderImage = true }) => {
   return (
@@ -148,6 +149,8 @@ const Aboutus = ({ showHeaderImage = true }) => {
           <img src={rightImage} alt="Vision & Mission" className="w-full h-auto" />
         </div>
       </div>
+
+      <div><DevPlan/></div>
     </div>
   );
 };
