@@ -3,6 +3,8 @@ import { FaInfoCircle, FaDotCircle, FaCheckCircle } from "react-icons/fa";
 import heading from "../../constants/images/tech/technology-heading.jpg";
 import leftImage from "../../constants/images/leftBottom.jpg";
 import rightImage from "../../constants/images/vision & mission.jpg";
+import CounterExp from "../../components/CounterExp";
+import DevPlan from "../../components/DevPlan"
 
 const Aboutus = ({ showHeaderImage = true }) => {
   return (
@@ -99,6 +101,10 @@ const Aboutus = ({ showHeaderImage = true }) => {
         </div>
       </div>
 
+      <div className="px-2 sm:px-4 lg:px-10 py-4 ">
+        <CounterExp />
+      </div>
+
       <div className="flex flex-col-reverse xl:flex-row-reverse gap-2 xl:gap-10 p-4 md:p-8 bg-gray-100 mt-2 lg:mt-8">
         <div className="xl:w-1/2 mb-8 md:mb-0">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">VISION & MISSION</h1>
@@ -143,6 +149,8 @@ const Aboutus = ({ showHeaderImage = true }) => {
           <img src={rightImage} alt="Vision & Mission" className="w-full h-auto" />
         </div>
       </div>
+
+      <div><DevPlan/></div>
     </div>
   );
 };

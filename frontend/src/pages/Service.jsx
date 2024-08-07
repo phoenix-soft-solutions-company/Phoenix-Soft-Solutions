@@ -5,20 +5,20 @@ import { useNavigate } from "react-router-dom";
 import Service from "../constants/images/services/service.jpg";
 import webService from "../constants/images/services/webabout.jpg";
 import mobileService from "../constants/images/services/mobile_app.png";
-import devopService from "../constants/images/services/devops.png";
-import qaService from "../constants/images/services/qa.png";
-import aiService from "../constants/images/services/ai.png";
-import softwaremanitainService from "../constants/images/services/software-maintain.png";
-import customService from "../constants/images/services/custom.png";
-import backendService from "../constants/images/services/backend.png";
-import sedevelopmentService from "../constants/images/services/sedevelopment.png";
-import frontendService from "../constants/images/services/frontend.png";
-import cloudService from "../constants/images/services/cloud.png";
-import pocService from "../constants/images/services/poc.png";
-import marketingService from "../constants/images/services/marketing.png";
+import devopService from "../constants/images/services/devops.jpg";
+import qaService from "../constants/images/services/qa.jpg";
+import aiService from "../constants/images/services/ai.webp";
+import softwaremanitainService from "../constants/images/services/software-maintain.jpg";
+import customService from "../constants/images/services/custom.jpg";
+import backendService from "../constants/images/services/backend.jpg";
+import sedevelopmentService from "../constants/images/services/sedevelopment.webp";
+import frontendService from "../constants/images/services/frontend.webp";
+import cloudService from "../constants/images/services/cloud.webp";
+import pocService from "../constants/images/services/poc.jpg";
+import marketingService from "../constants/images/services/marketing.jpg";
 import cyberService from "../constants/images/services/cyber.png";
-import managementService from "../constants/images/services/management.png";
-import graphicService from "../constants/images/services/graphic.png";
+import managementService from "../constants/images/services/management.jpg";
+import graphicService from "../constants/images/services/graphic.jpg";
 
 const serviceNames = [
   {

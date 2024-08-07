@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CompanyMap from "../components/CompanyMap";
 import SlideShow from "../components/SlideShow";
-import Counter from "../components/Counter";
+import ImageCarousel from "../components/ImageCarousel";
+import CounterExp from "../components/CounterExp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import icon1 from "../constants/images/icons/Icon1.png";
@@ -24,13 +25,17 @@ import icon13 from "../constants/images/icons/ico3.png";
 import icon14 from "../constants/images/icons/ico4.png";
 import CustomerReviews from "../components/CustomerReviews";
 import LeatestProjects from "../components/LeatestProjects";
-import './Styles.css';
+import "./Styles.css";
 
 function Home() {
   return (
     <div>
-      <div className="h-[50vh] sm:h-[90vh]">
+      <div className="h-[60vh] sm:h-[90vh]">
         <SlideShow />
+      </div>
+
+      <div className="py-4 px-2 sm:px-4">
+        <ImageCarousel />
       </div>
 
       <div className="flex flex-col lg:flex-row md:pb-5 xl:pb-20">
@@ -319,22 +324,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col sm:flex-row justify-between px-40 w-full h-40 border border-black">
-        <div>
-          <h2>Expirence</h2>
-          <Counter threshold={5} increment={1} />
-        </div>
-
-        <div>
-          <h2>Projects</h2>
-          <Counter threshold={20} increment={1} />
-        </div>
-
-        <div>
-          <h2>Clients</h2>
-          <Counter threshold={50} increment={1} />
-        </div>
-      </div>
+      <div className="px-2 sm:px-4 lg:px-10 py-4 "><CounterExp/></div>
 
       <div className="p-2">
         <div className="text-center py-4">
