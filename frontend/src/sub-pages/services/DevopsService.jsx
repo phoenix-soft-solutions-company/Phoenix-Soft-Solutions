@@ -1,7 +1,63 @@
 import React from "react";
+import service1 from "../../constants/images/services/webabout.jpg";
 
-function DevopsService() {
-  return <div>devop</div>;
-}
+const DevOps = () => {
+  return (
+    <div className="min-h-screen relative">
+      {/* Hero Section */}
+      <div className="relative w-full h-[50vh]">
+        <img
+          src={service1}
+          className="object-cover w-full h-full"
+          alt="DevOps Service"
+        />
+        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest text-white uppercase">
+            DEVOPS SERVICE
+          </h1>
+        </div>
+      </div>
 
-export default DevopsService;
+      {/* Content Section */}
+      <div className="p-8 lg:p-16">
+        {/* First Section */}
+        <div className="text-center mb-12">
+          <h1 className="text-3xl lg:text-4xl font-bold uppercase">
+            DevOps Development Services
+          </h1>
+          <div className="w-24 h-1 bg-red-500 mx-auto my-4"></div>
+          <p className="text-lg lg:text-xl">
+            As a long-standing DevOps Services Company, Saigon Technology offers
+            high quality and affordable Devops<br></br> consulting and implementation
+            services for startups and enterprises in the world.
+          </p>
+          <img
+            src={service1}
+            alt="Description 1"
+            className="mt-8 w-full lg:w-1/2 mx-auto"
+          />
+        </div>
+
+        {/* Second Section */}
+        <div className="text-center mb-12">
+          <h1 className="text-3xl lg:text-4xl font-bold uppercase mb-3">
+            DevOps to Revolutionize Your IT Operations
+          </h1>
+
+          <p className="text-lg lg:text-xl">
+            You can fully optimize the software development related activities
+            for your business with DevOps.<br></br> <br></br>DevOps (Development & Operations) is
+            a technique that was created to integrate software developers with
+            operation teams so that high-quality<br></br> software could be delivered
+            more quickly. Specifically, the use of tool-chain pipelines,
+            monitoring, collaboration, automation, and <br></br>cloud adoption are all
+            components that are leveraged by a DevOps services company.
+          </p>
+          <div className="w-24 h-1 bg-red-500 mx-auto my-4"></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default DevOps;
