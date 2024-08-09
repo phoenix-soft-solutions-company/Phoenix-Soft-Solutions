@@ -13,11 +13,14 @@ function CounterExp() {
           <img src={icon1} alt="Icon 1" className="w-20 h-20" />
         </div>
         <div className="flex flex-col justify-center h-full">
-          <Counter
-            threshold={5}
-            increment={1}
-            className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
-          />
+          <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+            <Counter
+              threshold={5}
+              increment={1}
+              className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
+            />
+          </h1>
+
           <h2 className="text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
             Years Of Experience
           </h2>
@@ -29,11 +32,13 @@ function CounterExp() {
           <img src={icon2} alt="Icon 2" className="w-20 h-20" />
         </div>
         <div className="flex flex-col justify-center h-full">
-          <Counter
-            threshold={20}
-            increment={1}
-            className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500"
-          />
+          <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+            <Counter
+              threshold={20}
+              increment={1}
+              className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500"
+            />
+          </h1>
           <h2 className="text-xl bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
             Project Completed
           </h2>
@@ -45,11 +50,13 @@ function CounterExp() {
           <img src={icon3} alt="Icon 3" className="w-20 h-20" />
         </div>
         <div className="flex flex-col justify-center h-full">
-          <Counter
-            threshold={10}
-            increment={1}
-            className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-red-500"
-          />
+          <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-red-500">
+            <Counter
+              threshold={10}
+              increment={1}
+              className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-red-500"
+            />
+          </h1>
           <h2 className="text-xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-red-500">
             Skilled Experts
           </h2>
@@ -61,11 +68,13 @@ function CounterExp() {
           <img src={icon4} alt="Icon 4" className="w-20 h-20" />
         </div>
         <div className="flex flex-col justify-center h-full">
-          <Counter
-            threshold={30}
-            increment={1}
-            className="bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-500"
-          />
+          <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-500">
+            <Counter
+              threshold={30}
+              increment={1}
+              className="bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-500"
+            />
+          </h1>
           <h2 className="text-xl bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-500">
             Satisfied Clients
           </h2>
