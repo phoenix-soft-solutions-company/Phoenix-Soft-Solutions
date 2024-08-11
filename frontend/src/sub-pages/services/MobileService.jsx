@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom"; // Import Link for navigation
 import service1 from "../../constants/images/services/webabout.jpg";
 import mobileImage from "../../constants/images/services/mobile.jpg";
+import mobile from "../../constants/images/services/app.png";
 import cardImage1 from "../../constants/images/services/mobile.jpg"; // First card image
-import cardImage2 from "../../constants/images/services/mobile.jpg"; // Second card image
+import android from "../../constants/images/services/android.png"; // Second card image
 
 const Mobile = () => {
   return (
@@ -134,11 +135,11 @@ const Mobile = () => {
 
           <div className="flex flex-col-reverse lg:flex-row items-center p-5">
             {/* Left Side: Image */}
-            <div className="lg:w-1/3">
+            <div className="lg:w-1/3 w-full">
               <img
-                src={cardImage2}
+                src={android}
                 alt="Custom App Development"
-                className="object-cover w-full h-full"
+                className="object-cover w-ful h-auto" // Adjust h-auto as needed
               />
             </div>
             {/* Right Side: Description and List */}
@@ -184,15 +185,13 @@ const Mobile = () => {
             {/* Right Side: Image */}
             <div className="lg:w-1/3">
               <img
-                src={cardImage1}
+                src={mobile}
                 alt="Mobile App Development"
                 className="object-cover w-full h-full"
               />
             </div>
           </div>
         </div>
-
-        
       </div>
     </div>
   );
