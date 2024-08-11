@@ -1,6 +1,7 @@
 import React from "react";
 import devops from "../../constants/images/services/devopshead.jpg";
 
+
 const DevOps = () => {
   return (
     <div className="min-h-screen relative">
