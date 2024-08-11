@@ -79,7 +79,10 @@ const CompanyMap = () => {
         zoom={2}
         style={{ height: "600px", width: "100%" }}
         className="rounded-lg shadow-lg">
-        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        <TileLayer
+          url="https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg"
+          attribution='&copy; <a href="http://stamen.com">Stamen Design</a>, &copy; <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        />
         {locations.map((location, index) => (
           <Marker key={index} position={location.position} icon={location.icon || null}>
             <Tooltip permanent>{location.name}</Tooltip>
