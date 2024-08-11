@@ -7,7 +7,7 @@ import icon4 from "../constants/images/icons/client.png";
 
 function CounterExp() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 justify-center w-full via-purple-500 to-pink-500 p-8 rounded shadow-lg">
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 justify-center w-full p-8 rounded shadow-lg">
       <div className="flex flex-row gap-4">
         <div className="flex items-center">
           <img src={icon1} alt="Icon 1" className="w-20 h-20" />
