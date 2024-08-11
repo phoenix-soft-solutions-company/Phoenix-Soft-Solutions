@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Import Link for navigation
-import service1 from "../../constants/images/services/webabout.jpg";
+import header from "../../constants/images/services/mobilehead.jpg";
 import mobileImage from "../../constants/images/services/mobile.jpg";
 import mobile from "../../constants/images/services/app.png";
-import cardImage1 from "../../constants/images/services/mobile.jpg"; // First card image
+import ios from "../../constants/images/services/ios.png"; // First card image
 import android from "../../constants/images/services/android.png"; // Second card image
 
 const Mobile = () => {
@@ -12,7 +12,7 @@ const Mobile = () => {
       {/* Hero Section */}
       <div className="relative w-full h-[50vh]">
         <img
-          src={service1}
+          src={header}
           className="object-cover w-full h-full"
           alt="Mobile Development"
         />
@@ -126,7 +126,7 @@ const Mobile = () => {
             {/* Right Side: Image */}
             <div className="lg:w-1/3">
               <img
-                src={cardImage1}
+                src={ios}
                 alt="Mobile App Development"
                 className="object-cover w-full h-full"
               />

@@ -1,12 +1,16 @@
 import React from "react";
-import service1 from "../../constants/images/services/webabout.jpg";
+import devops from "../../constants/images/services/devopshead.jpg";
 
 const DevOps = () => {
   return (
     <div className="min-h-screen relative">
       {/* Hero Section */}
       <div className="relative w-full h-[50vh]">
-        <img src={service1} className="object-cover w-full h-full" alt="DevOps Service" />
+        <img
+          src={devops}
+          className="object-cover w-full h-full"
+          alt="DevOps Service"
+        />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest text-white uppercase">
             DEVOPS SERVICE
@@ -24,7 +28,11 @@ const DevOps = () => {
             As a long-standing DevOps Services Company, Saigon Technology offers high quality and affordable
             Devops<br></br> consulting and implementation services for startups and enterprises in the world.
           </p>
-          <img src={service1} alt="Description 1" className="mt-8 w-full lg:w-1/2 mx-auto" />
+          <img
+            src={devops}
+            alt="Description 1"
+            className="mt-8 w-full lg:w-1/2 mx-auto"
+          />
         </div>
       </div>
       {/* Second Section */}
@@ -46,7 +54,11 @@ const DevOps = () => {
           <h1 className="text-3xl lg:text-4xl font-bold uppercase ">
             Taking Advantage of Partnering with Saigon<br></br> Technology for DevOps Services
           </h1>
-          <img src={service1} alt="New Section" className="mt-8 w-full lg:w-1/2 mx-auto" />
+          <img
+            src={devops}
+            alt="New Section Image"
+            className="mt-8 w-full lg:w-1/2 mx-auto"
+          />
 
           {/* Centering the List with Left Padding */}
           <div className="flex justify-center mt-8">
