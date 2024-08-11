@@ -1,5 +1,5 @@
 import React from "react";
-import service1 from "../../constants/images/services/webabout.jpg";
+import devops from "../../constants/images/services/devopshead.jpg";
 
 const DevOps = () => {
   return (
@@ -7,7 +7,7 @@ const DevOps = () => {
       {/* Hero Section */}
       <div className="relative w-full h-[50vh]">
         <img
-          src={service1}
+          src={devops}
           className="object-cover w-full h-full"
           alt="DevOps Service"
         />
@@ -32,7 +32,7 @@ const DevOps = () => {
             implementation services for startups and enterprises in the world.
           </p>
           <img
-            src={service1}
+            src={devops}
             alt="Description 1"
             className="mt-8 w-full lg:w-1/2 mx-auto"
           />
@@ -62,7 +62,7 @@ const DevOps = () => {
             DevOps Services
           </h1>
           <img
-            src={service1}
+            src={devops}
             alt="New Section Image"
             className="mt-8 w-full lg:w-1/2 mx-auto"
           />
