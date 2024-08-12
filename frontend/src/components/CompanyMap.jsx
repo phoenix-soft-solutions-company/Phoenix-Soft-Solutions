@@ -1,8 +1,15 @@
 import React from "react";
-import { MapContainer, TileLayer, Marker, Tooltip, useMap } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Tooltip,
+  useMap,
+} from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet-curve";
+import "./MapStyles.css"; // Import the CSS file
 
 // Define custom icon options
 const redIconOptions = {
@@ -12,7 +19,8 @@ const redIconOptions = {
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
   shadowSize: [41, 41],
-  shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
+  shadowUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
 };
 
 const blueIconOptions = {
@@ -22,7 +30,8 @@ const blueIconOptions = {
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
   shadowSize: [41, 41],
-  shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
+  shadowUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
 };
 
 const redIcon = L.icon(redIconOptions);
@@ -70,28 +79,38 @@ const CurvedPolyline = ({ positions }) => {
 };
 
 const CompanyMap = () => {
-  const AustraliaPosition = locations.find((location) => location.name === "Australia").position;
+  const AustraliaPosition = locations.find(
+    (location) => location.name === "Australia"
+  ).position;
 
   return (
-    <div className="w-full h-[600px]">
+    <div className="w-full h-[600px] map-container">
       <MapContainer
         center={[20, 80]}
         zoom={2}
         style={{ height: "600px", width: "100%" }}
-        className="rounded-lg shadow-lg">
+        className="rounded-lg shadow-lg map-content"
+      >
         <TileLayer
-          url="https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg"
-          attribution='&copy; <a href="http://stamen.com">Stamen Design</a>, &copy; <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+          attribution='&copy; <a href="https://carto.com/attributions">CARTO</a> contributors'
         />
         {locations.map((location, index) => (
-          <Marker key={index} position={location.position} icon={location.icon || null}>
+          <Marker
+            key={index}
+            position={location.position}
+            icon={location.icon || null}
+          >
             <Tooltip permanent>{location.name}</Tooltip>
           </Marker>
         ))}
         {locations
           .filter((location) => location.name !== "Australia")
           .map((location, index) => (
-            <CurvedPolyline key={index} positions={[AustraliaPosition, location.position]} />
+            <CurvedPolyline
+              key={index}
+              positions={[AustraliaPosition, location.position]}
+            />
           ))}
       </MapContainer>
     </div>
