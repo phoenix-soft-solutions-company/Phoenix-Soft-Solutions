@@ -1,5 +1,5 @@
 import React from "react";
-import service1 from "../../constants/images/services/webabout.jpg";
+import service from "../../constants/images/services/ai.webp";
 import exampleImage from "../../constants/images/services/webabout.jpg"; // Replace with the path to your new image
 
 const AI = () => {
@@ -8,13 +8,13 @@ const AI = () => {
       {/* Hero Section */}
       <div className="relative w-full h-[50vh]">
         <img
-          src={service1}
+          src={service}
           className="object-cover w-full h-full"
           alt="Mobile Development"
         />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest text-white uppercase">
-            AI SERVICE
+            AI Development SERVICE
           </h1>
         </div>
       </div>
@@ -26,7 +26,7 @@ const AI = () => {
           <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-1 bg-red-500"></div>
         </h1>
 
-        <img src={service1} className="w-1/2 h-auto mb-6" alt="AI Service" />
+        <img src={service} className="w-1/2 h-auto mb-6" alt="AI Service" />
 
         <p className="text-md text-justify px-8  mx-10  mb-6">
           Saigon Technology - a prominent solutions and software development

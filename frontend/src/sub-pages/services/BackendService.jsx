@@ -7,7 +7,7 @@ import {
   FaCloud,
   FaGlobe,
 } from "react-icons/fa"; // Import the required icons
-import service1 from "../../constants/images/services/webabout.jpg";
+import service from "../../constants/images/services/backend.jpg";
 
 const backend = () => {
   return (
@@ -15,7 +15,7 @@ const backend = () => {
       {/* Hero Section */}
       <div className="relative w-full h-[50vh]">
         <img
-          src={service1}
+          src={service}
           className="object-cover w-full h-full"
           alt="Mobile Development"
         />

@@ -1,5 +1,5 @@
 import React from "react";
-import devops from "../../constants/images/services/devopshead.jpg";
+import devops from "../../constants/images/services/devops.jpg";
 
 const DevOps = () => {
   return (

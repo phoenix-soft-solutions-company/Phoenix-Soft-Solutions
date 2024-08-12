@@ -3,14 +3,14 @@ import icon1 from "../../constants/images/icons/data.png"; // Replace with the c
 import icon2 from "../../constants/images/icons/plan.png"; // Replace with the correct path
 import icon3 from "../../constants/images/icons/sketch.png"; // Replace with the correct path
 import icon4 from "../../constants/images/icons/migration.png"; // Replace with the correct path
-import service1 from "../../constants/images/services/webabout.jpg";
+import service from "../../constants/images/services/custom.jpg";
 
 const Cloud = () => {
   return (
     <div className="min-h-screen relative">
       <div className="relative w-full h-[50vh]">
         <img
-          src={service1}
+          src={service}
           className="object-cover w-full h-full"
           alt="Cloud Migration Service"
         />
@@ -31,7 +31,7 @@ const Cloud = () => {
           high-profile cloud migration services vendor in Vietnam
         </p>
         <img
-          src={service1}
+          src={service}
           className="object-cover w-full max-w-md h-auto mb-8"
           alt="Cloud Migration"
         />
@@ -95,7 +95,7 @@ const Cloud = () => {
             {/* Right Side - Image */}
             <div className="flex-1 px-4 py-4">
               <img
-                src={service1}
+                src={service}
                 className="object-cover w-full h-auto rounded-lg shadow-lg"
                 alt="Cloud Migration"
               />

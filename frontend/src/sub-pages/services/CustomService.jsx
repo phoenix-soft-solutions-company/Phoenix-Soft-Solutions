@@ -1,5 +1,5 @@
 import React from "react";
-import service1 from "../../constants/images/services/webabout.jpg";
+import service from "../../constants/images/services/custom.jpg";
 
 const Custom = () => {
   return (
@@ -7,13 +7,13 @@ const Custom = () => {
       {/* Hero Section */}
       <div className="relative w-full h-[50vh]">
         <img
-          src={service1}
+          src={service}
           className="object-cover w-full h-full"
           alt="Mobile Development"
         />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest text-white uppercase">
-            DEVOPS SERVICE
+            custom software development
           </h1>
         </div>
       </div>
@@ -31,7 +31,7 @@ const Custom = () => {
         {/* Left Side Image */}
         <div className="lg:w-1/2">
           <img
-            src={service1}
+            src={service}
             className="object-cover w-full h-full"
             alt="Service"
           />

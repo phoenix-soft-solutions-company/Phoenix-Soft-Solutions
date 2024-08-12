@@ -1,5 +1,5 @@
 import React from "react";
-import service1 from "../../constants/images/services/webabout.jpg";
+import service from "../../constants/images/services/frontend.webp";
 import {
   FaCode,
   FaMobileAlt,
@@ -18,7 +18,7 @@ const Frontend = () => {
       {/* Hero Section */}
       <div className="relative w-full h-[50vh]">
         <img
-          src={service1}
+          src={service}
           className="object-cover w-full h-full"
           alt="Mobile Development"
         />

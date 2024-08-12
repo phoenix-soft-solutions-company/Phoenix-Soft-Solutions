@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Import Link for navigation
-import header from "../../constants/images/services/mobilehead.jpg";
+import header from "../../constants/images/services/mobile.jpg";
 import mobileImage from "../../constants/images/services/mobile.jpg";
 import mobile from "../../constants/images/services/app.png";
 import ios from "../../constants/images/services/ios.png"; // First card image
