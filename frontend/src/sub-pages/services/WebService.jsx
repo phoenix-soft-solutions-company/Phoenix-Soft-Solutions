@@ -116,7 +116,7 @@ const Web = () => {
       </div>
 
       <section className="p-10 bg-gray-200 text-center lg:mt-10">
-        <h1 className="text-2xl lg:text-3xl font-bold text-blue-600 mb-5 font-serif">
+        <h1 className="text-2xl lg:text-3xl font-bold text-red-600 mb-5 font-serif">
           Our Web Application Development Services
         </h1>
         <p className="text-xl text-gray-700 mb-10 sm:px-5 lg:px-232 xl:px-52">
@@ -133,7 +133,7 @@ const Web = () => {
                 key={index}
                 className="relative bg-white border-2 border-gray-200 rounded-lg p-4 shadow-md flex flex-col items-start h-auto sm:h-[450px] md:h-[400px] w-72 md:w-80 mx-auto">
                 <img src={box.icon} className="absolute top-4 left-4 w-12 h-12" alt={`Icon ${index + 1}`} />
-                <h2 className="text-xl font-semibold text-blue-600 mt-14 mb-2 text-start">{box.title}</h2>
+                <h2 className="text-xl font-semibold text-red-600 mt-14 mb-2 text-start">{box.title}</h2>
                 <p className="text-start text-lg text-gray-700">{box.description}</p>
               </div>
             ))}
