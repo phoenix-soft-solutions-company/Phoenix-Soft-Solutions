@@ -1,13 +1,21 @@
 import React from "react";
 import service1 from "../../constants/images/services/webabout.jpg";
 import anotherImage from "../../constants/images/services/webabout.jpg"; // Update this with your image source
+import cardImage from "../../constants/images/services/webabout.jpg";
 
 const Card = ({ title, paragraph }) => (
   <div className="bg-white shadow-md rounded-lg p-6 mb-6 w-full max-w-4xl">
-    {" "}
-    {/* Increased card width */}
     <h2 className="text-xl font-semibold mb-2 text-red-600">{title}</h2>
     <p>{paragraph}</p>
+  </div>
+);
+
+// ImageCard Component for image-based cards (image first)
+const ImageCard = ({ image, title, paragraph }) => (
+  <div className="bg-white shadow-md rounded-lg p-6 mb-6 w-full max-w-md flex flex-col items-center">
+    <img src={image} alt="Card" className="w-full h-auto rounded-lg mb-4" />
+    <h2 className="text-xl font-semibold mb-2 text-red-600">{title}</h2>
+    <p className="text-center">{paragraph}</p>
   </div>
 );
 
@@ -45,12 +53,28 @@ const Qa = () => {
     },
   ];
 
+  const secondCardData = [
+    {
+      image: cardImage,
+      title: "MANUAL TESTING",
+      paragraph:
+        "In manual testing, the QA Analyst performs the tests by hand, and the results are recorded. Finding errors in software that is still in the development phase is the purpose of this process. The person conducting the test, in particular, will be responsible for ensuring that the program or software in consideration has all of its required components. Following that, testing reports will be prepared to serve as the foundation for the next step of software development.",
+    },
+    {
+      image: cardImage, // Replace with your image source
+      title: "AUTOMATED TESTING",
+      paragraph:
+        "Automation is achieved via the use of test scripting and code written by the software testers. In order to create test scripts and verify the product, testers make use of relevant automation technologies. The completion of the test execution in a shorter period of time is the desired end objective.",
+    },
+    // Add more data here if needed
+  ];
+
   return (
     <div className="min-h-screen relative">
       {/* Hero Section */}
       <div className="relative w-full h-[50vh]">
         <img
-          src={service1}
+          src={service1} // Replace with your image source
           className="object-cover w-full h-full"
           alt="Mobile Development"
         />
@@ -64,54 +88,68 @@ const Qa = () => {
       {/* Content Section */}
       <div className="flex flex-col items-center justify-center px-4 py-12">
         <h1 className="text-3xl lg:text-4xl font-serif font-bold mb-4 text-center">
-          SAIGON TECHNOLOGY - WITH A DECADE OF<br></br> EXPERIENCE IN QA TESTING
-          SERVICES
+          SAIGON TECHNOLOGY - WITH A DECADE OF
+          <br /> EXPERIENCE IN QA TESTING SERVICES
         </h1>
         <div className="text-center mb-8">
           <p className="mb-4">
             “Two of our many essential service categories are QA and Software
-            Testing services, which are meant to <br></br>ensure that the
-            software meets all of its standards and expectations before it is
-            released.
+            Testing services, which are meant to <br /> ensure that the software
+            meets all of its standards and expectations before it is released.
           </p>
           <p className="mb-4">
             This guarantee contributes significantly to the success of the
-            software in the future. In order to assist our<br></br> clients in
-            delivering high-quality software in a timely manner, we offer
-            comprehensive quality assurance<br></br> services under strict time
-            constraints.”
+            software in the future. In order to assist our
+            <br /> clients in delivering high-quality software in a timely
+            manner, we offer comprehensive quality assurance
+            <br /> services under strict time constraints.”
           </p>
         </div>
         <img
-          src={anotherImage} // Update this with your image source
+          src={anotherImage} // Replace with your image source
           className="w-full max-w-md"
           alt="DevOps Services"
         />
         <p className="mb-4 text-center mt-8">
           The customizable service model offered by Saigon Technology includes
-          web app/ mobile app and custom app testing. With<br></br> ten years of
-          experience in the worldwide IT market - especially for QA testing
-          software, we have numerous non-tech<br></br> and tech company clients
-          from key nations such as the United States, Canada, the United
-          Kingdom, Australia, Germany, and the<br></br> Netherlands… to seek
-          guidance on appropriate software solutions; and have subsequently
-          opted to continue with and<br></br> delegate the project to Saigon
-          Technology for many years.
+          web app/ mobile app and custom app testing. With
+          <br /> ten years of experience in the worldwide IT market - especially
+          for QA testing software, we have numerous non-tech
+          <br /> and tech company clients from key nations such as the United
+          States, Canada, the United Kingdom, Australia, Germany, and the
+          <br /> Netherlands… to seek guidance on appropriate software
+          solutions; and have subsequently opted to continue with and
+          <br /> delegate the project to Saigon Technology for many years.
         </p>
 
-        {/* New Heading with Red Underline */}
+        {/* Text-Based Card Section */}
         <div className="w-full max-w-4xl text-center mt-12">
           <h1 className="text-2xl lg:text-3xl font-serif font-bold mb-4">
-            WHY SAIGON TECHNOLOGY FOR YOUR<br></br> SOFTWARE QA TESTING
-            SERVICES?
+            OUR COMMITMENT TO EXCELLENCE
           </h1>
           <div className="border-b-4 border-red-500 w-1/3 mx-auto"></div>
         </div>
-
-        {/* Card Section */}
         <div className="flex flex-col items-center mt-12 px-4">
           {cardData.map((card, index) => (
             <Card key={index} title={card.title} paragraph={card.paragraph} />
+          ))}
+        </div>
+
+        {/* Image-Based Card Section */}
+        <div className="w-full max-w-4xl text-center mt-12">
+          <h1 className="text-2xl lg:text-3xl font-serif font-bold mb-4">
+            HOW IS QA TESTING SOFTWARE HANDLED?
+          </h1>
+          <div className="border-b-4 border-red-500 w-1/3 mx-auto"></div>
+        </div>
+        <div className="flex flex-wrap justify-center px-4 mt-12 gap-4">
+          {secondCardData.map((card, index) => (
+            <ImageCard
+              key={index}
+              image={card.image}
+              title={card.title} // Pass the title here
+              paragraph={card.paragraph}
+            />
           ))}
         </div>
       </div>
