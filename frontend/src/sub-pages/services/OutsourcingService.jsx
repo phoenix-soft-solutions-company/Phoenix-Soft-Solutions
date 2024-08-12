@@ -1,6 +1,6 @@
 import React from "react";
 import service from "../../constants/images/services/sedevelopment.webp";
-import sideImage from "../../constants/images/services/webabout.jpg"; // Adjust path if needed
+import sideImage from "../../constants/images/services/se.jpg"; // Adjust path if needed
 import { FaCheckCircle } from "react-icons/fa"; // Import FaCheckCircle icon
 
 const Outsourcing = () => {

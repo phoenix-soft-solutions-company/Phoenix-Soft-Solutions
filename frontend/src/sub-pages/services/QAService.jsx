@@ -1,7 +1,8 @@
 import React from "react";
 import service from "../../constants/images/services/qa.jpg";
-import anotherImage from "../../constants/images/services/webabout.jpg"; // Update this with your image source
-import cardImage from "../../constants/images/services/webabout.jpg";
+import anotherImage from "../../constants/images/services/qa3.jpg"; // Update this with your image source
+import cardImage from "../../constants/images/services/qa1.jpg";
+import cardImage2 from "../../constants/images/services/qa2.jpg";
 
 const Card = ({ title, paragraph }) => (
   <div className="bg-white shadow-md rounded-lg p-6 mb-6 w-full max-w-4xl">
@@ -61,7 +62,7 @@ const Qa = () => {
         "In manual testing, the QA Analyst performs the tests by hand, and the results are recorded. Finding errors in software that is still in the development phase is the purpose of this process. The person conducting the test, in particular, will be responsible for ensuring that the program or software in consideration has all of its required components. Following that, testing reports will be prepared to serve as the foundation for the next step of software development.",
     },
     {
-      image: cardImage, // Replace with your image source
+      image: cardImage2, // Replace with your image source
       title: "AUTOMATED TESTING",
       paragraph:
         "Automation is achieved via the use of test scripting and code written by the software testers. In order to create test scripts and verify the product, testers make use of relevant automation technologies. The completion of the test execution in a shorter period of time is the desired end objective.",

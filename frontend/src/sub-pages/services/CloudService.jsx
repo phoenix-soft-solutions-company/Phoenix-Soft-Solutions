@@ -3,7 +3,9 @@ import icon1 from "../../constants/images/icons/data.png"; // Replace with the c
 import icon2 from "../../constants/images/icons/plan.png"; // Replace with the correct path
 import icon3 from "../../constants/images/icons/sketch.png"; // Replace with the correct path
 import icon4 from "../../constants/images/icons/migration.png"; // Replace with the correct path
-import service from "../../constants/images/services/custom.jpg";
+import service from "../../constants/images/services/cloud.webp";
+import service2 from "../../constants/images/services/cloud1.jpg";
+import service1 from "../../constants/images/services/cloud2.jpg";
 
 const Cloud = () => {
   return (
@@ -31,7 +33,7 @@ const Cloud = () => {
           high-profile cloud migration services vendor in Vietnam
         </p>
         <img
-          src={service}
+          src={service1}
           className="object-cover w-full max-w-md h-auto mb-8"
           alt="Cloud Migration"
         />
@@ -95,7 +97,7 @@ const Cloud = () => {
             {/* Right Side - Image */}
             <div className="flex-1 px-4 py-4">
               <img
-                src={service}
+                src={service2}
                 className="object-cover w-full h-auto rounded-lg shadow-lg"
                 alt="Cloud Migration"
               />

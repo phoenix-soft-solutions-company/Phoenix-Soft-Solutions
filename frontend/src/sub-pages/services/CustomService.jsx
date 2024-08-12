@@ -1,5 +1,6 @@
 import React from "react";
 import service from "../../constants/images/services/custom.jpg";
+import service2 from "../../constants/images/services/custom2.jpg";
 
 const Custom = () => {
   return (
@@ -31,7 +32,7 @@ const Custom = () => {
         {/* Left Side Image */}
         <div className="lg:w-1/2">
           <img
-            src={service}
+            src={service2}
             className="object-cover w-full h-full"
             alt="Service"
           />

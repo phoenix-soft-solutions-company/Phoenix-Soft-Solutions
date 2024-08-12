@@ -1,5 +1,7 @@
 import React from "react";
 import devops from "../../constants/images/services/devops.jpg";
+import devops1 from "../../constants/images/services/devo.jpg";
+import devops2 from "../../constants/images/services/devo2.jpg";
 
 const DevOps = () => {
   return (
@@ -32,7 +34,7 @@ const DevOps = () => {
             services for startups and enterprises in the world.
           </p>
           <img
-            src={devops}
+            src={devops1}
             alt="DevOps Consulting Services"
             className="mt-8 w-full lg:w-1/2 mx-auto"
           />
@@ -62,7 +64,7 @@ const DevOps = () => {
             DevOps Services
           </h1>
           <img
-            src={devops}
+            src={devops2}
             alt="Saigon Technology DevOps Services"
             className="mt-8 w-full lg:w-1/2 mx-auto"
           />

@@ -1,6 +1,7 @@
 import React from "react";
 import service from "../../constants/images/services/ai.webp";
-import exampleImage from "../../constants/images/services/webabout.jpg"; // Replace with the path to your new image
+import ai1 from "../../constants/images/services/ai1.jpg";
+import ai2 from "../../constants/images/services/ai2.jpg";
 
 const AI = () => {
   return (
@@ -10,7 +11,7 @@ const AI = () => {
         <img
           src={service}
           className="object-cover w-full h-full"
-          alt="Mobile Development"
+          alt="AI Development"
         />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest text-white uppercase">
@@ -23,17 +24,20 @@ const AI = () => {
       <div className="flex flex-col items-center mt-10 px-4">
         <h1 className="text-3xl font-serif font-bold text-center relative mb-6">
           MACHINE LEARNING & AI DEVELOPMENT SERVICES
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-1 bg-red-500"></div>
+          <span className="block h-1 w-1/12 bg-red-700 mt-2 mx-auto"></span>
+          
         </h1>
 
-        <img src={service} className="w-1/2 h-auto mb-6" alt="AI Service" />
+        {/* Reduced Size Image */}
+        <img src={ai1} className="w-1/3 h-50 mb-6" alt="AI Service" />
 
-        <p className="text-md text-justify px-8  mx-10  mb-6">
+        <p className="text-md text-justify px-8 mx-10 mb-6">
           Saigon Technology - a prominent solutions and software development
           company in Vietnam, specializes in providing corporate technology
           solutions that use Artificial Intelligence (AI) and Machine Learning
-          (ML).<br></br> As a leader in sophisticated and dependable machine
-          learning with custom AI solution implementation, we provide premier IT
+          (ML).
+          <br /> As a leader in sophisticated and dependable machine learning
+          with custom AI solution implementation, we provide premier IT
           consulting services to assist organizations in turning into
           data-driven enterprises. Our Saigon Technology, in particular, is the
           image that represents expert AI development at the most affordable
@@ -51,7 +55,7 @@ const AI = () => {
         {/* Image and Paragraphs Section */}
         <div className="flex flex-col lg:flex-row items-center w-full max-w-5xl px-4 mb-6">
           <img
-            src={exampleImage}
+            src={ai2}
             className="w-full lg:w-1/2 h-auto mb-4 lg:mb-0 lg:mr-6"
             alt="Example"
           />
