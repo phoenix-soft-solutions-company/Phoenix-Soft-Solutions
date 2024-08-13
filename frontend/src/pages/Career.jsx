@@ -196,6 +196,49 @@ const Career = () => {
           </p>
         </div>
       </div>
+
+      {/* FAQ Section */}
+      <section className="p-6 md:p-8 bg-white text-black flex flex-col items-center">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-center">
+          FAQ
+        </h1>
+
+        <div className="max-w-4xl w-full space-y-4 md:space-y-6">
+          {[
+            {
+              question: "I want to learn and develop. Will X Croup support me?",
+              answer:
+                "Yes, X Croup is committed to your professional development. We offer various learning opportunities through our X Croup Academy program, including coaching, learning tracks, and regular knowledge-sharing sessions.",
+            },
+            {
+              question: "What sort of tech stack is used at X Croup?",
+              answer:
+                "At X Croup, we use a modern tech stack that includes a variety of tools and technologies. The specifics can vary depending on the project, but we emphasize using the latest industry standards and best practices to deliver high-quality solutions.",
+            },
+            {
+              question: "How does X Croup implement and practice Agile?",
+              answer:
+                "We practice Agile through iterative development, regular stand-ups, sprint planning, and retrospectives. Our teams are empowered to adapt and improve processes continuously, ensuring that we meet our partners' needs effectively.",
+            },
+            {
+              question:
+                "What sort of people and skillsets typically work for X Croup?",
+              answer:
+                "Our teams are diverse, consisting of individuals with various skill sets including software development, product management, Agile facilitation, and more. We value people who are innovative, collaborative, and committed to delivering excellence.",
+            },
+          ].map((faq, index) => (
+            <div
+              key={index}
+              className="bg-gray-100 p-4 rounded-lg shadow-md mb-4"
+            >
+              <h3 className="text-xl md:text-2xl font-semibold mb-2 text-black-600">
+                {faq.question}
+              </h3>
+              <p>{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 };
