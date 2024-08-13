@@ -1,7 +1,11 @@
 import React from "react";
 import heading from "../constants/images/tech/technology-heading.jpg";
-import card1 from "../constants/images/tech/technology-heading.jpg"; 
-import card2 from "../constants/images/tech/technology-heading.jpg"; 
+import card1 from "../constants/images/Career/benifit1.jpg"; 
+import card2 from "../constants/images/Career/benifit2.jpg";
+import card3 from "../constants/images/Career/benifit3.jpg"; 
+import card4 from "../constants/images/Career/benifit4.jpg";
+import card5 from "../constants/images/Career/benifit5.jpg";
+import card6 from "../constants/images/Career/benifit6.jpg";
 
 const Career = () => {
   return (
@@ -97,7 +101,7 @@ const Career = () => {
               <p>
                 Success at X Croup means you'll always be facing new challenges
                 - which means you're learning and empowered to overcome your
-                current challenges. To facilitate learning, we provide coaches
+                current challenges. <br></br> <br></br>To facilitate learning, we provide coaches
                 and learning tracks through our X Croup Academy program. Our
                 current learning tracks include: Product Discovery, Tech
                 Practices, Agile Facilitation, Product Management and People
@@ -127,7 +131,7 @@ const Career = () => {
                 for our customers. Our customers are building SaaS businesses
                 and the awesome thing about SaaS is that when you are creating
                 an impact for good, then scaling the business also scales the
-                impact. X Croup Ventures is our team ESOP, giving everyone who
+                impact.<br></br> <br></br> X Croup Ventures is our team ESOP, giving everyone who
                 works at X Croup a chance to own shares in our customers. So
                 when our customers win, we not only take pride in knowing we’ve
                 achieved an awesome impact, but we share in the financial
@@ -157,7 +161,7 @@ const Career = () => {
             </div>
             <div className="w-1/2 pl-6">
               <img
-                src={card1}
+                src={card3}
                 alt="Learning opportunities"
                 className="rounded-lg object-cover w-full h-full"
               />
@@ -181,7 +185,7 @@ const Career = () => {
             </div>
             <div className="w-1/2 pr-6">
               <img
-                src={card2}
+                src={card4}
                 alt="Showcasing skills"
                 className="rounded-lg object-cover w-full h-full"
               />
@@ -201,7 +205,7 @@ const Career = () => {
             </div>
             <div className="w-1/2 pl-6">
               <img
-                src={card1}
+                src={card5}
                 alt="Learning opportunities"
                 className="rounded-lg object-cover w-full h-full"
               />
@@ -221,35 +225,34 @@ const Career = () => {
             </div>
             <div className="w-1/2 pr-6">
               <img
-                src={card2}
+                src={card6}
                 alt="Showcasing skills"
                 className="rounded-lg object-cover w-full h-full"
               />
             </div>
           </div>
-          {/* Card 1: Text Left, Image Right */}
-          <div className="bg-white p-6 rounded-lg shadow-lg flex items-center">
-            <div className="w-1/2">
-              <h3 className="text-2xl font-semibold mb-4">
-                Apply to ouropen positions
-              </h3>
-              <p>
-                Create your own role We’re always on the look out for talented
-                people to join the growing team at X Croup . Is it you?
-              </p>
-            </div>
-            <div className="w-1/2 pl-6">
-              <img
-                src={card1}
-                alt="Learning opportunities"
-                className="rounded-lg object-cover w-full h-full"
-              />
-            </div>
-          </div>
-
-          
         </div>
       </section>
+
+      {/* Card 1: Image Top, Text Bottom */}
+      <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center">
+        <div className="w-full mb-4">
+          <img
+            src={card1}
+            alt="Learning opportunities"
+            className="rounded-lg object-cover w-full h-full"
+          />
+        </div>
+        <div className="w-full text-center">
+          <h3 className="text-2xl font-semibold mb-4">
+            Apply to our open positions
+          </h3>
+          <p>
+            Create your own role. We’re always on the lookout for talented
+            people to join the growing team at X Croup. Is it you?
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
