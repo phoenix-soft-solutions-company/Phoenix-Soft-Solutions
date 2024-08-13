@@ -1,8 +1,11 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+
 import heading from "../constants/images/tech/technology-heading.jpg";
-import card1 from "../constants/images/Career/benifit1.jpg"; 
+import card1 from "../constants/images/Career/benifit1.jpg";
 import card2 from "../constants/images/Career/benifit2.jpg";
-import card3 from "../constants/images/Career/benifit3.jpg"; 
+import card3 from "../constants/images/Career/benifit3.jpg";
 import card4 from "../constants/images/Career/benifit4.jpg";
 import card5 from "../constants/images/Career/benifit5.jpg";
 import card6 from "../constants/images/Career/benifit6.jpg";
@@ -27,75 +30,112 @@ const Career = () => {
         <h2 className="text-3xl font-bold mb-8 text-center">OUR VALUES</h2>
 
         <div className="bg-gray-100 p-8 rounded-lg shadow-lg max-w-6xl">
-          <div className="flex flex-wrap">
-            {/* Left Column */}
+          <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row md:gap-x-10 lg:gap-x-0 xl:gap-x-4">
             <div className="w-full md:w-1/2 pr-4">
-              <ul className="list-none space-y-6">
-                <li>
-                  <h3 className="text-2xl font-semibold mb-2">How we play</h3>
-                  <p>
-                    It's important to know that what matters to us also matters
-                    to you.
-                  </p>
+              <ul className="list-none space-y-6 text-lg text-black lg:text-xl">
+                <li className="flex items-start transform transition-transform duration-300 hover:translate-x-2">
+                  <FontAwesomeIcon
+                    icon={faCheckCircle}
+                    className="text-red-600 mr-2 w-6 h-6"
+                  />
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-2">How we play</h3>
+                    <p>
+                      It's important to know that what matters to us also
+                      matters to you.
+                    </p>
+                  </div>
                 </li>
 
-                <li>
-                  <h3 className="text-2xl font-semibold mb-2">
-                    We're in this together
-                  </h3>
-                  <p>
-                    We work with, not for, our partners and teams to make them
-                    more successful. We work best in high-performing teams and
-                    consider our partners to be on the team with us. We have
-                    shared goals and a drive to succeed.
-                  </p>
+                <li className="flex items-start transform transition-transform duration-300 hover:translate-x-2">
+                  <FontAwesomeIcon
+                    icon={faCheckCircle}
+                    className="text-red-600 mr-2 w-6 h-6"
+                  />
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-2">
+                      We're in this together
+                    </h3>
+                    <p>
+                      We work with, not for, our partners and teams to make them
+                      more successful. We work best in high-performing teams and
+                      consider our partners to be on the team with us. We have
+                      shared goals and a drive to succeed.
+                    </p>
+                  </div>
                 </li>
 
-                <li>
-                  <h3 className="text-2xl font-semibold mb-2">
-                    Bring your best
-                  </h3>
-                  <p>
-                    Achieving great things requires us to maintain high
-                    standards and deliver excellence. We strive to be
-                    deliberate, commit, take responsibility, and see things
-                    through.
-                  </p>
+                <li className="flex items-start transform transition-transform duration-300 hover:translate-x-2">
+                  <FontAwesomeIcon
+                    icon={faCheckCircle}
+                    className="text-red-600 mr-2 w-6 h-6"
+                  />
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-2">
+                      Bring your best
+                    </h3>
+                    <p>
+                      Achieving great things requires us to maintain high
+                      standards and deliver excellence. We strive to be
+                      deliberate, commit, take responsibility, and see things
+                      through.
+                    </p>
+                  </div>
                 </li>
               </ul>
             </div>
 
-            {/* Right Column */}
             <div className="w-full md:w-1/2 pl-4">
-              <ul className="list-none space-y-6">
-                <li>
-                  <h3 className="text-2xl font-semibold mb-2">Be a pioneer</h3>
-                  <p>
-                    We’re always looking to experiment, learn, and improve. We
-                    constantly iterate over build, measure, learn. We’re agile
-                    in how we think about problems and how we deliver solutions.
-                  </p>
+              <ul className="list-none space-y-6 text-lg text-black lg:text-xl">
+                <li className="flex items-start transform transition-transform duration-300 hover:translate-x-2">
+                  <FontAwesomeIcon
+                    icon={faCheckCircle}
+                    className="text-red-600 mr-2 w-6 h-6"
+                  />
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-2">
+                      Be a pioneer
+                    </h3>
+                    <p>
+                      We’re always looking to experiment, learn, and improve. We
+                      constantly iterate over build, measure, learn. We’re agile
+                      in how we think about problems and how we deliver
+                      solutions.
+                    </p>
+                  </div>
                 </li>
 
-                <li>
-                  <h3 className="text-2xl font-semibold mb-2">Ask Why?</h3>
-                  <p>
-                    Asking why drives our desire to deliver the right thing. We
-                    position ourselves for breakthroughs that give our partners
-                    an unfair advantage in their market.
-                  </p>
+                <li className="flex items-start transform transition-transform duration-300 hover:translate-x-2">
+                  <FontAwesomeIcon
+                    icon={faCheckCircle}
+                    className="text-red-600 mr-2 w-6 h-6"
+                  />
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-2">Ask Why?</h3>
+                    <p>
+                      Asking why drives our desire to deliver the right thing.
+                      We position ourselves for breakthroughs that give our
+                      partners an unfair advantage in their market.
+                    </p>
+                  </div>
                 </li>
 
-                <li>
-                  <h3 className="text-2xl font-semibold mb-2">
-                    Be ready to help
-                  </h3>
-                  <p>
-                    Our industry has huge potential, but in many ways is
-                    self-serving. We choose to be different, serving with
-                    integrity, commitment, and excellence. To achieve this,
-                    simply be ready to help.
-                  </p>
+                <li className="flex items-start transform transition-transform duration-300 hover:translate-x-2">
+                  <FontAwesomeIcon
+                    icon={faCheckCircle}
+                    className="text-red-600 mr-2 w-6 h-6"
+                  />
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-2">
+                      Be ready to help
+                    </h3>
+                    <p>
+                      Our industry has huge potential, but in many ways is
+                      self-serving. We choose to be different, serving with
+                      integrity, commitment, and excellence. To achieve this,
+                      simply be ready to help.
+                    </p>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -106,11 +146,11 @@ const Career = () => {
       <section className="p-8 bg-gray-100 text-black flex flex-col items-center">
         <h2 className="text-3xl font-bold mb-8 text-center">OUR BENEFITS</h2>
 
-        <div className="max-w-4xl w-full space-y-8">
+        <div className="max-w-5xl w-full space-y-8">
           {/* Card 1: Text Left, Image Right */}
           <div className="bg-white p-6 rounded-lg shadow-lg flex items-center">
             <div className="w-1/2">
-              <h3 className="text-2xl font-semibold mb-4">
+              <h3 className="text-2xl font-semibold mb-4 text-red-600">
                 Opportunities to learn and share what you know
               </h3>
               <p>
@@ -138,7 +178,7 @@ const Career = () => {
           {/* Card 2: Image Left, Text Right */}
           <div className="bg-white p-6 rounded-lg shadow-lg flex items-center flex-row-reverse">
             <div className="w-1/2">
-              <h3 className="text-2xl font-semibold mb-4">
+              <h3 className="text-2xl font-semibold mb-4 text-red-600">
                 Create impactful software and share in the financial upside
               </h3>
               <p>
@@ -164,20 +204,20 @@ const Career = () => {
           {/* Card 1: Text Left, Image Right */}
           <div className="bg-white p-6 rounded-lg shadow-lg flex items-center">
             <div className="w-1/2">
-              <h3 className="text-2xl font-semibold mb-4">
+              <h3 className="text-2xl font-semibold mb-4 text-red-600">
                 A supportive & encouraging team environment
               </h3>
               <p>
-                Our Virtual Product Teams are a core feature of X Croup . We
+                Our Virtual Product Teams are a core feature of X Croup. We
                 value collaboration and co-working, and as part of a VPT, you'll
                 have access to, and be supported by other talented people who
-                are passionate about the success of our partners and X Croup .
+                are passionate about the success of our partners and X Croup.
               </p>
             </div>
             <div className="w-1/2 pl-6">
               <img
                 src={card3}
-                alt="Learning opportunities"
+                alt="Supportive environment"
                 className="rounded-lg object-cover w-full h-full"
               />
             </div>
@@ -186,7 +226,7 @@ const Career = () => {
           {/* Card 2: Image Left, Text Right */}
           <div className="bg-white p-6 rounded-lg shadow-lg flex items-center flex-row-reverse">
             <div className="w-1/2">
-              <h3 className="text-2xl font-semibold mb-4">
+              <h3 className="text-2xl font-semibold mb-4 text-red-600">
                 An office worth coming to
               </h3>
               <p>
@@ -201,7 +241,7 @@ const Career = () => {
             <div className="w-1/2 pr-6">
               <img
                 src={card4}
-                alt="Showcasing skills"
+                alt="Office environment"
                 className="rounded-lg object-cover w-full h-full"
               />
             </div>
@@ -209,7 +249,9 @@ const Career = () => {
           {/* Card 1: Text Left, Image Right */}
           <div className="bg-white p-6 rounded-lg shadow-lg flex items-center">
             <div className="w-1/2">
-              <h3 className="text-2xl font-semibold mb-4">Flexible working</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-red-600">
+                Flexible working
+              </h3>
               <p>
                 Whether you’re up with the sun or prefer a lie in, our teams
                 work closely together to create schedules that work for them and
@@ -221,7 +263,7 @@ const Career = () => {
             <div className="w-1/2 pl-6">
               <img
                 src={card5}
-                alt="Learning opportunities"
+                alt="Flexible working"
                 className="rounded-lg object-cover w-full h-full"
               />
             </div>
@@ -230,7 +272,9 @@ const Career = () => {
           {/* Card 2: Image Left, Text Right */}
           <div className="bg-white p-6 rounded-lg shadow-lg flex items-center flex-row-reverse">
             <div className="w-1/2">
-              <h3 className="text-2xl font-semibold mb-4">Celebrations</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-red-600">
+                Celebrations
+              </h3>
               <p>
                 We love celebrating the awesome things our teams achieve, from
                 promotions, completed projects, anniversaries and personal
@@ -241,7 +285,7 @@ const Career = () => {
             <div className="w-1/2 pr-6">
               <img
                 src={card6}
-                alt="Showcasing skills"
+                alt="Celebrations"
                 className="rounded-lg object-cover w-full h-full"
               />
             </div>
@@ -254,12 +298,12 @@ const Career = () => {
         <div className="w-full mb-4">
           <img
             src={card1}
-            alt="Learning opportunities"
+            alt="Open positions"
             className="rounded-lg object-cover w-full h-full"
           />
         </div>
         <div className="w-full text-center">
-          <h3 className="text-2xl font-semibold mb-4">
+          <h3 className="text-2xl font-semibold mb-4 text-red-600">
             Apply to our open positions
           </h3>
           <p>
