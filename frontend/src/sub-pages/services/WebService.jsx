@@ -1,14 +1,16 @@
 import React from "react";
-import service1 from "../../constants/images/services/webabout.jpg";
-import icon1 from "../../constants/images/icons/ico1.png";
-import icon2 from "../../constants/images/icons/ico1.png";
+import service from "../../constants/images/services/webabout.jpg";
+import service2 from "../../constants/images/services/custom.jpg";
+import service1 from "../../constants/images/services/backend.jpg";
+import icon1 from "../../constants/images/icons/Icon11.png";
+import icon2 from "../../constants/images/icons/web.png";
 // import icon3 from "../../constants/images/icons/ico1.png";
 import icon4 from "../../constants/images/icons/ico1.png";
-import icon5 from "../../constants/images/icons/ico1.png";
-import icon6 from "../../constants/images/icons/ico1.png";
-import icon7 from "../../constants/images/icons/ico1.png";
-import icon8 from "../../constants/images/icons/ico1.png";
-import icon9 from "../../constants/images/icons/ico1.png";
+import icon5 from "../../constants/images/icons/Icon6.png";
+import icon6 from "../../constants/images/icons/Icon10.png";
+import icon7 from "../../constants/images/icons/Icon1.png";
+import icon8 from "../../constants/images/icons/testing.png";
+import icon9 from "../../constants/images/icons/Icon4.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
@@ -67,7 +69,7 @@ const Web = () => {
   return (
     <div className="min-h-screen relative">
       <div className="relative w-full h-[50vh]">
-        <img src={service1} className="object-cover w-full h-full" alt="Web Development" />
+        <img src={service} className="object-cover w-full h-full" alt="Web Development" />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest text-white uppercase">
             Web Development
@@ -99,7 +101,7 @@ const Web = () => {
 
       <div className="flex flex-col-reverse lg:flex-row justify-center items-center p-5 gap-5 lg:gap-x-20 xl:gap-x-40">
         <div className="w-full lg:w-1/2 max-w-md">
-          <img src={service1} className="w-full h-auto rounded-lg" alt="Web Development" />
+          <img src={service2} className="w-full h-auto rounded-lg" alt="Web Development" />
         </div>
         <div className="w-full lg:w-1/2 max-w-2xl lg:max-w-xl bg-gray-100 p-6 rounded-lg border-2 border-red-500 shadow-md">
           <p className="text-xl leading-relaxed flex items-start">
@@ -116,7 +118,7 @@ const Web = () => {
       </div>
 
       <section className="p-10 bg-gray-200 text-center lg:mt-10">
-        <h1 className="text-2xl lg:text-3xl font-bold text-blue-600 mb-5 font-serif">
+        <h1 className="text-2xl lg:text-3xl font-bold text-red-600 mb-5 font-serif">
           Our Web Application Development Services
         </h1>
         <p className="text-xl text-gray-700 mb-10 sm:px-5 lg:px-232 xl:px-52">
@@ -133,7 +135,7 @@ const Web = () => {
                 key={index}
                 className="relative bg-white border-2 border-gray-200 rounded-lg p-4 shadow-md flex flex-col items-start h-auto sm:h-[450px] md:h-[400px] w-72 md:w-80 mx-auto">
                 <img src={box.icon} className="absolute top-4 left-4 w-12 h-12" alt={`Icon ${index + 1}`} />
-                <h2 className="text-xl font-semibold text-blue-600 mt-14 mb-2 text-start">{box.title}</h2>
+                <h2 className="text-xl font-semibold text-red-600 mt-14 mb-2 text-start">{box.title}</h2>
                 <p className="text-start text-lg text-gray-700">{box.description}</p>
               </div>
             ))}

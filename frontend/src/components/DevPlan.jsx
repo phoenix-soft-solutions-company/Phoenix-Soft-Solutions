@@ -1,4 +1,10 @@
 import React from "react";
+import workshop from "../constants/images/icons/workshop.png";
+import planning from "../constants/images/icons/planning.png";
+import testing from "../constants/images/icons/testing.png";
+import development from "../constants/images/icons/coding.png";
+import design from "../constants/images/icons/design.png";
+import maintance from "../constants/images/icons/maintance.png";
 
 const DevPlan = () => {
   return (
@@ -25,7 +31,7 @@ const DevPlan = () => {
                 <img
                   alt="icon"
                   className="w-[60px] h-[60px] p-2"
-                  src="https://cdn-icbnj.nitrocdn.com/DxLMbDkMAsFVFzgPzCObWFuipKtAgITG/assets/images/optimized/rev-09281f7/www.unifiedinfotech.net/wp-content/themes/unifiedinfotech/assets/images/how-we-approach-icon-01.svg"
+                  src={workshop}
                 />
               </div>
             </div>
@@ -56,7 +62,7 @@ const DevPlan = () => {
                 <img
                   alt="icon"
                   className="w-[60px] h-[60px] p-2"
-                  src="https://cdn-icbnj.nitrocdn.com/DxLMbDkMAsFVFzgPzCObWFuipKtAgITG/assets/images/optimized/rev-09281f7/www.unifiedinfotech.net/wp-content/themes/unifiedinfotech/assets/images/how-we-approach-icon-01.svg"
+                  src={planning}
                 />
               </div>
             </div>
@@ -87,7 +93,7 @@ const DevPlan = () => {
                 <img
                   alt="icon"
                   className="w-[60px] h-[60px] p-2"
-                  src="https://cdn-icbnj.nitrocdn.com/DxLMbDkMAsFVFzgPzCObWFuipKtAgITG/assets/images/optimized/rev-09281f7/www.unifiedinfotech.net/wp-content/themes/unifiedinfotech/assets/images/how-we-approach-icon-03.svg"
+                  src={design}
                 />
               </div>
             </div>
@@ -118,7 +124,7 @@ const DevPlan = () => {
                 <img
                   alt="icon"
                   className="w-[60px] h-[60px] p-2"
-                  src="https://cdn-icbnj.nitrocdn.com/DxLMbDkMAsFVFzgPzCObWFuipKtAgITG/assets/images/optimized/rev-09281f7/www.unifiedinfotech.net/wp-content/themes/unifiedinfotech/assets/images/how-we-approach-icon-01.svg"
+                  src={development}
                 />
               </div>
             </div>
@@ -149,7 +155,7 @@ const DevPlan = () => {
                 <img
                   alt="icon"
                   className="w-[60px] h-[60px] p-2"
-                  src="https://cdn-icbnj.nitrocdn.com/DxLMbDkMAsFVFzgPzCObWFuipKtAgITG/assets/images/optimized/rev-09281f7/www.unifiedinfotech.net/wp-content/themes/unifiedinfotech/assets/images/how-we-approach-icon-01.svg"
+                  src={testing}
                 />
               </div>
             </div>
@@ -175,7 +181,7 @@ const DevPlan = () => {
                 <img
                   alt="icon"
                   className="w-[60px] h-[60px] p-2"
-                  src="https://cdn-icbnj.nitrocdn.com/DxLMbDkMAsFVFzgPzCObWFuipKtAgITG/assets/images/optimized/rev-09281f7/www.unifiedinfotech.net/wp-content/themes/unifiedinfotech/assets/images/how-we-approach-icon-01.svg"
+                  src={maintance}
                 />
               </div>
             </div>

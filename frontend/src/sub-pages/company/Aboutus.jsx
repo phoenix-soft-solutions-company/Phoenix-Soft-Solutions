@@ -1,8 +1,8 @@
 import React from "react";
 import { FaInfoCircle, FaDotCircle, FaCheckCircle } from "react-icons/fa";
 import heading from "../../constants/images/tech/technology-heading.jpg";
-import leftImage from "../../constants/images/leftBottom.jpg";
-import rightImage from "../../constants/images/vision & mission.jpg";
+import leftImage from "../../constants/images/company/company.jpg";
+import rightImage from "../../constants/images/company/vision & mission.jpg";
 import CounterExp from "../../components/CounterExp";
 import DevPlan from "../../components/DevPlan"
 
@@ -11,9 +11,15 @@ const Aboutus = ({ showHeaderImage = true }) => {
     <div className="min-h-screen relative">
       {showHeaderImage && (
         <header className="relative w-full h-[50vh]">
-          <img src={heading} alt="header" className="object-cover w-full h-full" />
+          <img
+            src={heading}
+            alt="header"
+            className="object-cover w-full h-full"
+          />
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
-            <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest">ABOUT US</h1>
+            <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest">
+              ABOUT US
+            </h1>
           </div>
         </header>
       )}
@@ -21,7 +27,7 @@ const Aboutus = ({ showHeaderImage = true }) => {
       <div className="flex flex-col lg:flex-row p-4 md:p-8">
         <div className="lg:w-1/2">
           <div>
-            <img src={leftImage} alt="Left Side" className="w-full h-auto" />
+            <img src={leftImage} alt="Left Side" className="w-full h-[650px]" />
           </div>
         </div>
 
@@ -32,24 +38,37 @@ const Aboutus = ({ showHeaderImage = true }) => {
           </div>
 
           <h1 className="mb-4 lg:mb-10 font-bold">
-            <span className="text-red-600 text-2xl lg:text-4xl xl:text-5xl">We provide the best </span>
-            <span className="text-red-800 text-3xl lg:text-5xl xl:text-6xl">IT </span>
+            <span className="text-red-600 text-2xl lg:text-4xl xl:text-5xl">
+              We provide the best{" "}
+            </span>
+            <span className="text-red-800 text-3xl lg:text-5xl xl:text-6xl">
+              IT{" "}
+            </span>
             <br />
-            <span className="text-red-800 text-3xl lg:text-5xl xl:text-6xl">Solution</span>
-            <span className="text-red-600 text-2xl lg:text-4xl xl:text-5xl"> services</span>
+            <span className="text-red-800 text-3xl lg:text-5xl xl:text-6xl">
+              Solution
+            </span>
+            <span className="text-red-600 text-2xl lg:text-4xl xl:text-5xl">
+              {" "}
+              services
+            </span>
           </h1>
 
           <p className="mb-4 text-md lg:text-lg">
-            X croup is one of the reputed and leading IT companies of new zealand d We provide next generation
-            digital services that look great and are easy-to-use which helps our clients to grow their
-            business successfully. As a result, just in few years, the company has served more than 150+
-            customers which shows that we have made a strong reputation for building websites and software.
+            X croup is one of the reputed and leading IT companies of new
+            zealand d We provide next generation digital services that look
+            great and are easy-to-use which helps our clients to grow their
+            business successfully. As a result, just in few years, the company
+            has served more than 150+ customers which shows that we have made a
+            strong reputation for building websites and software.
           </p>
           <p className="mb-4 text-md lg:text-lg">
-            Every company wants satisfactory success and that is only possible when its clients are satisfied.
-            Thus we focus on providing customized and quality products which always give the best results to
-            our customers. We have the following teams which always use the latest technologies and tools to
-            fulfill client's requirements exactly.
+            Every company wants satisfactory success and that is only possible
+            when its clients are satisfied. Thus we focus on providing
+            customized and quality products which always give the best results
+            to our customers. We have the following teams which always use the
+            latest technologies and tools to fulfill client's requirements
+            exactly.
           </p>
 
           <div className="flex flex-col sm:flex-row mt-5 text-sm lg:text-md">
@@ -94,7 +113,8 @@ const Aboutus = ({ showHeaderImage = true }) => {
           <div className="flex justify-center sm:justify-start mt-8">
             <a
               href="#contact-us"
-              className="border-2 border-red-700 bg-red-700 text-white py-2 px-6 text-base rounded hover:bg-white hover:text-red-700 transition duration-500">
+              className="border-2 border-red-700 bg-red-700 text-white py-2 px-6 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
+            >
               Contact Us
             </a>
           </div>
@@ -107,7 +127,9 @@ const Aboutus = ({ showHeaderImage = true }) => {
 
       <div className="flex flex-col-reverse xl:flex-row-reverse gap-2 xl:gap-10 p-4 md:p-8 bg-gray-100 mt-2 lg:mt-8">
         <div className="xl:w-1/2 mb-8 md:mb-0">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">VISION & MISSION</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+            VISION & MISSION
+          </h1>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="w-full">
@@ -116,8 +138,9 @@ const Aboutus = ({ showHeaderImage = true }) => {
                 Our Vision
               </h3>
               <p className="text-lg lg:text-xl">
-                "Our vision is to satisfy our clients with our Phoenix Business Solutions and to be recognized
-                as all time preferred IT company with complete reliability & authenticity."
+                "Our vision is to satisfy our clients with our Phoenix Business
+                Solutions and to be recognized as all time preferred IT company
+                with complete reliability & authenticity."
               </p>
             </div>
 
@@ -127,8 +150,9 @@ const Aboutus = ({ showHeaderImage = true }) => {
                 Our Mission
               </h3>
               <p className="text-lg lg:text-xl">
-                "Our mission is to provide the best services at best price, to develop and maintain the bond
-                between client and company to grow together."
+                "Our mission is to provide the best services at best price, to
+                develop and maintain the bond between client and company to grow
+                together."
               </p>
             </div>
             <div className="w-full">
@@ -137,8 +161,9 @@ const Aboutus = ({ showHeaderImage = true }) => {
                 Our Values
               </h3>
               <p className="text-lg lg:text-xl">
-                "To become successful every company needs a strong base of values, which leads the whole team
-                towards the company's vision - mission. Our core values support and shape company's culture
+                "To become successful every company needs a strong base of
+                values, which leads the whole team towards the company's vision
+                - mission. Our core values support and shape company's culture
                 and motivate our employees to achieve their goals."
               </p>
             </div>
@@ -146,11 +171,17 @@ const Aboutus = ({ showHeaderImage = true }) => {
         </div>
 
         <div className="xl:w-1/2">
-          <img src={rightImage} alt="Vision & Mission" className="w-full h-auto" />
+          <img
+            src={rightImage}
+            alt="Vision & Mission"
+            className="w-full h-auto"
+          />
         </div>
       </div>
 
-      <div><DevPlan/></div>
+      <div>
+        <DevPlan />
+      </div>
     </div>
   );
 };
