@@ -1,7 +1,8 @@
 import React from "react";
 import service from "../../constants/images/services/sedevelopment.webp";
 import sideImage from "../../constants/images/services/se.jpg"; // Adjust path if needed
-import { FaCheckCircle } from "react-icons/fa"; // Import FaCheckCircle icon
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 const Outsourcing = () => {
   return (
@@ -43,21 +44,30 @@ const Outsourcing = () => {
         {/* Right Side Paragraphs */}
         <div className="w-full lg:w-1/2 lg:pl-12 space-y-4">
           <p className="flex items-start text-lg">
-            <FaCheckCircle className="text-red-600 text-2xl mr-2 mt-1" />
+            <FontAwesomeIcon
+              icon={faCheckCircle}
+              className="text-red-600 text-xl mr-2 mt-1"
+            />
             Saigon Technology has one goal: your success is our mission! We are
             a top software outsourcing company with over 12 years of experience.
             We have completed over 800 projects in many areas. This means we
             keep up with tech changes.
           </p>
           <p className="flex items-start text-lg">
-            <FaCheckCircle className="text-red-600 text-2xl mr-2 mt-1" />
+            <FontAwesomeIcon
+              icon={faCheckCircle}
+              className="text-red-600 text-xl mr-2 mt-1"
+            />
             Skilled project managers and tech team leaders lead our end-to-end
             services. Teams of developers with experience across many domains
             handle the coding. This method ensures high-quality products from
             start to finish. It lets you focus on your business.
           </p>
           <p className="flex items-start text-lg">
-            <FaCheckCircle className="text-red-600 text-2xl mr-2 mt-1" />
+            <FontAwesomeIcon
+              icon={faCheckCircle}
+              className="text-red-600 text-xl mr-2 mt-1"
+            />
             With over 350 developers, we offer flexible engagement models. These
             fit your budget and goals. Our advanced methods reduce project risks
             and fast-track your market entry. <br />
@@ -85,11 +95,14 @@ const Outsourcing = () => {
           {/* Card 1 */}
           <div className="bg-white p-6 rounded shadow-lg">
             <h3 className="text-xl font-serif font-bold flex items-center mb-2">
-              <FaCheckCircle className="text-red-600 text-xl mr-2" />
+              <FontAwesomeIcon
+                icon={faCheckCircle}
+                className="text-red-600 text-xl mr-2"
+              />
               Experience Excellence
             </h3>
             <p className="text-gray-700">
-              Are you looking for software developers ? We have been creating
+              Are you looking for software developers? We have been creating
               solutions for global companies for over 12 years. Our team grows
               with technology. That’s why we gain knowledge to meet complex
               needs. We are ready to handle your project requirements with
@@ -100,13 +113,16 @@ const Outsourcing = () => {
           {/* Card 2 */}
           <div className="bg-white p-6 rounded shadow-lg">
             <h3 className="text-xl font-serif font-bold flex items-center mb-2">
-              <FaCheckCircle className="text-red-600 text-xl mr-2" />
+              <FontAwesomeIcon
+                icon={faCheckCircle}
+                className="text-red-600 text-xl mr-2"
+              />
               Harvest of Project Experiences
             </h3>
             <p className="text-gray-700">
-              We have worked on over 800 diverse projects . Our experience
-              covers many areas and industries. Our team is equipped to handle
-              any project challenges. From our past projects, we have learned
+              We have worked on over 800 diverse projects. Our experience covers
+              many areas and industries. Our team is equipped to handle any
+              project challenges. From our past projects, we have learned
               valuable insights. These help us improve and create innovative
               solutions. Trust us to deliver effective results.
             </p>
@@ -115,7 +131,10 @@ const Outsourcing = () => {
           {/* Card 3 */}
           <div className="bg-white p-6 rounded shadow-lg">
             <h3 className="text-xl font-serif font-bold flex items-center mb-2">
-              <FaCheckCircle className="text-red-600 text-xl mr-2" />
+              <FontAwesomeIcon
+                icon={faCheckCircle}
+                className="text-red-600 text-xl mr-2"
+              />
               Cost-Effective Solutions with a Vietnamese Team
             </h3>
             <p className="text-gray-700">
@@ -130,11 +149,14 @@ const Outsourcing = () => {
           {/* Card 4 */}
           <div className="bg-white p-6 rounded shadow-lg">
             <h3 className="text-xl font-serif font-bold flex items-center mb-2">
-              <FaCheckCircle className="text-red-600 text-xl mr-2" />
+              <FontAwesomeIcon
+                icon={faCheckCircle}
+                className="text-red-600 text-xl mr-2"
+              />
               Gateway to Skilled Professionals
             </h3>
             <p className="text-gray-700">
-              We select only the top IT talent in Vietnam , focusing on the top
+              We select only the top IT talent in Vietnam, focusing on the top
               1% of graduates. Our hiring process is strict, ensuring we work
               with the best developers. We offer intern training in tech,
               English, and management as well.
@@ -144,14 +166,17 @@ const Outsourcing = () => {
           {/* Card 5 */}
           <div className="bg-white p-6 rounded shadow-lg">
             <h3 className="text-xl font-serif font-bold flex items-center mb-2">
-              <FaCheckCircle className="text-red-600 text-xl mr-2" />
+              <FontAwesomeIcon
+                icon={faCheckCircle}
+                className="text-red-600 text-xl mr-2"
+              />
               Various Flexible Engagement Models
             </h3>
             <p className="text-gray-700">
               Our team of over 350 developers excels in many fields. This allows
               us to offer different work models to suit your needs. We provide
               staff augmentation, dedicated development teams, fixed-price
-              options, and an ODC model . Each is designed to match client
+              options, and an ODC model. Each is designed to match client
               demands, helping you meet your budget and deadlines.
             </p>
           </div>
@@ -159,7 +184,10 @@ const Outsourcing = () => {
           {/* Card 6 */}
           <div className="bg-white p-6 rounded shadow-lg">
             <h3 className="text-xl font-serif font-bold flex items-center mb-2">
-              <FaCheckCircle className="text-red-600 text-xl mr-2" />
+              <FontAwesomeIcon
+                icon={faCheckCircle}
+                className="text-red-600 text-xl mr-2"
+              />
               Adoption of Agile Principles
             </h3>
             <p className="text-gray-700">
@@ -172,7 +200,10 @@ const Outsourcing = () => {
 
           <div className="bg-white p-6 rounded shadow-lg">
             <h3 className="text-xl font-serif font-bold flex items-center mb-2">
-              <FaCheckCircle className="text-red-600 text-xl mr-2" />
+              <FontAwesomeIcon
+                icon={faCheckCircle}
+                className="text-red-600 text-xl mr-2"
+              />
               Spectrum of Data Security and Quality Management
             </h3>
             <p className="text-gray-700">
@@ -185,7 +216,10 @@ const Outsourcing = () => {
 
           <div className="bg-white p-6 rounded shadow-lg">
             <h3 className="text-xl font-serif font-bold flex items-center mb-2">
-              <FaCheckCircle className="text-red-600 text-xl mr-2" />
+              <FontAwesomeIcon
+                icon={faCheckCircle}
+                className="text-red-600 text-xl mr-2"
+              />
               Frontline Technological Adoption
             </h3>
             <p className="text-gray-700">
@@ -195,9 +229,13 @@ const Outsourcing = () => {
               market advantage.
             </p>
           </div>
+
           <div className="bg-white p-6 rounded shadow-lg">
             <h3 className="text-xl font-serif font-bold flex items-center mb-2">
-              <FaCheckCircle className="text-red-600 text-xl mr-2" />
+              <FontAwesomeIcon
+                icon={faCheckCircle}
+                className="text-red-600 text-xl mr-2"
+              />
               Unified Communication
             </h3>
             <p className="text-gray-700">
@@ -208,9 +246,13 @@ const Outsourcing = () => {
               project.
             </p>
           </div>
+
           <div className="bg-white p-6 rounded shadow-lg">
             <h3 className="text-xl font-serif font-bold flex items-center mb-2">
-              <FaCheckCircle className="text-red-600 text-xl mr-2" />
+              <FontAwesomeIcon
+                icon={faCheckCircle}
+                className="text-red-600 text-xl mr-2"
+              />
               Professional Project Management
             </h3>
             <p className="text-gray-700">
