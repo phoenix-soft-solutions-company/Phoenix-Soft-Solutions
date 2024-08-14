@@ -195,6 +195,14 @@ const Career = () => {
             people to join the growing team at X Croup. Is it you?
           </p>
         </div>
+        <div className="mt-6">
+          <a
+            href="/Company/Contactus"
+            className="inline-block px-6 py-3 bg-red-500 text-white font-bold rounded-lg shadow hover:bg-red-600 transition duration-300"
+          >
+            Get in Touch
+          </a>
+        </div>
       </div>
 
       {/* FAQ Section */}

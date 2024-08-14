@@ -146,7 +146,9 @@ const Cyber = () => {
 
       {/* Justified Text Section */}
       <div className="flex flex-col items-center justify-center text-center mt-16 px-8">
-        <h4 className="text-xl font-semibold text-red-500">Company Strengths at a glance</h4>
+        <h4 className="text-xl font-semibold text-red-500">
+          Company Strengths at a glance
+        </h4>
         <h1 className="text-3xl lg:text-4xl font-bold mt-4">
           Our Strong Points
         </h1>
@@ -165,7 +167,9 @@ const Cyber = () => {
       <div className="flex flex-col lg:flex-row justify-between mt-16 px-8 lg:px-32 mb-10 ">
         {/* Card 1 */}
         <div className="bg-white shadow-lg rounded-lg p-6 mb-8 lg:w-1/2 lg:mb-0 lg:mr-4 ">
-          <h2 className="text-2xl font-bold mb-2 text-red-500">Risk and Compliance</h2>
+          <h2 className="text-2xl font-bold mb-2 text-red-500">
+            Risk and Compliance
+          </h2>
           <p className="text-lg text-justify">
             At CSS, we help with your Risk and Compliance programs. We also
             setup standards that make sense for your industry. If a program
@@ -298,6 +302,9 @@ const Cyber = () => {
           </ul>
         </div>
       </div>
+      
+
+      
     </div>
   );
 };
