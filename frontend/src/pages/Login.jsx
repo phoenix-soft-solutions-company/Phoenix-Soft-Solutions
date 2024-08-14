@@ -1,6 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Perform form validation or authentication here
+
+    // On successful login, navigate to the admin page
+    navigate("/admin");
+  };
+
   return (
     <div className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center px-4 py-4 lg:py-20">
       <div className="flex flex-col lg:flex-row bg-white shadow-md rounded-lg p-4">
@@ -8,13 +19,13 @@ function Login() {
           <img
             src="https://img.freepik.com/free-vector/login-concept-illustration_114360-739.jpg"
             alt="login"
-            className="w-wull h-auto p-2 lg:p-8 mx-auto"
+            className="w-full h-auto p-2 lg:p-8 mx-auto"
           />
         </div>
 
         <div className="px-4 sm:px-8 w-full lg:w-1/2 mx-auto my-auto">
           <div className="">
-            <form className="">
+            <form className="" onSubmit={handleSubmit}>
               <h1 className="text-2xl font-bold mb-2">Sign In</h1>
               <div className="mb-4">
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">

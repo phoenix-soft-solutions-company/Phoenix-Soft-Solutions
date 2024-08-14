@@ -36,6 +36,11 @@ import WebHosting from "./sub-pages/hosting/WebHosting";
 import CloudHosting from "./sub-pages/hosting/CloudHosting";
 import VPSHosting from "./sub-pages/hosting/VPSHosting";
 import BusinessEmail from "./sub-pages/hosting/BusinessEmail";
+import Admin from "./pages/Admin";
+import AdminCounter from "./sub-pages/admin/AdminCounter";
+import AdminEvent from "./sub-pages/admin/AdminEvent";
+import AdminProject from "./sub-pages/admin/AdminProject";
+import AdminFeedback from "./sub-pages/admin/AdminFeedback";
 
 const App = () => {
   return (
@@ -79,16 +84,21 @@ const App = () => {
 
           {/* domain sub pages */}
           <Route path="/domain/lk" element={<LkDomain />} />
-          <Route
-            path="/domain/international"
-            element={<InternationalDomain />}
-          />
+          <Route path="/domain/international" element={<InternationalDomain />} />
 
           {/* hosting sub pages */}
           <Route path="/hosting/web" element={<WebHosting />} />
           <Route path="/hosting/cloud" element={<CloudHosting />} />
           <Route path="/hosting/vps" element={<VPSHosting />} />
           <Route path="/hosting/business-email" element={<BusinessEmail />} />
+
+          {/* admin routes */}
+          <Route path="/admin" element={<Admin />}>
+            <Route path="counter" element={<AdminCounter />} />
+            <Route path="project" element={<AdminProject />} />
+            <Route path="event" element={<AdminEvent />} />
+            <Route path="feedback" element={<AdminFeedback />} />
+          </Route>
         </Routes>
       </div>
       <Footer />
