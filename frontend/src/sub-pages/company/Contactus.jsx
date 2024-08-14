@@ -32,11 +32,11 @@ const Contactus = ({ showHeaderImage = true }) => {
         <div className="flex flex-col gap-5 px-2 sm:px-4 lg:px-8">
           {/* Contact Us Description */}
           <div className="text-center mb-8">
-            
             <p className="text-lg">
-              We would love to hear from you! <br></br>Whether you have a question about
-              our services, <br></br>need assistance, or just want to give feedback, feel
-              free to reach out to us. <br></br>Our team is here to help you.
+              We would love to hear from you! <br></br>Whether you have a
+              question about our services, <br></br>need assistance, or just
+              want to give feedback, feel free to reach out to us. <br></br>Our
+              team is here to help you.
             </p>
           </div>
           {/* main Box */}
@@ -52,7 +52,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   />
                   <div>
                     <p className="text-lg">
-                      1/46 Martin Place <br />
+                      Phonix Digital (Pvt) Ltd<br/> 1/46 Martin Place <br />
                       Sydney NSW 2000 <br />
                       Australia
                     </p>
@@ -77,7 +77,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                     className="text-red-600 mr-4 mt-1"
                   />
                   <div>
-                    <p className="text-lg">+12125468713 </p>
+                    <p className="text-lg">+ </p>
                   </div>
                 </div>
               </div>
@@ -109,7 +109,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                     style={{ fontSize: "2rem" }}
                   />
                   <p className="text-lg">
-                    <span>Xcrop (Pvt) Ltd,</span>
+                    <span>Phonix Digital (Pvt) Ltd,</span>
                     <br />
                     <span>Level 6,</span> <br />
                     <span>40 Taranaki Street Wellington,</span> <br />
@@ -151,7 +151,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                     style={{ fontSize: "2rem" }}
                   />
                   <p className="text-lg">
-                    <span>Xcrop (Pvt) Ltd,</span>
+                    <span>Phonix Digital (Pvt) Ltd,</span>
                     <br />
                     <span>66, Fieldside Road,</span> <br />
                     <span>Bromley,</span> <br />
@@ -164,7 +164,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                     className="text-red-600 mr-4"
                     style={{ fontSize: "2rem" }}
                   />
-                  <p className="text-lg">+44 73 089 6025</p>
+                  <p className="text-lg">+</p>
                 </div>
               </div>
               <div className="w-full h-40">
@@ -192,7 +192,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                     style={{ fontSize: "2rem" }}
                   />
                   <p className="text-lg">
-                    <span>Xcrop (Pvt) Ltd,</span>
+                    <span>Phonix Digital (Pvt) Ltd,</span>
                     <br />
                     <span>No. 23,</span> <br />
                     <span>Matara Road,</span> <br />
@@ -233,7 +233,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                     style={{ fontSize: "2rem" }}
                   />
                   <p className="text-lg">
-                    <span>Xcrop (Pvt) Ltd,</span>
+                    <span>Phonix Digital (Pvt) Ltd,</span>
                     <br />
                     <span>Isafjordsgatan 15,</span> <br />
                     <span>166 45 Kista,</span> <br />
@@ -246,7 +246,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                     className="text-red-600 mr-4"
                     style={{ fontSize: "2rem" }}
                   />
-                  <p className="text-lg">+46 76 692 1940</p>
+                  <p className="text-lg">+</p>
                 </div>
               </div>
               <div className="w-full h-40">

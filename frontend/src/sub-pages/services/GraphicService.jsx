@@ -100,13 +100,16 @@ const Graphic = () => {
         <div className="relative z-10 text-center px-4 lg:px-8">
           <h2 className="text-3xl font-bold mb-4">Get Started with Us</h2>
           <p className="text-lg mb-6">
-            Contact us today to secure your business with our expert cyber
-            security services and solutions. Let’s work together to protect what
-            matters most.
+            Contact us today to elevate your brand with our expert graphic
+            design services. Let’s collaborate to create stunning visuals that
+            make a lasting impression.
           </p>
-          <button className="bg-white text-red-500 py-2 px-6 rounded-full font-semibold">
-            Get in Touch
-          </button>
+          <a href="/Company/Contactus" className="block">
+            <button className="bg-white text-red-500 py-2 px-6 rounded-full font-semibold">
+              Get in Touch
+            </button>
+          </a>
+          
         </div>
       </div>
     </div>

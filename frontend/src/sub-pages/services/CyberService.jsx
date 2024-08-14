@@ -325,9 +325,11 @@ const Cyber = () => {
             security services and solutions. Let’s work together to protect what
             matters most.
           </p>
-          <button className="bg-white text-red-500 py-2 px-6 rounded-full font-semibold">
-            Get in Touch
-          </button>
+          <a href="/Company/Contactus" className="block">
+            <button className="bg-white text-red-500 py-2 px-6 rounded-full font-semibold">
+              Get in Touch
+            </button>
+          </a>
         </div>
       </div>
     </div>

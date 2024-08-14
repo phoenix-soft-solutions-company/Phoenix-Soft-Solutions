@@ -61,7 +61,7 @@ function CustomerReviews() {
               minWidth: "45px",
               maxWidth: "400px",
             }}>
-            <div className="relative w-full h-[550px] bg-red-200 p-2 rounded-lg shadow-lg border border-gray-200 mt-10">
+            <div className="relative w-full h-[550px] bg-red-600 p-2 rounded-lg shadow-lg border border-gray-200 mt-10">
               <div className="absolute top-[-40px] left-1/2 transform -translate-x-1/2 bg-white w-24 h-24 rounded-full border border-red-400 flex items-center justify-center">
                 <img
                   src={review.imageUrl}
