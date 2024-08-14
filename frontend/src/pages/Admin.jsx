@@ -9,11 +9,11 @@ function Admin() {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <div>
+    <div className="">
       <div className="flex justify-center p-4">
         <div>
           <div>
-            <h1 className="text-2xl font-bold mb-4 text-center">Admin Dashboard</h1>
+            <h1 className="text-2xl font-bold mb-4 text-center mt-5">Admin Dashboard</h1>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
