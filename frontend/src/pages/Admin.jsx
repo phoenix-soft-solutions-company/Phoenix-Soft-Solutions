@@ -1,8 +1,12 @@
 import React from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate, useLocation } from "react-router-dom";
 
 function Admin() {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Determine the active path
+  const isActive = (path) => location.pathname === path;
 
   return (
     <div>
@@ -15,22 +19,38 @@ function Admin() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             <button
               onClick={() => navigate("/admin/counter")}
-              className="border-2 border-green-700 bg-green-700 text-white py-4 px-8 text-base rounded hover:bg-white hover:text-green-700 transition duration-500">
+              className={`border-2 py-4 px-8 text-base rounded transition duration-500 ${
+                isActive("/admin/counter")
+                  ? "border-blue-700 bg-blue-700 text-white hover:bg-blue-800"
+                  : "border-green-700 bg-green-700 text-white hover:bg-green-800"
+              }`}>
               Counter
             </button>
             <button
               onClick={() => navigate("/admin/project")}
-              className="border-2 border-green-700 bg-green-700 text-white py-4 px-8 text-base rounded hover:bg-white hover:text-green-700 transition duration-500">
+              className={`border-2 py-4 px-8 text-base rounded transition duration-500 ${
+                isActive("/admin/project")
+                  ? "border-blue-700 bg-blue-700 text-white hover:bg-blue-800"
+                  : "border-green-700 bg-green-700 text-white hover:bg-green-800"
+              }`}>
               Project
             </button>
             <button
               onClick={() => navigate("/admin/event")}
-              className="border-2 border-green-700 bg-green-700 text-white py-4 px-8 text-base rounded hover:bg-white hover:text-green-700 transition duration-500">
+              className={`border-2 py-4 px-8 text-base rounded transition duration-500 ${
+                isActive("/admin/event")
+                  ? "border-blue-700 bg-blue-700 text-white hover:bg-blue-800"
+                  : "border-green-700 bg-green-700 text-white hover:bg-green-800"
+              }`}>
               Event
             </button>
             <button
               onClick={() => navigate("/admin/feedback")}
-              className="border-2 border-green-700 bg-green-700 text-white py-4 px-8 text-base rounded hover:bg-white hover:text-green-700 transition duration-500">
+              className={`border-2 py-4 px-8 text-base rounded transition duration-500 ${
+                isActive("/admin/feedback")
+                  ? "border-blue-700 bg-blue-700 text-white hover:bg-blue-800"
+                  : "border-green-700 bg-green-700 text-white hover:bg-green-800"
+              }`}>
               Feedback
             </button>
           </div>
