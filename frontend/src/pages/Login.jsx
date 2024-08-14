@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import loginImage from "../constants/images/login.jpg"; // Import your image
 
 function Login() {
   const navigate = useNavigate();
@@ -13,11 +14,11 @@ function Login() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center px-4 py-4 lg:py-20">
+    <div className="bg-gradient-to-r from-red-500 via-white-500 to-red-200 flex items-center justify-center px-4 py-4 lg:py-20">
       <div className="flex flex-col lg:flex-row bg-white shadow-md rounded-lg p-4">
-        <div className="mb-6 w-full lg:w-1/2">
+        <div className="mb-6 w-full lg:w-1/2 ">
           <img
-            src="https://img.freepik.com/free-vector/login-concept-illustration_114360-739.jpg"
+            src={loginImage} // Use the imported image
             alt="login"
             className="w-full h-auto p-2 lg:p-8 mx-auto"
           />
