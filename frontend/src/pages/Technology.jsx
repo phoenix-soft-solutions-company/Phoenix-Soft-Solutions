@@ -20,6 +20,7 @@ import service3 from "../constants/images/tech/health.png";
 import service4 from "../constants/images/tech/bussines.png";
 import service5 from "../constants/images/tech/bank.png";
 import service6 from "../constants/images/tech/ecommernce.png";
+import Logo from "../constants/images/logo.png";
 
 const images = [nodejs, php, python, reactImg, angular, aws, android, java, ios, js];
 
@@ -106,10 +107,15 @@ const Technology = () => {
         </h1>
 
         <div className="flex flex-col justify-center w-full my-5">
-          <div className="flex justify-center  items-center mx-auto border border-gray-200 w-28 h-28 p-2 shadow-sm rounded-md ">
-            <img src={service1} alt="logo" className="object-contain w-20 h-20 mx-auto" />
+          <div className="flex justify-center bg-red-400 items-center mx-auto border border-gray-200 w-28 h-28 p-2 shadow-sm rounded-md ">
+            <img src={Logo} alt="logo" className="w-[150px] h-auto mx-auto" />
           </div>
-          <svg className="hidden lg:block mx-auto" version="1.1" xmlns="http://www.w3.org/2000/svg" width="843" height="99">
+          <svg
+            className="hidden lg:block mx-auto"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="843"
+            height="99">
             <path
               d="M0 0 C278.19 0 556.38 0 843 0 C843 32.67 843 65.34 843 99 C564.81 99 286.62 99 0 99 C0 66.33 0 33.66 0 0 Z "
               fill="#FFFFFF"
