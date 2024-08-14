@@ -45,7 +45,7 @@ const AI = () => {
         </p>
 
         {/* Light Red Box */}
-        <div className="bg-red-100 p-6 rounded-lg shadow-md w-full max-w-5xl mb-4 border-2 border-red-500">
+        <div className="bg-red-100 p-6 rounded-lg shadow-md w-full max-w-5xl mb-14 mt-10 border-2 border-red-500">
           <p className="text-4xl text-red-600 font-bold">
             We provide and deploy the most advanced AI-driven services to
             optimize your business operations.

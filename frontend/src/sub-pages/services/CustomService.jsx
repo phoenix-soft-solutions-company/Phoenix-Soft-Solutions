@@ -76,7 +76,7 @@ const Custom = () => {
 
       {/* Centered Additional Heading and Paragraph */}
       <div className="flex flex-col items-center py-8">
-        <h1 className="text-2xl lg:text-3xl font-serif font-bold text-center mb-4">
+        <h1 className="text-2xl lg:text-3xl font-serif font-bold text-center mb-4 ">
           Elevating Your Business with Custom <br />
           Software Development Services
         </h1>
@@ -97,7 +97,7 @@ const Custom = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {/* Card 1 */}
           <div className="bg-white p-6 rounded shadow-lg">
-            <h3 className="text-xl font-serif font-bold mb-2">
+            <h3 className="text-xl font-serif font-bold mb-2 text-red-500">
               Software Consulting
             </h3>
             <p className="text-gray-700">
@@ -113,7 +113,7 @@ const Custom = () => {
 
           {/* Card 2 */}
           <div className="bg-white p-6 rounded shadow-lg">
-            <h3 className="text-xl font-serif font-bold mb-2">
+            <h3 className="text-xl font-serif font-bold mb-2 text-red-500">
               Custom Web Application Development
             </h3>
             <p className="text-gray-700">
@@ -128,7 +128,7 @@ const Custom = () => {
 
           {/* Card 3 */}
           <div className="bg-white p-6 rounded shadow-lg">
-            <h3 className="text-xl font-serif font-bold mb-2">
+            <h3 className="text-xl font-serif font-bold mb-2 text-red-500">
               Custom Mobile Application Development
             </h3>
             <p className="text-gray-700">
@@ -144,7 +144,7 @@ const Custom = () => {
 
           {/* Card 4 */}
           <div className="bg-white p-6 rounded shadow-lg">
-            <h3 className="text-xl font-serif font-bold mb-2">
+            <h3 className="text-xl font-serif font-bold mb-2 text-red-500">
               Enterprise Software Development
             </h3>
             <p className="text-gray-700">
@@ -159,7 +159,7 @@ const Custom = () => {
 
           {/* Card 5 */}
           <div className="bg-white p-6 rounded shadow-lg">
-            <h3 className="text-xl font-serif font-bold mb-2">
+            <h3 className="text-xl font-serif font-bold mb-2 text-red-500">
               SaaS Application Development
             </h3>
             <p className="text-gray-700">
@@ -174,7 +174,7 @@ const Custom = () => {
 
           {/* Card 6 */}
           <div className="bg-white p-6 rounded shadow-lg">
-            <h3 className="text-xl font-serif font-bold mb-2">
+            <h3 className="text-xl font-serif font-bold mb-2 text-red-500">
               API Development & Software Integration
             </h3>
             <p className="text-gray-700">

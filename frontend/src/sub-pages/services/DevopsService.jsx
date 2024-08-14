@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import devops from "../../constants/images/services/devops.jpg";
 import devops1 from "../../constants/images/services/devo.jpg";
 import devops2 from "../../constants/images/services/devo2.jpg";
@@ -71,34 +73,58 @@ const DevOps = () => {
 
           {/* Centering the List with Left Padding */}
           <div className="flex justify-center mt-8">
-            <ul className="text-lg lg:text-xl space-y-4 text-left list-disc list-inside pl-8 max-w-3xl">
-              <li>
-                <span className="font-bold">
-                  Speed up the rollout of new software:
-                </span>{" "}
-                Integrate and automate supervision, quality assessment, and
-                corrective actions using toolchains of DevOps Services & DevOps
-                solutions.
+            <ul className="list-none space-y-4 text-left pl-8 max-w-3xl">
+              <li className="flex items-start">
+                <FontAwesomeIcon
+                  icon={faCheckCircle}
+                  className="text-red-500 mr-2"
+                />
+                <span className="text-lg lg:text-xl">
+                  <span className="font-bold">
+                    Speed up the rollout of new software:
+                  </span>{" "}
+                  Integrate and automate supervision, quality assessment, and
+                  corrective actions using toolchains of DevOps Services &
+                  DevOps solutions.
+                </span>
               </li>
-              <li>
-                <span className="font-bold">
-                  Generate software of an excellent caliber:
-                </span>{" "}
-                Produce software outputs of the highest possible quality, with
-                prolonged release validation to be performed at each level of
-                the software development life cycle (SDLC) to ensure code
-                quality is always at its best.
+              <li className="flex items-start">
+                <FontAwesomeIcon
+                  icon={faCheckCircle}
+                  className="text-red-500 mr-2"
+                />
+                <span className="text-lg lg:text-xl">
+                  <span className="font-bold">
+                    Generate software of an excellent caliber:
+                  </span>{" "}
+                  Produce software outputs of the highest possible quality, with
+                  prolonged release validation to be performed at each level of
+                  the software development life cycle (SDLC) to ensure code
+                  quality is always at its best.
+                </span>
               </li>
-              <li>
-                <span className="font-bold">
-                  Boost the efficiency of developing software:
-                </span>{" "}
-                By automatically detecting errors and eliminating them, the
-                downtime will be minimized as much as possible.
+              <li className="flex items-start">
+                <FontAwesomeIcon
+                  icon={faCheckCircle}
+                  className="text-red-500 mr-2"
+                />
+                <span className="text-lg lg:text-xl">
+                  <span className="font-bold">
+                    Boost the efficiency of developing software:
+                  </span>{" "}
+                  By automatically detecting errors and eliminating them, the
+                  downtime will be minimized as much as possible.
+                </span>
               </li>
-              <li>
-                <span className="font-bold">Fourth</span> item in the list with
-                a brief description.
+              <li className="flex items-start">
+                <FontAwesomeIcon
+                  icon={faCheckCircle}
+                  className="text-red-500 mr-2"
+                />
+                <span className="text-lg lg:text-xl">
+                  <span className="font-bold">Fourth</span> item in the list
+                  with a brief description.
+                </span>
               </li>
             </ul>
           </div>
