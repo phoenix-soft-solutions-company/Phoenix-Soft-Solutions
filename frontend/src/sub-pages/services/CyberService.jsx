@@ -1,5 +1,5 @@
 import React from "react";
-import service from "../../constants/images/services/cyber.png";
+import service from "../../constants/images/services/cyber.jpg";
 import middle from "../../constants/images/services/cyber2.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";

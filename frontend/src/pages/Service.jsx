@@ -16,7 +16,7 @@ import frontendService from "../constants/images/services/frontend.webp";
 import cloudService from "../constants/images/services/cloud.webp";
 import pocService from "../constants/images/services/poc.jpg";
 import marketingService from "../constants/images/services/marketing.jpg";
-import cyberService from "../constants/images/services/cyber.png";
+import cyberService from "../constants/images/services/cyber.jpg";
 import managementService from "../constants/images/services/management.jpg";
 import graphicService from "../constants/images/services/graphic.jpg";
 

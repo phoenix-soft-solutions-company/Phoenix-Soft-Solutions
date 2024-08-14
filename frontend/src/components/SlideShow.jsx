@@ -3,7 +3,7 @@ import "./Styles.css";
 import slide1 from "../constants/images/slides/slide1.jpg";
 import slide2 from "../constants/images/services/backend.jpg";
 import slide3 from "../constants/images/slides/slide3.jpg";
-import slide4 from "../constants/images/services/cyber.png";
+import slide4 from "../constants/images/slides/slide4.png";
 
 const images = [
   {
