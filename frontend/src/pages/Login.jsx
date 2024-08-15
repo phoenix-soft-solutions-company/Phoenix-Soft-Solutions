@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import loginImage from "../constants/images/login.jpg"; // Import your image
+import loginImage from "../constants/images/login.avif"; // Import your image
 
 function Login() {
   const navigate = useNavigate();
@@ -14,8 +14,8 @@ function Login() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-red-500 via-white-500 to-red-200 flex items-center justify-center px-20 py-4 lg:py-20">
-      <div className="flex flex-col lg:flex-row bg-white shadow-md rounded-lg p-4 lg:p-6 w-full max-w-md lg:max-w-5xl">
+    <div className="bg-gradient-to-r from-red-500 via-purple-500 to-pink-500 flex items-center justify-center  py-4 lg:py-20">
+      <div className="flex flex-col lg:flex-row bg-white shadow-md rounded-lg p-4 lg:p-6 w-full max-w-md lg:max-w-4xl">
         <div className="mb-6 w-full lg:w-1/2 ">
           <img
             src={loginImage} // Use the imported image
