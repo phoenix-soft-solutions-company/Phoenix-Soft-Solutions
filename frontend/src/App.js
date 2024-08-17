@@ -36,11 +36,11 @@ import WebHosting from "./sub-pages/hosting/WebHosting";
 import CloudHosting from "./sub-pages/hosting/CloudHosting";
 import VPSHosting from "./sub-pages/hosting/VPSHosting";
 import BusinessEmail from "./sub-pages/hosting/BusinessEmail";
-import Admin from "./pages/Admin";
-import AdminCounter from "./sub-pages/admin/AdminCounter";
-import AdminEvent from "./sub-pages/admin/AdminEvent";
-import AdminProject from "./sub-pages/admin/AdminProject";
-import AdminFeedback from "./sub-pages/admin/AdminFeedback";
+import Admin from "./admin-panel/Admin";
+import AdminCounter from "./admin-panel/AdminCounter";
+import AdminEvent from "./admin-panel/AdminEvent";
+import AdminProject from "./admin-panel/AdminProject";
+import AdminFeedback from "./admin-panel/AdminFeedback";
 
 const App = () => {
   return (
