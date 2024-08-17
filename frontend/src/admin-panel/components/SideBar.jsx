@@ -30,7 +30,7 @@ function SideBar({ isVisible, onClose }) {
               ? "bg-blue-500 text-white"
               : "text-gray-700 hover:text-white hover:bg-blue-500"
           }`}>
-          XCrop Links
+          Xcrop
         </button>
         <div
           className={`overflow-hidden transition-all duration-300 ${
@@ -58,7 +58,7 @@ function SideBar({ isVisible, onClose }) {
               ? "bg-blue-500 text-white"
               : "text-gray-700 hover:text-white hover:bg-blue-500"
           }`}>
-          New Project
+          ABC web
         </button>
         <div
           className={`overflow-hidden transition-all duration-300 ${

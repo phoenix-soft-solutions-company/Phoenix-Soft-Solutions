@@ -12,7 +12,7 @@ function Login() {
     // Perform form validation or authentication here
 
     // On successful login, navigate to the admin page
-    window.open("/admin", "_blank");
+    window.open("/admin/xcrop/counter", "_blank");
   };
 
   return (
