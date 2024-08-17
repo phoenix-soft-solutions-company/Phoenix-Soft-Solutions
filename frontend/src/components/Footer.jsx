@@ -31,20 +31,20 @@ function Footer() {
             <br />
             <span>Email : info@xcrop.com</span>
             <br />
-            <span>Phone : +1234567890</span>
+            <span>Phone : </span>
           </p>
         </div>
 
         <div className="">
           <h1 className="text-xl font-bold tracking-wider font-mono underline-animation">Branches</h1>
           <p className="text-md mt-2">
-            <span>New Zealand : +1234567890</span>
+            <span>New Zealand :</span>
             <br />
-            <span>United Kingdom : +44 73 089 6025 </span>
+            <span>United Kingdom :  </span>
             <br />
             <span>Sri Lanka : +94 77 844 3682</span>
             <br />
-            <span>Sweden : +46 76 692 1940</span>
+            <span>Sweden :</span>
           </p>
         </div>
 
