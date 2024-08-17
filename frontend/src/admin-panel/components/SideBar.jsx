@@ -1,14 +1,20 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { xCropLinks, newProject } from "./links";
-import { ChevronDoubleLeftIcon } from "@heroicons/react/24/outline";
+import { BookmarkIcon, ChevronDoubleLeftIcon } from "@heroicons/react/24/outline";
 
 function SideBar({ isVisible, onClose }) {
   const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState(null);
+  const [activeLink, setActiveLink] = useState(null);
 
   const handleSectionToggle = (section) => {
     setActiveSection(activeSection === section ? null : section);
+  };
+
+  const handleLinkClick = (path) => {
+    setActiveLink(path);
+    navigate(path);
   };
 
   return (
@@ -38,10 +44,17 @@ function SideBar({ isVisible, onClose }) {
           }`}>
           <ul className="mt-2">
             {xCropLinks.map((link) => (
-              <li key={link.path} className="mb-2 px-4">
+              <li key={link.path} className="flex flex-row mb-2 px-4 rounded ml-2">
+                <BookmarkIcon
+                  className={`w-6 h-6 ${
+                    activeLink === link.path ? "text-blue-500" : "text-black"
+                  } hover:text-blue-500 cursor-pointer mt-2`}
+                />
                 <button
-                  onClick={() => navigate(link.path)}
-                  className="w-full text-left text-gray-500 hover:text-white hover:bg-gray-300 p-2 rounded">
+                  onClick={() => handleLinkClick(link.path)}
+                  className={`w-full text-left p-2 ${
+                    activeLink === link.path ? "text-blue-500" : "text-gray-500 hover:text-blue-500"
+                  }`}>
                   {link.name}
                 </button>
               </li>
@@ -50,6 +63,7 @@ function SideBar({ isVisible, onClose }) {
         </div>
       </div>
 
+      {/* New Project Links Section */}
       <div className="px-2 mb-2">
         <button
           onClick={() => handleSectionToggle("newProject")}
@@ -66,10 +80,17 @@ function SideBar({ isVisible, onClose }) {
           }`}>
           <ul className="mt-2">
             {newProject.map((link) => (
-              <li key={link.path} className="mb-2 px-4">
+              <li key={link.path} className="flex flex-row mb-2 px-4 rounded ml-2">
+                <BookmarkIcon
+                  className={`w-6 h-6 ${
+                    activeLink === link.path ? "text-blue-500" : "text-black"
+                  } hover:text-blue-500 cursor-pointer mt-2`}
+                />
                 <button
-                  onClick={() => navigate(link.path)}
-                  className="w-full text-left text-gray-500 hover:text-white hover:bg-gray-300 p-2 rounded">
+                  onClick={() => handleLinkClick(link.path)}
+                  className={`w-full text-left p-2 ${
+                    activeLink === link.path ? "text-blue-500" : "text-gray-500 hover:text-blue-500"
+                  }`}>
                   {link.name}
                 </button>
               </li>

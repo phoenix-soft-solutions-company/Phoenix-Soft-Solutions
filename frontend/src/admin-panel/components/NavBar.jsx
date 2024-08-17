@@ -1,7 +1,6 @@
 import React from 'react'
-import { HomeIcon, SunIcon } from "@heroicons/react/24/outline";
+import { HomeIcon, SunIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { useNavigate, useLocation } from "react-router-dom";
-import { Bars3Icon } from "@heroicons/react/24/outline";
 
 function NavBar({ isSidebarVisible, isSidebarFullyHidden, onOpenSidebar }) {
   const navigate = useNavigate();
