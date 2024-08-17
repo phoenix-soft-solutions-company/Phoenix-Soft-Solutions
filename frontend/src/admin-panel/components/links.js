@@ -1,8 +1,8 @@
 export const xCropLinks = [
-  { name: "Counter", path: "/admin/counter" },
-  { name: "Project", path: "/admin/project" },
-  { name: "Event", path: "/admin/event" },
-  { name: "Feedback", path: "/admin/feedback" },
+  { name: "Counter", path: "/admin/xcrop/counter" },
+  { name: "Project", path: "/admin/xcrop/project" },
+  { name: "Event", path: "/admin/xcrop/event" },
+  { name: "Feedback", path: "/admin/xcrop/feedback" },
 ];
 
 export const newProject = [

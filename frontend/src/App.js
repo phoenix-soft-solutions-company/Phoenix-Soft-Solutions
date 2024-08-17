@@ -37,10 +37,10 @@ import CloudHosting from "./sub-pages/hosting/CloudHosting";
 import VPSHosting from "./sub-pages/hosting/VPSHosting";
 import BusinessEmail from "./sub-pages/hosting/BusinessEmail";
 import Admin from "./admin-panel/Admin";
-import AdminCounter from "./admin-panel/xcrop/XcropCounter";
-import AdminEvent from "./admin-panel/xcrop/XcropEvent";
-import AdminProject from "./admin-panel/xcrop/XcropProject";
-import AdminFeedback from "./admin-panel/xcrop/XcropFeedback";
+import XcropCounter from "./admin-panel/xcrop/XcropCounter";
+import XcropEvent from "./admin-panel/xcrop/XcropEvent";
+import XcropProject from "./admin-panel/xcrop/XcropProject";
+import XcropFeedback from "./admin-panel/xcrop/XcropFeedback";
 
 const App = () => {
   const location = useLocation();
@@ -100,11 +100,11 @@ const App = () => {
           <Route path="/hosting/business-email" element={<BusinessEmail />} />
 
           {/* admin routes */}
-          <Route path="/admin" element={<Admin />}>
-            <Route path="counter" element={<AdminCounter />} />
-            <Route path="project" element={<AdminProject />} />
-            <Route path="event" element={<AdminEvent />} />
-            <Route path="feedback" element={<AdminFeedback />} />
+          <Route path="/admin/xcrop" element={<Admin />}>
+            <Route path="counter" element={<XcropCounter />} />
+            <Route path="project" element={<XcropProject />} />
+            <Route path="event" element={<XcropEvent />} />
+            <Route path="feedback" element={<XcropFeedback />} />
           </Route>
         </Routes>
       </div>

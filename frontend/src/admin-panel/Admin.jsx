@@ -29,7 +29,7 @@ function Admin() {
           isSidebarVisible ? "ml-64 w-[calc(100%-16rem)]" : "ml-0 w-full"
         } px-4 py-2`}>
         {!isSidebarVisible && isSidebarFullyHidden && (
-          <button onClick={() => setIsSidebarVisible(true)} className="p-2 fixed top-4 left-4">
+          <button onClick={() => setIsSidebarVisible(true)} className="p-2 fixed top-6 left-4">
             <Bars3Icon className="w-6 h-6 text-black" />
           </button>
         )}
