@@ -10,6 +10,10 @@ import android from "../constants/images/tech/Android.png";
 import java from "../constants/images/tech/java.png";
 import ios from "../constants/images/tech/IOS.png";
 import js from "../constants/images/tech/js.png";
+import ps from "../constants/images/tech/ps.jpg";
+import mongo from "../constants/images/tech/mongodb.png";
+import express from "../constants/images/tech/express.png";
+import net from "../constants/images/tech/net.png"
 import webapp from "../constants/images/tech/web_app.png";
 import mobileapp from "../constants/images/tech/mobile_app.png";
 import bussinessapp from "../constants/images/tech/Busines_app.png";
@@ -22,7 +26,7 @@ import service5 from "../constants/images/tech/bank.png";
 import service6 from "../constants/images/tech/ecommernce.png";
 import Logo from "../constants/images/logo.png";
 
-const images = [nodejs, php, python, reactImg, angular, aws, android, java, ios, js];
+const images = [nodejs, php, python, reactImg, angular, aws, android, java, ios, js,ps, mongo, express, net];
 
 const titles = [
   "Node.js",
@@ -35,6 +39,10 @@ const titles = [
   "Java",
   "iOS",
   "JavaScript",
+  "Photoshop",
+  "MongoDB",
+  "Express.js",
+  ".NET"
 ];
 
 const boxes = [
