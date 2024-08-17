@@ -1,7 +1,7 @@
 import React from "react";
 
 function InternationalDomain() {
-  return <div>InternationalDomain</div>;
+  return <div className="pt-16">InternationalDomain</div>;
 }
 
 export default InternationalDomain;
