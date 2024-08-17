@@ -1,9 +1,12 @@
 import React from "react";
-import loginImage from "../constants/images/login.avif"; 
+import loginImage from "../constants/images/login.avif";
 import { HomeIcon } from "@heroicons/react/24/outline";
 import Logo from "../constants/images/logo.png";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Perform form validation or authentication here
@@ -16,13 +19,13 @@ function Login() {
     <div>
       <div className="bg-red-800 text-white py-4 px-10 fixed left-0 top-0 right-0 z-[1000]">
         <div className="flex justify-between items-center">
-          <div className="flex items-center">
+          <div className="flex items-center cursor-pointer" onClick={() => navigate("/")}>
             <img src={Logo} alt="Company Logo" className="h-8 lg:h-10 mr-4" />
             <span className="text-xl lg:text-2xl font-bold tracking-widest font-serif">Xcrop</span>
           </div>
 
-          <div className="">
-            <button>
+          <div className="flex flex-row">
+            <button onClick={() => navigate("/")}>
               <HomeIcon className="w-6 h-6 text-white" />
             </button>
           </div>
