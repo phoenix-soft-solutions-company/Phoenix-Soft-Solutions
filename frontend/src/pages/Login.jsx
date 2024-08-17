@@ -1,18 +1,15 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import loginImage from "../constants/images/login.avif"; // Import your image
+import loginImage from "../constants/images/login.avif"; 
 import { HomeIcon } from "@heroicons/react/24/outline";
 import Logo from "../constants/images/logo.png";
 
 function Login() {
-  const navigate = useNavigate();
-
   const handleSubmit = (e) => {
     e.preventDefault();
     // Perform form validation or authentication here
 
     // On successful login, navigate to the admin page
-    navigate("/admin");
+    window.open("/admin", "_blank");
   };
 
   return (

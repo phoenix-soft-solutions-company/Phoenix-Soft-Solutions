@@ -37,10 +37,10 @@ import CloudHosting from "./sub-pages/hosting/CloudHosting";
 import VPSHosting from "./sub-pages/hosting/VPSHosting";
 import BusinessEmail from "./sub-pages/hosting/BusinessEmail";
 import Admin from "./admin-panel/Admin";
-import AdminCounter from "./admin-panel/AdminCounter";
-import AdminEvent from "./admin-panel/AdminEvent";
-import AdminProject from "./admin-panel/AdminProject";
-import AdminFeedback from "./admin-panel/AdminFeedback";
+import AdminCounter from "./admin-panel/components/AdminCounter";
+import AdminEvent from "./admin-panel/components/AdminEvent";
+import AdminProject from "./admin-panel/components/AdminProject";
+import AdminFeedback from "./admin-panel/components/AdminFeedback";
 
 const App = () => {
   const location = useLocation();
