@@ -13,7 +13,7 @@ const Card = ({ title, paragraph }) => (
 
 // ImageCard Component for image-based cards (image first)
 const ImageCard = ({ image, title, paragraph }) => (
-  <div className="bg-white shadow-md rounded-lg p-6 mb-6 w-full max-w-md flex flex-col items-center">
+  <div className="bg-white shadow-md rounded-lg p-6 mb-6 w-full max-w-md flex flex-col items-center pt-16">
     <img src={image} alt="Card" className="w-full h-auto rounded-lg mb-4" />
     <h2 className="text-xl font-semibold mb-2 text-red-600">{title}</h2>
     <p className="text-center">{paragraph}</p>

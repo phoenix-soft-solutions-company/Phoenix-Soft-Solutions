@@ -1,7 +1,7 @@
 import React from "react";
 
 function VPSHosting() {
-  return <div>VPSHosting</div>;
+  return <div className="pt-16">VPSHosting</div>;
 }
 
 export default VPSHosting;

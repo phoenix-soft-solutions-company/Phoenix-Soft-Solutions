@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -37,16 +37,22 @@ import CloudHosting from "./sub-pages/hosting/CloudHosting";
 import VPSHosting from "./sub-pages/hosting/VPSHosting";
 import BusinessEmail from "./sub-pages/hosting/BusinessEmail";
 import Admin from "./admin-panel/Admin";
-import AdminCounter from "./admin-panel/AdminCounter";
-import AdminEvent from "./admin-panel/AdminEvent";
-import AdminProject from "./admin-panel/AdminProject";
-import AdminFeedback from "./admin-panel/AdminFeedback";
+import AdminCounter from "./admin-panel/components/AdminCounter";
+import AdminEvent from "./admin-panel/components/AdminEvent";
+import AdminProject from "./admin-panel/components/AdminProject";
+import AdminFeedback from "./admin-panel/components/AdminFeedback";
 
 const App = () => {
+  const location = useLocation();
+
+  // Paths where Navbar should not be displayed
+  const noNavbarPaths = ["/login", "/admin"];
+
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <div className="flex-grow pt-16">
+    <div className="flex flex-col">
+      {/* Conditionally render Navbar */}
+      {!noNavbarPaths.includes(location.pathname) && <Navbar />}
+      <div className="">
         <Routes>
           {/* main pages */}
           <Route path="/" element={<Home />} />
@@ -101,7 +107,7 @@ const App = () => {
           </Route>
         </Routes>
       </div>
-      <Footer />
+      {!noNavbarPaths.includes(location.pathname) && <Footer />}
     </div>
   );
 };
