@@ -1,10 +1,12 @@
-import React from 'react'
+import React from "react";
 import { HomeIcon, SunIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useDarkMode } from "../../DarkModeContext";
 
 function NavBar({ isSidebarVisible, isSidebarFullyHidden, onOpenSidebar }) {
   const navigate = useNavigate();
   const location = useLocation();
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   // Generate the navigation path
   const pathSegments = location.pathname.split("/").filter(Boolean);
@@ -16,23 +18,26 @@ function NavBar({ isSidebarVisible, isSidebarFullyHidden, onOpenSidebar }) {
   ));
 
   return (
-    <div className="bg-white border border-gray-300 rounded-lg p-4">
+    <div
+      className={`border border-gray-300 rounded-lg p-4 ${
+        isDarkMode ? "bg-gray-800 text-white" : "bg-white text-gray-900"
+      }`}>
       <div className="flex justify-between items-center px-4">
-        <div className='flex flex-row'>
+        <div className="flex flex-row items-center">
           {!isSidebarVisible && isSidebarFullyHidden && (
             <button onClick={onOpenSidebar} className="p-2">
-              <Bars3Icon className="w-6 h-6 text-black" />
+              <Bars3Icon className={`w-6 h-6 ${isDarkMode ? "text-white" : "text-black"}`} />
             </button>
           )}
-          <div className="py-2 text-gray-700 ml-2">{navigationPath}</div>
+          <div className="py-2 ml-2 flex items-center">{navigationPath}</div>
         </div>
 
-        <div className="flex flex-row gap-4">
-          <button>
-            <SunIcon className="w-6 h-6 text-black" />
+        <div className="flex flex-row gap-4 items-center">
+          <button onClick={toggleDarkMode} className="p-2">
+            <SunIcon className={`w-6 h-6 ${isDarkMode ? "text-yellow-400" : "text-black"}`} />
           </button>
           <button onClick={() => navigate("/")}>
-            <HomeIcon className="w-6 h-6 text-black" />
+            <HomeIcon className={`w-6 h-6 ${isDarkMode ? "text-white" : "text-black"}`} />
           </button>
         </div>
       </div>
@@ -40,4 +45,4 @@ function NavBar({ isSidebarVisible, isSidebarFullyHidden, onOpenSidebar }) {
   );
 }
 
-export default NavBar
+export default NavBar;
