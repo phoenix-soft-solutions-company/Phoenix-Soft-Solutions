@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
-import { Bars3Icon } from "@heroicons/react/24/outline";
 
 function Admin() {
   const [isSidebarVisible, setIsSidebarVisible] = useState(true);
