@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
-function AdminProject() {
+function XcropProject() {
   // Initialize state for the number fields
   const [formData, setFormData] = useState({
     image: "",
@@ -137,4 +137,4 @@ function AdminProject() {
   );
 }
 
-export default AdminProject;
+export default XcropProject;

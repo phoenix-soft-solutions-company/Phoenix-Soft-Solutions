@@ -37,21 +37,22 @@ import CloudHosting from "./sub-pages/hosting/CloudHosting";
 import VPSHosting from "./sub-pages/hosting/VPSHosting";
 import BusinessEmail from "./sub-pages/hosting/BusinessEmail";
 import Admin from "./admin-panel/Admin";
-import AdminCounter from "./admin-panel/components/AdminCounter";
-import AdminEvent from "./admin-panel/components/AdminEvent";
-import AdminProject from "./admin-panel/components/AdminProject";
-import AdminFeedback from "./admin-panel/components/AdminFeedback";
+import AdminCounter from "./admin-panel/xcrop/XcropCounter";
+import AdminEvent from "./admin-panel/xcrop/XcropEvent";
+import AdminProject from "./admin-panel/xcrop/XcropProject";
+import AdminFeedback from "./admin-panel/xcrop/XcropFeedback";
 
 const App = () => {
   const location = useLocation();
 
   // Paths where Navbar should not be displayed
-  const noNavbarPaths = ["/login", "/admin"];
+  const noNavbarPaths = ["/login"];
+  const isAdminRoute = location.pathname.startsWith("/admin");
 
   return (
     <div className="flex flex-col">
       {/* Conditionally render Navbar */}
-      {!noNavbarPaths.includes(location.pathname) && <Navbar />}
+      {!noNavbarPaths.includes(location.pathname) && !isAdminRoute && <Navbar />}
       <div className="">
         <Routes>
           {/* main pages */}
@@ -107,7 +108,7 @@ const App = () => {
           </Route>
         </Routes>
       </div>
-      {!noNavbarPaths.includes(location.pathname) && <Footer />}
+      {!noNavbarPaths.includes(location.pathname) && !isAdminRoute && <Footer />}
     </div>
   );
 };

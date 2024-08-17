@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
-function AdminEvent() {
+function XcropFeedback() {
   // Initialize state for the number fields
   const [formData, setFormData] = useState({
-    date: "",
     image: "",
-    title: "",
-    description: "",
+    name: "",
+    feedback: "",
   });
 
   // Handle input changes
@@ -30,20 +29,19 @@ function AdminEvent() {
   // Handle form clearing
   const handleClear = () => {
     setFormData({
-      date: "",
       image: "",
-      title: "",
-      description: "",
+      name: "",
+      feedback: "",
     });
   };
 
   return (
     <div className="p-4">
       <div className="shadow-lg p-4">
-        <h1 className="text-center font-bold text-2xl">Current Events</h1>
+        <h1 className="text-center font-bold text-2xl">Current Projects</h1>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center">
           <div className="flex flex-row gap-5 shadow-lg p-4">
-            <div>Event-title</div>
+            <div>Person-name</div>
             <div>
               <button className="text-red-600 hover:text-red-800 transition duration-300" aria-label="Delete">
                 <FontAwesomeIcon icon={faTrashAlt} className="text-red-600" />
@@ -52,7 +50,7 @@ function AdminEvent() {
           </div>
 
           <div className="flex flex-row gap-5 shadow-lg p-4">
-            <div>Event-title</div>
+            <div>Person-name</div>
             <div>
               <button className="text-red-600 hover:text-red-800 transition duration-300" aria-label="Delete">
                 <FontAwesomeIcon icon={faTrashAlt} className="text-red-600" />
@@ -61,7 +59,7 @@ function AdminEvent() {
           </div>
 
           <div className="flex flex-row gap-5 shadow-lg p-4">
-            <div>Event-title</div>
+            <div>Person-name</div>
             <div>
               <button className="text-red-600 hover:text-red-800 transition duration-300" aria-label="Delete">
                 <FontAwesomeIcon icon={faTrashAlt} className="text-red-600" />
@@ -70,7 +68,7 @@ function AdminEvent() {
           </div>
 
           <div className="flex flex-row gap-5 shadow-lg p-4">
-            <div>Event-title</div>
+            <div>Person-name</div>
             <div>
               <button className="text-red-600 hover:text-red-800 transition duration-300" aria-label="Delete">
                 <FontAwesomeIcon icon={faTrashAlt} className="text-red-600" />
@@ -81,20 +79,7 @@ function AdminEvent() {
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4 w-[320px] mx-auto shadow-lg p-4 mt-5">
-        <h1 className="text-2xl font-bold mb-4">Add Event</h1>
-        <div>
-          <label htmlFor="experiences" className="block text-sm font-medium text-gray-700">
-            Date
-          </label>
-          <input
-            type="date"
-            id="date"
-            name="date"
-            value={formData.date}
-            onChange={handleChange}
-            className="p-2 mt-1 block w-full border-2 border-gray-300 rounded-md focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          />
-        </div>
+        <h1 className="text-2xl font-bold mb-4">Add Feedback</h1>
         <div>
           <label htmlFor="experiences" className="block text-sm font-medium text-gray-700">
             Image URL
@@ -110,25 +95,25 @@ function AdminEvent() {
         </div>
         <div>
           <label htmlFor="projects" className="block text-sm font-medium text-gray-700">
-            Title
+            Name
           </label>
           <input
             type="text"
-            id="title"
-            name="title"
-            value={formData.title}
+            id="name"
+            name="name"
+            value={formData.name}
             onChange={handleChange}
             className="p-2 mt-1 block w-full border-2 border-gray-300 rounded-md focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
           />
         </div>
         <div>
           <label htmlFor="experts" className="block text-sm font-medium text-gray-700">
-            Description
+            Feedback
           </label>
           <textarea
-            id="description"
-            name="description"
-            value={formData.description}
+            id="feedback"
+            name="feedback"
+            value={formData.feedback}
             onChange={handleChange}
             className="min-h-40 p-2 mt-1 block w-full border-2 border-gray-300 rounded-md focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
           />
@@ -152,4 +137,4 @@ function AdminEvent() {
   );
 }
 
-export default AdminEvent;
+export default XcropFeedback;

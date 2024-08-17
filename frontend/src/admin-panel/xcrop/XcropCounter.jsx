@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function AdminCounter() {
+function XcropCounter() {
   // Initialize state for the number fields
   const [formData, setFormData] = useState({
     experiences: "",
@@ -109,4 +109,4 @@ function AdminCounter() {
   );
 }
 
-export default AdminCounter;
+export default XcropCounter;

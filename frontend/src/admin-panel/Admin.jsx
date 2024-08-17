@@ -1,64 +1,42 @@
-import React from "react";
-import { Outlet, useNavigate, useLocation } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Outlet } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import SideBar from "./components/SideBar";
+import { Bars3Icon } from "@heroicons/react/24/outline";
 
 function Admin() {
-  const navigate = useNavigate();
-  const location = useLocation();
+  const [isSidebarVisible, setIsSidebarVisible] = useState(true);
+  const [isSidebarFullyHidden, setIsSidebarFullyHidden] = useState(false);
 
-  // Determine the active path
-  const isActive = (path) => location.pathname === path;
+  useEffect(() => {
+    if (!isSidebarVisible) {
+      const timer = setTimeout(() => {
+        setIsSidebarFullyHidden(true);
+      }, 100); 
+
+      return () => clearTimeout(timer); 
+    } else {
+      setIsSidebarFullyHidden(false);
+    }
+  }, [isSidebarVisible]);
 
   return (
-    <div className="">
-      <div className="flex justify-center p-4">
-        <div>
-          <div>
-            <h1 className="text-2xl font-bold mb-4 text-center mt-5">Admin Dashboard</h1>
-          </div>
+    <div className="flex flex-row min-h-screen bg-gray-200">
+      <SideBar isVisible={isSidebarVisible} onClose={() => setIsSidebarVisible(false)} />
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <button
-              onClick={() => navigate("/admin/counter")}
-              className={`border-2 py-4 px-8 text-base rounded transition duration-500 ${
-                isActive("/admin/counter")
-                  ? "border-blue-700 bg-blue-700 text-white hover:bg-blue-800"
-                  : "border-green-700 bg-green-700 text-white hover:bg-green-800"
-              }`}>
-              Counter
-            </button>
-            <button
-              onClick={() => navigate("/admin/project")}
-              className={`border-2 py-4 px-8 text-base rounded transition duration-500 ${
-                isActive("/admin/project")
-                  ? "border-blue-700 bg-blue-700 text-white hover:bg-blue-800"
-                  : "border-green-700 bg-green-700 text-white hover:bg-green-800"
-              }`}>
-              Project
-            </button>
-            <button
-              onClick={() => navigate("/admin/event")}
-              className={`border-2 py-4 px-8 text-base rounded transition duration-500 ${
-                isActive("/admin/event")
-                  ? "border-blue-700 bg-blue-700 text-white hover:bg-blue-800"
-                  : "border-green-700 bg-green-700 text-white hover:bg-green-800"
-              }`}>
-              Event
-            </button>
-            <button
-              onClick={() => navigate("/admin/feedback")}
-              className={`border-2 py-4 px-8 text-base rounded transition duration-500 ${
-                isActive("/admin/feedback")
-                  ? "border-blue-700 bg-blue-700 text-white hover:bg-blue-800"
-                  : "border-green-700 bg-green-700 text-white hover:bg-green-800"
-              }`}>
-              Feedback
-            </button>
-          </div>
+      <div
+        className={`flex flex-col transition-all duration-300 ${
+          isSidebarVisible ? "ml-64 w-[calc(100%-16rem)]" : "ml-0 w-full"
+        } px-4 py-2`}>
+        {!isSidebarVisible && isSidebarFullyHidden && (
+          <button onClick={() => setIsSidebarVisible(true)} className="p-2 fixed top-4 left-4">
+            <Bars3Icon className="w-6 h-6 text-black" />
+          </button>
+        )}
+        <NavBar />
+        <div className="bg-white border border-gray-300 rounded-lg p-4 mt-4 min-h-[85vh]">
+          <Outlet />
         </div>
-      </div>
-
-      <div className="p-4">
-        <Outlet />
       </div>
     </div>
   );
