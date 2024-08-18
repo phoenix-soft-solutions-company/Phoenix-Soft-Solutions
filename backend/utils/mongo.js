@@ -9,6 +9,14 @@ class MongoBase {
     }
     return model.findOne(field, projection);
   };
+
+  update = async (model, filter, updateDetails) => {
+    try {
+      return await model.findOneAndUpdate(filter, updateDetails, { new: true });
+    } catch (error) {
+      throw error;
+    }
+  };
 }
 
 const mongoBase = new MongoBase();
