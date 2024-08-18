@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import loginImage from "../constants/images/login.avif";
-import { HomeIcon } from "@heroicons/react/24/outline";
+import { HomeIcon, EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 import Logo from "../constants/images/logo.png";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -9,9 +9,19 @@ import { tokenise } from "../utils/rsa.encrypt";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
+    const [remember, setRemember] = useState(false);
 
   const navigate = useNavigate();
+
+   useEffect(() => {
+     if (localStorage.getItem("Email") && localStorage.getItem("Password")) {
+       setEmail(localStorage.getItem("Email"));
+       setPassword(atob(localStorage.getItem("Password")));
+       setRemember(true);
+     }
+   }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -41,7 +51,7 @@ function Login() {
       .post(`${process.env.REACT_APP_BASE_URL}/auth/login`, { token })
       .then((response) => {
         // Save or remove the username and password from local storage
-        if (true) {
+        if (remember) {
           localStorage.setItem("Email", email);
           localStorage.setItem("Password", btoa(password));
         } else {
@@ -54,6 +64,10 @@ function Login() {
       .catch((error) => {
         setError("Invalid credentials");
       });
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
   return (
@@ -95,19 +109,43 @@ function Login() {
                     placeholder="Enter your email"
                   />
                 </div>
-                <div className="mb-6">
+                <div className="mb-6 relative">
                   <label htmlFor="password" className="block text-xl font-medium text-gray-700">
                     Password
                   </label>
                   <input
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     id="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="mt-1 block w-full py-2 border-b-2 border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     placeholder="Enter your password"
                   />
+                  <div
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer"
+                    onClick={togglePasswordVisibility}>
+                    {showPassword ? (
+                      <EyeSlashIcon className="w-5 h-5 text-gray-500" />
+                    ) : (
+                      <EyeIcon className="w-5 h-5 text-gray-500" />
+                    )}
+                  </div>
                 </div>
+
+                <div className="flex flex-row justify-between mb-4">
+                  <div>
+                    <input
+                      type="checkbox"
+                      id="checkbox"
+                      checked={remember}
+                      onChange={() => setRemember(!remember)}
+                      className="accent-[#2852dd] mr-2"
+                    />
+                    <label htmlFor="checkbox ml-2">Remember me</label>
+                  </div>
+                  <div><p><a href="#" >Forget Password?</a></p></div>
+                </div>
+
                 <button
                   type="submit"
                   className="w-full px-4 py-2 text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
