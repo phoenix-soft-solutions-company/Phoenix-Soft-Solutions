@@ -8,7 +8,7 @@ class AuthService {
       password = authentication.encryption(password);
 
       const foundUser = await userRepository.findUser({ email, password });
-      console.log(foundUser);
+
       if (!foundUser) {
         return null;
       } 
