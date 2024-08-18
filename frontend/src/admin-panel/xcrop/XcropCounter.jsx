@@ -1,13 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 function XcropCounter() {
-  // Initialize state for the number fields
   const [formData, setFormData] = useState({
     experiences: "",
     projects: "",
     experts: "",
     clients: "",
   });
+
+  // Fetch current counter data by ID when the component mounts
+  useEffect(() => {
+    const fetchCounterData = async () => {
+      try {
+        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/counter/66c21af52a7dd94e2cd73e8c`);
+        setFormData(response.data);
+      } catch (error) {
+        console.error("Error fetching counter data:", error);
+      }
+    };
+
+    fetchCounterData();
+  }, []);
 
   // Handle input changes
   const handleChange = (e) => {
@@ -19,10 +33,20 @@ function XcropCounter() {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Process form data here
-    console.log("Form Submitted:", formData);
+
+    try {
+      const response = await axios.put(
+        `${process.env.REACT_APP_BASE_URL}/counter/66c21af52a7dd94e2cd73e8c`,
+        formData
+      );
+      console.log("Counter Updated:", response.data);
+      // You can also display a success message or redirect the user
+    } catch (error) {
+      console.error("Error updating counter:", error);
+      // Handle the error (e.g., display an error message)
+    }
   };
 
   // Handle form clearing
@@ -49,7 +73,7 @@ function XcropCounter() {
             name="experiences"
             value={formData.experiences}
             onChange={handleChange}
-             className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
+            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
           />
         </div>
         <div>
@@ -62,7 +86,7 @@ function XcropCounter() {
             name="projects"
             value={formData.projects}
             onChange={handleChange}
-             className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
+            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
           />
         </div>
         <div>
@@ -75,7 +99,7 @@ function XcropCounter() {
             name="experts"
             value={formData.experts}
             onChange={handleChange}
-             className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
+            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
           />
         </div>
         <div>
@@ -88,7 +112,7 @@ function XcropCounter() {
             name="clients"
             value={formData.clients}
             onChange={handleChange}
-             className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
+            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
           />
         </div>
         <div className="flex space-x-4">
