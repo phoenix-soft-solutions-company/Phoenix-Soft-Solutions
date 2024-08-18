@@ -1,18 +1,59 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import loginImage from "../constants/images/login.avif";
 import { HomeIcon } from "@heroicons/react/24/outline";
 import Logo from "../constants/images/logo.png";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { tokenise } from "../utils/rsa.encrypt";
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
+
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Perform form validation or authentication here
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-    // On successful login, navigate to the admin page
-    window.open("/admin/xcrop/counter", "_blank");
+    if (!email || !password) {
+      setError("Please enter the credentials");
+      return;
+    }
+
+    setError(null);
+
+    const userCredentials = {
+      email: email,
+      password: password,
+    };
+
+    let token;
+
+    try {
+      token = await tokenise(userCredentials);
+    } catch (error) {
+      setError("An error occurred! Please try again");
+      return;
+    }
+
+    axios
+      .post(`${process.env.REACT_APP_BASE_URL}/auth/login`, { token })
+      .then((response) => {
+        // Save or remove the username and password from local storage
+        if (true) {
+          localStorage.setItem("Email", email);
+          localStorage.setItem("Password", btoa(password));
+        } else {
+          localStorage.removeItem("Email");
+          localStorage.removeItem("Password");
+        }
+
+        window.open("/admin/xcrop/counter", "_blank");
+      })
+      .catch((error) => {
+        setError("Invalid credentials");
+      });
   };
 
   return (
@@ -34,11 +75,7 @@ function Login() {
       <div className="bg-white flex items-center justify-center p-4 lg:p-10 mt-16">
         <div className="flex flex-col lg:flex-row bg-white shadow-md rounded-lg p-2 sm:p-6 w-full">
           <div className="mb-6 w-full lg:w-1/2 lg:border-r-2 lg:border-red-800">
-            <img
-              src={loginImage} // Use the imported image
-              alt="login"
-              className="w-full sm:w-[500px] mx-auto"
-            />
+            <img src={loginImage} alt="login" className="w-full sm:w-[500px] mx-auto" />
           </div>
 
           <div className="px-4 sm:px-8 w-full lg:w-1/2 mx-auto my-auto lg:pl-16">
@@ -52,6 +89,8 @@ function Login() {
                   <input
                     type="email"
                     id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="mt-1 block w-full py-2 border-b-2 border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     placeholder="Enter your email"
                   />
@@ -63,6 +102,8 @@ function Login() {
                   <input
                     type="password"
                     id="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     className="mt-1 block w-full py-2 border-b-2 border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     placeholder="Enter your password"
                   />
@@ -72,6 +113,7 @@ function Login() {
                   className="w-full px-4 py-2 text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                   Sign In
                 </button>
+                {error && <div className="mt-4 text-center text-red-500">{error}</div>}
               </form>
               <div className="mt-6 flex items-center justify-between">
                 <hr className="w-full border-gray-300" />
