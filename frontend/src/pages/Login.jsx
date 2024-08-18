@@ -143,7 +143,7 @@ function Login() {
                     />
                     <label htmlFor="checkbox ml-2">Remember me</label>
                   </div>
-                  <div><p><a href="#" >Forget Password?</a></p></div>
+                  <div><p><a href="#forget" >Forget Password?</a></p></div>
                 </div>
 
                 <button
