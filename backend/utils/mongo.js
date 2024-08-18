@@ -17,6 +17,14 @@ class MongoBase {
       throw error;
     }
   };
+
+  findById = async (model, id) => {
+    try {
+      return await model.findById(id);
+    } catch (error) {
+      throw error;
+    }
+  };
 }
 
 const mongoBase = new MongoBase();

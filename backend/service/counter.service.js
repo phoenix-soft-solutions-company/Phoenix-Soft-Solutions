@@ -16,6 +16,14 @@ class CounterService {
       throw error;
     }
   };
+
+  findById = async (id) => {
+    try {
+      return await counterRepository.findById(id);
+    } catch (error) {
+      throw error;
+    }
+  };
 }
 
 const counterServiceInstance = new CounterService();

@@ -30,7 +30,22 @@ const update = async (req, res, next) => {
   }
 };
 
+const findById = async (req, res, next) => {
+  try {
+    const result = await counterService.findById(req.params.id);
+
+    if (!result) {
+      return res.status(statusCodes.notFound).json(error.counterNotFound);
+    } else {
+      return res.status(statusCodes.success).json(result);
+    }
+  } catch (error) {
+    next(error);
+  }
+};
+
 router.post("/", create);
 router.put("/:id", update);
+router.get("/:id", findById);
 
 module.exports = router;

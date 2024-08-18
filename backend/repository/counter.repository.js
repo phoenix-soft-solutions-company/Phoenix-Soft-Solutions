@@ -18,6 +18,14 @@ class CounterRepository {
       throw error;
     }
   };
+
+  findById = async (id) => {
+    try {
+      return await mongoBase.findById(Counter, id);
+    } catch (error) {
+      throw error;
+    }
+  };
 }
 
 const counterRepositoryInstance = new CounterRepository();
