@@ -8,15 +8,12 @@ const handleErrors = require("./middleware/error-handler.middleware");
 
 require("dotenv").config();
 
-const corsOptions = {
+let corsOptions = {
   origin: "*",
-  methods: "GET,POST,PUT,PATCH,DELETE,OPTIONS",
-  allowedHeaders: "Content-Type,Authorization",
-  credentials: true,
-  optionsSuccessStatus: 204,
+
 };
 
-app.options("*", cors(corsOptions));
+app.use(cors(corsOptions));
 
 app.use(express.json());
 
