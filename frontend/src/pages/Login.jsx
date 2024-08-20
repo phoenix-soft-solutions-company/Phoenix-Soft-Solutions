@@ -59,7 +59,7 @@ function Login() {
           localStorage.removeItem("Password");
         }
 
-        window.open("/admin/xcrop/counter", "_blank");
+        navigate("/admin/xcrop/counter"); //  window.open("/admin/xcrop/counter", "_blank");
       })
       .catch((error) => {
         setError("Invalid credentials");
