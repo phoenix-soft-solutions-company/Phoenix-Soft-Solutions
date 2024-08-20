@@ -8,7 +8,7 @@ import slide4 from "../constants/images/slides/slide4.png";
 const images = [
   {
     path: slide1,
-    title: "Phoenix DIgital",
+    title: "Phoenix Soft Solutions",
     text: "Phoenix Digital, we fuse visionary design with cutting-edge web development. Our expert team crafts immersive, high-performance websites that elevate your brand and captivate audiences. Ignite your digital transformation with us and create something truly legendary!",
   },
   {
