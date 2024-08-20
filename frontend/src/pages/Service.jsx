@@ -16,7 +16,7 @@ import frontendService from "../constants/images/services/frontend.webp";
 import cloudService from "../constants/images/services/cloud.webp";
 import pocService from "../constants/images/services/poc.jpg";
 import marketingService from "../constants/images/services/marketing.jpg";
-import cyberService from "../constants/images/services/cyber.png";
+import cyberService from "../constants/images/services/cyber.jpg";
 import managementService from "../constants/images/services/management.jpg";
 import graphicService from "../constants/images/services/graphic.jpg";
 
@@ -150,13 +150,9 @@ const ServicePage = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen pt-16">
       <header className="relative w-full h-[50vh]">
-        <img
-          src={Service}
-          alt="Header-Service"
-          className="object-cover w-full h-full"
-        />
+        <img src={Service} alt="Header-Service" className="object-cover w-full h-full" />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
           <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest uppercase">
             Our Services
@@ -170,8 +166,7 @@ const ServicePage = () => {
             <div
               className="bg-grey-100 p-4 border border-red-800 text-center cursor-pointer transition-transform transform hover:-translate-y-2 hover:text-red-700 min-w-76 duration-300 ease-in-out"
               key={index}
-              onClick={() => handleBoxClick(index)}
-            >
+              onClick={() => handleBoxClick(index)}>
               <h5 className="flex items-center justify-between text-md xl:text-lg font-sans">
                 {service.name}
                 <FontAwesomeIcon icon={faChevronDown} />
@@ -185,27 +180,18 @@ const ServicePage = () => {
         {serviceNames.map((service, index) => (
           <div
             key={index}
-            className={`my-4 lg:my-8 ${
-              index % 2 === 0 ? "sm:text-left" : "sm:text-right"
-            }`}
-            ref={(el) => (sectionsRefs.current[index] = el)}
-          >
+            className={`my-4 lg:my-8 ${index % 2 === 0 ? "sm:text-left" : "sm:text-right"}`}
+            ref={(el) => (sectionsRefs.current[index] = el)}>
             <div
               className={`flex flex-col sm:flex-row items-center bg-red-100 border border-gray-100 rounded-xl shadow-md p-3 sm:p-4 md:px-8 lg:px-20  ${
                 index % 2 === 0 ? "" : "sm:flex-row-reverse"
-              }`}
-            >
+              }`}>
               <div className="flex-1">
-                <h2 className="text-2xl mb-4 underline text-red-700 font-mono">
-                  {service.name}
-                </h2>
-                <p className="text-lg text-gray-600 mb-4">
-                  {service.description}
-                </p>
+                <h2 className="text-2xl mb-4 underline text-red-700 font-mono">{service.name}</h2>
+                <p className="text-lg text-gray-600 mb-4">{service.description}</p>
                 <button
                   className="border-2 border-red-700 bg-red-700 text-white py-2 px-6 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
-                  onClick={() => handleReadMoreClick(service.link)}
-                >
+                  onClick={() => handleReadMoreClick(service.link)}>
                   Read More
                 </button>
               </div>

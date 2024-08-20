@@ -46,7 +46,7 @@ const Navbar = () => {
                 )}
               </Link>
 
-              {link.subpages && dropdownOpen === index && (
+              {link.subpages && link.subpages.length < 5 && dropdownOpen === index && (
                 <div className="absolute left-0 z-[999] w-48 bg-red-800 border border-red-700 rounded shadow-lg group-hover:block">
                   {link.subpages.map((subpage, subIndex) => (
                     <Link
@@ -62,6 +62,40 @@ const Navbar = () => {
                   ))}
                 </div>
               )}
+
+              {link.subpages && link.subpages.length > 5 && dropdownOpen === index && (
+                <div className="flex flex-row absolute left-0 z-[999]w-96 bg-red-800 border border-red-700 rounded shadow-lg">
+                  <div className="w-48 group-hover:block border-r border-red-700">
+                    {link.subpages.slice(0, 9).map((subpage, subIndex) => (
+                      <Link
+                        key={subIndex}
+                        to={subpage.path}
+                        className="block px-4 py-2 hover:bg-red-700"
+                        onClick={toggleNavbar}>
+                        <span className="tracking-wide font-semibold hover:underline underline-offset-8 font-mono uppercase text-md">
+                          {" "}
+                          {subpage.name}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+
+                  <div className="w-48 group-hover:block">
+                    {link.subpages.slice(9).map((subpage, subIndex) => (
+                      <Link
+                        key={subIndex}
+                        to={subpage.path}
+                        className="block px-4 py-2 hover:bg-red-700"
+                        onClick={toggleNavbar}>
+                        <span className="tracking-wide font-semibold hover:underline underline-offset-8 font-mono uppercase text-md">
+                          {" "}
+                          {subpage.name}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -74,7 +108,7 @@ const Navbar = () => {
 
       {/* Side bar */}
       <div
-        className={`fixed top-0 right-0 h-full bg-red-800 text-white transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full overflow-y-auto bg-red-800 text-white transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } xl:hidden w-full sm:w-96 p-4 z-[1000]`}>
         <div className="flex justify-between items-center mb-4">

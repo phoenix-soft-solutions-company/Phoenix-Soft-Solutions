@@ -1,14 +1,14 @@
 import React from "react";
 import { FaInfoCircle, FaDotCircle, FaCheckCircle } from "react-icons/fa";
 import heading from "../../constants/images/tech/technology-heading.jpg";
-import leftImage from "../../constants/images/leftBottom.jpg";
-import rightImage from "../../constants/images/vision & mission.jpg";
+import leftImage from "../../constants/images/company/company.jpg";
+import rightImage from "../../constants/images/company/vision & mission.jpg";
 import CounterExp from "../../components/CounterExp";
 import DevPlan from "../../components/DevPlan"
 
 const Aboutus = ({ showHeaderImage = true }) => {
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative pt-16">
       {showHeaderImage && (
         <header className="relative w-full h-[50vh]">
           <img src={heading} alt="header" className="object-cover w-full h-full" />
@@ -21,7 +21,7 @@ const Aboutus = ({ showHeaderImage = true }) => {
       <div className="flex flex-col lg:flex-row p-4 md:p-8">
         <div className="lg:w-1/2">
           <div>
-            <img src={leftImage} alt="Left Side" className="w-full h-auto" />
+            <img src={leftImage} alt="Left Side" className="w-full h-[650px]" />
           </div>
         </div>
 
@@ -150,7 +150,9 @@ const Aboutus = ({ showHeaderImage = true }) => {
         </div>
       </div>
 
-      <div><DevPlan/></div>
+      <div>
+        <DevPlan />
+      </div>
     </div>
   );
 };

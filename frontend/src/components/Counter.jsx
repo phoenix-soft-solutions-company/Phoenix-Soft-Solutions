@@ -39,7 +39,9 @@ const Counter = ({ threshold = 100, increment = 1 }) => {
 
   return (
     <div ref={counterRef}>
-      <h1 className="text-5xl font-bold">{count}</h1>
+      
+        {count}
+      
     </div>
   );
 };

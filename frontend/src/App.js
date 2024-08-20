@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -36,63 +36,78 @@ import WebHosting from "./sub-pages/hosting/WebHosting";
 import CloudHosting from "./sub-pages/hosting/CloudHosting";
 import VPSHosting from "./sub-pages/hosting/VPSHosting";
 import BusinessEmail from "./sub-pages/hosting/BusinessEmail";
+import Admin from "./admin-panel/Admin";
+import XcropCounter from "./admin-panel/xcrop/XcropCounter";
+import XcropEvent from "./admin-panel/xcrop/XcropEvent";
+import XcropProject from "./admin-panel/xcrop/XcropProject";
+import XcropFeedback from "./admin-panel/xcrop/XcropFeedback";
+import { DarkModeProvider } from "./DarkModeContext";
 
 const App = () => {
+  const location = useLocation();
+
+  // Paths where Navbar should not be displayed
+  const noNavbarPaths = ["/login"];
+  const isAdminRoute = location.pathname.startsWith("/admin");
+
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <div className="flex-grow pt-16">
-        <Routes>
-          {/* main pages */}
-          <Route path="/" element={<Home />} />
-          <Route path="/company" element={<Company />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="/project" element={<Project />} />
-          <Route path="/technology" element={<Technology />} />
-          <Route path="/career" element={<Career />} />
-          <Route path="/event" element={<Event />} />
-          <Route path="/domain" element={<Domain />} />
-          <Route path="/hosting" element={<Hosting />} />
-          <Route path="/login" element={<Login />} />
-
-          {/*company sub pages*/}
-          <Route path="/company/Aboutus" element={<Aboutus />} />
-          <Route path="/company/Contactus" element={<Contactus />} />
-
-          {/* service sub pages */}
-          <Route path="/service/web" element={<WebService />} />
-          <Route path="/service/mobile" element={<MobileService />} />
-          <Route path="/service/custom" element={<CustomService />} />
-          <Route path="/service/devops" element={<DevopsService />} />
-          <Route path="/service/cloud" element={<CloudService />} />
-          <Route path="/service/ai" element={<AiService />} />
-          <Route path="/service/outsourcing" element={<OutsourcingService />} />
-          <Route path="/service/poc" element={<PocService />} />
-          <Route path="/service/qa" element={<QAService />} />
-          <Route path="/service/graphic" element={<GraphicService />} />
-          <Route path="/service/business" element={<BusinessService />} />
-          <Route path="/service/backend" element={<BackendService />} />
-          <Route path="/service/frontend" element={<FrontendService />} />
-          <Route path="/service/marketing" element={<MarketingService />} />
-          <Route path="/service/cyber" element={<CyberService />} />
-          <Route path="/service/software" element={<SoftwareService />} />
-
-          {/* domain sub pages */}
-          <Route path="/domain/lk" element={<LkDomain />} />
-          <Route
-            path="/domain/international"
-            element={<InternationalDomain />}
-          />
-
-          {/* hosting sub pages */}
-          <Route path="/hosting/web" element={<WebHosting />} />
-          <Route path="/hosting/cloud" element={<CloudHosting />} />
-          <Route path="/hosting/vps" element={<VPSHosting />} />
-          <Route path="/hosting/business-email" element={<BusinessEmail />} />
-        </Routes>
+    <DarkModeProvider>
+      <div className="flex flex-col">
+        {/* Conditionally render Navbar */}
+        {!noNavbarPaths.includes(location.pathname) && !isAdminRoute && <Navbar />}
+        <div className="">
+          <Routes>
+            {/* main pages */}
+            <Route path="/" element={<Home />} />
+            <Route path="/company" element={<Company />} />
+            <Route path="/service" element={<Service />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="/technology" element={<Technology />} />
+            <Route path="/career" element={<Career />} />
+            <Route path="/event" element={<Event />} />
+            <Route path="/domain" element={<Domain />} />
+            <Route path="/hosting" element={<Hosting />} />
+            <Route path="/login" element={<Login />} />
+            {/* company sub pages */}
+            <Route path="/company/Aboutus" element={<Aboutus />} />
+            <Route path="/company/Contactus" element={<Contactus />} />
+            {/* service sub pages */}
+            <Route path="/service/web" element={<WebService />} />
+            <Route path="/service/mobile" element={<MobileService />} />
+            <Route path="/service/custom" element={<CustomService />} />
+            <Route path="/service/devops" element={<DevopsService />} />
+            <Route path="/service/cloud" element={<CloudService />} />
+            <Route path="/service/ai" element={<AiService />} />
+            <Route path="/service/outsourcing" element={<OutsourcingService />} />
+            <Route path="/service/poc" element={<PocService />} />
+            <Route path="/service/qa" element={<QAService />} />
+            <Route path="/service/graphic" element={<GraphicService />} />
+            <Route path="/service/business" element={<BusinessService />} />
+            <Route path="/service/backend" element={<BackendService />} />
+            <Route path="/service/frontend" element={<FrontendService />} />
+            <Route path="/service/marketing" element={<MarketingService />} />
+            <Route path="/service/cyber" element={<CyberService />} />
+            <Route path="/service/software" element={<SoftwareService />} />
+            {/* domain sub pages */}
+            <Route path="/domain/lk" element={<LkDomain />} />
+            <Route path="/domain/international" element={<InternationalDomain />} />
+            {/* hosting sub pages */}
+            <Route path="/hosting/web" element={<WebHosting />} />
+            <Route path="/hosting/cloud" element={<CloudHosting />} />
+            <Route path="/hosting/vps" element={<VPSHosting />} />
+            <Route path="/hosting/business-email" element={<BusinessEmail />} />
+            {/* admin routes */}
+            <Route path="/admin/xcrop" element={<Admin />}>
+              <Route path="counter" element={<XcropCounter />} />
+              <Route path="project" element={<XcropProject />} />
+              <Route path="event" element={<XcropEvent />} />
+              <Route path="feedback" element={<XcropFeedback />} />
+            </Route>
+          </Routes>
+        </div>
+        {!noNavbarPaths.includes(location.pathname) && !isAdminRoute && <Footer />}
       </div>
-      <Footer />
-    </div>
+    </DarkModeProvider>
   );
 };
 
