@@ -1,40 +1,73 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 function XcropProject() {
-  // Initialize state for the number fields
   const [formData, setFormData] = useState({
     date: "",
-    image: "",
     title: "",
     description: "",
+    image: null,
   });
+  const [projects, setProjects] = useState([]);
 
-  // Handle input changes
+  useEffect(() => {
+    getProjects();
+  }, []);
+
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, files } = e.target;
     setFormData({
       ...formData,
-      [name]: value,
+      [name]: files ? files[0] : value,
     });
   };
 
-  // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Process form data here
-    console.log("Form Submitted:", formData);
+
+    const uploadData = new FormData();
+    uploadData.append("date", formData.date);
+    uploadData.append("title", formData.title);
+    uploadData.append("description", formData.description);
+    if (formData.image) {
+      uploadData.append("image", formData.image);
+    }
+
+    try {
+      const result = await axios.post(`${process.env.REACT_APP_BASE_URL}/project`, uploadData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+
+      if (result.data.status === "ok") {
+        getProjects();
+      } else {
+        console.error(result.data.message);
+      }
+    } catch (error) {
+      console.error("Error submitting project:", error);
+    }
   };
 
-  // Handle form clearing
-  const handleClear = () => {
-    setFormData({
-      date: "",
-      image: "",
-      title: "",
-      description: "",
-    });
+  // Fetch projects from the server
+  const getProjects = async () => {
+    try {
+      const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/project`);
+      setProjects(result.data.data);
+    } catch (error) {
+      console.error("Error fetching projects:", error);
+    }
+  };
+
+  // Handle project deletion
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`${process.env.REACT_APP_BASE_URL}/project/${id}`);
+      getProjects();
+    } catch (error) {
+      console.error("Error deleting project:", error);
+    }
   };
 
   return (
@@ -42,41 +75,26 @@ function XcropProject() {
       <div className="bg-white border border-gray-300 rounded-lg p-4">
         <h1 className="font-semibold text-xl mb-4 text-gray-600">Current Projects</h1>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center">
-          <div className="flex flex-row gap-5 border border-gray-300 rounded-lg p-4">
-            <div>project</div>
-            <div>
-              <button className="text-red-600 hover:text-red-800 transition duration-300" aria-label="Delete">
-                <FontAwesomeIcon icon={faTrashAlt} className="text-red-600" />
-              </button>
+          {projects.map((project) => (
+            <div key={project._id} className="flex flex-col gap-5 border border-gray-300 rounded-lg p-4">
+              <div>
+                <img
+                  src={require(`../../images/${project.image}`)}
+                  alt={project.title}
+                  className="w-32 h-auto"
+                />
+              </div>
+              <div>
+                <h2 className="font-semibold">{project.title}</h2>
+                <button
+                  onClick={() => handleDelete(project._id)}
+                  className="text-red-600 hover:text-red-800 transition duration-300 mt-2"
+                  aria-label="Delete">
+                  <FontAwesomeIcon icon={faTrashAlt} />
+                </button>
+              </div>
             </div>
-          </div>
-
-          <div className="flex flex-row gap-5 border border-gray-300 rounded-lg p-4">
-            <div>project</div>
-            <div>
-              <button className="text-red-600 hover:text-red-800 transition duration-300" aria-label="Delete">
-                <FontAwesomeIcon icon={faTrashAlt} className="text-red-600" />
-              </button>
-            </div>
-          </div>
-
-          <div className="flex flex-row gap-5 border border-gray-300 rounded-lg p-4">
-            <div>project</div>
-            <div>
-              <button className="text-red-600 hover:text-red-800 transition duration-300" aria-label="Delete">
-                <FontAwesomeIcon icon={faTrashAlt} className="text-red-600" />
-              </button>
-            </div>
-          </div>
-
-          <div className="flex flex-row gap-5 border border-gray-300 rounded-lg p-4">
-            <div>project</div>
-            <div>
-              <button className="text-red-600 hover:text-red-800 transition duration-300" aria-label="Delete">
-                <FontAwesomeIcon icon={faTrashAlt} className="text-red-600" />
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
@@ -85,7 +103,7 @@ function XcropProject() {
         className="space-y-4 w-full mx-auto bg-white border border-gray-300 rounded-lg p-4 mt-5">
         <h1 className="font-semibold text-xl mb-4 text-gray-600">Add Project</h1>
         <div>
-          <label htmlFor="experiences" className="block text-sm font-medium text-gray-500">
+          <label htmlFor="date" className="block text-sm font-medium text-gray-500">
             Date
           </label>
           <input
@@ -98,7 +116,7 @@ function XcropProject() {
           />
         </div>
         <div>
-          <label htmlFor="projects" className="block text-sm font-medium text-gray-500">
+          <label htmlFor="title" className="block text-sm font-medium text-gray-500">
             Title
           </label>
           <input
@@ -111,7 +129,7 @@ function XcropProject() {
           />
         </div>
         <div>
-          <label htmlFor="experts" className="block text-sm font-medium text-gray-500">
+          <label htmlFor="description" className="block text-sm font-medium text-gray-500">
             Description
           </label>
           <textarea
@@ -123,14 +141,13 @@ function XcropProject() {
           />
         </div>
         <div>
-          <label htmlFor="experiences" className="block text-sm font-medium text-gray-500">
+          <label htmlFor="image" className="block text-sm font-medium text-gray-500">
             Image
           </label>
           <input
             type="file"
             id="image"
             name="image"
-            value={formData.image}
             onChange={handleChange}
             className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
           />
@@ -144,7 +161,14 @@ function XcropProject() {
           </button>
           <button
             type="button"
-            onClick={handleClear}
+            onClick={() =>
+              setFormData({
+                date: "",
+                title: "",
+                description: "",
+                image: null,
+              })
+            }
             className="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
             Clear
           </button>

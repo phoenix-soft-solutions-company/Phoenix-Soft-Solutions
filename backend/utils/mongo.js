@@ -3,6 +3,10 @@ class MongoBase {
     return model.create(data);
   };
 
+  findAll = async (model) => {
+    return model.find({});
+  };
+
   findOne = async (model, field, projection = null) => {
     if (projection) {
       projection.runValidators = true;
@@ -21,6 +25,14 @@ class MongoBase {
   findById = async (model, id) => {
     try {
       return await model.findById(id);
+    } catch (error) {
+      throw error;
+    }
+  };
+
+  findByIdAndDelete = async (model, id) => {
+    try {
+      return await model.findByIdAndDelete(id);
     } catch (error) {
       throw error;
     }

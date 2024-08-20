@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Alert from "../components/Alert";
 
 function XcropCounter() {
   const [formData, setFormData] = useState({
@@ -8,15 +9,20 @@ function XcropCounter() {
     experts: "",
     clients: "",
   });
+  const [alertMessage, setAlertMessage] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
 
   // Fetch current counter data by ID when the component mounts
   useEffect(() => {
     const fetchCounterData = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/counter/66c21af52a7dd94e2cd73e8c`);
+        const response = await axios.get(
+          `${process.env.REACT_APP_BASE_URL}/counter/66c21af52a7dd94e2cd73e8c`
+        );
         setFormData(response.data);
       } catch (error) {
-        console.error("Error fetching counter data:", error);
+        setAlertMessage("Error fetching counter data");
+        setShowAlert(true);
       }
     };
 
@@ -37,15 +43,15 @@ function XcropCounter() {
     e.preventDefault();
 
     try {
-      const response = await axios.put(
+      await axios.put(
         `${process.env.REACT_APP_BASE_URL}/counter/66c21af52a7dd94e2cd73e8c`,
         formData
       );
-      console.log("Counter Updated:", response.data);
-      // You can also display a success message or redirect the user
+      setAlertMessage("Counter successfully updated!");
+      setShowAlert(true);
     } catch (error) {
-      console.error("Error updating counter:", error);
-      // Handle the error (e.g., display an error message)
+      setAlertMessage("Error updating counter");
+      setShowAlert(true);
     }
   };
 
@@ -59,8 +65,15 @@ function XcropCounter() {
     });
   };
 
+  // Handle alert close
+  const handleCloseAlert = () => {
+    setShowAlert(false);
+  };
+
   return (
     <div className="p-4">
+      {showAlert && <Alert message={alertMessage} onClose={handleCloseAlert} />}
+
       <form onSubmit={handleSubmit} className="space-y-4 w-full mx-auto shadow-lg p-4">
         <h1 className="text-2xl font-bold mb-4 text-gray-600">Update Counter</h1>
         <div>
