@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-red-800 text-white py-4 px-10 fixed left-0 top-0 right-0 z-[1000]">
+    <nav className="bg-red-600 text-white py-4 px-10 fixed left-0 top-0 right-0 z-[1000]">
       <div className="flex justify-between items-center">
         <div className="flex items-center">
           <img src={Logo} alt="Company Logo" className="h-8 lg:h-10 mr-4" />
@@ -47,7 +47,7 @@ const Navbar = () => {
               </Link>
 
               {link.subpages && link.subpages.length < 5 && dropdownOpen === index && (
-                <div className="absolute left-0 z-[999] w-48 bg-red-800 border border-red-700 rounded shadow-lg group-hover:block">
+                <div className="absolute left-0 z-[999] w-48 bg-red-600 border border-red-700 rounded shadow-lg group-hover:block">
                   {link.subpages.map((subpage, subIndex) => (
                     <Link
                       key={subIndex}
@@ -64,7 +64,7 @@ const Navbar = () => {
               )}
 
               {link.subpages && link.subpages.length > 5 && dropdownOpen === index && (
-                <div className="flex flex-row absolute left-0 z-[999]w-96 bg-red-800 border border-red-700 rounded shadow-lg">
+                <div className="flex flex-row absolute left-0 z-[999]w-96 bg-red-600 border border-red-700 rounded shadow-lg">
                   <div className="w-48 group-hover:block border-r border-red-700">
                     {link.subpages.slice(0, 9).map((subpage, subIndex) => (
                       <Link
@@ -108,7 +108,7 @@ const Navbar = () => {
 
       {/* Side bar */}
       <div
-        className={`fixed top-0 right-0 h-full overflow-y-auto bg-red-800 text-white transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full overflow-y-auto bg-red-600 text-white transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } xl:hidden w-full sm:w-96 p-4 z-[1000]`}>
         <div className="flex justify-between items-center mb-4">

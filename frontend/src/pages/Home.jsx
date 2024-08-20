@@ -137,7 +137,7 @@ function Home() {
             <div className="flex justify-center sm:justify-start mt-8">
               <a
                 href="/Company/Contactus"
-                className="border-2 border-red-700 bg-red-700 text-white py-2 px-6 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
+                className="border-2 border-red-700 bg-red-600 text-white py-2 px-6 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
               >
                 Contact Us
               </a>
@@ -294,7 +294,7 @@ function Home() {
         <div className="flex justify-center mt-6">
           <Link
             to="/service"
-            className="border-2 border-red-700 bg-red-700 text-white py-4 px-8 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
+            className="border-2 border-red-700 bg-red-600 text-white py-4 px-8 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
           >
             Explore in detail
           </Link>
@@ -335,7 +335,7 @@ function Home() {
         <div className="flex justify-center">
           <Link
             to="/project"
-            className="border-2 border-red-700 bg-red-700 text-white py-4 px-8 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
+            className="border-2 border-red-700 bg-red-600 text-white py-4 px-8 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
           >
             Explore more projects
           </Link>

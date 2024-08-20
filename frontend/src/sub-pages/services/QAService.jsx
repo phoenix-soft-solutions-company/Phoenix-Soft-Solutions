@@ -89,7 +89,7 @@ const Qa = () => {
       {/* Content Section */}
       <div className="flex flex-col items-center justify-center px-4 py-12">
         <h1 className="text-3xl lg:text-4xl font-serif font-bold mb-4 text-center">
-          SAIGON TECHNOLOGY - WITH A DECADE OF
+          Phoenix Soft Solutions - WITH A DECADE OF
           <br /> EXPERIENCE IN QA TESTING SERVICES
         </h1>
         <div className="text-center mb-8">
@@ -112,15 +112,15 @@ const Qa = () => {
           alt="DevOps Services"
         />
         <p className="mb-4 text-center mt-8">
-          The customizable service model offered by Saigon Technology includes
-          web app/ mobile app and custom app testing. With
+          The customizable service model offered by Phoenix Soft Solutions
+          includes web app/ mobile app and custom app testing. With
           <br /> ten years of experience in the worldwide IT market - especially
           for QA testing software, we have numerous non-tech
           <br /> and tech company clients from key nations such as the United
           States, Canada, the United Kingdom, Australia, Germany, and the
           <br /> Netherlands… to seek guidance on appropriate software
           solutions; and have subsequently opted to continue with and
-          <br /> delegate the project to Saigon Technology for many years.
+          <br /> delegate the project to Phoenix Soft Solutions for many years.
         </p>
 
         {/* Text-Based Card Section */}

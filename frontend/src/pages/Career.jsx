@@ -14,28 +14,47 @@ const Career = () => {
   return (
     <div className="min-h-screen relative pt-16">
       <header className="relative w-full h-[40vh] md:h-[50vh]">
-        <img src={heading} alt="header" className="object-cover w-full h-full" />
+        <img
+          src={heading}
+          alt="header"
+          className="object-cover w-full h-full"
+        />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold tracking-widest">CAREER</h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold tracking-widest">
+            CAREER
+          </h1>
         </div>
       </header>
 
       <section className="p-6 md:p-8 bg-white text-black flex flex-col items-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-center">OUR VALUES</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-center">
+          OUR VALUES
+        </h1>
 
         <div className="bg-gray-100 p-6 md:p-8 rounded-lg shadow-lg max-w-6xl w-full">
           <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row md:gap-x-10 lg:gap-x-0 xl:gap-x-4">
             <div className="w-full md:w-1/2 pr-4">
               <ul className="list-none space-y-4 md:space-y-6 text-base md:text-lg text-black">
-                {["How we play", "We're in this together", "Bring your best"].map((title, index) => (
+                {[
+                  "How we play",
+                  "We're in this together",
+                  "Bring your best",
+                ].map((title, index) => (
                   <li
                     key={index}
-                    className="flex items-start transform transition-transform duration-300 hover:translate-x-2">
-                    <FontAwesomeIcon icon={faCheckCircle} className="text-red-600 mr-2 w-6 h-6" />
+                    className="flex items-start transform transition-transform duration-300 hover:translate-x-2"
+                  >
+                    <FontAwesomeIcon
+                      icon={faCheckCircle}
+                      className="text-red-600 mr-2 w-6 h-6"
+                    />
                     <div>
-                      <h3 className="text-xl md:text-2xl font-semibold mb-2">{title}</h3>
+                      <h3 className="text-xl md:text-2xl font-semibold mb-2">
+                        {title}
+                      </h3>
                       <p>
-                        {index === 0 && "It's important to know that what matters to us also matters to you."}
+                        {index === 0 &&
+                          "It's important to know that what matters to us also matters to you."}
                         {index === 1 &&
                           "We work with, not for, our partners and teams to make them more successful. We work best in high-performing teams and consider our partners to be on the team with us. We have shared goals and a drive to succeed."}
                         {index === 2 &&
@@ -49,24 +68,32 @@ const Career = () => {
 
             <div className="w-full md:w-1/2 pl-4">
               <ul className="list-none space-y-4 md:space-y-6 text-base md:text-lg text-black">
-                {["Be a pioneer", "Ask Why?", "Be ready to help"].map((title, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start transform transition-transform duration-300 hover:translate-x-2">
-                    <FontAwesomeIcon icon={faCheckCircle} className="text-red-600 mr-2 w-6 h-6" />
-                    <div>
-                      <h3 className="text-xl md:text-2xl font-semibold mb-2">{title}</h3>
-                      <p>
-                        {index === 0 &&
-                          "We’re always looking to experiment, learn, and improve. We constantly iterate over build, measure, learn. We’re agile in how we think about problems and how we deliver solutions."}
-                        {index === 1 &&
-                          "Asking why drives our desire to deliver the right thing. We position ourselves for breakthroughs that give our partners an unfair advantage in their market."}
-                        {index === 2 &&
-                          "Our industry has huge potential, but in many ways is self-serving. We choose to be different, serving with integrity, commitment, and excellence. To achieve this, simply be ready to help."}
-                      </p>
-                    </div>
-                  </li>
-                ))}
+                {["Be a pioneer", "Ask Why?", "Be ready to help"].map(
+                  (title, index) => (
+                    <li
+                      key={index}
+                      className="flex items-start transform transition-transform duration-300 hover:translate-x-2"
+                    >
+                      <FontAwesomeIcon
+                        icon={faCheckCircle}
+                        className="text-red-600 mr-2 w-6 h-6"
+                      />
+                      <div>
+                        <h3 className="text-xl md:text-2xl font-semibold mb-2">
+                          {title}
+                        </h3>
+                        <p>
+                          {index === 0 &&
+                            "We’re always looking to experiment, learn, and improve. We constantly iterate over build, measure, learn. We’re agile in how we think about problems and how we deliver solutions."}
+                          {index === 1 &&
+                            "Asking why drives our desire to deliver the right thing. We position ourselves for breakthroughs that give our partners an unfair advantage in their market."}
+                          {index === 2 &&
+                            "Our industry has huge potential, but in many ways is self-serving. We choose to be different, serving with integrity, commitment, and excellence. To achieve this, simply be ready to help."}
+                        </p>
+                      </div>
+                    </li>
+                  )
+                )}
               </ul>
             </div>
           </div>
@@ -74,7 +101,9 @@ const Career = () => {
       </section>
 
       <section className="p-6 md:p-8 bg-gray-100 text-black flex flex-col items-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-center">OUR BENEFITS</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-center">
+          OUR BENEFITS
+        </h1>
 
         <div className="max-w-5xl w-full space-y-6 md:space-y-8">
           {[
@@ -86,7 +115,8 @@ const Career = () => {
               imgAlt: "Learning opportunities",
             },
             {
-              title: "Create impactful software and share in the financial upside",
+              title:
+                "Create impactful software and share in the financial upside",
               description:
                 "At X Croup, we love building impactful and purposeful software for our customers. Our customers are building SaaS businesses and the awesome thing about SaaS is that when you are creating an impact for good, then scaling the business also scales the impact. X Croup Ventures is our team ESOP, giving everyone who works at X Croup a chance to own shares in our customers. So when our customers win, we not only take pride in knowing we’ve achieved an awesome impact, but we share in the financial upside.",
               imgSrc: card2,
@@ -128,13 +158,20 @@ const Career = () => {
               key={index}
               className={`bg-white p-6 rounded-lg shadow-lg flex flex-col md:flex-row gap-4 ${
                 card.reverse ? "md:flex-row-reverse" : ""
-              } ${index % 2 === 1 ? "md:space-x-8" : "md:space-x-4"}`}>
+              } ${index % 2 === 1 ? "md:space-x-8" : "md:space-x-4"}`}
+            >
               <div className="w-full md:w-1/2 mb-4 md:mb-0 ">
-                <h3 className="text-xl md:text-2xl font-semibold mb-4 text-red-600">{card.title}</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4 text-red-600">
+                  {card.title}
+                </h3>
                 <p>{card.description}</p>
               </div>
               <div className="w-full md:w-1/2">
-                <img src={card.imgSrc} alt={card.imgAlt} className="rounded-lg object-cover w-full h-full" />
+                <img
+                  src={card.imgSrc}
+                  alt={card.imgAlt}
+                  className="rounded-lg object-cover w-full h-full"
+                />
               </div>
             </div>
           ))}
@@ -143,19 +180,27 @@ const Career = () => {
 
       <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center mb-8">
         <div className="w-full mb-4">
-          <img src={card1} alt="Open positions" className="rounded-lg object-cover w-full h-48 md:h-64" />
+          <img
+            src={card1}
+            alt="Open positions"
+            className="rounded-lg object-cover w-full h-48 md:h-64"
+          />
         </div>
         <div className="w-full text-center">
-          <h3 className="text-xl md:text-2xl font-semibold mb-4 text-red-600">Apply to our open positions</h3>
+          <h3 className="text-xl md:text-2xl font-semibold mb-4 text-red-600">
+            Apply to our open positions
+          </h3>
           <p>
-            Create your own role. We’re always on the lookout for talented people to join the growing team at
-            X Croup. Is it you?
+            Create your own role. We’re always on the lookout for talented
+            people to join the growing team at Phoenix Soft Solutions. Is it
+            you?
           </p>
         </div>
         <div className="mt-6">
           <a
             href="/Company/Contactus"
-            className="inline-block px-6 py-3 bg-red-500 text-white font-bold rounded-lg shadow hover:bg-red-600 transition duration-300">
+            className="inline-block px-6 py-3 bg-red-500 text-white font-bold rounded-lg shadow hover:bg-red-600 transition duration-300"
+          >
             Get in Touch
           </a>
         </div>
@@ -163,7 +208,9 @@ const Career = () => {
 
       {/* FAQ Section */}
       <section className="p-6 md:p-8 bg-white text-black flex flex-col items-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-center">FAQ</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-center">
+          FAQ
+        </h1>
 
         <div className="max-w-4xl w-full space-y-4 md:space-y-6">
           {[
@@ -183,13 +230,19 @@ const Career = () => {
                 "We practice Agile through iterative development, regular stand-ups, sprint planning, and retrospectives. Our teams are empowered to adapt and improve processes continuously, ensuring that we meet our partners' needs effectively.",
             },
             {
-              question: "What sort of people and skillsets typically work for X Croup?",
+              question:
+                "What sort of people and skillsets typically work for X Croup?",
               answer:
                 "Our teams are diverse, consisting of individuals with various skill sets including software development, product management, Agile facilitation, and more. We value people who are innovative, collaborative, and committed to delivering excellence.",
             },
           ].map((faq, index) => (
-            <div key={index} className="bg-gray-100 p-4 rounded-lg shadow-md mb-4">
-              <h3 className="text-xl md:text-2xl font-semibold mb-2 text-black-600">{faq.question}</h3>
+            <div
+              key={index}
+              className="bg-gray-100 p-4 rounded-lg shadow-md mb-4"
+            >
+              <h3 className="text-xl md:text-2xl font-semibold mb-2 text-black-600">
+                {faq.question}
+              </h3>
               <p>{faq.answer}</p>
             </div>
           ))}

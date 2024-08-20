@@ -36,7 +36,7 @@ const Poc = () => {
           The purpose of Proof of Concept (PoC) development services is to
           assess the waters and ensure that a<br></br> solution or idea will
           work before committing to a larger scale implementation. Significant
-          PoC development<br></br> services offered by Saigon Technology
+          PoC development<br></br> services offered by Phoenix Soft Solutions
           include:
         </p>
       </div>
@@ -107,7 +107,7 @@ const Poc = () => {
             As with any new technology, the best approach to introduce IoT to a
             company is through a proof of concept with mistakes being minimized.
             A Proof of Concept is a small-scale trial that allows you to test
-            out an answer in your own setting. Saigon Technology's PoC
+            out an answer in your own setting. Phoenix Soft Solutions's PoC
             development services, particularly for IoT, have been consistently
             deployed, and the company has received numerous requirements for
             these services.
