@@ -65,11 +65,9 @@ const Navbar = () => {
 
       <div className="flex justify-between items-center py-4 px-10">
         <div className="flex items-center">
-          <img src={Logo} alt="Company Logo" className="h-8 lg:h-10 mr-4" />
-          <span className="text-xl lg:text-2xl font-bold tracking-widest font-serif">
-            Phoenix Soft Solutions
-          </span>
+          <img src={Logo} alt="Company Logo" className="h-12 lg:h-14 mr-6" />
         </div>
+
         <div className="hidden xl:flex space-x-1">
           {LINKS?.map((link, index) => (
             <div
