@@ -1,7 +1,7 @@
 import React from "react";
 import { FaInfoCircle, FaDotCircle, FaCheckCircle } from "react-icons/fa";
 import heading from "../../constants/images/tech/technology-heading.jpg";
-import leftImage from "../../constants/images/company/company.jpg";
+import leftImage from "../../constants/images/company/aa.jpg";
 import rightImage from "../../constants/images/company/vision & mission.jpg";
 import CounterExp from "../../components/CounterExp";
 import DevPlan from "../../components/DevPlan"

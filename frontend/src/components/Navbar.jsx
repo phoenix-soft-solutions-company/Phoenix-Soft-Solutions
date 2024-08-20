@@ -12,6 +12,7 @@ import {
   faFacebook,
   faTwitter,
   faLinkedin,
+  faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
 const Navbar = () => {
@@ -37,7 +38,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-4">
           {/* Social Media Icons */}
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/phoenixsoftsolutionsnz?mibextid=ZbWKwL"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -56,6 +57,13 @@ const Navbar = () => {
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faLinkedin} className="text-black" />
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faInstagram} className="text-black" />
           </a>
         </div>
         <p className="text-black font-bold">

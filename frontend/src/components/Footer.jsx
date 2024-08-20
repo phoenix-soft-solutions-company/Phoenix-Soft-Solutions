@@ -1,6 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebook,
+  faTwitter,
+  faLinkedin,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 import "./Styles.css";
 import { Link } from "react-router-dom";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
@@ -16,9 +21,9 @@ function Footer() {
           <div className="flex flex-row mt-2">
             <p className="text-md pr-8 lg:text-justify">
               Phoenix Soft Solutions is one of the reputed and leading IT
-              companies of new zealand d We provide next generation digital
-              services that look great and are easy-to-use which helps our
-              clients to grow their business successfully.
+              companies of New Zealand. We provide next generation digital
+              services that look great and are easy-to-use, which helps our
+              clients grow their businesses successfully.
             </p>
           </div>
         </div>
@@ -34,9 +39,9 @@ function Footer() {
             <span>Sydney NSW 2000,</span> <br />
             <span>Australia.</span>
             <br />
-            <span>Email : info@phoenixsoftsolutions.com</span>
+            <span>Email: info@phoenixsoftsolutions.com</span>
             <br />
-            <span>Phone : +61 2-7912 3603 </span>
+            <span>Phone: +61 2-7912 3603 </span>
           </p>
         </div>
 
@@ -45,13 +50,13 @@ function Footer() {
             Branches
           </h1>
           <p className="text-md mt-2">
-            <span>New Zealand :</span>
+            <span>New Zealand:</span>
             <br />
-            <span>United Kingdom :+447908678192 </span>
+            <span>United Kingdom: +44 7908 678192</span>
             <br />
-            <span>Sri Lanka : +94 77 844 3682</span>
+            <span>Sri Lanka: +94 77 844 3682</span>
             <br />
-            <span>Sweden : +46 766920017</span>
+            <span>Sweden: +46 766 920017</span>
           </p>
         </div>
 
@@ -61,31 +66,31 @@ function Footer() {
           </h1>
           <ul className="list-none mt-2">
             <li className="flex flex-row transform transition-transform duration-300 hover:translate-x-2">
-              <ArrowRightIcon className="text-white h-5 w5 mr-2 font-semibold" />
+              <ArrowRightIcon className="text-white h-5 w-5 mr-2 font-semibold" />
               <Link to="/" className="">
                 Home
               </Link>
             </li>
             <li className="flex flex-row transform transition-transform duration-300 hover:translate-x-2">
-              <ArrowRightIcon className="text-white h-5 w5 mr-2 font-semibold" />
+              <ArrowRightIcon className="text-white h-5 w-5 mr-2 font-semibold" />
               <Link to="/company" className="">
                 Company
               </Link>
             </li>
             <li className="flex flex-row transform transition-transform duration-300 hover:translate-x-2">
-              <ArrowRightIcon className="text-white h-5 w5 mr-2 font-semibold" />
+              <ArrowRightIcon className="text-white h-5 w-5 mr-2 font-semibold" />
               <Link to="/service" className="">
                 Service
               </Link>
             </li>
             <li className="flex flex-row transform transition-transform duration-300 hover:translate-x-2">
-              <ArrowRightIcon className="text-white h-5 w5 mr-2 font-semibold" />
+              <ArrowRightIcon className="text-white h-5 w-5 mr-2 font-semibold" />
               <Link to="/domain" className="">
                 Domain
               </Link>
             </li>
             <li className="flex flex-row transform transition-transform duration-300 hover:translate-x-2">
-              <ArrowRightIcon className="text-white h-5 w5 mr-2 font-semibold" />
+              <ArrowRightIcon className="text-white h-5 w-5 mr-2 font-semibold" />
               <Link to="/hosting" className="">
                 Hosting
               </Link>
@@ -126,7 +131,7 @@ function Footer() {
         </div>
         <div className="flex flex-row justify-start sm:justify-center gap-3 lg:gap-5 mt-2 mb-5">
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/phoenixsoftsolutionsnz?mibextid=ZbWKwL"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -145,6 +150,13 @@ function Footer() {
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faLinkedin} size="lg" />
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faInstagram} size="lg" />
           </a>
         </div>
       </div>
