@@ -14,16 +14,16 @@ import ps from "../constants/images/tech/ps.jpg";
 import mongo from "../constants/images/tech/mongodb.png";
 import express from "../constants/images/tech/express.png";
 import net from "../constants/images/tech/net.png"
-import webapp from "../constants/images/tech/web_app.png";
-import mobileapp from "../constants/images/tech/mobile_app.png";
-import bussinessapp from "../constants/images/tech/Busines_app.png";
-import custom from "../constants/images/tech/Busines_app.png";
-import service1 from "../constants/images/tech/transport.png";
-import service2 from "../constants/images/tech/account.png";
-import service3 from "../constants/images/tech/health.png";
-import service4 from "../constants/images/tech/bussines.png";
-import service5 from "../constants/images/tech/bank.png";
-import service6 from "../constants/images/tech/ecommernce.png";
+import webapp from "../constants/images/tech/web-app.jpg";
+import mobileapp from "../constants/images/tech/mob-app.jpg";
+import bussinessapp from "../constants/images/tech/bus-app.jpg";
+import custom from "../constants/images/tech/custom-app.webp";
+import service1 from "../constants/images/tech/trans.jpg";
+import service2 from "../constants/images/tech/account.jpg";
+import service3 from "../constants/images/tech/health.jpg";
+import service4 from "../constants/images/tech/busi.jpg";
+import service5 from "../constants/images/tech/bank.jpg";
+import service6 from "../constants/images/tech/ecommerc.jpg";
 import Logo from "../constants/images/logo.png";
 
 const images = [nodejs, php, python, reactImg, angular, aws, android, java, ios, js,ps, mongo, express, net];
@@ -148,7 +148,7 @@ const Technology = () => {
         </div>
 
         <div className="w-[300px] sm:w-[600px] lg:w-[1000px] mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-7 justify-items-center gap-y-5">
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-7 justify-items-center gap-y-5 mb-10">
             {images.map((image, index) => (
               <div className="border border-gray-200 w-28 h-28 p-2 shadow-sm rounded-md" key={index}>
                 <img src={image} alt={titles[index]} className="object-contain w-20 h-20 mx-auto" />
@@ -158,10 +158,10 @@ const Technology = () => {
           </div>
         </div>
 
-        <h1 className="w-full text-center text-4xl lg:text-5xl font-bold tracking-wider font-mono uppercase px-4 mt-8 relative inline-block after:block after:h-1 after:w-1/3 after:bg-red-500 after:mt-2 after:mx-auto">
+        <h1 className=" w-full text-center text-4xl lg:text-5xl font-bold tracking-wider font-mono uppercase px-4 mt-8 relative inline-block after:block after:h-1 after:w-1/3 after:bg-red-500 after:mt-2 after:mx-auto">
           Our Technology Boxes
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 mt-8 px-10 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 mt-8 px-20 mb-10">
           {boxes.map((box, index) => (
             <div className="border border-red-500 p-6 text-center shadow-lg m-0" key={index}>
               <div className="flex items-center justify-center mx-auto h-80 w-90 mb-4">
@@ -176,7 +176,7 @@ const Technology = () => {
         <h1 className="w-full text-center text-4xl lg:text-5xl font-bold tracking-wider font-mono uppercase px-4 mt-8 relative inline-block after:block after:h-1 after:w-1/3 after:bg-red-500 after:mt-2 after:mx-auto">
           DOMAIN EXPERTISE
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 mt-8 px-10 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 mt-8 px-40 mb-10">
           {services.map((service, index) => (
             <div className="border border-red-500 p-6 text-center shadow-lg m-0" key={index}>
               <div className="flex items-center justify-center mx-auto h-80 w-90 mb-4">
