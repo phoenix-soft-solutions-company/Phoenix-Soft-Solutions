@@ -5,6 +5,7 @@ const app = express();
 const routes = require("./routes");
 const { success, error } = require("./constants");
 const handleErrors = require("./middleware/error-handler.middleware");
+const Project = require("./model/project.model");
 
 require("dotenv").config();
 
