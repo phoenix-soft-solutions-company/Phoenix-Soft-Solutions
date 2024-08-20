@@ -9,14 +9,14 @@ const handleErrors = require("./middleware/error-handler.middleware");
 require("dotenv").config();
 
 const corsOptions = {
-  origin: ["https://tkdeshan.github.io/", "http://localhost:3000"],
+  origin: "*",
   methods: "GET,POST,PUT,PATCH,DELETE,OPTIONS",
   allowedHeaders: "Content-Type,Authorization",
   credentials: true,
-  optionsSuccessStatus: 200,
+  optionsSuccessStatus: 204,
 };
 
-app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 
 app.use(express.json());
 
