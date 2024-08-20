@@ -9,7 +9,7 @@ const handleErrors = require("./middleware/error-handler.middleware");
 require("dotenv").config();
 
 const corsOptions = {
-  origin: ["https://tkdeshan.github.io/Xcrop-website/", "http://localhost:3000"],
+  origin: ["https://tkdeshan.github.io/", "http://localhost:3000"],
   methods: "GET,POST,PUT,PATCH,DELETE,OPTIONS",
   allowedHeaders: "Content-Type,Authorization",
   credentials: true,
