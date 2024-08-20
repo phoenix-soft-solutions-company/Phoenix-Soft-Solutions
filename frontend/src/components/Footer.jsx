@@ -15,10 +15,10 @@ function Footer() {
           </h1>
           <div className="flex flex-row mt-2">
             <p className="text-md pr-8 lg:text-justify">
-              Xcrop is one of the reputed and leading IT companies of new
-              zealand d We provide next generation digital services that look
-              great and are easy-to-use which helps our clients to grow their
-              business successfully.
+              Phoenix Soft Solutions is one of the reputed and leading IT
+              companies of new zealand d We provide next generation digital
+              services that look great and are easy-to-use which helps our
+              clients to grow their business successfully.
             </p>
           </div>
         </div>
@@ -28,7 +28,7 @@ function Footer() {
             Head Office
           </h1>
           <p className="text-md mt-2">
-            <span>Xcrop (Pvt) Ltd,</span>
+            <span>Phoenix Soft Solutions (Pvt) Ltd,</span>
             <br />
             <span>1/46 Martin Place,</span> <br />
             <span>Sydney NSW 2000,</span> <br />
@@ -96,7 +96,8 @@ function Footer() {
 
       <div className="pl-4 sm:pl-0">
         <p className="text-base font-mono text-start sm:text-center">
-          &copy; {new Date().getFullYear()} Xcrop. All Rights Reserved.
+          &copy; {new Date().getFullYear()} Phoenix Soft Solutions. All Rights
+          Reserved.
         </p>
         <div className="flex flex-row justify-start sm:justify-center mt-2 mb-5 text-sm">
           <a

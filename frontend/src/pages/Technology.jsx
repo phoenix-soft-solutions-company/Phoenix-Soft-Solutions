@@ -10,7 +10,7 @@ import android from "../constants/images/tech/Android.png";
 import java from "../constants/images/tech/java.png";
 import ios from "../constants/images/tech/IOS.png";
 import js from "../constants/images/tech/js.png";
-import ps from "../constants/images/tech/ps.jpg";
+import ps from "../constants/images/tech/ps.png";
 import mongo from "../constants/images/tech/mongodb.png";
 import express from "../constants/images/tech/express.png";
 import net from "../constants/images/tech/net.png"
