@@ -79,9 +79,7 @@ function Login() {
             onClick={() => navigate("/")}
           >
             <img src={Logo} alt="Company Logo" className="h-8 lg:h-10 mr-4" />
-            <span className="text-xl lg:text-2xl font-bold tracking-widest font-serif">
-              Phoenix Soft Solutions
-            </span>
+           
           </div>
 
           <div className="flex flex-row">
