@@ -5,19 +5,10 @@ const app = express();
 const routes = require("./routes");
 const { success, error } = require("./constants");
 const handleErrors = require("./middleware/error-handler.middleware");
-const Project = require("./model/project.model");
 
 require("dotenv").config();
 
-const corsOptions = {
-  origin: ["https://monitoring.elzian.com", "http://localhost:3000"],
-  methods: "GET,POST,PUT,PATCH,DELETE,OPTIONS",
-  allowedHeaders: "Content-Type,Authorization",
-  credentials: true,
-  optionsSuccessStatus: 200,
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(express.json());
 
