@@ -1,13 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-function AdminCounter() {
-  // Initialize state for the number fields
+function XcropCounter() {
   const [formData, setFormData] = useState({
     experiences: "",
     projects: "",
     experts: "",
     clients: "",
   });
+
+  // Fetch current counter data by ID when the component mounts
+  useEffect(() => {
+    const fetchCounterData = async () => {
+      try {
+        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/counter/66c21af52a7dd94e2cd73e8c`);
+        setFormData(response.data);
+      } catch (error) {
+        console.error("Error fetching counter data:", error);
+      }
+    };
+
+    fetchCounterData();
+  }, []);
 
   // Handle input changes
   const handleChange = (e) => {
@@ -19,10 +33,20 @@ function AdminCounter() {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Process form data here
-    console.log("Form Submitted:", formData);
+
+    try {
+      const response = await axios.put(
+        `${process.env.REACT_APP_BASE_URL}/counter/66c21af52a7dd94e2cd73e8c`,
+        formData
+      );
+      console.log("Counter Updated:", response.data);
+      // You can also display a success message or redirect the user
+    } catch (error) {
+      console.error("Error updating counter:", error);
+      // Handle the error (e.g., display an error message)
+    }
   };
 
   // Handle form clearing
@@ -37,8 +61,8 @@ function AdminCounter() {
 
   return (
     <div className="p-4">
-      <form onSubmit={handleSubmit} className="space-y-4 w-[320px] mx-auto shadow-lg p-4">
-        <h1 className="text-2xl font-bold mb-4">Counter Details</h1>
+      <form onSubmit={handleSubmit} className="space-y-4 w-full mx-auto shadow-lg p-4">
+        <h1 className="text-2xl font-bold mb-4 text-gray-600">Update Counter</h1>
         <div>
           <label htmlFor="experiences" className="block text-sm font-medium text-gray-700">
             Experiences
@@ -49,7 +73,7 @@ function AdminCounter() {
             name="experiences"
             value={formData.experiences}
             onChange={handleChange}
-            className="p-2 mt-1 block w-full border-2 border-gray-300 rounded-md focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
           />
         </div>
         <div>
@@ -62,7 +86,7 @@ function AdminCounter() {
             name="projects"
             value={formData.projects}
             onChange={handleChange}
-            className="p-2 mt-1 block w-full border-2 border-gray-300 rounded-md focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
           />
         </div>
         <div>
@@ -75,7 +99,7 @@ function AdminCounter() {
             name="experts"
             value={formData.experts}
             onChange={handleChange}
-            className="p-2 mt-1 block w-full border-2 border-gray-300 rounded-md focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
           />
         </div>
         <div>
@@ -88,7 +112,7 @@ function AdminCounter() {
             name="clients"
             value={formData.clients}
             onChange={handleChange}
-            className="p-2 mt-1 block w-full border-2 border-gray-300 rounded-md focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
           />
         </div>
         <div className="flex space-x-4">
@@ -109,4 +133,4 @@ function AdminCounter() {
   );
 }
 
-export default AdminCounter;
+export default XcropCounter;

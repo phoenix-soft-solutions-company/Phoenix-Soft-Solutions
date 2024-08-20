@@ -1,18 +1,73 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import loginImage from "../constants/images/login.avif";
-import { HomeIcon } from "@heroicons/react/24/outline";
+import { HomeIcon, EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 import Logo from "../constants/images/logo.png";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { tokenise } from "../utils/rsa.encrypt";
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState(null);
+    const [remember, setRemember] = useState(false);
+
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Perform form validation or authentication here
+   useEffect(() => {
+     if (localStorage.getItem("Email") && localStorage.getItem("Password")) {
+       setEmail(localStorage.getItem("Email"));
+       setPassword(atob(localStorage.getItem("Password")));
+       setRemember(true);
+     }
+   }, []);
 
-    // On successful login, navigate to the admin page
-    window.open("/admin", "_blank");
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    if (!email || !password) {
+      setError("Please enter the credentials");
+      return;
+    }
+
+    setError(null);
+
+    const userCredentials = {
+      email: email,
+      password: password,
+    };
+
+    let token;
+
+    try {
+      token = await tokenise(userCredentials);
+    } catch (error) {
+      setError("An error occurred! Please try again");
+      return;
+    }
+
+    axios
+      .post(`${process.env.REACT_APP_BASE_URL}/auth/login`, { token })
+      .then((response) => {
+        // Save or remove the username and password from local storage
+        if (remember) {
+          localStorage.setItem("Email", email);
+          localStorage.setItem("Password", btoa(password));
+        } else {
+          localStorage.removeItem("Email");
+          localStorage.removeItem("Password");
+        }
+
+        window.open("/admin/xcrop/counter", "_blank");
+      })
+      .catch((error) => {
+        setError("Invalid credentials");
+      });
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
   return (
@@ -34,11 +89,7 @@ function Login() {
       <div className="bg-white flex items-center justify-center p-4 lg:p-10 mt-16">
         <div className="flex flex-col lg:flex-row bg-white shadow-md rounded-lg p-2 sm:p-6 w-full">
           <div className="mb-6 w-full lg:w-1/2 lg:border-r-2 lg:border-red-800">
-            <img
-              src={loginImage} // Use the imported image
-              alt="login"
-              className="w-full sm:w-[500px] mx-auto"
-            />
+            <img src={loginImage} alt="login" className="w-full sm:w-[500px] mx-auto" />
           </div>
 
           <div className="px-4 sm:px-8 w-full lg:w-1/2 mx-auto my-auto lg:pl-16">
@@ -52,26 +103,55 @@ function Login() {
                   <input
                     type="email"
                     id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="mt-1 block w-full py-2 border-b-2 border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     placeholder="Enter your email"
                   />
                 </div>
-                <div className="mb-6">
+                <div className="mb-6 relative">
                   <label htmlFor="password" className="block text-xl font-medium text-gray-700">
                     Password
                   </label>
                   <input
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     id="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     className="mt-1 block w-full py-2 border-b-2 border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     placeholder="Enter your password"
                   />
+                  <div
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer"
+                    onClick={togglePasswordVisibility}>
+                    {showPassword ? (
+                      <EyeSlashIcon className="w-5 h-5 text-gray-500" />
+                    ) : (
+                      <EyeIcon className="w-5 h-5 text-gray-500" />
+                    )}
+                  </div>
                 </div>
+
+                <div className="flex flex-row justify-between mb-4">
+                  <div>
+                    <input
+                      type="checkbox"
+                      id="checkbox"
+                      checked={remember}
+                      onChange={() => setRemember(!remember)}
+                      className="accent-[#2852dd] mr-2"
+                    />
+                    <label htmlFor="checkbox ml-2">Remember me</label>
+                  </div>
+                  <div><p><a href="#forget" >Forget Password?</a></p></div>
+                </div>
+
                 <button
                   type="submit"
                   className="w-full px-4 py-2 text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                   Sign In
                 </button>
+                {error && <div className="mt-4 text-center text-red-500">{error}</div>}
               </form>
               <div className="mt-6 flex items-center justify-between">
                 <hr className="w-full border-gray-300" />
