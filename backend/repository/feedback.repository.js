@@ -1,4 +1,4 @@
-const Project = require("../model/project.model");
+const Feedback = require("../model/feedback.model");
 const mongoBase = require("../utils/mongo");
 
 class ProjectRepository {

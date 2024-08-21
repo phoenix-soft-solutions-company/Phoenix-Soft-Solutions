@@ -1,80 +1,120 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
+import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import Alert from "../components/Alert"; 
+import { identifyError } from "../../utils/identify.error";
+import { messages } from "../../constants/messages";
 
 function XcropFeedback() {
-  // Initialize state for the number fields
   const [formData, setFormData] = useState({
-    image: "",
     name: "",
     feedback: "",
+    image: null,
   });
+  const [feedbacks, setFeedbacks] = useState([]);
+  const [alertMessage, setAlertMessage] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
 
-  // Handle input changes
+  useEffect(() => {
+    getFeedbacks();
+  }, []);
+
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, files } = e.target;
     setFormData({
       ...formData,
-      [name]: value,
+      [name]: files ? files[0] : value,
     });
   };
 
-  // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Process form data here
-    console.log("Form Submitted:", formData);
+
+    const uploadData = new FormData();
+    uploadData.append("name", formData.name);
+    uploadData.append("feedback", formData.feedback);
+    if (formData.image) {
+      uploadData.append("image", formData.image);
+    }
+
+    try {
+      await axios.post(`${process.env.REACT_APP_BASE_URL}/feedback`, uploadData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+
+      setAlertMessage(messages.feedbackCreated);
+      setShowAlert(true);
+
+      setFormData({
+        name: "",
+        feedback: "",
+        image: null,
+      });
+
+      getFeedbacks();
+    } catch (error) {
+      setAlertMessage(identifyError(error.response?.data?.code));
+      setShowAlert(true);
+    }
   };
 
-  // Handle form clearing
-  const handleClear = () => {
-    setFormData({
-      image: "",
-      name: "",
-      feedback: "",
-    });
+  const getFeedbacks = async () => {
+    try {
+      const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/feedback`);
+      setFeedbacks(result.data.data);
+    } catch (error) {
+      setAlertMessage(identifyError(error.response?.data?.code));
+      setShowAlert(true);
+    }
+  };
+
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`${process.env.REACT_APP_BASE_URL}/feedback/${id}`);
+
+      setAlertMessage(messages.feedbackDeleted);
+      setShowAlert(true);
+
+      getFeedbacks();
+    } catch (error) {
+      setAlertMessage(identifyError(error.response?.data?.code));
+      setShowAlert(true);
+    }
+  };
+
+  const handleCloseAlert = () => {
+    setShowAlert(false);
   };
 
   return (
     <div className="p-4">
+      {showAlert && <Alert message={alertMessage} onClose={handleCloseAlert} />}
+
       <div className="bg-white border border-gray-300 rounded-lg p-4">
         <h1 className="font-semibold text-xl mb-4 text-gray-600">Current Feedback</h1>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center">
-          <div className="flex flex-row gap-5 border border-gray-300 rounded-lg p-4">
-            <div>Dejon De Zoyza</div>
-            <div>
-              <button className="text-red-600 hover:text-red-800 transition duration-300" aria-label="Delete">
-                <FontAwesomeIcon icon={faTrashAlt} className="text-red-600" />
-              </button>
+          {feedbacks.map((feedback) => (
+            <div key={feedback._id} className="flex flex-col gap-5 border border-gray-300 rounded-lg p-4">
+              <div>
+                <img
+                  src={`https://drive.google.com/thumbnail?id=${feedback.image}&sz=w1000`}
+                  alt={feedback.name}
+                  className="w-32 h-auto"
+                />
+              </div>
+              <div>
+                <h2 className="font-semibold">{feedback.name}</h2>
+                <p>{feedback.feedback}</p>
+                <button
+                  onClick={() => handleDelete(feedback._id)}
+                  className="text-red-600 hover:text-red-800 transition duration-300 mt-2"
+                  aria-label="Delete">
+                  <FontAwesomeIcon icon={faTrashAlt} />
+                </button>
+              </div>
             </div>
-          </div>
-
-          <div className="flex flex-row gap-5 border border-gray-300 rounded-lg p-4">
-            <div>Dejon De Zoyza</div>
-            <div>
-              <button className="text-red-600 hover:text-red-800 transition duration-300" aria-label="Delete">
-                <FontAwesomeIcon icon={faTrashAlt} className="text-red-600" />
-              </button>
-            </div>
-          </div>
-
-          <div className="flex flex-row gap-5 border border-gray-300 rounded-lg p-4">
-            <div>Dejon De Zoyza</div>
-            <div>
-              <button className="text-red-600 hover:text-red-800 transition duration-300" aria-label="Delete">
-                <FontAwesomeIcon icon={faTrashAlt} className="text-red-600" />
-              </button>
-            </div>
-          </div>
-
-          <div className="flex flex-row gap-5 border border-gray-300 rounded-lg p-4">
-            <div>Dejon De Zoyza</div>
-            <div>
-              <button className="text-red-600 hover:text-red-800 transition duration-300" aria-label="Delete">
-                <FontAwesomeIcon icon={faTrashAlt} className="text-red-600" />
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
@@ -83,7 +123,7 @@ function XcropFeedback() {
         className="space-y-4 w-full mx-auto bg-white border border-gray-300 rounded-lg p-4 mt-5">
         <h1 className="font-semibold text-xl mb-4 text-gray-600">Add Feedback</h1>
         <div>
-          <label htmlFor="projects" className="block text-sm font-medium text-gray-500">
+          <label htmlFor="name" className="block text-sm font-medium text-gray-500">
             Name
           </label>
           <input
@@ -96,7 +136,7 @@ function XcropFeedback() {
           />
         </div>
         <div>
-          <label htmlFor="experts" className="block text-sm font-medium text-gray-500">
+          <label htmlFor="feedback" className="block text-sm font-medium text-gray-500">
             Feedback
           </label>
           <textarea
@@ -108,14 +148,13 @@ function XcropFeedback() {
           />
         </div>
         <div>
-          <label htmlFor="experiences" className="block text-sm font-medium text-gray-500">
+          <label htmlFor="image" className="block text-sm font-medium text-gray-500">
             Image
           </label>
           <input
             type="file"
             id="image"
             name="image"
-            value={formData.image}
             onChange={handleChange}
             className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
           />
@@ -129,7 +168,13 @@ function XcropFeedback() {
           </button>
           <button
             type="button"
-            onClick={handleClear}
+            onClick={() =>
+              setFormData({
+                name: "",
+                feedback: "",
+                image: null,
+              })
+            }
             className="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
             Clear
           </button>

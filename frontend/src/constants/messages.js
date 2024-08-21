@@ -6,10 +6,14 @@ export const errorType = {
   internalServerError: { code: 13005, message: "Internal Server Error!" },
   projectCreatedFailed: { code: 13006, message: "Project created failed!" },
   projectNotFound: { code: 13007, message: "Project not found!" },
+  feedbackCreatedFailed: { code: 13008, message: "Feedback created failed" },
+  feedbackNotFound: { code: 13009, message: "Feedback not found" },
 };
 
 export const messages = {
   counterUpdated: "Counter updated successfully!",
   projectCreated: "Project created Successfully!",
   projectDeleted: "Project deleted Successfully!",
+  feedbackCreated: "Feedback created Successfully!",
+  feedbackDeleted: "Feedback deleted Successfully!",
 };

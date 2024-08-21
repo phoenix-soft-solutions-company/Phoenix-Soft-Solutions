@@ -31,6 +31,7 @@ module.exports = {
     counterUpdated: { code: 14004, message: "Counter updated Successfully" },
     projectCreated: { code: 14005, message: "Project created Successfully" },
     projectDeleted: { code: 14006, message: "Project deleted Successfully" },
-    feedbackDeleted: { code: 14007, message: "Feedback created Successfully" },
+    feedbackCreated: { code: 14007, message: "Feedback created Successfully" },
+    feedbackDeleted: { code: 14008, message: "Feedback deleted Successfully" },
   },
 };
