@@ -79,7 +79,7 @@ function XcropProject() {
             <div key={project._id} className="flex flex-col gap-5 border border-gray-300 rounded-lg p-4">
               <div>
                 <img
-                  src={`https://drive.google.com/uc?export=view&id=${project.image}`}
+                  src={`https://drive.google.com/thumbnail?id=${project.image}&sz=w1000`}
                   alt={project.title}
                   className="w-32 h-auto"
                 />
