@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const projectService = require("../service/project.service");
-const { statusCodes } = require("../constants");
+const { error, success, statusCodes } = require("../constants");
 const multer = require("multer");
 const { google } = require("googleapis");
 const { PassThrough } = require("stream");
@@ -84,28 +84,28 @@ const create = async (req, res, next) => {
       description,
       image: imageId,
     });
-    res.json({ status: "ok" });
+
+    return res.status(statusCodes.created).json(success.projectCreated);
   } catch (error) {
     next(error);
   }
 };
 
-// Get all projects
 const getAll = async (req, res, next) => {
   try {
     const projects = await projectService.getAll();
-    res.json({ status: "ok", data: projects });
+    return res.status(statusCodes.success).json({ data: projects });
   } catch (error) {
     next(error);
   }
 };
 
-// Delete a project by ID
 const deleteProject = async (req, res, next) => {
   const { id } = req.params;
   try {
-    await projectService.deleteProject(id);
-    res.json({ status: "ok" });
+    const result = await projectService.deleteProject(id);
+
+    return res.status(statusCodes.success).json(success.projectDeleted);
   } catch (error) {
     next(error);
   }

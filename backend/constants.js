@@ -17,6 +17,8 @@ module.exports = {
     counterCreatedFailed: { code: 13003, message: "Counter created failed" },
     counterNotFound: { code: 13004, message: "Counter not found" },
     internalServerError: { code: 13005, message: "Internal Server Error" },
+    projectCreatedFailed: { code: 13006, message: "Project created failed" },
+    projectNotFound: { code: 13007, message: "Project not found" },
   },
 
   success: {
@@ -25,5 +27,7 @@ module.exports = {
     userCreated: { code: 14002, message: "User created Successfully" },
     counterCreated: { code: 14003, message: "Counter created Successfully" },
     counterUpdated: { code: 14004, message: "Counter updated Successfully" },
+    projectCreated: { code: 14005, message: "Project created Successfully" },
+    projectDeleted: { code: 14006, message: "Project deleted Successfully" },
   },
 };
