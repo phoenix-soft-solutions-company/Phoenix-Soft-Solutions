@@ -246,7 +246,7 @@ function Home() {
               alt="Cloud Migration Services"
               className="mx-auto mb-3 w-16"
             />
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="text-2xl  mb-2">
               Cloud Migration Services
             </h2>
             <p className="text-lg">
@@ -263,7 +263,7 @@ function Home() {
               alt="PoC Development Services"
               className="mx-auto mb-3 w-16"
             />
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="text-2xl mb-2">
               PoC Development Services
             </h2>
             <p className="text-lg">
@@ -279,7 +279,7 @@ function Home() {
               alt="AI Development Services"
               className="mx-auto mb-3 w-16"
             />
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="text-2xl mb-2">
               AI Development Services
             </h2>
             <p className="text-lg">
