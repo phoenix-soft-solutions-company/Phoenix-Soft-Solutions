@@ -19,6 +19,8 @@ module.exports = {
     internalServerError: { code: 13005, message: "Internal Server Error" },
     projectCreatedFailed: { code: 13006, message: "Project created failed" },
     projectNotFound: { code: 13007, message: "Project not found" },
+    feedbackCreatedFailed: { code: 13008, message: "Feedback created failed" },
+    feedbackNotFound: { code: 13009, message: "Feedback not found" },
   },
 
   success: {
@@ -29,5 +31,6 @@ module.exports = {
     counterUpdated: { code: 14004, message: "Counter updated Successfully" },
     projectCreated: { code: 14005, message: "Project created Successfully" },
     projectDeleted: { code: 14006, message: "Project deleted Successfully" },
+    feedbackDeleted: { code: 14007, message: "Feedback created Successfully" },
   },
 };
