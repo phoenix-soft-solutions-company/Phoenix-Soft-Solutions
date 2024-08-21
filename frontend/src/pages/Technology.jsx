@@ -24,7 +24,7 @@ import service3 from "../constants/images/tech/health.jpg";
 import service4 from "../constants/images/tech/busi.jpg";
 import service5 from "../constants/images/tech/bank.jpg";
 import service6 from "../constants/images/tech/ecommerc.jpg";
-import Logo from "../constants/images/logo.png";
+import Logo from "../constants/images/logo1.png";
 
 const images = [nodejs, php, python, reactImg, angular, aws, android, java, ios, js,ps, mongo, express, net];
 
@@ -121,7 +121,7 @@ const Technology = () => {
         </h1>
 
         <div className="flex flex-col justify-center w-full my-5">
-          <div className="flex justify-center bg-red-600 items-center mx-auto border border-gray-200 w-18 h-18 p-2 shadow-sm rounded-md ">
+          <div className="flex justify-center  items-center mx-auto   w-15 h-15 p-2 shadow-sm rounded-md ">
             <img src={Logo} alt="logo" className="w-[150px] h-auto mx-auto" />
           </div>
           <svg

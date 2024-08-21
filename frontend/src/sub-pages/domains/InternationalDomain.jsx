@@ -18,8 +18,10 @@ function InternationalDomain() {
           </h1>
         </div>
       </header>
-
-      <h1 className="mt-8 text-center text-3xl lg:text-4xl font-bold text-gray-800">
+      <h1
+        className="mt-28 text-center text-3xl lg:text-4xl font-bold text-gray-800"
+        style={{ fontStyle: "italic" }}
+      >
         Maintenance
       </h1>
     </div>

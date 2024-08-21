@@ -32,6 +32,9 @@ const Contactus = ({ showHeaderImage = true }) => {
         <div className="flex flex-col gap-5 px-2 sm:px-4 lg:px-8">
           {/* Contact Us Description */}
           <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-5xl font-bold  text-center mb-2 font-mono">
+              CONTACT US
+            </h2>
             <p className="text-lg">
               We would love to hear from you! <br></br>Whether you have a
               question about our services, <br></br>need assistance, or just
