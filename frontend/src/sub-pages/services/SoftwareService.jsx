@@ -52,28 +52,28 @@ const Software = () => {
   return (
     <div className="min-h-screen relative pt-16">
       {/* Hero Section */}
-      <div className="relative w-full h-[50vh]">
+      <div className="relative w-full h-[40vh] sm:h-[50vh]">
         <img
           src={service}
           className="object-cover w-full h-full"
-          alt="Mobile Development"
+          alt="Software Maintenance"
         />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest text-white uppercase">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold tracking-widest text-white uppercase text-center">
             Software Maintenance and Support
           </h1>
         </div>
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between p-16 mx-8">
+      <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between p-6 sm:p-12 mx-4 sm:mx-8">
         {/* Left Side - Text */}
-        <div className="lg:w-1/2 text-center lg:text-left">
-          <h1 className="text-2xl lg:text-4xl font-serif font-bold tracking-widest text-gray-900 mb-4">
+        <div className="sm:w-1/2 text-center sm:text-left mb-8 sm:mb-0">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold tracking-widest text-gray-900 mb-4">
             Maximizing Software Potential with Advanced Software Maintenance and
             Support Services
           </h1>
-          <p className="text-lg lg:text-xl text-gray-700">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700">
             As businesses increasingly rely on sophisticated software
             development solutions, the necessity for robust software maintenance
             and support services becomes paramount. We recognize this critical
@@ -86,31 +86,34 @@ const Software = () => {
         </div>
 
         {/* Right Side - Image */}
-        <div className="lg:w-1/2 mt-8 lg:mt-0">
+        <div className="sm:w-1/2">
           <img
             src={service}
             className="object-cover w-full h-full"
-            alt="DevOps Service"
+            alt="Software Maintenance"
           />
         </div>
       </div>
 
       {/* Cards Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 mx-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 p-6 sm:p-8 mx-4 sm:mx-8">
         {cards.map((card, index) => (
           <div
             key={index}
-            className="flex flex-col items-center bg-white shadow-lg p-6 rounded-lg text-center"
+            className="flex flex-col items-center bg-white shadow-lg p-4 sm:p-6 rounded-lg text-center"
           >
             {card.icon}
-            <h2 className="text-xl font-bold mt-4">{card.title}</h2>
-            <p className="text-gray-600 mt-2">{card.description}</p>
+            <h2 className="text-lg sm:text-xl font-bold mt-4">{card.title}</h2>
+            <p className="text-sm sm:text-base text-gray-600 mt-2">
+              {card.description}
+            </p>
           </div>
         ))}
       </div>
+
       {/* Wave Section */}
-      <div className="relative bg-red-600 text-white py-16">
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-red-600">
+      <div className="relative bg-red-600 text-white py-8 sm:py-16">
+        <div className="absolute inset-x-0 bottom-0 h-16 sm:h-24 bg-red-600">
           <svg
             viewBox="0 0 1440 320"
             className="absolute inset-x-0 bottom-0"
@@ -123,9 +126,11 @@ const Software = () => {
             ></path>
           </svg>
         </div>
-        <div className="relative z-10 text-center px-4 lg:px-8">
-          <h2 className="text-3xl font-bold mb-4">Get Started with Us</h2>
-          <p className="text-lg mb-6 text-black">
+        <div className="relative z-10 text-center px-4 sm:px-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+            Get Started with Us
+          </h2>
+          <p className="text-base sm:text-lg md:text-xl mb-6 text-black">
             Contact us today to enhance your business with our expert software
             maintenance and support services. Let’s collaborate to ensure your
             systems run smoothly and efficiently.

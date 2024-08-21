@@ -62,49 +62,37 @@ const Cloud = () => {
         </p>
 
         {/* New Section */}
-        <div className="flex flex-col items-center justify-center w-full px-4 py-8 bg-gray-100">
-          <h1 className="text-3xl lg:text-4xl font-serif font-bold text-center mb-8">
-            Why Choose Our Cloud Migration Services?
-          </h1>
+<div className="flex flex-col items-center justify-center w-full px-4 py-8 bg-gray-100">
+  <h1 className="text-3xl lg:text-4xl font-serif font-bold text-center mb-8">
+    Why Choose Our Cloud Migration Services?
+  </h1>
 
-          {/* Card Layout */}
-          <div className="flex flex-wrap max-w-4xl mx-auto">
-            {/* Left Side - Paragraphs */}
-            <div className="flex-1 px-4 py-4">
-              <p className="text-lg text-justify mb-4">
-                - Cloud Migration is considered as the adoption of cloud
-                computing. Literally understood as a 'relocation' of all the
-                documents, data, and processes from some data centers to a cloud
-                infrastructure, transferring the burden of server maintenance
-                and application management to an external location and usually
-                to a specialized supplier.
-              </p>
-              <p className="text-lg text-justify mb-4">
-                - To successfully implement Cloud Migration, businesses can
-                consider using one or more 'clouds' to ensure efficiency and
-                storage capacity not only at present but also in the upcoming
-                business development phase.
-              </p>
-              <p className="text-lg text-justify mb-4">
-                - In fact, you don't need to worry much about the methods and
-                implementation, as well as the certain impacts, because when you
-                choose the right well-established partner with years of
-                experience and reputation, Cloud Migration will be faster and
-                more efficient than you think.
-              </p>
-            </div>
+  {/* Card Layout */}
+  <div className="flex flex-col lg:flex-row max-w-4xl mx-auto">
+    {/* Left Side - Paragraphs */}
+    <div className="flex-1 px-4 py-4 lg:pr-8">
+      <p className="text-lg text-justify mb-4">
+        - Cloud Migration is considered as the adoption of cloud computing. Literally understood as a 'relocation' of all the documents, data, and processes from some data centers to a cloud infrastructure, transferring the burden of server maintenance and application management to an external location and usually to a specialized supplier.
+      </p>
+      <p className="text-lg text-justify mb-4">
+        - To successfully implement Cloud Migration, businesses can consider using one or more 'clouds' to ensure efficiency and storage capacity not only at present but also in the upcoming business development phase.
+      </p>
+      <p className="text-lg text-justify mb-4">
+        - In fact, you don't need to worry much about the methods and implementation, as well as the certain impacts, because when you choose the right well-established partner with years of experience and reputation, Cloud Migration will be faster and more efficient than you think.
+      </p>
+    </div>
 
-            {/* Right Side - Image */}
-            <div className="flex-1 px-4 py-4">
-              <img
-                src={service2}
-                className="object-cover w-full h-auto rounded-lg shadow-lg"
-                alt="Cloud Migration"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+    {/* Right Side - Image */}
+    <div className="flex-1 px-4 py-4 lg:pl-8">
+      <img
+        src={service2}
+        className="object-cover w-full h-auto rounded-lg shadow-lg"
+        alt="Cloud Migration"
+      />
+    </div>
+  </div>
+</div>
+</div>
 
       {/* Centered h1 and p */}
       <div className="flex flex-col items-center justify-center px-4 py-8">

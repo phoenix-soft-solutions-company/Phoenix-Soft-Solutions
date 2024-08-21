@@ -110,7 +110,7 @@ const Career = () => {
             {
               title: "Opportunities to learn and share what you know",
               description:
-                "Success at X Croup means you'll always be facing new challenges - which means you're learning and empowered to overcome your current challenges. To facilitate learning, we provide coaches and learning tracks through our X Croup Academy program. Our current learning tracks include: Product Discovery, Tech Practices, Agile Facilitation, Product Management and People Leadership. Plus, there are plenty of opportunities to showcase your skills to your VPT and others at X Croup through our weekly CoPX experience discussions, fortnightly lunch presentations and cross-team huddles.",
+                "Success at Phoenix Soft Solutions means you'll always be facing new challenges - which means you're learning and empowered to overcome your current challenges. To facilitate learning, we provide coaches and learning tracks through our X Croup Academy program. Our current learning tracks include: Product Discovery, Tech Practices, Agile Facilitation, Product Management and People Leadership. Plus, there are plenty of opportunities to showcase your skills to your VPT and others at X Croup through our weekly CoPX experience discussions, fortnightly lunch presentations and cross-team huddles.",
               imgSrc: card1,
               imgAlt: "Learning opportunities",
             },
@@ -118,7 +118,7 @@ const Career = () => {
               title:
                 "Create impactful software and share in the financial upside",
               description:
-                "At X Croup, we love building impactful and purposeful software for our customers. Our customers are building SaaS businesses and the awesome thing about SaaS is that when you are creating an impact for good, then scaling the business also scales the impact. X Croup Ventures is our team ESOP, giving everyone who works at X Croup a chance to own shares in our customers. So when our customers win, we not only take pride in knowing we’ve achieved an awesome impact, but we share in the financial upside.",
+                "At Phoenix Soft Solutions, we love building impactful and purposeful software for our customers. Our customers are building SaaS businesses and the awesome thing about SaaS is that when you are creating an impact for good, then scaling the business also scales the impact. X Croup Ventures is our team ESOP, giving everyone who works at X Croup a chance to own shares in our customers. So when our customers win, we not only take pride in knowing we’ve achieved an awesome impact, but we share in the financial upside.",
               imgSrc: card2,
               imgAlt: "Showcasing skills",
               reverse: true,
@@ -126,7 +126,7 @@ const Career = () => {
             {
               title: "A supportive & encouraging team environment",
               description:
-                "Our Virtual Product Teams are a core feature of X Croup. We value collaboration and co-working, and as part of a VPT, you'll have access to, and be supported by other talented people who are passionate about the success of our partners and X Croup.",
+                "Our Virtual Product Teams are a core feature of Phoenix Soft Solutions. We value collaboration and co-working, and as part of a VPT, you'll have access to, and be supported by other talented people who are passionate about the success of our partners and X Croup.",
               imgSrc: card3,
               imgAlt: "Supportive environment",
             },
@@ -215,23 +215,26 @@ const Career = () => {
         <div className="max-w-4xl w-full space-y-4 md:space-y-6">
           {[
             {
-              question: "I want to learn and develop. Will X Croup support me?",
+              question:
+                "I want to learn and develop. Will Phoenix Soft Solutions support me?",
               answer:
-                "Yes, X Croup is committed to your professional development. We offer various learning opportunities through our X Croup Academy program, including coaching, learning tracks, and regular knowledge-sharing sessions.",
+                "Yes, Phoenix Soft Solutions is committed to your professional development. We offer various learning opportunities through our X Croup Academy program, including coaching, learning tracks, and regular knowledge-sharing sessions.",
             },
             {
-              question: "What sort of tech stack is used at X Croup?",
+              question:
+                "What sort of tech stack is used at Phoenix Soft Solutions?",
               answer:
-                "At X Croup, we use a modern tech stack that includes a variety of tools and technologies. The specifics can vary depending on the project, but we emphasize using the latest industry standards and best practices to deliver high-quality solutions.",
+                "At Phoenix Soft Solutions, we use a modern tech stack that includes a variety of tools and technologies. The specifics can vary depending on the project, but we emphasize using the latest industry standards and best practices to deliver high-quality solutions.",
             },
             {
-              question: "How does X Croup implement and practice Agile?",
+              question:
+                "How does Phoenix Soft Solutions implement and practice Agile?",
               answer:
                 "We practice Agile through iterative development, regular stand-ups, sprint planning, and retrospectives. Our teams are empowered to adapt and improve processes continuously, ensuring that we meet our partners' needs effectively.",
             },
             {
               question:
-                "What sort of people and skillsets typically work for X Croup?",
+                "What sort of people and skillsets typically work for Phoenix Soft Solutions?",
               answer:
                 "Our teams are diverse, consisting of individuals with various skill sets including software development, product management, Agile facilitation, and more. We value people who are innovative, collaborative, and committed to delivering excellence.",
             },

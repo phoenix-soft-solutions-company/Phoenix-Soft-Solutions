@@ -14,7 +14,7 @@ const AI = () => {
           alt="AI Development"
         />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest text-white uppercase">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold tracking-widest text-white uppercase text-center">
             AI Development SERVICE
           </h1>
         </div>
@@ -22,15 +22,19 @@ const AI = () => {
 
       {/* Main Content Section */}
       <div className="flex flex-col items-center mt-10 px-4">
-        <h1 className="text-3xl font-serif font-bold text-center relative mb-6">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-center relative mb-6">
           MACHINE LEARNING & AI DEVELOPMENT SERVICES
           <span className="block h-1 w-1/12 bg-red-700 mt-2 mx-auto"></span>
         </h1>
 
         {/* Reduced Size Image */}
-        <img src={ai1} className="w-1/3 h-50 mb-6" alt="AI Service" />
+        <img
+          src={ai1}
+          className="w-full max-w-xs h-auto mb-6"
+          alt="AI Service"
+        />
 
-        <p className="text-md text-justify px-8 mx-10 mb-6">
+        <p className="text-sm sm:text-base md:text-lg lg:text-md text-justify px-4 sm:px-8 mx-auto mb-6 max-w-prose">
           Phoenix Soft Solutions - a prominent solutions and software
           development company in Australia, specializes in providing corporate
           technology solutions that use Artificial Intelligence (AI) and Machine
@@ -45,7 +49,7 @@ const AI = () => {
 
         {/* Light Red Box */}
         <div className="bg-red-100 p-6 rounded-lg shadow-md w-full max-w-5xl mb-14 mt-10 border-2 border-red-500">
-          <p className="text-4xl text-red-600 font-bold">
+          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-red-600 font-bold text-center">
             We provide and deploy the most advanced AI-driven services to
             optimize your business operations.
           </p>
@@ -59,7 +63,7 @@ const AI = () => {
             alt="Example"
           />
           <div className="flex flex-col w-full lg:w-1/2">
-            <p className="text-lg text-justify mb-4">
+            <p className="text-sm sm:text-base md:text-lg lg:text-md text-justify mb-4">
               Phoenix Soft Solutions, headquartered in Ho Chi Minh City,
               Vietnam, and with representative offices in Singapore and the
               United States, provides a broad range of qualified technical
@@ -67,7 +71,7 @@ const AI = () => {
               classification tools, data analytics, natural language processing,
               and other areas.
             </p>
-            <p className="text-lg text-justify">
+            <p className="text-sm sm:text-base md:text-lg lg:text-md text-justify">
               If you're looking for an AI development firm in Australia, we've
               got a team of data scientists, machine learning engineers, and
               software developers that are well versed in cutting-edge AI
@@ -81,6 +85,7 @@ const AI = () => {
           </div>
         </div>
       </div>
+
       {/* Wave Section */}
       <div className="relative bg-red-600 text-white py-16">
         <div className="absolute inset-x-0 bottom-0 h-24 bg-red-600">
@@ -97,14 +102,16 @@ const AI = () => {
           </svg>
         </div>
         <div className="relative z-10 text-center px-4 lg:px-8">
-          <h2 className="text-3xl font-bold mb-4">Get Started with Us</h2>
-          <p className="text-lg mb-6 text-black">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            Get Started with Us
+          </h2>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 text-black">
             Contact us today to enhance your business with our cutting-edge AI
             services and solutions. Let’s collaborate to drive innovation and
             unlock new opportunities for growth.
           </p>
           <a href="/Company/Contactus" className="block">
-            <button className="bg-white text-red-500 py-2 px-6 rounded-full font-semibold">
+            <button className="bg-white text-red-500 py-2 px-6 rounded-full font-semibold text-sm sm:text-base md:text-lg lg:text-xl">
               Get in Touch
             </button>
           </a>
