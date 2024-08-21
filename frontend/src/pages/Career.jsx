@@ -26,15 +26,15 @@ const Career = () => {
         </div>
       </header>
 
-      <section className="p-6 md:p-8 bg-white text-black flex flex-col items-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-center">
+      <section className="p-4 sm:p-6 md:p-8 bg-white text-black flex flex-col items-center">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 md:mb-8 text-center">
           OUR VALUES
         </h1>
 
-        <div className="bg-gray-100 p-6 md:p-8 rounded-lg shadow-lg max-w-6xl w-full">
-          <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row md:gap-x-10 lg:gap-x-0 xl:gap-x-4">
-            <div className="w-full md:w-1/2 pr-4">
-              <ul className="list-none space-y-4 md:space-y-6 text-base md:text-lg text-black">
+        <div className="bg-gray-100 p-4 sm:p-6 md:p-8 rounded-lg shadow-lg max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl w-full">
+          <div className="flex flex-col lg:flex-row gap-y-6 lg:gap-y-0 lg:gap-x-10">
+            <div className="w-full lg:w-1/2">
+              <ul className="list-none space-y-4 md:space-y-6 text-sm sm:text-base md:text-lg text-black">
                 {[
                   "How we play",
                   "We're in this together",
@@ -46,10 +46,10 @@ const Career = () => {
                   >
                     <FontAwesomeIcon
                       icon={faCheckCircle}
-                      className="text-red-600 mr-2 w-6 h-6"
+                      className="text-red-600 mr-2 w-5 h-5 sm:w-6 sm:h-6"
                     />
                     <div>
-                      <h3 className="text-xl md:text-2xl font-semibold mb-2">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-1 sm:mb-2">
                         {title}
                       </h3>
                       <p>
@@ -66,8 +66,8 @@ const Career = () => {
               </ul>
             </div>
 
-            <div className="w-full md:w-1/2 pl-4">
-              <ul className="list-none space-y-4 md:space-y-6 text-base md:text-lg text-black">
+            <div className="w-full lg:w-1/2">
+              <ul className="list-none space-y-4 md:space-y-6 text-sm sm:text-base md:text-lg text-black">
                 {["Be a pioneer", "Ask Why?", "Be ready to help"].map(
                   (title, index) => (
                     <li
@@ -76,10 +76,10 @@ const Career = () => {
                     >
                       <FontAwesomeIcon
                         icon={faCheckCircle}
-                        className="text-red-600 mr-2 w-6 h-6"
+                        className="text-red-600 mr-2 w-5 h-5 sm:w-6 sm:h-6"
                       />
                       <div>
-                        <h3 className="text-xl md:text-2xl font-semibold mb-2">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-1 sm:mb-2">
                           {title}
                         </h3>
                         <p>

@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-red-600 text-white fixed left-0 top-0 right-0 z-[1000]">
-      <div className="w-full h-8 bg-white flex items-center justify-between px-4">
+      <div className="w-full h-8 bg-blue-950 flex items-center justify-between px-4">
         <div className="flex items-center space-x-4">
           {/* Social Media Icons */}
           <a
@@ -42,33 +42,39 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faFacebook} className="text-black" />
+            <FontAwesomeIcon icon={faFacebook} className="text-white" />
           </a>
           <a
             href="https://www.twitter.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faTwitter} className="text-black" />
+            <FontAwesomeIcon icon={faTwitter} className="text-white" />
           </a>
           <a
             href="https://www.linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faLinkedin} className="text-black" />
+            <FontAwesomeIcon icon={faLinkedin} className="text-white" />
           </a>
           <a
             href="https://www.instagram.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faInstagram} className="text-black" />
+            <FontAwesomeIcon icon={faInstagram} className="text-white" />
           </a>
         </div>
-        <p className="text-black font-bold">
-          +94 77 844 3682 / info@phoenixsoftsolutions.com
-        </p>
+        <div className="flex items-center space-x-4 ml-auto">
+          <p className="text-white font-bold text-sm">
+            info@phoenixsoftsolutions.com
+          </p>
+          <p className="text-white font-bold text-sm">Contact Us 77 844 3682</p>
+          <button className="bg-red-600 text-white py-1 px-5 rounded">
+            More
+          </button>
+        </div>
       </div>
 
       <div className="flex justify-between items-center py-4 px-10">

@@ -186,8 +186,8 @@ const Cloud = () => {
         </div>
       </div>
       {/* Wave Section */}
-      <div className="relative bg-red-500 text-white py-16">
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-red-500">
+      <div className="relative bg-red-600 text-white py-16">
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-red-600">
           <svg
             viewBox="0 0 1440 320"
             className="absolute inset-x-0 bottom-0"
@@ -202,7 +202,7 @@ const Cloud = () => {
         </div>
         <div className="relative z-10 text-center px-4 lg:px-8">
           <h2 className="text-3xl font-bold mb-4">Get Started with Us</h2>
-          <p className="text-lg mb-6">
+          <p className="text-lg mb-6 text-black">
             Contact us today to streamline your transition to the cloud with our
             expert migration services and solutions. Let’s work together to
             optimize and secure your digital environment.
