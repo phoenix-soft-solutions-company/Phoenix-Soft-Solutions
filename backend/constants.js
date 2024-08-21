@@ -16,6 +16,7 @@ module.exports = {
     emailExists: { code: 13002, message: "Email is already exists" },
     counterCreatedFailed: { code: 13003, message: "Counter created failed" },
     counterNotFound: { code: 13004, message: "Counter not found" },
+    internalServerError: { code: 13005, message: "Internal Server Error" },
   },
 
   success: {
