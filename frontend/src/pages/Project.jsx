@@ -30,7 +30,7 @@ const ProjectPage = () => {
               key={project._id}
               className="bg-white border border-gray-300 rounded-lg overflow-hidden shadow-md">
               <img
-                src={require(`../images/${project.image}`)}
+                src={`https://drive.google.com/uc?export=view&id=${project.image}`}
                 alt={project.title}
                 className="w-full h-48 object-cover"
               />

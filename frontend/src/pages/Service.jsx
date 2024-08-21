@@ -94,42 +94,42 @@ const serviceNames = [
   {
     name: "Back-end Development Services",
     description:
-      "Discover how Saigon Technology's superior back-end development services can accelerate your business growth. Your vision, our expertise.",
+      "Discover how Phoenix Soft Solutions's superior back-end development services can accelerate your business growth. Your vision, our expertise.",
     image: backendService,
     link: "/service/backend",
   },
   {
     name: "Software Maintenance and Support",
     description:
-      "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
+      "Explore Phoenix Soft Solutions's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
     image: softwaremanitainService,
     link: "/service/software",
   },
   {
     name: "Digital Marketing and Social Media Marketing",
     description:
-      "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
+      "Explore Phoenix Soft Solutions's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
     image: marketingService,
     link: "/service/marketing",
   },
   {
     name: "Cyber Security System Development",
     description:
-      "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
+      "Explore Phoenix Soft Solutions's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
     image: cyberService,
     link: "/service/cyber",
   },
   {
     name: "Business Managements",
     description:
-      "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
+      "Explore Phoenix Soft Solutions's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
     image: managementService,
     link: "/service/business",
   },
   {
     name: "Graphic Design",
     description:
-      "Explore Saigon Technology's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
+      "Explore Phoenix Soft Solutions's superior software maintenance and support services for optimal efficiency, security, and performance. Contact us today.",
     image: graphicService,
     link: "/service/graphic",
   },
