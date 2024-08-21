@@ -16,7 +16,7 @@ import icon7 from "../constants/images/icons/Icon7.png";
 import icon8 from "../constants/images/icons/Icon8.png";
 import icon9 from "../constants/images/icons/Icon9.png";
 import leftImage from "../constants/images/left.jpg";
-import rightImage from "../constants/images/RightHome.jpg";
+import left from "../constants/images/left.png";
 import leftTopImage from "../constants/images/home_head_1.jpg";
 import leftBottomImage from "../constants/images/leftBottom.jpg";
 import icon11 from "../constants/images/icons/ico1.png";
@@ -137,7 +137,7 @@ function Home() {
             <div className="flex justify-center sm:justify-start mt-8">
               <a
                 href="/Company/Contactus"
-                className="border-2 border-red-700 bg-red-700 text-white py-2 px-6 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
+                className="border-2 border-red-700 bg-red-600 text-white py-2 px-6 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
               >
                 Contact Us
               </a>
@@ -246,7 +246,7 @@ function Home() {
               alt="Cloud Migration Services"
               className="mx-auto mb-3 w-16"
             />
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="text-2xl  mb-2">
               Cloud Migration Services
             </h2>
             <p className="text-lg">
@@ -263,7 +263,7 @@ function Home() {
               alt="PoC Development Services"
               className="mx-auto mb-3 w-16"
             />
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="text-2xl mb-2">
               PoC Development Services
             </h2>
             <p className="text-lg">
@@ -279,7 +279,7 @@ function Home() {
               alt="AI Development Services"
               className="mx-auto mb-3 w-16"
             />
-            <h2 className="text-2xl font-semibold mb-2">
+            <h2 className="text-2xl mb-2">
               AI Development Services
             </h2>
             <p className="text-lg">
@@ -294,7 +294,7 @@ function Home() {
         <div className="flex justify-center mt-6">
           <Link
             to="/service"
-            className="border-2 border-red-700 bg-red-700 text-white py-4 px-8 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
+            className="border-2 border-red-700 bg-red-600 text-white py-4 px-8 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
           >
             Explore in detail
           </Link>
@@ -335,7 +335,7 @@ function Home() {
         <div className="flex justify-center">
           <Link
             to="/project"
-            className="border-2 border-red-700 bg-red-700 text-white py-4 px-8 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
+            className="border-2 border-red-700 bg-red-600 text-white py-4 px-8 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
           >
             Explore more projects
           </Link>
@@ -416,24 +416,11 @@ function Home() {
 
           <div className="w-full xl:w-1/2 flex justify-center items-center p-4 relative 2xl:pl-8">
             <img
-              src={leftImage}
+              src={left}
               alt="Description"
               className="max-w-full max-h-full h-auto p-4"
             />
-            <div className="w-full absolute bottom-4 left-4">
-              <img
-                src={rightImage}
-                alt="Icon 1"
-                className="w-2/5 h-auto transform transition-transform duration-300 hover:scale-110"
-              />
-            </div>
-            <div className="w-full flex absolute top-4 right-4 justify-end">
-              <img
-                src={leftTopImage}
-                alt="Icon 4"
-                className="w-2/5 h-auto transform transition-transform duration-300 hover:scale-110"
-              />
-            </div>
+            
           </div>
         </div>
       </div>

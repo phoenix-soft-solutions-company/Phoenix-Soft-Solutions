@@ -36,7 +36,7 @@
   left: 0;
   width: 0.6rem; /* Ball width */
   height: 0.5rem; /* Ball height */
-  background-color: #9f2911; /* Ball color */
+  background-color: #bd2d10; /* Ball color */
   border-radius: 0.125rem;
   animation: ballMoveSmall 10s infinite ease-in-out;
   bottom: -0.5px; /* Position the ball on the underline */
@@ -118,8 +118,8 @@
 }
 
 .carousel-image {
-  width: 200px; /* Adjust the width of your images */
-  height: 200px; /* Adjust the height of your images */
+  width: 100px; /* Adjust the width of your images */
+  height: 100px; /* Adjust the height of your images */
   margin-right: 10px; /* Adjust the spacing between images */
 }
 

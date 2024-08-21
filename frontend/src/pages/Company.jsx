@@ -16,7 +16,7 @@ const CompanyPage = () => {
 
       <Aboutus showHeaderImage={false} />
 
-      <h2 className="text-2xl md:text-5xl font-bold mb-4 text-center mt-10 font-mono">CONTACT US</h2>
+     
       <Contactus showHeaderImage={false} />
     </div>
   );

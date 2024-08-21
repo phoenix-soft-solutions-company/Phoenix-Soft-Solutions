@@ -9,22 +9,22 @@ const images = [
   {
     path: slide1,
     title: "Phoenix Soft Solutions",
-    text: "Phoenix Digital, we fuse visionary design with cutting-edge web development. Our expert team crafts immersive, high-performance websites that elevate your brand and captivate audiences. Ignite your digital transformation with us and create something truly legendary!",
+    text: "Phoenix Soft Solutions, we fuse visionary design with cutting-edge web development. Our expert team crafts immersive, high-performance websites that elevate your brand and captivate audiences. Ignite your digital transformation with us and create something truly legendary!",
   },
   {
     path: slide2,
     title: "Web Design & Development",
-    text: "At xcorp we understand your need for a website that aligns perfectly with your business plan. That's why we specialize in custom web development services in World Each website we craft is meticulously tailored to your unique requirements.At xcorp we understand your need for a website that aligns perfectly with your business plan. That's why we specialize in custom web development services in World Each website we craft is meticulously tailored to your unique requirements.",
+    text: "At Phoenix Soft Solutions we understand your need for a website that aligns perfectly with your business plan. That's why we specialize in custom web development services in World Each website we craft is meticulously tailored to your unique requirements.At xcorp we understand your need for a website that aligns perfectly with your business plan. That's why we specialize in custom web development services in World Each website we craft is meticulously tailored to your unique requirements.",
   },
   {
     path: slide3,
     title: "Mobile App Design & Development",
-    text: "Are you on the lookout for top-notch mobile app developers in Sri Lanka? Well, your search stops right here. At xcorp , we're not just about crafting apps; we're about creating experiences that users love. Think of us as your partners in turning your business dreams into digital reality. Our team of talented mobile app developers brings not just skills, but passion and dedication to every project, ensuring that your app not only meets but exceeds your expectations.",
+    text: "Are you on the lookout for top-notch mobile app developers in Sri Lanka? Well, your search stops right here. At Phoenix Soft Solutions , we're not just about crafting apps; we're about creating experiences that users love. Think of us as your partners in turning your business dreams into digital reality. Our team of talented mobile app developers brings not just skills, but passion and dedication to every project, ensuring that your app not only meets but exceeds your expectations.",
   },
   {
     path: slide4,
     title: "Cybersecurity Development Services",
-    text: "At xcorp we understand your need for a website that aligns perfectly with your business plan. That's why we specialize in custom web development services in World Each website we craft is meticulously tailored to your unique requirements.",
+    text: "At Phoenix Soft Solutions we understand your need for a website that aligns perfectly with your business plan. That's why we specialize in custom web development services in World Each website we craft is meticulously tailored to your unique requirements.",
   },
 ];
 

@@ -36,7 +36,7 @@ const Poc = () => {
           The purpose of Proof of Concept (PoC) development services is to
           assess the waters and ensure that a<br></br> solution or idea will
           work before committing to a larger scale implementation. Significant
-          PoC development<br></br> services offered by Saigon Technology
+          PoC development<br></br> services offered by Phoenix Soft Solutions
           include:
         </p>
       </div>
@@ -107,7 +107,7 @@ const Poc = () => {
             As with any new technology, the best approach to introduce IoT to a
             company is through a proof of concept with mistakes being minimized.
             A Proof of Concept is a small-scale trial that allows you to test
-            out an answer in your own setting. Saigon Technology's PoC
+            out an answer in your own setting. Phoenix Soft Solutions's PoC
             development services, particularly for IoT, have been consistently
             deployed, and the company has received numerous requirements for
             these services.
@@ -229,15 +229,15 @@ const Poc = () => {
         </div>
       </div>
       {/* Wave Section */}
-      <div className="relative bg-red-500 text-white py-16">
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-red-500">
+      <div className="relative bg-red-600 text-white py-16">
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-red-600">
           <svg
             viewBox="0 0 1440 320"
             className="absolute inset-x-0 bottom-0"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fill="#f87171"
+              fill="#f8f7fa"
               fillOpacity="1"
               d="M0,96L30,117.3C60,139,120,181,180,186.7C240,192,300,160,360,149.3C420,139,480,149,540,186.7C600,224,660,288,720,293.3C780,299,840,245,900,229.3C960,213,1020,235,1080,240C1140,245,1200,235,1260,218.7C1320,203,1380,181,1410,170.7L1440,160L1440,320L0,320Z"
             ></path>
@@ -245,7 +245,7 @@ const Poc = () => {
         </div>
         <div className="relative z-10 text-center px-4 lg:px-8">
           <h2 className="text-3xl font-bold mb-4">Get Started with Us</h2>
-          <p className="text-lg mb-6">
+          <p className="text-lg mb-6 text-black">
             Contact us today to explore how our Proof of Concept (PoC) services
             can validate your ideas and secure your business solutions. Let’s
             collaborate to demonstrate the potential and effectiveness of your

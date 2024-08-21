@@ -89,7 +89,7 @@ const Qa = () => {
       {/* Content Section */}
       <div className="flex flex-col items-center justify-center px-4 py-12">
         <h1 className="text-3xl lg:text-4xl font-serif font-bold mb-4 text-center">
-          SAIGON TECHNOLOGY - WITH A DECADE OF
+          Phoenix Soft Solutions - WITH A DECADE OF
           <br /> EXPERIENCE IN QA TESTING SERVICES
         </h1>
         <div className="text-center mb-8">
@@ -112,15 +112,15 @@ const Qa = () => {
           alt="DevOps Services"
         />
         <p className="mb-4 text-center mt-8">
-          The customizable service model offered by Saigon Technology includes
-          web app/ mobile app and custom app testing. With
+          The customizable service model offered by Phoenix Soft Solutions
+          includes web app/ mobile app and custom app testing. With
           <br /> ten years of experience in the worldwide IT market - especially
           for QA testing software, we have numerous non-tech
           <br /> and tech company clients from key nations such as the United
           States, Canada, the United Kingdom, Australia, Germany, and the
           <br /> Netherlands… to seek guidance on appropriate software
           solutions; and have subsequently opted to continue with and
-          <br /> delegate the project to Saigon Technology for many years.
+          <br /> delegate the project to Phoenix Soft Solutions for many years.
         </p>
 
         {/* Text-Based Card Section */}
@@ -155,15 +155,15 @@ const Qa = () => {
         </div>
       </div>
       {/* Wave Section */}
-      <div className="relative bg-red-500 text-white py-16">
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-red-500">
+      <div className="relative bg-red-600 text-white py-16">
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-red-600">
           <svg
             viewBox="0 0 1440 320"
             className="absolute inset-x-0 bottom-0"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fill="#f87171"
+              fill="#f8f7fa"
               fillOpacity="1"
               d="M0,96L30,117.3C60,139,120,181,180,186.7C240,192,300,160,360,149.3C420,139,480,149,540,186.7C600,224,660,288,720,293.3C780,299,840,245,900,229.3C960,213,1020,235,1080,240C1140,245,1200,235,1260,218.7C1320,203,1380,181,1410,170.7L1440,160L1440,320L0,320Z"
             ></path>
@@ -171,7 +171,7 @@ const Qa = () => {
         </div>
         <div className="relative z-10 text-center px-4 lg:px-8">
           <h2 className="text-3xl font-bold mb-4">Get Started with Us</h2>
-          <p className="text-lg mb-6">
+          <p className="text-lg mb-6 text-black">
             Contact us today to enhance your business with our expert Software
             QA Testing services and solutions. Let’s work together to ensure
             your software performs flawlessly and meets the highest quality
