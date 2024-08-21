@@ -34,36 +34,40 @@ const Navbar = () => {
 
   return (
     <nav className="bg-red-600 text-white fixed left-0 top-0 right-0 z-[1000]">
-      <div className="w-full h-8 bg-blue-950 flex items-center justify-between px-4">
+      <div className="w-full h-10 bg-blue-950 flex items-center justify-between px-4 hidden sm:flex">
         <div className="flex items-center space-x-4">
           {/* Social Media Icons */}
           <a
             href="https://www.facebook.com/phoenixsoftsolutionsnz?mibextid=ZbWKwL"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-white"
           >
-            <FontAwesomeIcon icon={faFacebook} className="text-white" />
+            <FontAwesomeIcon icon={faFacebook} />
           </a>
           <a
             href="https://www.twitter.com"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-white"
           >
-            <FontAwesomeIcon icon={faTwitter} className="text-white" />
+            <FontAwesomeIcon icon={faTwitter} />
           </a>
           <a
             href="https://www.linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-white"
           >
-            <FontAwesomeIcon icon={faLinkedin} className="text-white" />
+            <FontAwesomeIcon icon={faLinkedin} />
           </a>
           <a
             href="https://www.instagram.com"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-white"
           >
-            <FontAwesomeIcon icon={faInstagram} className="text-white" />
+            <FontAwesomeIcon icon={faInstagram} />
           </a>
         </div>
         <div className="flex items-center space-x-4 ml-auto">
@@ -71,15 +75,17 @@ const Navbar = () => {
             info@phoenixsoftsolutions.com
           </p>
           <p className="text-white font-bold text-sm">Contact Us 77 844 3682</p>
-          <button className="bg-red-600 text-white py-1 px-5 rounded">
-            More
-          </button>
+          <a href="/company/Contactus" className="inline-block">
+            <button className="bg-red-600 text-white py-1 px-5 text-xs sm:text-sm">
+              Have Any Questions??
+            </button>
+          </a>
         </div>
       </div>
 
       <div className="flex justify-between items-center py-4 px-10">
         <div className="flex items-center">
-          <img src={Logo} alt="Company Logo" className="h-12 lg:h-14 mr-6" />
+          <img src={Logo} alt="Company Logo" className="h-8 lg:h-10 mr-6" />
         </div>
 
         <div className="hidden xl:flex space-x-1">
@@ -179,6 +185,57 @@ const Navbar = () => {
             <XMarkIcon className="w-6 h-6 text-white" />
           </button>
         </div>
+
+        {/* Blue bar with social icons and contact information */}
+        <div className="w-full bg-blue-950 py-4 px-2 mb-4">
+          <div className="flex items-center justify-center space-x-4 mb-2">
+            <a
+              href="https://www.facebook.com/phoenixsoftsolutionsnz?mibextid=ZbWKwL"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white"
+            >
+              <FontAwesomeIcon icon={faFacebook} />
+            </a>
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white"
+            >
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white"
+            >
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white"
+            >
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+          </div>
+          <p className="text-center text-white font-bold mb-2">
+            info@phoenixsoftsolutions.com
+          </p>
+          <p className="text-center text-white font-bold mb-4">
+            Contact Us 77 844 3682
+          </p>
+          <a href="/company/Contactus" className="block text-center">
+            <button className="bg-red-600 text-white py-2 px-6 text-xs sm:text-sm">
+              Have Any Questions??
+            </button>
+          </a>
+        </div>
+
+        {/* Navigation Links */}
         {LINKS.map((link, index) => (
           <div key={index} className="relative mb-2">
             <div className="flex flex-row justify-between items-center cursor-pointer px-4 py-2 hover:bg-red-700">
