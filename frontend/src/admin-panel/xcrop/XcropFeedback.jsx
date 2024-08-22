@@ -1,10 +1,11 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
-import Alert from "../components/Alert"; 
+import Alert from "../components/Alert";
 import { identifyError } from "../../utils/identify.error";
 import { messages } from "../../constants/messages";
+import { useDarkMode } from "../../DarkModeContext";
 
 function XcropFeedback() {
   const [formData, setFormData] = useState({
@@ -15,6 +16,7 @@ function XcropFeedback() {
   const [feedbacks, setFeedbacks] = useState([]);
   const [alertMessage, setAlertMessage] = useState("");
   const [showAlert, setShowAlert] = useState(false);
+  const { isDarkMode } = useDarkMode();
 
   useEffect(() => {
     getFeedbacks();
@@ -91,16 +93,25 @@ function XcropFeedback() {
     <div className="p-4">
       {showAlert && <Alert message={alertMessage} onClose={handleCloseAlert} />}
 
-      <div className="bg-white border border-gray-300 rounded-lg p-4">
-        <h1 className="font-semibold text-xl mb-4 text-gray-600">Current Feedback</h1>
+      <div
+        className={`border border-gray-500 rounded-lg p-4 ${
+          isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+        }`}>
+        <h1 className="font-semibold text-xl mb-4">Current Feedback</h1>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center">
           {feedbacks.map((feedback) => (
-            <div key={feedback._id} className="flex flex-col gap-5 border border-gray-300 rounded-lg p-4">
+            <div
+              key={feedback._id}
+              className="relative flex flex-col gap-5 border border-gray-500 rounded-lg p-4">
               <div>
                 <img
-                  src={`https://drive.google.com/thumbnail?id=${feedback.image}&sz=w1000`}
+                  src={
+                    feedback.image
+                      ? `https://drive.google.com/thumbnail?id=${feedback.image}&sz=w1000`
+                      : "https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+                  }
                   alt={feedback.name}
-                  className="w-32 h-auto"
+                  className="w-32 h-auto mx-auto rounded-full"
                 />
               </div>
               <div>
@@ -108,7 +119,7 @@ function XcropFeedback() {
                 <p>{feedback.feedback}</p>
                 <button
                   onClick={() => handleDelete(feedback._id)}
-                  className="text-red-600 hover:text-red-800 transition duration-300 mt-2"
+                  className="text-red-600 hover:text-red-800 transition duration-300 mt-2 absolute right-2 bottom-2"
                   aria-label="Delete">
                   <FontAwesomeIcon icon={faTrashAlt} />
                 </button>
@@ -120,35 +131,43 @@ function XcropFeedback() {
 
       <form
         onSubmit={handleSubmit}
-        className="space-y-4 w-full mx-auto bg-white border border-gray-300 rounded-lg p-4 mt-5">
-        <h1 className="font-semibold text-xl mb-4 text-gray-600">Add Feedback</h1>
+        className={`space-y-4 w-full mx-auto border border-gray-500 rounded-lg p-4 mt-5 ${
+          isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+        }`}>
+        <h1 className="font-semibold text-xl mb-4">Add Feedback</h1>
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-500">
+          <label htmlFor="name" className="block text-sm font-medium">
             Name
           </label>
           <input
             type="text"
             id="name"
             name="name"
+            required
             value={formData.name}
             onChange={handleChange}
-            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
+            className={`p-2 mt-1 block w-full border border-gray-500 rounded-md text-sm focus:border-blue-500 outline-none ${
+              isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+            } `}
           />
         </div>
         <div>
-          <label htmlFor="feedback" className="block text-sm font-medium text-gray-500">
+          <label htmlFor="feedback" className="block text-sm font-medium">
             Feedback
           </label>
           <textarea
             id="feedback"
             name="feedback"
+            required
             value={formData.feedback}
             onChange={handleChange}
-            className="min-h-40 p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
+            className={`min-h-40 p-2 mt-1 block w-full border border-gray-500 rounded-md text-sm focus:border-blue-500 outline-none ${
+              isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+            } `}
           />
         </div>
         <div>
-          <label htmlFor="image" className="block text-sm font-medium text-gray-500">
+          <label htmlFor="image" className="block text-sm font-medium">
             Image
           </label>
           <input
@@ -156,7 +175,9 @@ function XcropFeedback() {
             id="image"
             name="image"
             onChange={handleChange}
-            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
+            className={`p-2 mt-1 block w-full border border-gray-500 rounded-md text-sm focus:border-blue-500 outline-none ${
+              isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+            } `}
           />
         </div>
 

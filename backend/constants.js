@@ -21,6 +21,8 @@ module.exports = {
     projectNotFound: { code: 13007, message: "Project not found" },
     feedbackCreatedFailed: { code: 13008, message: "Feedback created failed" },
     feedbackNotFound: { code: 13009, message: "Feedback not found" },
+    eventCreatedFailed: { code: 13010, message: "Feedback created failed" },
+    eventNotFound: { code: 13011, message: "Event not found" },
   },
 
   success: {
@@ -33,5 +35,7 @@ module.exports = {
     projectDeleted: { code: 14006, message: "Project deleted Successfully" },
     feedbackCreated: { code: 14007, message: "Feedback created Successfully" },
     feedbackDeleted: { code: 14008, message: "Feedback deleted Successfully" },
+    eventCreated: { code: 14009, message: "Event created Successfully" },
+    eventDeleted: { code: 14010, message: "Event deleted Successfully" },
   },
 };

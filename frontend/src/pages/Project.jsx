@@ -32,7 +32,7 @@ const ProjectPage = () => {
               <img
                 src={`https://drive.google.com/thumbnail?id=${project.image}&sz=w1000`}
                 alt={project.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-64 object-cover"
               />
               <div className="p-4">
                 <h2 className="text-lg font-semibold">{project.title}</h2>
