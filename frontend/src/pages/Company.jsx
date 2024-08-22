@@ -1,5 +1,5 @@
 import React from "react";
-import heading from "../constants/images/tech/technology-heading.jpg";
+import heading from "../constants/images/company/headmain.png";
 import Aboutus from "../sub-pages/company/Aboutus";
 import Contactus from "../sub-pages/company/Contactus";
 
