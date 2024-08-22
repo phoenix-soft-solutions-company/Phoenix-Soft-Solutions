@@ -9,22 +9,18 @@ const images = [
   {
     path: slide1,
     title: "Phoenix Soft Solutions",
-    text: "Phoenix Soft Solutions, we fuse visionary design with cutting-edge web development. Our expert team crafts immersive, high-performance websites that elevate your brand and captivate audiences. Ignite your digital transformation with us and create something truly legendary!",
   },
   {
     path: slide2,
     title: "Web Design & Development",
-    text: "At Phoenix Soft Solutions we understand your need for a website that aligns perfectly with your business plan. That's why we specialize in custom web development services in World Each website we craft is meticulously tailored to your unique requirements.",
   },
   {
     path: slide3,
     title: "Mobile App Design & Development",
-    text: "Are you on the lookout for top-notch mobile app developers in Sri Lanka? Well, your search stops right here. At Phoenix Soft Solutions , we're not just about crafting apps; we're about creating experiences that users love. Our team of talented mobile app developers brings not just skills, but passion and dedication to every project, ensuring that your app not only meets but exceeds your expectations.",
   },
   {
     path: slide4,
     title: "Cybersecurity Development Services",
-    text: "At Phoenix Soft Solutions we understand your need for a website that aligns perfectly with your business plan. That's why we specialize in custom web development services in World Each website we craft is meticulously tailored to your unique requirements.",
   },
 ];
 
@@ -48,16 +44,10 @@ function SlideShow() {
             className={`slide-image ${index === currentImageIndex ? "slide-image-active" : ""}`}
           />
           <div
-            className={`slide-title font-mono text-2xl sm:text-4xl font-bold top-[20px] sm:top-[60px] md:top-[100px] lg:top-[150px] w-[90%] ${
+            className={`slide-title font-mono text-2xl sm:text-4xl lg:text-6xl font-bold top-[40%] w-[80%] sm:w-[60%] lg:w-[40%] ${
               index === currentImageIndex ? "slide-title-active" : ""
             }`}>
             {image.title}
-          </div>
-          <div
-            className={`slide-text text-sm sm:text-xl top-[170px] sm:top-[220px] md:top-[250px] lg:top-[300px] w-[90%] lg:w-[60%] ${
-              index === currentImageIndex ? "slide-text-active" : ""
-            }`}>
-            {image.text}
           </div>
         </div>
       ))}
