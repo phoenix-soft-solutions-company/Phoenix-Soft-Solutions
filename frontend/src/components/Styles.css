@@ -82,12 +82,11 @@
   padding: 20px;
   padding-right: 60px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
   transition: left 2s ease-in-out;
 }
 
 .slide-title-active {
-  left: 20px; /* Animate into view */
+  left: 20%; /* Animate into view */
 }
 
 .slide-text {
