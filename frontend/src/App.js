@@ -97,7 +97,7 @@ const App = () => {
             <Route path="/hosting/vps" element={<VPSHosting />} />
             <Route path="/hosting/business-email" element={<BusinessEmail />} />
             {/* admin routes */}
-            <Route path="/admin/xcrop" element={<Admin />}>
+            <Route path="/admin/phoenix-soft" element={<Admin />}>
               <Route path="counter" element={<XcropCounter />} />
               <Route path="project" element={<XcropProject />} />
               <Route path="event" element={<XcropEvent />} />
