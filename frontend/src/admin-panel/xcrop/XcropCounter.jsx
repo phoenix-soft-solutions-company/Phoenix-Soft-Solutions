@@ -3,6 +3,7 @@ import axios from "axios";
 import Alert from "../components/Alert";
 import { identifyError } from "../../utils/identify.error";
 import { messages } from "../../constants/messages";
+import { useDarkMode } from "../../DarkModeContext";
 
 function XcropCounter() {
   const [formData, setFormData] = useState({
@@ -13,6 +14,7 @@ function XcropCounter() {
   });
   const [alertMessage, setAlertMessage] = useState("");
   const [showAlert, setShowAlert] = useState(false);
+  const { isDarkMode } = useDarkMode();
 
   // Fetch current counter data by ID when the component mounts
   useEffect(() => {
@@ -70,13 +72,13 @@ function XcropCounter() {
   };
 
   return (
-    <div className="p-4">
+    <div className={`p-4 ${isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"}`}>
       {showAlert && <Alert message={alertMessage} onClose={handleCloseAlert} />}
 
-      <form onSubmit={handleSubmit} className="space-y-4 w-full mx-auto shadow-lg p-4">
-        <h1 className="text-2xl font-bold mb-4 text-gray-600">Update Counter</h1>
+      <form onSubmit={handleSubmit} className="space-y-4 w-full mx-auto border border-gray-500 rounded-lg p-4">
+        <h1 className="text-2xl font-bold mb-4">Update Counter</h1>
         <div>
-          <label htmlFor="experiences" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="experiences" className="block text-sm font-medium">
             Experiences
           </label>
           <input
@@ -86,11 +88,13 @@ function XcropCounter() {
             required
             value={formData.experiences}
             onChange={handleChange}
-            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
+            className={`p-2 mt-1 block w-full border border-gray-500 rounded-md text-sm focus:border-blue-500 outline-none ${
+              isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+            } `}
           />
         </div>
         <div>
-          <label htmlFor="projects" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="projects" className="block text-sm font-medium">
             Projects
           </label>
           <input
@@ -100,11 +104,13 @@ function XcropCounter() {
             required
             value={formData.projects}
             onChange={handleChange}
-            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
+            className={`p-2 mt-1 block w-full border border-gray-500 rounded-md text-sm focus:border-blue-500 outline-none ${
+              isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+            } `}
           />
         </div>
         <div>
-          <label htmlFor="experts" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="experts" className="block text-sm font-medium">
             Experts
           </label>
           <input
@@ -114,11 +120,13 @@ function XcropCounter() {
             required
             value={formData.experts}
             onChange={handleChange}
-            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
+            className={`p-2 mt-1 block w-full border border-gray-500 rounded-md text-sm focus:border-blue-500 outline-none ${
+              isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+            } `}
           />
         </div>
         <div>
-          <label htmlFor="clients" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="clients" className="block text-sm font-medium">
             Clients
           </label>
           <input
@@ -128,7 +136,9 @@ function XcropCounter() {
             required
             value={formData.clients}
             onChange={handleChange}
-            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
+            className={`p-2 mt-1 block w-full border border-gray-500 rounded-md text-sm focus:border-blue-500 outline-none ${
+              isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+            } `}
           />
         </div>
         <div className="flex space-x-4">

@@ -5,6 +5,7 @@ import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { identifyError } from "../../utils/identify.error";
 import { messages } from "../../constants/messages";
 import Alert from "../components/Alert";
+import { useDarkMode } from "../../DarkModeContext";
 
 function XcropEvent() {
   const [formData, setFormData] = useState({
@@ -16,6 +17,7 @@ function XcropEvent() {
   const [events, setEvents] = useState([]);
   const [alertMessage, setAlertMessage] = useState("");
   const [showAlert, setShowAlert] = useState(false);
+  const { isDarkMode } = useDarkMode();
 
   useEffect(() => {
     getEvents();
@@ -97,11 +99,14 @@ function XcropEvent() {
     <div className="p-4">
       {showAlert && <Alert message={alertMessage} onClose={handleCloseAlert} />}
 
-      <div className="bg-white border border-gray-300 rounded-lg p-4">
-        <h1 className="font-semibold text-xl mb-4 text-gray-600">Current Events</h1>
+      <div
+        className={`border border-gray-500 rounded-lg p-4 ${
+          isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+        }`}>
+        <h1 className="font-semibold text-xl mb-4">Current Events</h1>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center">
           {events.map((event) => (
-            <div key={event._id} className="flex flex-col gap-5 border border-gray-300 rounded-lg p-4">
+            <div key={event._id} className="flex flex-col gap-5 border border-gray-500 rounded-lg p-4">
               <div>
                 <img
                   src={`https://drive.google.com/thumbnail?id=${event.image}&sz=w1000`}
@@ -125,10 +130,12 @@ function XcropEvent() {
 
       <form
         onSubmit={handleSubmit}
-        className="space-y-4 w-full mx-auto bg-white border border-gray-300 rounded-lg p-4 mt-5">
-        <h1 className="font-semibold text-xl mb-4 text-gray-600">Add Event</h1>
+        className={`space-y-4 w-full mx-auto border border-gray-500 rounded-lg p-4 mt-5 ${
+          isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+        }`}>
+        <h1 className="font-semibold text-xl mb-4">Add Event</h1>
         <div>
-          <label htmlFor="date" className="block text-sm font-medium text-gray-500">
+          <label htmlFor="date" className="block text-sm font-medium">
             Date
           </label>
           <input
@@ -138,11 +145,13 @@ function XcropEvent() {
             required
             value={formData.date}
             onChange={handleChange}
-            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
+            className={`p-2 mt-1 block w-full border border-gray-500 rounded-md text-sm focus:border-blue-500 outline-none ${
+              isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+            } `}
           />
         </div>
         <div>
-          <label htmlFor="title" className="block text-sm font-medium text-gray-500">
+          <label htmlFor="title" className="block text-sm font-medium">
             Title
           </label>
           <input
@@ -152,11 +161,13 @@ function XcropEvent() {
             required
             value={formData.title}
             onChange={handleChange}
-            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
+            className={`p-2 mt-1 block w-full border border-gray-500 rounded-md text-sm focus:border-blue-500 outline-none ${
+              isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+            } `}
           />
         </div>
         <div>
-          <label htmlFor="description" className="block text-sm font-medium text-gray-500">
+          <label htmlFor="description" className="block text-sm font-medium">
             Description
           </label>
           <textarea
@@ -165,11 +176,13 @@ function XcropEvent() {
             required
             value={formData.description}
             onChange={handleChange}
-            className="min-h-40 p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
+            className={`min-h-40 p-2 mt-1 block w-full border border-gray-500 rounded-md text-sm focus:border-blue-500 outline-none ${
+              isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+            } `}
           />
         </div>
         <div>
-          <label htmlFor="image" className="block text-sm font-medium text-gray-500">
+          <label htmlFor="image" className="block text-sm font-medium">
             Image
           </label>
           <input
@@ -178,7 +191,9 @@ function XcropEvent() {
             name="image"
             required
             onChange={handleChange}
-            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
+            className={`p-2 mt-1 block w-full border border-gray-500 rounded-md text-sm focus:border-blue-500 outline-none ${
+              isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+            } `}
           />
         </div>
 

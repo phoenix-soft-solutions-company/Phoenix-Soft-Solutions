@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import SideBar from "./components/SideBar";
+import { useDarkMode } from "../DarkModeContext";
 
 function Admin() {
   const [isSidebarVisible, setIsSidebarVisible] = useState(true);
   const [isSidebarFullyHidden, setIsSidebarFullyHidden] = useState(false);
+  const { isDarkMode } = useDarkMode();
 
   useEffect(() => {
     if (!isSidebarVisible) {
@@ -20,7 +22,7 @@ function Admin() {
   }, [isSidebarVisible]);
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen bg-gray-200">
+    <div className={`flex flex-col lg:flex-row min-h-screen bg-gray-200`}>
       <SideBar
         isVisible={isSidebarVisible}
         onClose={() => setIsSidebarVisible(false)}
@@ -37,7 +39,10 @@ function Admin() {
           onOpenSidebar={() => setIsSidebarVisible(true)}
         />
 
-        <div className="bg-white border border-gray-300 rounded-lg p-4 mt-4 min-h-[85vh]">
+        <div
+          className={`border-gray-300 rounded-lg p-4 mt-4 min-h-[85vh] ${
+            isDarkMode ? "bg-gray-800" : "bg-white"
+          }`}>
           <Outlet />
         </div>
       </div>
