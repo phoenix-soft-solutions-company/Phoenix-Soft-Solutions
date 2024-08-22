@@ -1,8 +1,8 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
-import Alert from "../components/Alert"; 
+import Alert from "../components/Alert";
 import { identifyError } from "../../utils/identify.error";
 import { messages } from "../../constants/messages";
 
@@ -95,7 +95,9 @@ function XcropFeedback() {
         <h1 className="font-semibold text-xl mb-4 text-gray-600">Current Feedback</h1>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center">
           {feedbacks.map((feedback) => (
-            <div key={feedback._id} className="relative flex flex-col gap-5 border border-gray-300 rounded-lg p-4">
+            <div
+              key={feedback._id}
+              className="relative flex flex-col gap-5 border border-gray-300 rounded-lg p-4">
               <div>
                 <img
                   src={
@@ -134,6 +136,7 @@ function XcropFeedback() {
             type="text"
             id="name"
             name="name"
+            required
             value={formData.name}
             onChange={handleChange}
             className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
@@ -146,6 +149,7 @@ function XcropFeedback() {
           <textarea
             id="feedback"
             name="feedback"
+            required
             value={formData.feedback}
             onChange={handleChange}
             className="min-h-40 p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"

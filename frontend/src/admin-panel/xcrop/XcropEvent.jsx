@@ -135,6 +135,7 @@ function XcropEvent() {
             type="date"
             id="date"
             name="date"
+            required
             value={formData.date}
             onChange={handleChange}
             className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
@@ -148,6 +149,7 @@ function XcropEvent() {
             type="text"
             id="title"
             name="title"
+            required
             value={formData.title}
             onChange={handleChange}
             className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
@@ -160,6 +162,7 @@ function XcropEvent() {
           <textarea
             id="description"
             name="description"
+            required
             value={formData.description}
             onChange={handleChange}
             className="min-h-40 p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
@@ -173,6 +176,7 @@ function XcropEvent() {
             type="file"
             id="image"
             name="image"
+            required
             onChange={handleChange}
             className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
           />

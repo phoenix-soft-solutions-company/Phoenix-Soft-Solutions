@@ -45,10 +45,7 @@ function XcropCounter() {
     e.preventDefault();
 
     try {
-      await axios.put(
-        `${process.env.REACT_APP_BASE_URL}/counter/66c21af52a7dd94e2cd73e8c`,
-        formData
-      );
+      await axios.put(`${process.env.REACT_APP_BASE_URL}/counter/66c21af52a7dd94e2cd73e8c`, formData);
       setAlertMessage(messages.counterUpdated);
       setShowAlert(true);
     } catch (error) {
@@ -86,6 +83,7 @@ function XcropCounter() {
             type="number"
             id="experiences"
             name="experiences"
+            required
             value={formData.experiences}
             onChange={handleChange}
             className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
@@ -99,6 +97,7 @@ function XcropCounter() {
             type="number"
             id="projects"
             name="projects"
+            required
             value={formData.projects}
             onChange={handleChange}
             className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
@@ -112,6 +111,7 @@ function XcropCounter() {
             type="number"
             id="experts"
             name="experts"
+            required
             value={formData.experts}
             onChange={handleChange}
             className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
@@ -125,6 +125,7 @@ function XcropCounter() {
             type="number"
             id="clients"
             name="clients"
+            required
             value={formData.clients}
             onChange={handleChange}
             className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
