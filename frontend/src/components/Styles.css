@@ -39,7 +39,7 @@
   background-color: #bd2d10; /* Ball color */
   border-radius: 0.125rem;
   animation: ballMoveSmall 10s infinite ease-in-out;
-  bottom: -0.5px; /* Position the ball on the underline */
+  bottom: -1.8px; /* Position the ball on the underline */
   z-index: 2;
 }
 
