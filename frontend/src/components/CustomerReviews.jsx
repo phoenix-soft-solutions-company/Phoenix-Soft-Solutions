@@ -43,9 +43,13 @@ function CustomerReviews() {
             <div className="relative w-full h-[550px] bg-red-600 p-2 rounded-lg shadow-lg border border-gray-200 mt-10">
               <div className="absolute top-[-40px] left-1/2 transform -translate-x-1/2 bg-white w-24 h-24 rounded-full border border-red-600 flex items-center justify-center">
                 <img
-                  src={`https://drive.google.com/thumbnail?id=${review.image}&sz=w1000`}
+                  src={
+                    review.image
+                      ? `https://drive.google.com/thumbnail?id=${review.image}&sz=w1000`
+                      : "https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+                  }
                   alt={review.name}
-                  className="w-32 h-auto"
+                  className="w-32 h-auto rounded-full"
                 />
               </div>
               <div className="mt-14 text-center">
