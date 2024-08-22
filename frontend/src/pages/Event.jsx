@@ -1,5 +1,5 @@
 import React from "react";
-import heading from "../constants/images/tech/technology-heading.jpg";
+import heading from "../constants/images/eventhead.jpg";
 
 function Event() {
   return (

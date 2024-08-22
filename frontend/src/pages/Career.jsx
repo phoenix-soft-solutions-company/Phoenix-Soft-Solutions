@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
-import heading from "../constants/images/tech/technology-heading.jpg";
+import heading from "../constants/images/Career/heading.png";
 import card1 from "../constants/images/Career/benifit1.jpg";
 import card2 from "../constants/images/Career/benifit2.jpg";
 import card3 from "../constants/images/Career/benifit3.jpg";

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import heading from "../constants/images/projects/project-header.jpg";
+import heading from "../constants/images/projects/heading.webp";
 
 const ProjectPage = () => {
   const [projects, setProjects] = useState([]);
