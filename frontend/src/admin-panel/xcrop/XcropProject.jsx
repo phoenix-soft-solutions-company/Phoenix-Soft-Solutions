@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { identifyError } from "../../utils/identify.error";
+import { messages } from "../../constants/messages";
+import Alert from "../components/Alert";
 
 function XcropProject() {
   const [formData, setFormData] = useState({
@@ -11,6 +14,8 @@ function XcropProject() {
     image: null,
   });
   const [projects, setProjects] = useState([]);
+  const [alertMessage, setAlertMessage] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
 
   useEffect(() => {
     getProjects();
@@ -36,17 +41,24 @@ function XcropProject() {
     }
 
     try {
-      const result = await axios.post(`${process.env.REACT_APP_BASE_URL}/project`, uploadData, {
+      await axios.post(`${process.env.REACT_APP_BASE_URL}/project`, uploadData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
-      if (result.data.status === "ok") {
-        getProjects();
-      } else {
-        console.error(result.data.message);
-      }
+      setAlertMessage(messages.projectCreated);
+      setShowAlert(true);
+
+      setFormData({
+        date: "",
+        title: "",
+        description: "",
+        image: null,
+      });
+
+      getProjects();
     } catch (error) {
-      console.error("Error submitting project:", error);
+      setAlertMessage(identifyError(error.response?.data?.code));
+      setShowAlert(true);
     }
   };
 
@@ -56,7 +68,8 @@ function XcropProject() {
       const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/project`);
       setProjects(result.data.data);
     } catch (error) {
-      console.error("Error fetching projects:", error);
+      setAlertMessage(identifyError(error.response?.data?.code));
+      setShowAlert(true);
     }
   };
 
@@ -64,14 +77,26 @@ function XcropProject() {
   const handleDelete = async (id) => {
     try {
       await axios.delete(`${process.env.REACT_APP_BASE_URL}/project/${id}`);
+
+      setAlertMessage(messages.projectDeleted);
+      setShowAlert(true);
+
       getProjects();
     } catch (error) {
-      console.error("Error deleting project:", error);
+      setAlertMessage(identifyError(error.response?.data?.code));
+      setShowAlert(true);
     }
+  };
+
+  // Handle alert close
+  const handleCloseAlert = () => {
+    setShowAlert(false);
   };
 
   return (
     <div className="p-4">
+      {showAlert && <Alert message={alertMessage} onClose={handleCloseAlert} />}
+
       <div className="bg-white border border-gray-300 rounded-lg p-4">
         <h1 className="font-semibold text-xl mb-4 text-gray-600">Current Projects</h1>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center">
@@ -79,7 +104,7 @@ function XcropProject() {
             <div key={project._id} className="flex flex-col gap-5 border border-gray-300 rounded-lg p-4">
               <div>
                 <img
-                  src={require(`../../images/${project.image}`)}
+                  src={`https://drive.google.com/thumbnail?id=${project.image}&sz=w1000`}
                   alt={project.title}
                   className="w-32 h-auto"
                 />

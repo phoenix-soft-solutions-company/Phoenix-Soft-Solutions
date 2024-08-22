@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Alert from "../components/Alert";
+import { identifyError } from "../../utils/identify.error";
+import { messages } from "../../constants/messages";
 
 function XcropCounter() {
   const [formData, setFormData] = useState({
@@ -21,7 +23,7 @@ function XcropCounter() {
         );
         setFormData(response.data);
       } catch (error) {
-        setAlertMessage("Error fetching counter data");
+        setAlertMessage(identifyError(error.response?.data?.code));
         setShowAlert(true);
       }
     };
@@ -47,10 +49,10 @@ function XcropCounter() {
         `${process.env.REACT_APP_BASE_URL}/counter/66c21af52a7dd94e2cd73e8c`,
         formData
       );
-      setAlertMessage("Counter successfully updated!");
+      setAlertMessage(messages.counterUpdated);
       setShowAlert(true);
     } catch (error) {
-      setAlertMessage("Error updating counter");
+      setAlertMessage(identifyError(error.response?.data?.code));
       setShowAlert(true);
     }
   };
