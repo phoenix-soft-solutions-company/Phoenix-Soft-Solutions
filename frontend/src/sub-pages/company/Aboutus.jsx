@@ -62,7 +62,7 @@ const Aboutus = ({ showHeaderImage = true }) => {
 
           <p className="mb-4 text-sm sm:text-md lg:text-lg">
             Phoenix Soft Solutions is one of the reputed and leading IT
-            companies of New Zealand. We provide next-generation digital
+            companies of Australia. We provide next-generation digital
             services that look great and are easy to use, helping our clients
             grow their businesses successfully. As a result, in just a few
             years, the company has served more than 150+ customers,
