@@ -1,5 +1,6 @@
 import React from "react";
 import service from "../../constants/images/services/software-maintain.jpg";
+import heading from "../../constants/images/services/soft.webp";
 import {
   FaBug, // Icon for Rectification and Stability Enhancement
   FaRocket, // Icon for Progressive Updates and Feature Expansion
@@ -54,7 +55,7 @@ const Software = () => {
       {/* Hero Section */}
       <div className="relative w-full h-[40vh] sm:h-[50vh]">
         <img
-          src={service}
+          src={heading}
           className="object-cover w-full h-full"
           alt="Software Maintenance"
         />

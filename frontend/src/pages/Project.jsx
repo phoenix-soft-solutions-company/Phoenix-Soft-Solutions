@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import heading from "../constants/images/projects/project-header.jpg";
+import heading from "../constants/images/projects/heading.webp";
 
 const ProjectPage = () => {
   const [projects, setProjects] = useState([]);
@@ -30,9 +30,9 @@ const ProjectPage = () => {
               key={project._id}
               className="bg-white border border-gray-300 rounded-lg overflow-hidden shadow-md">
               <img
-                src={`https://drive.google.com/uc?export=view&id=${project.image}`}
+                src={`https://drive.google.com/thumbnail?id=${project.image}&sz=w1000`}
                 alt={project.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-64 object-cover"
               />
               <div className="p-4">
                 <h2 className="text-lg font-semibold">{project.title}</h2>

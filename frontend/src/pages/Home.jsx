@@ -163,8 +163,9 @@ function Home() {
             <h2 className="text-2xl mb-2">Web Application Development</h2>
             <p className="text-lg">
               To help businesses successfully communicate with their intended
-              demographic, Xcrop Technology provides services that include the
-              complete spectrum of the software development life cycle.
+              demographic, Phoenix Soft Solutions provides services
+              that include the complete spectrum of the software development
+              life cycle.
             </p>
           </div>
 
@@ -220,9 +221,9 @@ function Home() {
             />
             <h2 className="text-2xl mb-2">Software Development Outsourcing</h2>
             <p className="text-lg">
-              By utilizing Xcrop Technology's services, businesses can leverage
-              our expertise and infrastructure for the smooth completion of
-              their projects at accelerated lower overall costs.
+              By utilizing Phoenix Soft Solutions's services, businesses can
+              leverage our expertise and infrastructure for the smooth
+              completion of their projects at accelerated lower overall costs.
             </p>
           </div>
 
@@ -234,9 +235,9 @@ function Home() {
             />
             <h2 className="text-2xl mb-2">Software QA Testing</h2>
             <p className="text-lg">
-              Xcrop Technology offers thorough testing and bug-fixing to improve
-              overall performance and guarantee the quality, stability, and
-              functioning of software programs as part of our services.
+              Phoenix Soft Solutions offers thorough testing and bug-fixing to
+              improve overall performance and guarantee the quality, stability,
+              and functioning of software programs as part of our services.
             </p>
           </div>
 
@@ -246,9 +247,7 @@ function Home() {
               alt="Cloud Migration Services"
               className="mx-auto mb-3 w-16"
             />
-            <h2 className="text-2xl  mb-2">
-              Cloud Migration Services
-            </h2>
+            <h2 className="text-2xl  mb-2">Cloud Migration Services</h2>
             <p className="text-lg">
               Experience a seamless transition to the cloud with our exceptional
               services. We empower businesses to effortlessly move their
@@ -263,9 +262,7 @@ function Home() {
               alt="PoC Development Services"
               className="mx-auto mb-3 w-16"
             />
-            <h2 className="text-2xl mb-2">
-              PoC Development Services
-            </h2>
+            <h2 className="text-2xl mb-2">PoC Development Services</h2>
             <p className="text-lg">
               With our exceptional expertise, we empower you to embark on a
               journey of innovation, ensuring that your concepts are thoroughly
@@ -279,9 +276,7 @@ function Home() {
               alt="AI Development Services"
               className="mx-auto mb-3 w-16"
             />
-            <h2 className="text-2xl mb-2">
-              AI Development Services
-            </h2>
+            <h2 className="text-2xl mb-2">AI Development Services</h2>
             <p className="text-lg">
               By combining cutting-edge AI with machine learning, we can create
               smart software that can streamline business operations and enhance
@@ -420,7 +415,6 @@ function Home() {
               alt="Description"
               className="max-w-full max-h-full h-auto p-4"
             />
-            
           </div>
         </div>
       </div>

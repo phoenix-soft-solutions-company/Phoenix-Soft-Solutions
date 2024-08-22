@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { identifyError } from "../../utils/identify.error";
+import { messages } from "../../constants/messages";
+import Alert from "../components/Alert";
+import { useDarkMode } from "../../DarkModeContext";
 
 function XcropProject() {
   const [formData, setFormData] = useState({
@@ -11,6 +15,9 @@ function XcropProject() {
     image: null,
   });
   const [projects, setProjects] = useState([]);
+  const [alertMessage, setAlertMessage] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
+  const { isDarkMode } = useDarkMode();
 
   useEffect(() => {
     getProjects();
@@ -36,17 +43,24 @@ function XcropProject() {
     }
 
     try {
-      const result = await axios.post(`${process.env.REACT_APP_BASE_URL}/project`, uploadData, {
+      await axios.post(`${process.env.REACT_APP_BASE_URL}/project`, uploadData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
-      if (result.data.status === "ok") {
-        getProjects();
-      } else {
-        console.error(result.data.message);
-      }
+      setAlertMessage(messages.projectCreated);
+      setShowAlert(true);
+
+      setFormData({
+        date: "",
+        title: "",
+        description: "",
+        image: null,
+      });
+
+      getProjects();
     } catch (error) {
-      console.error("Error submitting project:", error);
+      setAlertMessage(identifyError(error.response?.data?.code));
+      setShowAlert(true);
     }
   };
 
@@ -56,7 +70,8 @@ function XcropProject() {
       const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/project`);
       setProjects(result.data.data);
     } catch (error) {
-      console.error("Error fetching projects:", error);
+      setAlertMessage(identifyError(error.response?.data?.code));
+      setShowAlert(true);
     }
   };
 
@@ -64,22 +79,37 @@ function XcropProject() {
   const handleDelete = async (id) => {
     try {
       await axios.delete(`${process.env.REACT_APP_BASE_URL}/project/${id}`);
+
+      setAlertMessage(messages.projectDeleted);
+      setShowAlert(true);
+
       getProjects();
     } catch (error) {
-      console.error("Error deleting project:", error);
+      setAlertMessage(identifyError(error.response?.data?.code));
+      setShowAlert(true);
     }
+  };
+
+  // Handle alert close
+  const handleCloseAlert = () => {
+    setShowAlert(false);
   };
 
   return (
     <div className="p-4">
-      <div className="bg-white border border-gray-300 rounded-lg p-4">
-        <h1 className="font-semibold text-xl mb-4 text-gray-600">Current Projects</h1>
+      {showAlert && <Alert message={alertMessage} onClose={handleCloseAlert} />}
+
+      <div
+        className={`border border-gray-500 rounded-lg p-4 ${
+          isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+        }`}>
+        <h1 className="font-semibold text-xl mb-4">Current Projects</h1>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center">
           {projects.map((project) => (
-            <div key={project._id} className="flex flex-col gap-5 border border-gray-300 rounded-lg p-4">
+            <div key={project._id} className="flex flex-col gap-5 border border-gray-500 rounded-lg p-4">
               <div>
                 <img
-                  src={`https://drive.google.com/uc?export=view&id=${project.image}`}
+                  src={`https://drive.google.com/thumbnail?id=${project.image}&sz=w1000`}
                   alt={project.title}
                   className="w-32 h-auto"
                 />
@@ -100,56 +130,70 @@ function XcropProject() {
 
       <form
         onSubmit={handleSubmit}
-        className="space-y-4 w-full mx-auto bg-white border border-gray-300 rounded-lg p-4 mt-5">
-        <h1 className="font-semibold text-xl mb-4 text-gray-600">Add Project</h1>
+        className={`space-y-4 w-full mx-auto border border-gray-500 rounded-lg p-4 mt-5 ${
+          isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+        }`}>
+        <h1 className="font-semibold text-xl mb-4">Add Project</h1>
         <div>
-          <label htmlFor="date" className="block text-sm font-medium text-gray-500">
+          <label htmlFor="date" className="block text-sm font-medium">
             Date
           </label>
           <input
             type="date"
             id="date"
             name="date"
+            required
             value={formData.date}
             onChange={handleChange}
-            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
+            className={`p-2 mt-1 block w-full border border-gray-500 rounded-md text-sm focus:border-blue-500 outline-none ${
+              isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+            } `}
           />
         </div>
         <div>
-          <label htmlFor="title" className="block text-sm font-medium text-gray-500">
+          <label htmlFor="title" className="block text-sm font-medium">
             Title
           </label>
           <input
             type="text"
             id="title"
             name="title"
+            required
             value={formData.title}
             onChange={handleChange}
-            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
+            className={`p-2 mt-1 block w-full border border-gray-500 rounded-md text-sm focus:border-blue-500 outline-none ${
+              isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+            } `}
           />
         </div>
         <div>
-          <label htmlFor="description" className="block text-sm font-medium text-gray-500">
+          <label htmlFor="description" className="block text-sm font-medium">
             Description
           </label>
           <textarea
             id="description"
             name="description"
+            required
             value={formData.description}
             onChange={handleChange}
-            className="min-h-40 p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
+            className={`min-h-40 p-2 mt-1 block w-full border border-gray-500 rounded-md text-sm focus:border-blue-500 outline-none ${
+              isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+            } `}
           />
         </div>
         <div>
-          <label htmlFor="image" className="block text-sm font-medium text-gray-500">
+          <label htmlFor="image" className="block text-sm font-medium">
             Image
           </label>
           <input
             type="file"
             id="image"
             name="image"
+            required
             onChange={handleChange}
-            className="p-2 mt-1 block w-full border border-gray-300 rounded-md text-sm focus:border-blue-500 outline-none"
+            className={`p-2 mt-1 block w-full border border-gray-500 rounded-md text-sm focus:border-blue-500 outline-none ${
+              isDarkMode ? "bg-gray-800 text-gray-200" : "bg-white text-gray-600"
+            } `}
           />
         </div>
 

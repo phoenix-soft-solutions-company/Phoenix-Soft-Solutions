@@ -8,7 +8,7 @@ import {
   FaMobileAlt,
   FaTwitter,
 } from "react-icons/fa";
-import heading from "../../constants/images/tech/technology-heading.jpg";
+import heading from "../../constants/images/company/headcon.jpg";
 
 const Contactus = ({ showHeaderImage = true }) => {
   return (

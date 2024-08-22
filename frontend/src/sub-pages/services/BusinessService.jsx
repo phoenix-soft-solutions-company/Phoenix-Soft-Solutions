@@ -1,13 +1,15 @@
 import React from "react";
 import service from "../../constants/images/services/management.jpg";
-
+import heading from "../../constants/images/services/busi.jpg";
+import service1 from "../../constants/images/services/busi11.jpg";
+import service2 from "../../constants/images/services/busi22.jpg";
 const Business = () => {
   return (
     <div className="min-h-screen relative pt-16">
       {/* Hero Section */}
       <div className="relative w-full h-[50vh]">
         <img
-          src={service}
+          src={heading}
           className="object-cover w-full h-full"
           alt="Mobile Development"
         />
@@ -70,10 +72,10 @@ const Business = () => {
           </div>
 
           {/* Right Side: Image */}
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 flex justify-center items-center">
             <img
-              src={service}
-              className="object-cover w-full h-full"
+              src={service1}
+              className="object-contain max-w-full max-h-full"
               alt="Business Strategies"
             />
           </div>
@@ -86,7 +88,7 @@ const Business = () => {
           {/* Left Side: Image */}
           <div className="lg:w-1/2">
             <img
-              src={service}
+              src={service2}
               className="object-cover w-full h-full"
               alt="Business Strategy"
             />
@@ -108,7 +110,6 @@ const Business = () => {
               <li>Remote Work</li>
               <li>Visit Work</li>
               <li>Fully Outsource Work</li>
-              
             </ul>
           </div>
         </div>

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const projectService = require("../service/project.service");
+const eventService = require("../service/event.service");
 const { error, success, statusCodes } = require("../constants");
 const multer = require("multer");
 const { uploadImageToDrive } = require("../utils/drive.upload");
@@ -19,14 +19,14 @@ const create = async (req, res, next) => {
     }
 
     // Create a new project entry in the database
-    await projectService.create({
+    await eventService.create({
       date,
       title,
       description,
       image: imageId,
     });
 
-    return res.status(statusCodes.created).json(success.projectCreated);
+    return res.status(statusCodes.created).json(success.eventCreated);
   } catch (error) {
     next(error);
   }
@@ -34,19 +34,19 @@ const create = async (req, res, next) => {
 
 const getAll = async (req, res, next) => {
   try {
-    const projects = await projectService.getAll();
-    return res.status(statusCodes.success).json({ data: projects });
+    const events = await eventService.getAll();
+    return res.status(statusCodes.success).json({ data: events });
   } catch (error) {
     next(error);
   }
 };
 
-const deleteProject = async (req, res, next) => {
+const deleteEvent = async (req, res, next) => {
   const { id } = req.params;
   try {
-    const result = await projectService.deleteProject(id);
+    await eventService.deleteEvent(id);
 
-    return res.status(statusCodes.success).json(success.projectDeleted);
+    return res.status(statusCodes.success).json(success.eventDeleted);
   } catch (error) {
     next(error);
   }
@@ -55,6 +55,6 @@ const deleteProject = async (req, res, next) => {
 // Define routes
 router.post("/", upload.single("image"), create);
 router.get("/", getAll);
-router.delete("/:id", deleteProject);
+router.delete("/:id", deleteEvent);
 
 module.exports = router;

@@ -1,5 +1,6 @@
 import React from "react";
 import service from "../../constants/images/services/marketing.jpg"; // Make sure the image path is correct
+import service1 from "../../constants/images/services/marketing2.jpg";
 
 const Marketing = () => {
   return (
@@ -26,7 +27,7 @@ const Marketing = () => {
         <div className="bg-white shadow-lg rounded-lg p-6 max-w-4xl">
           <div className="w-full mt-10 px-8 lg:px-32 mb-8">
             <img
-              src={service}
+              src={service1}
               className="object-cover w-full h-auto rounded-lg shadow-lg"
               alt="Cybersecurity"
             />
