@@ -1,30 +1,45 @@
+import React, { useEffect } from "react";
+import "../../pages/Styles.css"; // Import the CSS for background animation
 
+const InternationalDomain = () => {
+  useEffect(() => {
+    const container = document.querySelector(".balls-container");
+    const numberOfBalls = 10;
 
-import React from "react";
-import heading from "../../constants/images/tech/technology-heading.jpg";
+    for (let i = 0; i < numberOfBalls; i++) {
+      const ball = document.createElement("div");
+      ball.className = "ball";
+      const size = Math.random() * 30 + 20; // Random size between 20px and 50px
+      ball.style.width = `${size}px`;
+      ball.style.height = `${size}px`;
+      ball.style.backgroundColor = "rgb(156, 150, 150)";
+      ball.style.left = `${Math.random() * 100}%`; // Random horizontal position
+      ball.style.bottom = `-${size}px`; // Start just below the viewport
+      ball.style.animationDelay = `${Math.random() * 4}s`; // Staggered start
+      container.appendChild(ball);
+    }
 
-function InternationalDomain() {
+    // Cleanup the balls when the component unmounts
+    return () => {
+      container.innerHTML = "";
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen relative pt-16">
-      <header className="relative w-full h-[50vh]">
-        <img
-          src={heading}
-          alt="header"
-          className="object-cover w-full h-full"
-        />
-        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
-          <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest">
-            INTERNATIONAL DOMAIN
-          </h1>
-        </div>
-      </header>
-      <h1
-        className="mt-28 text-center text-3xl lg:text-4xl font-bold text-gray-800"
-        style={{ fontStyle: "italic" }}
-      >
-        Maintenance
-      </h1>
+    <div className="flex items-center justify-center min-h-screen bg-red-600 relative overflow-hidden">
+      <div className="relative z-10 text-center text-black">
+        <h1 className="text-5xl font-bold">Coming Soon</h1>
+        <p className="mt-4 text-lg">
+          We are working on something amazing. Stay tuned!
+        </p>
+        <br />
+        <p className="mt-4 text-lg font-bold">-Phoenix Soft Solutions-</p>
+      </div>
+
+      {/* Animated Balls */}
+      <div className="balls-container"></div>
     </div>
   );
-}
+};
+
 export default InternationalDomain;
