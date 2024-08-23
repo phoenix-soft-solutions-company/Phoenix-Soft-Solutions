@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import emailjs from "emailjs-com";
 import {
   FaEnvelope,
   FaFacebook,
@@ -9,8 +10,56 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import heading from "../../constants/images/company/headcon.jpg";
+import { emaiJsCredentials } from "../../constants/emailJs";
+
+// Initialize EmailJS
+const initializeEmailJS = () => {
+  emailjs.init(emaiJsCredentials.EMAILJS_PUBLIC_KEY); // EmailJS public key
+};
 
 const Contactus = ({ showHeaderImage = true }) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [message, setMessage] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    initializeEmailJS();
+  }, []);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setError(null);
+    setMessage(null);
+
+    const { name, email, subject, message } = formData;
+
+    emailjs
+      .send(
+        emaiJsCredentials.EMAILJS_SERVICE_ID,
+        emaiJsCredentials.EMAILJS_TEMPLATE_ID,
+        { name, email, subject, message },
+        emaiJsCredentials.EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          setMessage("Message sent successfully!");
+          setFormData({ name: "", email: "", subject: "", message: "" });
+        },
+        (error) => {
+          setError("Failed to send message!");
+        }
+      );
+  };
+
   return (
     <div className="min-h-screen relative ">
       {showHeaderImage && (
@@ -267,59 +316,55 @@ const Contactus = ({ showHeaderImage = true }) => {
           <div className="w-full lg:w-1/2 p-4 sm:px-10 md:px-40 lg:px-4 mt-5">
             <div className="bg-white border border-gray-300 rounded-lg shadow-md p-12 md:p-14">
               <h3 className="text-xl md:text-2xl font-semibold mb-4">Contact Us</h3>
-              <form>
-                <div className="mb-4">
-                  <label htmlFor="name" className="block text-lg font-medium mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    className="w-full p-2 border border-gray-300 rounded-lg"
-                    placeholder="Your Name"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="email" className="block text-lg font-medium mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full p-2 border border-gray-300 rounded-lg"
-                    placeholder="Your Email"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="subject" className="block text-lg font-medium mb-2">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    className="w-full p-2 border border-gray-300 rounded-lg"
-                    placeholder="Subject"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="message" className="block text-lg font-medium mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="4"
-                    className="w-full p-2 border border-gray-300 rounded-lg"
-                    placeholder="Your Message"></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="border-2 border-red-700 bg-red-700 text-white py-2 px-6 text-base rounded hover:bg-white hover:text-red-700 transition duration-500">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Your Name"
+                  required
+                  className="border border-gray-300 p-2 rounded"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Your Email"
+                  required
+                  className="border border-gray-300 p-2 rounded"
+                />
+                <input
+                  type="text"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  placeholder="Subject"
+                  required
+                  className="border border-gray-300 p-2 rounded"
+                />
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Your Message"
+                  required
+                  className="border border-gray-300 p-2 rounded h-32"
+                />
+                <button type="submit" className="bg-red-600 text-white py-2 rounded mt-4">
                   Send Message
                 </button>
+                {message && (
+                  <div className="text-center bg-blue-500 text-white p-2">
+                    <p>{message}</p>
+                  </div>
+                )}
+                {error && (
+                  <div className="text-center bg-red-600 text-black p-2">
+                    <p>{error}</p>
+                  </div>
+                )}
               </form>
             </div>
           </div>
