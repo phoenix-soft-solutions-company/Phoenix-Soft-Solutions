@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { LINKS } from "../constants/Links";
 import { Link } from "react-router-dom";
 import { Bars3Icon, ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -10,6 +10,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(null);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(null);
+  const [navbarBg, setNavbarBg] = useState(false);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -23,10 +24,28 @@ const Navbar = () => {
     setMobileDropdownOpen(mobileDropdownOpen === index ? null : index);
   };
 
+  const changeNavbarBg = () => {
+    if (window.scrollY >= 100) {
+      setNavbarBg(true);
+    } else {
+      setNavbarBg(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavbarBg);
+    return () => {
+      window.removeEventListener("scroll", changeNavbarBg);
+    };
+  }, []);
+
   return (
-    <nav className=" bg-red-600 text-white fixed left-0 top-0 right-0 z-[1000]">
+    <nav
+      className={`fixed left-0 top-0 right-0 z-[1000] transition-colors duration-300 ${
+        navbarBg ? "bg-red-600" : "bg-transparent"
+      } text-white`}>
       <div className="relative">
-        <div className="absolute top-[10px] xl:top-[8px] left-4 flex items-center z-[1001]">
+        <div className="absolute top-[10px] xl:top-[8px] left-4 flex items-center z-[900]">
           <img src={Logo} alt="Company Logo" className="h-12 md:h-20 xl:h-24 mr-6" />
         </div>
 
@@ -102,7 +121,7 @@ const Navbar = () => {
                 )}
 
                 {link.subpages && link.subpages.length > 5 && dropdownOpen === index && (
-                  <div className="flex flex-row absolute left-0 z-[999]w-96 bg-red-600 border border-red-700 rounded shadow-lg">
+                  <div className="flex flex-row absolute left-0 z-[1001] w-96 bg-red-600 border border-red-700 rounded shadow-lg">
                     <div className="w-48 group-hover:block border-r border-red-700">
                       {link.subpages.slice(0, 9).map((subpage, subIndex) => (
                         <Link
@@ -155,8 +174,8 @@ const Navbar = () => {
         </div>
 
         {/* Blue bar with social icons and contact information */}
-        <div className="w-full bg-blue-950 py-4 px-2 mb-4 flex lg:hidden">
-          <div className="flex items-center justify-center space-x-4 mb-2">
+        <div className="w-full bg-blue-950 py-4 px-2 mb-4 flex flex-col items-center space-y-2 lg:hidden">
+          <div className="flex items-center justify-center space-x-4">
             <a
               href="https://www.facebook.com/phoenixsoftsolutionsnz?mibextid=ZbWKwL"
               target="_blank"
@@ -186,9 +205,9 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faInstagram} />
             </a>
           </div>
-          <p className="text-center text-white font-bold mb-2 text-xs">info@phoenixsoftsolutions.com</p>
-          <p className="text-center text-white font-bold mb-4 text-sm">Contact Us 77 844 3682</p>
-          <a href="/company/Contactus" className="block text-center">
+          <p className="text-center text-white font-bold text-xs">info@phoenixsoftsolutions.com</p>
+          <p className="text-center text-white font-bold text-sm">Contact Us 77 844 3682</p>
+          <a href="/company/Contactus" className="text-center">
             <button className="bg-red-600 text-white py-2 px-6 text-xs sm:text-sm">
               Have Any Questions??
             </button>

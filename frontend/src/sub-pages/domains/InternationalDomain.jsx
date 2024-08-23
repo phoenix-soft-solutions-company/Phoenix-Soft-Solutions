@@ -12,7 +12,7 @@ const InternationalDomain = () => {
       const size = Math.random() * 30 + 20; // Random size between 20px and 50px
       ball.style.width = `${size}px`;
       ball.style.height = `${size}px`;
-      ball.style.backgroundColor = "rgb(156, 150, 150)";
+      ball.style.backgroundColor = "red";
       ball.style.left = `${Math.random() * 100}%`; // Random horizontal position
       ball.style.bottom = `-${size}px`; // Start just below the viewport
       ball.style.animationDelay = `${Math.random() * 4}s`; // Staggered start
@@ -26,7 +26,7 @@ const InternationalDomain = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-red-600 relative overflow-hidden">
+    <div className="flex items-center justify-center min-h-screen bg-white relative overflow-hidden">
       <div className="relative z-10 text-center text-black">
         <h1 className="text-5xl font-bold">Coming Soon</h1>
         <p className="mt-4 text-lg">

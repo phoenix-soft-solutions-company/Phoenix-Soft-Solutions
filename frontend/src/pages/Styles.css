@@ -65,7 +65,7 @@
 .ball {
   border-radius: 50%;
   position: absolute;
-  background-color: rgb(156, 150, 150); /* Set all balls to the specified color */
+  background-color: rgb(241, 78, 78); /* Set all balls to the specified color */
   animation: moveUp 5s infinite ease-in-out; /* Animation properties */
 }
 
@@ -84,3 +84,58 @@
     opacity: 0;
   }
 }
+
+
+/* home image animation */
+@keyframes moveAroundLeft {
+0% {
+    transform: rotate(0deg) translateX(200px) rotate(0deg);
+  }
+  50% {
+    transform: rotate(60deg) translateX(200px) rotate(-60deg);
+  }
+  100% {
+    transform: rotate(90deg) translateX(200px) rotate(90deg);
+  }
+
+}
+
+.ballLeft {
+  width: 20px; /* Adjust ball size */
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0); /* Ball color */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: moveAroundLeft 10s infinite linear; /* Adjust duration as needed */
+}
+
+@keyframes moveAroundRight {
+0% {
+    transform: rotate(180deg) translateX(240px) rotate(180deg);
+  }
+  50% {
+    transform: rotate(230deg) translateX(240px) rotate(230deg);
+  }
+  100% {
+    transform: rotate(270deg) translateX(240px) rotate(270deg);
+  }
+
+}
+
+.ballRight {
+  width: 20px; /* Adjust ball size */
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0); /* Ball color */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: moveAroundRight 10s infinite linear; /* Adjust duration as needed */
+}
+
+
+

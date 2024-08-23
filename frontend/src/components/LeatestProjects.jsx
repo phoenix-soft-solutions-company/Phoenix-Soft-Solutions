@@ -42,7 +42,7 @@ const LeatestProject = () => {
             key={index}
             style={{
               width: "100%",
-              maxWidth: "800px",
+              maxWidth: "500px",
               height: "auto",
               margin: "20px",
             }}>
@@ -51,7 +51,7 @@ const LeatestProject = () => {
                 <img
                   src={`https://drive.google.com/thumbnail?id=${project.image}&sz=w1000`}
                   alt={project.name}
-                  className="w-full h-[300px] object-cover rounded-lg mb-4"
+                  className="w-full h-auto object-cover rounded-lg mb-4"
                 />
                 <h2 className="text-xl font-bold mb-2">{project.title}</h2>
                 <p className="text-base text-gray-700 text-center px-2 lg:px-10">{project.description}</p>

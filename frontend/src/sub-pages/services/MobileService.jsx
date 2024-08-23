@@ -8,14 +8,10 @@ import android from "../../constants/images/services/android.png"; // Second car
 
 const Mobile = () => {
   return (
-    <div className="min-h-screen relative pt-16">
+    <div className="min-h-screen relative ">
       {/* Hero Section */}
       <div className="relative w-full h-[50vh]">
-        <img
-          src={header}
-          className="object-cover w-full h-full"
-          alt="Mobile Development"
-        />
+        <img src={header} className="object-cover w-full h-full" alt="Mobile Development" />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest text-white uppercase">
             Mobile Development
@@ -29,14 +25,11 @@ const Mobile = () => {
           ISO-CERTIFIED MOBILE APP DEVELOPMENT COMPANY
         </h1>
         <p className="text-center text-base lg:text-lg mb-6">
-          “Phoenix Soft Solutions is an ISO-certified Agile app development
-          company in Vietnam,
-          <br /> specialized in consulting, designing, and developing mobile
-          apps for clients all over the world.
-          <br /> We are convinced that we can manage any request and project
-          nature of our clients, no matter
-          <br /> what field your organization is in or what kind of market they
-          are in.”
+          “Phoenix Soft Solutions is an ISO-certified Agile app development company in Vietnam,
+          <br /> specialized in consulting, designing, and developing mobile apps for clients all over the
+          world.
+          <br /> We are convinced that we can manage any request and project nature of our clients, no matter
+          <br /> what field your organization is in or what kind of market they are in.”
         </p>
         <img
           src={mobileImage}
@@ -61,12 +54,10 @@ const Mobile = () => {
 
         {/* Description */}
         <p className="mt-4 text-center text-base lg:text-lg px-4 lg:px-20">
-          The excellent services we have established for our clients are
-          continually improving. Development, integration, and administration of
-          mobile software applications are all a part of what we do. We
-          constantly appreciate the understanding and strong relationship
-          between Phoenix Soft Solutions and clients to produce the best
-          potential outcomes, from conception and design through delivery and
+          The excellent services we have established for our clients are continually improving. Development,
+          integration, and administration of mobile software applications are all a part of what we do. We
+          constantly appreciate the understanding and strong relationship between Phoenix Soft Solutions and
+          clients to produce the best potential outcomes, from conception and design through delivery and
           ongoing support.
         </p>
 
@@ -94,9 +85,9 @@ const Mobile = () => {
 
         {/* New Section Description */}
         <p className="text-center text-base lg:text-lg px-4 lg:px-20">
-          We will undoubtedly deliver the best quality to corporate clients and
-          end-users, better the target customers' experience, and bring many
-          additional advantages to the company with the following service items.
+          We will undoubtedly deliver the best quality to corporate clients and end-users, better the target
+          customers' experience, and bring many additional advantages to the company with the following
+          service items.
         </p>
 
         {/* Card Section */}
@@ -104,17 +95,13 @@ const Mobile = () => {
           <div className="flex flex-col lg:flex-row items-center p-5">
             {/* Left Side: Description and List */}
             <div className="lg:w-2/3 p-6">
-              <h2 className="text-xl font-semibold mb-4">
-                iOS App Development
-              </h2>
+              <h2 className="text-xl font-semibold mb-4">iOS App Development</h2>
               <p className="text-base lg:text-lg mb-4">
-                When it comes to developing iPhone applications that are both
-                easy to use and flexible, our top UI/UX designers are the best
-                in the industry. To ensure that your vision becomes a reality,
-                we have the necessary resources and skills. As a result, our
-                customers may rest assured knowing that all of our iPhone app
-                development methods adhere strictly to the tight iOS
-                requirements.
+                When it comes to developing iPhone applications that are both easy to use and flexible, our
+                top UI/UX designers are the best in the industry. To ensure that your vision becomes a
+                reality, we have the necessary resources and skills. As a result, our customers may rest
+                assured knowing that all of our iPhone app development methods adhere strictly to the tight
+                iOS requirements.
               </p>
               <ul className="list-disc list-inside mb-4">
                 <li>Design and Development of iOS Applications</li>
@@ -125,11 +112,7 @@ const Mobile = () => {
             </div>
             {/* Right Side: Image */}
             <div className="lg:w-1/3">
-              <img
-                src={ios}
-                alt="Mobile App Development"
-                className="object-cover w-full h-full"
-              />
+              <img src={ios} alt="Mobile App Development" className="object-cover w-full h-full" />
             </div>
           </div>
 
@@ -144,22 +127,16 @@ const Mobile = () => {
             </div>
             {/* Right Side: Description and List */}
             <div className="lg:w-2/3 p-6">
-              <h2 className="text-xl font-semibold mb-4">
-                Android App Development
-              </h2>
+              <h2 className="text-xl font-semibold mb-4">Android App Development</h2>
               <p className="text-base lg:text-lg mb-4">
-                The number of individuals downloading Android apps has risen in
-                tandem with the growing number of people using Android-based
-                mobile devices. The top Android app development firm in
-                Australia is here to help our clients remain on top of the
-                latest industry trends and developments.
+                The number of individuals downloading Android apps has risen in tandem with the growing number
+                of people using Android-based mobile devices. The top Android app development firm in
+                Australia is here to help our clients remain on top of the latest industry trends and
+                developments.
               </p>
               <ul className="list-disc list-inside mb-4">
                 <li>Development of Android Mobile Apps</li>
-                <li>
-                  Creation of mobile applications for Android TV, Tablet, and
-                  Wearables
-                </li>
+                <li>Creation of mobile applications for Android TV, Tablet, and Wearables</li>
               </ul>
             </div>
           </div>
@@ -167,13 +144,10 @@ const Mobile = () => {
           <div className="flex flex-col lg:flex-row items-center">
             {/* Left Side: Description and List */}
             <div className="lg:w-2/3 p-6">
-              <h2 className="text-xl font-semibold mb-4">
-                App Development for Multiple Platforms
-              </h2>
+              <h2 className="text-xl font-semibold mb-4">App Development for Multiple Platforms</h2>
               <p className="text-base lg:text-lg mb-4">
-                By acquiring high-quality mobile apps that work across many
-                platforms, you can serve your customers with an app that is
-                compatible with their OS. From there, improve the convenience
+                By acquiring high-quality mobile apps that work across many platforms, you can serve your
+                customers with an app that is compatible with their OS. From there, improve the convenience
                 and speed for users when experiencing the service you provide.
               </p>
               <ul className="list-disc list-inside mb-4">
@@ -184,11 +158,7 @@ const Mobile = () => {
             </div>
             {/* Right Side: Image */}
             <div className="lg:w-1/3">
-              <img
-                src={mobile}
-                alt="Mobile App Development"
-                className="object-cover w-full h-full"
-              />
+              <img src={mobile} alt="Mobile App Development" className="object-cover w-full h-full" />
             </div>
           </div>
         </div>
@@ -199,21 +169,18 @@ const Mobile = () => {
           <svg
             viewBox="0 0 1440 320"
             className="absolute inset-x-0 bottom-0"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+            xmlns="http://www.w3.org/2000/svg">
             <path
               fill="#f8f7fa"
               fillOpacity="1"
-              d="M0,96L30,117.3C60,139,120,181,180,186.7C240,192,300,160,360,149.3C420,139,480,149,540,186.7C600,224,660,288,720,293.3C780,299,840,245,900,229.3C960,213,1020,235,1080,240C1140,245,1200,235,1260,218.7C1320,203,1380,181,1410,170.7L1440,160L1440,320L0,320Z"
-            ></path>
+              d="M0,96L30,117.3C60,139,120,181,180,186.7C240,192,300,160,360,149.3C420,139,480,149,540,186.7C600,224,660,288,720,293.3C780,299,840,245,900,229.3C960,213,1020,235,1080,240C1140,245,1200,235,1260,218.7C1320,203,1380,181,1410,170.7L1440,160L1440,320L0,320Z"></path>
           </svg>
         </div>
         <div className="relative z-10 text-center px-4 lg:px-8">
           <h2 className="text-3xl font-bold mb-4">Get Started with Us</h2>
           <p className="text-lg mb-6 text-black">
-            Contact us today to take your business to the next level with our
-            expert mobile application development services. Let’s collaborate to
-            create innovative solutions tailored to your needs.
+            Contact us today to take your business to the next level with our expert mobile application
+            development services. Let’s collaborate to create innovative solutions tailored to your needs.
           </p>
           <a href="/Company/Contactus" className="block">
             <button className="bg-white text-red-500 py-2 px-6 rounded-full font-semibold">

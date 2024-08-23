@@ -13,7 +13,7 @@ import js from "../constants/images/tech/js.png";
 import ps from "../constants/images/tech/ps.png";
 import mongo from "../constants/images/tech/mongodb.png";
 import express from "../constants/images/tech/express.png";
-import net from "../constants/images/tech/net.png"
+import net from "../constants/images/tech/net.png";
 import webapp from "../constants/images/tech/web-app.jpg";
 import mobileapp from "../constants/images/tech/mob-app.jpg";
 import bussinessapp from "../constants/images/tech/bus-app.jpg";
@@ -26,7 +26,7 @@ import service5 from "../constants/images/tech/bank.jpg";
 import service6 from "../constants/images/tech/ecommerc.jpg";
 import Logo from "../constants/images/logo1.png";
 
-const images = [nodejs, php, python, reactImg, angular, aws, android, java, ios, js,ps, mongo, express, net];
+const images = [nodejs, php, python, reactImg, angular, aws, android, java, ios, js, ps, mongo, express, net];
 
 const titles = [
   "Node.js",
@@ -42,7 +42,7 @@ const titles = [
   "Photoshop",
   "MongoDB",
   "Express.js",
-  ".NET"
+  ".NET",
 ];
 
 const boxes = [
@@ -101,17 +101,11 @@ const services = [
 
 const Technology = () => {
   return (
-    <div className="min-h-screen relative pt-16">
+    <div className="min-h-screen relative ">
       <header className="relative w-full h-[50vh]">
-        <img
-          src={heading}
-          alt="header"
-          className="object-cover w-full h-full"
-        />
+        <img src={heading} alt="header" className="object-cover w-full h-full" />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
-          <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest">
-            TECHNOLOGIES
-          </h1>
+          <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest">TECHNOLOGIES</h1>
         </div>
       </header>
 
@@ -129,8 +123,7 @@ const Technology = () => {
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             width="843"
-            height="99"
-          >
+            height="99">
             <path
               d="M0 0 C278.19 0 556.38 0 843 0 C843 32.67 843 65.34 843 99 C564.81 99 286.62 99 0 99 C0 66.33 0 33.66 0 0 Z "
               fill="#FFFFFF"
@@ -157,68 +150,45 @@ const Technology = () => {
         <div className="w-[300px] sm:w-[600px] lg:w-[1000px] mx-auto">
           <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-7 justify-items-center gap-y-5 mb-10">
             {images.map((image, index) => (
-              <div
-                className="border border-gray-200 w-28 h-28 p-2 shadow-sm rounded-md"
-                key={index}
-              >
-                <img
-                  src={image}
-                  alt={titles[index]}
-                  className="object-contain w-20 h-20 mx-auto"
-                />
-                <h2 className="text-sm font-semibold font-mono text-center">
-                  {titles[index]}
-                </h2>
+              <div className="border border-gray-200 w-28 h-28 p-2 shadow-sm rounded-md" key={index}>
+                <img src={image} alt={titles[index]} className="object-contain w-20 h-20 mx-auto" />
+                <h2 className="text-sm font-semibold font-mono text-center">{titles[index]}</h2>
               </div>
             ))}
           </div>
         </div>
 
-      <h1 className="w-full text-center text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wider font-mono uppercase px-4 mt-8 relative inline-block after:block after:h-1 after:w-1/3 after:bg-red-500 after:mt-2 after:mx-auto">
-  Our Technology Boxes
-</h1>
+        <h1 className="w-full text-center text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wider font-mono uppercase px-4 mt-8 relative inline-block after:block after:h-1 after:w-1/3 after:bg-red-500 after:mt-2 after:mx-auto">
+          Our Technology Boxes
+        </h1>
 
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 px-6 sm:px-12 lg:px-20 mb-10">
-  {boxes.map((box, index) => (
-    <div
-      className="border border-red-500 p-6 text-center shadow-lg"
-      key={index}
-    >
-      <div className="flex items-center justify-center mx-auto h-48 sm:h-64 lg:h-80 w-full mb-4">
-        <img
-          src={box.image}
-          alt={box.topic}
-          className="object-contain h-full w-full"
-        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 px-6 sm:px-12 lg:px-20 mb-10">
+          {boxes.map((box, index) => (
+            <div className="border border-red-500 p-6 text-center shadow-lg" key={index}>
+              <div className="flex items-center justify-center mx-auto h-48 sm:h-64 lg:h-80 w-full mb-4">
+                <img src={box.image} alt={box.topic} className="object-contain h-full w-full" />
+              </div>
+              <h2 className="text-lg sm:text-xl font-bold mb-2">{box.topic}</h2>
+              <p className="text-gray-700 text-sm sm:text-base">{box.paragraph}</p>
+            </div>
+          ))}
+        </div>
+
+        <h1 className="w-full text-center text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wider font-mono uppercase px-4 mt-8 relative inline-block after:block after:h-1 after:w-1/3 after:bg-red-500 after:mt-2 after:mx-auto">
+          Domain Expertise
+        </h1>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 px-6 sm:px-12 lg:px-40 mb-10">
+          {services.map((service, index) => (
+            <div className="border border-red-500 p-6 text-center shadow-lg" key={index}>
+              <div className="flex items-center justify-center mx-auto h-48 sm:h-64 lg:h-80 w-full mb-4">
+                <img src={service.image} alt={service.topic} className="object-contain h-full w-full" />
+              </div>
+              <h2 className="text-lg sm:text-xl font-bold mb-2">{service.topic}</h2>
+            </div>
+          ))}
+        </div>
       </div>
-      <h2 className="text-lg sm:text-xl font-bold mb-2">{box.topic}</h2>
-      <p className="text-gray-700 text-sm sm:text-base">{box.paragraph}</p>
-    </div>
-  ))}
-</div>
-
-<h1 className="w-full text-center text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wider font-mono uppercase px-4 mt-8 relative inline-block after:block after:h-1 after:w-1/3 after:bg-red-500 after:mt-2 after:mx-auto">
-  Domain Expertise
-</h1>
-
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 px-6 sm:px-12 lg:px-40 mb-10">
-  {services.map((service, index) => (
-    <div
-      className="border border-red-500 p-6 text-center shadow-lg"
-      key={index}
-    >
-      <div className="flex items-center justify-center mx-auto h-48 sm:h-64 lg:h-80 w-full mb-4">
-        <img
-          src={service.image}
-          alt={service.topic}
-          className="object-contain h-full w-full"
-        />
-      </div>
-      <h2 className="text-lg sm:text-xl font-bold mb-2">{service.topic}</h2>
-    </div>
-  ))}
-</div>
-</div>
     </div>
   );
 };

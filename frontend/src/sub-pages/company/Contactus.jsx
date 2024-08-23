@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import emailjs from "emailjs-com";
 import {
   FaEnvelope,
   FaFacebook,
@@ -9,21 +10,63 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import heading from "../../constants/images/company/headcon.jpg";
+import { emaiJsCredentials } from "../../constants/emailJs";
+
+// Initialize EmailJS
+const initializeEmailJS = () => {
+  emailjs.init(emaiJsCredentials.EMAILJS_PUBLIC_KEY); // EmailJS public key
+};
 
 const Contactus = ({ showHeaderImage = true }) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [message, setMessage] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    initializeEmailJS();
+  }, []);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setError(null);
+    setMessage(null);
+
+    const { name, email, subject, message } = formData;
+
+    emailjs
+      .send(
+        emaiJsCredentials.EMAILJS_SERVICE_ID,
+        emaiJsCredentials.EMAILJS_TEMPLATE_ID,
+        { name, email, subject, message },
+        emaiJsCredentials.EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          setMessage("Message sent successfully!");
+          setFormData({ name: "", email: "", subject: "", message: "" });
+        },
+        (error) => {
+          setError("Failed to send message!");
+        }
+      );
+  };
+
   return (
-    <div className="min-h-screen relative pt-16">
+    <div className="min-h-screen relative ">
       {showHeaderImage && (
         <header className="relative w-full h-[50vh]">
-          <img
-            src={heading}
-            alt="header"
-            className="object-cover w-full h-full"
-          />
+          <img src={heading} alt="header" className="object-cover w-full h-full" />
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
-            <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest">
-              CONTACT US
-            </h1>
+            <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest">CONTACT US</h1>
           </div>
         </header>
       )}
@@ -32,13 +75,10 @@ const Contactus = ({ showHeaderImage = true }) => {
         <div className="flex flex-col gap-5 px-2 sm:px-4 lg:px-8">
           {/* Contact Us Description */}
           <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-5xl font-bold  text-center mb-2 font-mono">
-              CONTACT US
-            </h2>
+            <h2 className="text-2xl md:text-5xl font-bold  text-center mb-2 font-mono">CONTACT US</h2>
             <p className="text-lg">
-              We would love to hear from you! <br></br>Whether you have a
-              question about our services, <br></br>need assistance, or just
-              want to give feedback, feel free to reach out to us. <br></br>
+              We would love to hear from you! <br></br>Whether you have a question about our services,{" "}
+              <br></br>need assistance, or just want to give feedback, feel free to reach out to us. <br></br>
               Our team is here to help you.
             </p>
           </div>
@@ -49,10 +89,7 @@ const Contactus = ({ showHeaderImage = true }) => {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-6">
                 {/* Address */}
                 <div className="w-full flex mb-6 lg:mb-0 lg:mr-4">
-                  <FaMapMarkerAlt
-                    style={{ fontSize: "2rem" }}
-                    className="text-red-600 mr-4 mt-1"
-                  />
+                  <FaMapMarkerAlt style={{ fontSize: "2rem" }} className="text-red-600 mr-4 mt-1" />
                   <div>
                     <p className="text-lg">
                       Phoenix Soft Solutions (Pvt) Ltd
@@ -65,10 +102,7 @@ const Contactus = ({ showHeaderImage = true }) => {
 
                 {/* Email */}
                 <div className="w-full flex mb-6 lg:mb-0 lg:mr-4">
-                  <FaEnvelope
-                    style={{ fontSize: "2rem" }}
-                    className="text-red-600 mr-4 mt-1"
-                  />
+                  <FaEnvelope style={{ fontSize: "2rem" }} className="text-red-600 mr-4 mt-1" />
                   <div>
                     <p className="text-lg">info@phoenixsoftsolutions.com</p>
                   </div>
@@ -76,10 +110,7 @@ const Contactus = ({ showHeaderImage = true }) => {
 
                 {/* Phone */}
                 <div className="w-full flex">
-                  <FaMobileAlt
-                    style={{ fontSize: "2rem" }}
-                    className="text-red-600 mr-4 mt-1"
-                  />
+                  <FaMobileAlt style={{ fontSize: "2rem" }} className="text-red-600 mr-4 mt-1" />
                   <div>
                     <p className="text-lg">+61 2-7912 3603 </p>
                   </div>
@@ -97,8 +128,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   style={{ border: 0 }}
                   allowFullScreen=""
                   aria-hidden="false"
-                  tabIndex="0"
-                ></iframe>
+                  tabIndex="0"></iframe>
               </div>
             </div>
           </div>
@@ -108,10 +138,7 @@ const Contactus = ({ showHeaderImage = true }) => {
               <h3 className="text-xl font-semibold mb-2">New Zealand</h3>
               <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5 sm:gap-x-10 mb-2">
                 <div className="flex flex-row">
-                  <FaMapMarkerAlt
-                    className="text-red-600 mr-4 mt-1"
-                    style={{ fontSize: "2rem" }}
-                  />
+                  <FaMapMarkerAlt className="text-red-600 mr-4 mt-1" style={{ fontSize: "2rem" }} />
                   <p className="text-lg">
                     <span>Phoenix Soft Solutions (Pvt) Ltd,</span>
                     <br />
@@ -122,10 +149,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   </p>
                 </div>
                 <div className="flex">
-                  <FaMobileAlt
-                    className="text-red-600 mr-4"
-                    style={{ fontSize: "2rem" }}
-                  />
+                  <FaMobileAlt className="text-red-600 mr-4" style={{ fontSize: "2rem" }} />
                   <p className="text-lg">+</p>
                 </div>
               </div>
@@ -140,8 +164,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   style={{ border: 0 }}
                   allowFullScreen=""
                   aria-hidden="false"
-                  tabIndex="0"
-                ></iframe>
+                  tabIndex="0"></iframe>
               </div>
             </div>
 
@@ -150,10 +173,7 @@ const Contactus = ({ showHeaderImage = true }) => {
               <h3 className="text-xl font-semibold mb-2">United Kingdom </h3>
               <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5 sm:gap-x-10 mb-2">
                 <div className="flex flex-row">
-                  <FaMapMarkerAlt
-                    className="text-red-600 mr-4 mt-1"
-                    style={{ fontSize: "2rem" }}
-                  />
+                  <FaMapMarkerAlt className="text-red-600 mr-4 mt-1" style={{ fontSize: "2rem" }} />
                   <p className="text-lg">
                     <span>Phoenix Soft Solutions (Pvt) Ltd,</span>
                     <br />
@@ -164,10 +184,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   </p>
                 </div>
                 <div className="flex">
-                  <FaMobileAlt
-                    className="text-red-600 mr-4"
-                    style={{ fontSize: "2rem" }}
-                  />
+                  <FaMobileAlt className="text-red-600 mr-4" style={{ fontSize: "2rem" }} />
                   <p className="text-lg">+447908678192</p>
                 </div>
               </div>
@@ -181,8 +198,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   style={{ border: 0 }}
                   allowFullScreen=""
                   aria-hidden="false"
-                  tabIndex="0"
-                ></iframe>
+                  tabIndex="0"></iframe>
               </div>
             </div>
 
@@ -191,10 +207,7 @@ const Contactus = ({ showHeaderImage = true }) => {
               <h3 className="text-xl font-semibold mb-2">Sri Lanka</h3>
               <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5 sm:gap-x-10 mb-2">
                 <div className="flex flex-row">
-                  <FaMapMarkerAlt
-                    className="text-red-600 mr-4 mt-1"
-                    style={{ fontSize: "2rem" }}
-                  />
+                  <FaMapMarkerAlt className="text-red-600 mr-4 mt-1" style={{ fontSize: "2rem" }} />
                   <p className="text-lg">
                     <span>Phoenix Soft Solutions (Pvt) Ltd,</span>
                     <br />
@@ -205,10 +218,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   </p>
                 </div>
                 <div className="flex">
-                  <FaMobileAlt
-                    className="text-red-600 mr-4"
-                    style={{ fontSize: "2rem" }}
-                  />
+                  <FaMobileAlt className="text-red-600 mr-4" style={{ fontSize: "2rem" }} />
                   <p className="text-lg">+94 77 844 3682</p>
                 </div>
               </div>
@@ -222,8 +232,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   style={{ border: 0 }}
                   allowFullScreen=""
                   aria-hidden="false"
-                  tabIndex="0"
-                ></iframe>
+                  tabIndex="0"></iframe>
               </div>
             </div>
 
@@ -232,10 +241,7 @@ const Contactus = ({ showHeaderImage = true }) => {
               <h3 className="text-xl font-semibold mb-2">Sweden</h3>
               <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5 sm:gap-x-10 mb-2">
                 <div className="flex flex-row">
-                  <FaMapMarkerAlt
-                    className="text-red-600 mr-4 mt-1"
-                    style={{ fontSize: "2rem" }}
-                  />
+                  <FaMapMarkerAlt className="text-red-600 mr-4 mt-1" style={{ fontSize: "2rem" }} />
                   <p className="text-lg">
                     <span>Phoenix Soft Solutions (Pvt) Ltd,</span>
                     <br />
@@ -246,10 +252,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   </p>
                 </div>
                 <div className="flex">
-                  <FaMobileAlt
-                    className="text-red-600 mr-4"
-                    style={{ fontSize: "2rem" }}
-                  />
+                  <FaMobileAlt className="text-red-600 mr-4" style={{ fontSize: "2rem" }} />
                   <p className="text-lg">+46 766920017</p>
                 </div>
               </div>
@@ -263,8 +266,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   style={{ border: 0 }}
                   allowFullScreen=""
                   aria-hidden="false"
-                  tabIndex="0"
-                ></iframe>
+                  tabIndex="0"></iframe>
               </div>
             </div>
           </div>
@@ -283,32 +285,28 @@ const Contactus = ({ showHeaderImage = true }) => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-red-600 hover:text-red-400"
-              >
+                className="text-red-600 hover:text-red-400">
                 <FaFacebook className="text-3xl md:text-5xl" />
               </a>
               <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-red-600 hover:text-red-400"
-              >
+                className="text-red-600 hover:text-red-400">
                 <FaTwitter className="text-3xl md:text-5xl" />
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-red-600 hover:text-red-400"
-              >
+                className="text-red-600 hover:text-red-400">
                 <FaLinkedin className="text-3xl md:text-5xl" />
               </a>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-red-600 hover:text-red-400"
-              >
+                className="text-red-600 hover:text-red-400">
                 <FaInstagram className="text-3xl md:text-5xl" />
               </a>
             </div>
@@ -317,76 +315,56 @@ const Contactus = ({ showHeaderImage = true }) => {
           {/* Right Side with Contact Box */}
           <div className="w-full lg:w-1/2 p-4 sm:px-10 md:px-40 lg:px-4 mt-5">
             <div className="bg-white border border-gray-300 rounded-lg shadow-md p-12 md:p-14">
-              <h3 className="text-xl md:text-2xl font-semibold mb-4">
-                Contact Us
-              </h3>
-              <form>
-                <div className="mb-4">
-                  <label
-                    htmlFor="name"
-                    className="block text-lg font-medium mb-2"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    className="w-full p-2 border border-gray-300 rounded-lg"
-                    placeholder="Your Name"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label
-                    htmlFor="email"
-                    className="block text-lg font-medium mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full p-2 border border-gray-300 rounded-lg"
-                    placeholder="Your Email"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label
-                    htmlFor="subject"
-                    className="block text-lg font-medium mb-2"
-                  >
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    className="w-full p-2 border border-gray-300 rounded-lg"
-                    placeholder="Subject"
-                  />
-                </div>
-                <div className="mb-4">
-                  <label
-                    htmlFor="message"
-                    className="block text-lg font-medium mb-2"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="4"
-                    className="w-full p-2 border border-gray-300 rounded-lg"
-                    placeholder="Your Message"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="border-2 border-red-700 bg-red-700 text-white py-2 px-6 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
-                >
+              <h3 className="text-xl md:text-2xl font-semibold mb-4">Contact Us</h3>
+              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Your Name"
+                  required
+                  className="border border-gray-300 p-2 rounded"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Your Email"
+                  required
+                  className="border border-gray-300 p-2 rounded"
+                />
+                <input
+                  type="text"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  placeholder="Subject"
+                  required
+                  className="border border-gray-300 p-2 rounded"
+                />
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Your Message"
+                  required
+                  className="border border-gray-300 p-2 rounded h-32"
+                />
+                <button type="submit" className="bg-red-600 text-white py-2 rounded mt-4">
                   Send Message
                 </button>
+                {message && (
+                  <div className="text-center bg-blue-500 text-white p-2">
+                    <p>{message}</p>
+                  </div>
+                )}
+                {error && (
+                  <div className="text-center bg-red-600 text-black p-2">
+                    <p>{error}</p>
+                  </div>
+                )}
               </form>
             </div>
           </div>
