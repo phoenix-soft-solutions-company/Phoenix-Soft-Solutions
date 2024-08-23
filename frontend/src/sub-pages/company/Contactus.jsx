@@ -12,18 +12,12 @@ import heading from "../../constants/images/company/headcon.jpg";
 
 const Contactus = ({ showHeaderImage = true }) => {
   return (
-    <div className="min-h-screen relative pt-16">
+    <div className="min-h-screen relative ">
       {showHeaderImage && (
         <header className="relative w-full h-[50vh]">
-          <img
-            src={heading}
-            alt="header"
-            className="object-cover w-full h-full"
-          />
+          <img src={heading} alt="header" className="object-cover w-full h-full" />
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white">
-            <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest">
-              CONTACT US
-            </h1>
+            <h1 className="text-2xl lg:text-5xl font-serif font-bold tracking-widest">CONTACT US</h1>
           </div>
         </header>
       )}
@@ -32,13 +26,10 @@ const Contactus = ({ showHeaderImage = true }) => {
         <div className="flex flex-col gap-5 px-2 sm:px-4 lg:px-8">
           {/* Contact Us Description */}
           <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-5xl font-bold  text-center mb-2 font-mono">
-              CONTACT US
-            </h2>
+            <h2 className="text-2xl md:text-5xl font-bold  text-center mb-2 font-mono">CONTACT US</h2>
             <p className="text-lg">
-              We would love to hear from you! <br></br>Whether you have a
-              question about our services, <br></br>need assistance, or just
-              want to give feedback, feel free to reach out to us. <br></br>
+              We would love to hear from you! <br></br>Whether you have a question about our services,{" "}
+              <br></br>need assistance, or just want to give feedback, feel free to reach out to us. <br></br>
               Our team is here to help you.
             </p>
           </div>
@@ -49,10 +40,7 @@ const Contactus = ({ showHeaderImage = true }) => {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-6">
                 {/* Address */}
                 <div className="w-full flex mb-6 lg:mb-0 lg:mr-4">
-                  <FaMapMarkerAlt
-                    style={{ fontSize: "2rem" }}
-                    className="text-red-600 mr-4 mt-1"
-                  />
+                  <FaMapMarkerAlt style={{ fontSize: "2rem" }} className="text-red-600 mr-4 mt-1" />
                   <div>
                     <p className="text-lg">
                       Phoenix Soft Solutions (Pvt) Ltd
@@ -65,10 +53,7 @@ const Contactus = ({ showHeaderImage = true }) => {
 
                 {/* Email */}
                 <div className="w-full flex mb-6 lg:mb-0 lg:mr-4">
-                  <FaEnvelope
-                    style={{ fontSize: "2rem" }}
-                    className="text-red-600 mr-4 mt-1"
-                  />
+                  <FaEnvelope style={{ fontSize: "2rem" }} className="text-red-600 mr-4 mt-1" />
                   <div>
                     <p className="text-lg">info@phoenixsoftsolutions.com</p>
                   </div>
@@ -76,10 +61,7 @@ const Contactus = ({ showHeaderImage = true }) => {
 
                 {/* Phone */}
                 <div className="w-full flex">
-                  <FaMobileAlt
-                    style={{ fontSize: "2rem" }}
-                    className="text-red-600 mr-4 mt-1"
-                  />
+                  <FaMobileAlt style={{ fontSize: "2rem" }} className="text-red-600 mr-4 mt-1" />
                   <div>
                     <p className="text-lg">+61 2-7912 3603 </p>
                   </div>
@@ -97,8 +79,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   style={{ border: 0 }}
                   allowFullScreen=""
                   aria-hidden="false"
-                  tabIndex="0"
-                ></iframe>
+                  tabIndex="0"></iframe>
               </div>
             </div>
           </div>
@@ -108,10 +89,7 @@ const Contactus = ({ showHeaderImage = true }) => {
               <h3 className="text-xl font-semibold mb-2">New Zealand</h3>
               <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5 sm:gap-x-10 mb-2">
                 <div className="flex flex-row">
-                  <FaMapMarkerAlt
-                    className="text-red-600 mr-4 mt-1"
-                    style={{ fontSize: "2rem" }}
-                  />
+                  <FaMapMarkerAlt className="text-red-600 mr-4 mt-1" style={{ fontSize: "2rem" }} />
                   <p className="text-lg">
                     <span>Phoenix Soft Solutions (Pvt) Ltd,</span>
                     <br />
@@ -122,10 +100,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   </p>
                 </div>
                 <div className="flex">
-                  <FaMobileAlt
-                    className="text-red-600 mr-4"
-                    style={{ fontSize: "2rem" }}
-                  />
+                  <FaMobileAlt className="text-red-600 mr-4" style={{ fontSize: "2rem" }} />
                   <p className="text-lg">+</p>
                 </div>
               </div>
@@ -140,8 +115,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   style={{ border: 0 }}
                   allowFullScreen=""
                   aria-hidden="false"
-                  tabIndex="0"
-                ></iframe>
+                  tabIndex="0"></iframe>
               </div>
             </div>
 
@@ -150,10 +124,7 @@ const Contactus = ({ showHeaderImage = true }) => {
               <h3 className="text-xl font-semibold mb-2">United Kingdom </h3>
               <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5 sm:gap-x-10 mb-2">
                 <div className="flex flex-row">
-                  <FaMapMarkerAlt
-                    className="text-red-600 mr-4 mt-1"
-                    style={{ fontSize: "2rem" }}
-                  />
+                  <FaMapMarkerAlt className="text-red-600 mr-4 mt-1" style={{ fontSize: "2rem" }} />
                   <p className="text-lg">
                     <span>Phoenix Soft Solutions (Pvt) Ltd,</span>
                     <br />
@@ -164,10 +135,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   </p>
                 </div>
                 <div className="flex">
-                  <FaMobileAlt
-                    className="text-red-600 mr-4"
-                    style={{ fontSize: "2rem" }}
-                  />
+                  <FaMobileAlt className="text-red-600 mr-4" style={{ fontSize: "2rem" }} />
                   <p className="text-lg">+447908678192</p>
                 </div>
               </div>
@@ -181,8 +149,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   style={{ border: 0 }}
                   allowFullScreen=""
                   aria-hidden="false"
-                  tabIndex="0"
-                ></iframe>
+                  tabIndex="0"></iframe>
               </div>
             </div>
 
@@ -191,10 +158,7 @@ const Contactus = ({ showHeaderImage = true }) => {
               <h3 className="text-xl font-semibold mb-2">Sri Lanka</h3>
               <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5 sm:gap-x-10 mb-2">
                 <div className="flex flex-row">
-                  <FaMapMarkerAlt
-                    className="text-red-600 mr-4 mt-1"
-                    style={{ fontSize: "2rem" }}
-                  />
+                  <FaMapMarkerAlt className="text-red-600 mr-4 mt-1" style={{ fontSize: "2rem" }} />
                   <p className="text-lg">
                     <span>Phoenix Soft Solutions (Pvt) Ltd,</span>
                     <br />
@@ -205,10 +169,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   </p>
                 </div>
                 <div className="flex">
-                  <FaMobileAlt
-                    className="text-red-600 mr-4"
-                    style={{ fontSize: "2rem" }}
-                  />
+                  <FaMobileAlt className="text-red-600 mr-4" style={{ fontSize: "2rem" }} />
                   <p className="text-lg">+94 77 844 3682</p>
                 </div>
               </div>
@@ -222,8 +183,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   style={{ border: 0 }}
                   allowFullScreen=""
                   aria-hidden="false"
-                  tabIndex="0"
-                ></iframe>
+                  tabIndex="0"></iframe>
               </div>
             </div>
 
@@ -232,10 +192,7 @@ const Contactus = ({ showHeaderImage = true }) => {
               <h3 className="text-xl font-semibold mb-2">Sweden</h3>
               <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-5 sm:gap-x-10 mb-2">
                 <div className="flex flex-row">
-                  <FaMapMarkerAlt
-                    className="text-red-600 mr-4 mt-1"
-                    style={{ fontSize: "2rem" }}
-                  />
+                  <FaMapMarkerAlt className="text-red-600 mr-4 mt-1" style={{ fontSize: "2rem" }} />
                   <p className="text-lg">
                     <span>Phoenix Soft Solutions (Pvt) Ltd,</span>
                     <br />
@@ -246,10 +203,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   </p>
                 </div>
                 <div className="flex">
-                  <FaMobileAlt
-                    className="text-red-600 mr-4"
-                    style={{ fontSize: "2rem" }}
-                  />
+                  <FaMobileAlt className="text-red-600 mr-4" style={{ fontSize: "2rem" }} />
                   <p className="text-lg">+46 766920017</p>
                 </div>
               </div>
@@ -263,8 +217,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   style={{ border: 0 }}
                   allowFullScreen=""
                   aria-hidden="false"
-                  tabIndex="0"
-                ></iframe>
+                  tabIndex="0"></iframe>
               </div>
             </div>
           </div>
@@ -283,32 +236,28 @@ const Contactus = ({ showHeaderImage = true }) => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-red-600 hover:text-red-400"
-              >
+                className="text-red-600 hover:text-red-400">
                 <FaFacebook className="text-3xl md:text-5xl" />
               </a>
               <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-red-600 hover:text-red-400"
-              >
+                className="text-red-600 hover:text-red-400">
                 <FaTwitter className="text-3xl md:text-5xl" />
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-red-600 hover:text-red-400"
-              >
+                className="text-red-600 hover:text-red-400">
                 <FaLinkedin className="text-3xl md:text-5xl" />
               </a>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-red-600 hover:text-red-400"
-              >
+                className="text-red-600 hover:text-red-400">
                 <FaInstagram className="text-3xl md:text-5xl" />
               </a>
             </div>
@@ -317,15 +266,10 @@ const Contactus = ({ showHeaderImage = true }) => {
           {/* Right Side with Contact Box */}
           <div className="w-full lg:w-1/2 p-4 sm:px-10 md:px-40 lg:px-4 mt-5">
             <div className="bg-white border border-gray-300 rounded-lg shadow-md p-12 md:p-14">
-              <h3 className="text-xl md:text-2xl font-semibold mb-4">
-                Contact Us
-              </h3>
+              <h3 className="text-xl md:text-2xl font-semibold mb-4">Contact Us</h3>
               <form>
                 <div className="mb-4">
-                  <label
-                    htmlFor="name"
-                    className="block text-lg font-medium mb-2"
-                  >
+                  <label htmlFor="name" className="block text-lg font-medium mb-2">
                     Name
                   </label>
                   <input
@@ -337,10 +281,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   />
                 </div>
                 <div className="mb-4">
-                  <label
-                    htmlFor="email"
-                    className="block text-lg font-medium mb-2"
-                  >
+                  <label htmlFor="email" className="block text-lg font-medium mb-2">
                     Email
                   </label>
                   <input
@@ -352,10 +293,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   />
                 </div>
                 <div className="mb-4">
-                  <label
-                    htmlFor="subject"
-                    className="block text-lg font-medium mb-2"
-                  >
+                  <label htmlFor="subject" className="block text-lg font-medium mb-2">
                     Subject
                   </label>
                   <input
@@ -367,10 +305,7 @@ const Contactus = ({ showHeaderImage = true }) => {
                   />
                 </div>
                 <div className="mb-4">
-                  <label
-                    htmlFor="message"
-                    className="block text-lg font-medium mb-2"
-                  >
+                  <label htmlFor="message" className="block text-lg font-medium mb-2">
                     Message
                   </label>
                   <textarea
@@ -378,13 +313,11 @@ const Contactus = ({ showHeaderImage = true }) => {
                     name="message"
                     rows="4"
                     className="w-full p-2 border border-gray-300 rounded-lg"
-                    placeholder="Your Message"
-                  ></textarea>
+                    placeholder="Your Message"></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="border-2 border-red-700 bg-red-700 text-white py-2 px-6 text-base rounded hover:bg-white hover:text-red-700 transition duration-500"
-                >
+                  className="border-2 border-red-700 bg-red-700 text-white py-2 px-6 text-base rounded hover:bg-white hover:text-red-700 transition duration-500">
                   Send Message
                 </button>
               </form>
