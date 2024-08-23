@@ -8,19 +8,19 @@ import slide4 from "../constants/images/slides/slide4.png";
 const images = [
   {
     path: slide1,
-    title: "Phoenix Soft Solutions",
+    title: "PHOENIX SOFT SOLUTIONS",
   },
   {
     path: slide2,
-    title: "Web Design & Development",
+    title: "WEB DESIGN & DEVELOPMENT",
   },
   {
     path: slide3,
-    title: "Mobile App Design & Development",
+    title: "MOBILE APP DESIGN & DEVELOPMENT",
   },
   {
     path: slide4,
-    title: "Cybersecurity Development Services",
+    title: "CYBERSECURITY DEVELOPENT SERVICES",
   },
 ];
 
