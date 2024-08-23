@@ -163,9 +163,8 @@ function Home() {
             <h2 className="text-2xl mb-2">Web Application Development</h2>
             <p className="text-lg">
               To help businesses successfully communicate with their intended
-              demographic, Phoenix Soft Solutions provides services
-              that include the complete spectrum of the software development
-              life cycle.
+              demographic, Phoenix Soft Solutions provides services that include
+              the complete spectrum of the software development life cycle.
             </p>
           </div>
 
@@ -299,7 +298,7 @@ function Home() {
       <div className="flex flex-col py-5">
         <div className="text-center py-6">
           <h1 className="header-underline-animation font-bold text-2xl lg:text-3xl pb-1 sm:pb-2 lg:pb-3 font-serif">
-            OUR VALUES
+            WHAT’S CLIENTS SAY
           </h1>
           <p className="text-lg pt-4 px-4 sm:px-20 lg:px-40 xl:px-60">
             Their commitment to customer satisfaction is evident in every

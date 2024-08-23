@@ -50,7 +50,7 @@ function Footer() {
             <span>Desktop Application</span>
             <br />
 
-            <span>Cyber Security System Development</span>
+            <span>Cyber Security System </span>
             <br />
             <span>UI/UX Designing</span>
           </p>
