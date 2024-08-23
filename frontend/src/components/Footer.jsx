@@ -124,7 +124,7 @@ function Footer() {
           <p className="text-base font-mono text-start sm:text-center">
             &copy; {new Date().getFullYear()} Phoenix Soft Solutions. All Rights Reserved.
           </p>
-          <div className="flex flex-row justify-end pr-5 mt-2 mb-5 text-sm">
+          <div className="flex flex-row justify-start sm:justify-center mt-2 mb-5 text-sm">
             <a
               className="mr-4"
               href="https://www.termsfeed.com/live/5a224dd5-578c-41ff-b204-65c76070d75b"
