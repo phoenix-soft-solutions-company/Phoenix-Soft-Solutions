@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <nav className=" bg-red-600 text-white fixed left-0 top-0 right-0 z-[1000]">
       <div className="relative">
-        <div className="absolute top-[10px] xl:top-[8px] left-4 flex items-center z-[1001]">
+        <div className="absolute top-[10px] xl:top-[8px] left-4 flex items-center z-[900]">
           <img
             src={Logo}
             alt="Company Logo"
@@ -131,7 +131,7 @@ const Navbar = () => {
                 {link.subpages &&
                   link.subpages.length > 5 &&
                   dropdownOpen === index && (
-                    <div className="flex flex-row absolute left-0 z-[999]w-96 bg-red-600 border border-red-700 rounded shadow-lg">
+                    <div className="flex flex-row absolute left-0 z-[1001] w-96 bg-red-600 border border-red-700 rounded shadow-lg">
                       <div className="w-48 group-hover:block border-r border-red-700">
                         {link.subpages.slice(0, 9).map((subpage, subIndex) => (
                           <Link
