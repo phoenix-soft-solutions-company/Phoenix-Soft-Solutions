@@ -10,12 +10,20 @@ function NavBar({ isSidebarVisible, isSidebarFullyHidden, onOpenSidebar }) {
 
   // Generate the navigation path
   const pathSegments = location.pathname.split("/").filter(Boolean);
-  const navigationPath = pathSegments.map((segment, index) => (
-    <React.Fragment key={segment}>
-      <span>{segment.charAt(0).toUpperCase() + segment.slice(1)}</span>
-      {index < pathSegments.length - 1 && <span className="mx-2">/</span>}
-    </React.Fragment>
-  ));
+  const navigationPath = pathSegments.map((segment, index) => {
+    // Replace dashes with spaces and capitalize the first letter of each word
+    const formattedSegment = segment
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+
+    return (
+      <React.Fragment key={segment}>
+        <span>{formattedSegment}</span>
+        {index < pathSegments.length - 1 && <span className="mx-2">/</span>}
+      </React.Fragment>
+    );
+  });
 
   return (
     <div
