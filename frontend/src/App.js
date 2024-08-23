@@ -42,6 +42,7 @@ import XcropEvent from "./admin-panel/xcrop/XcropEvent";
 import XcropProject from "./admin-panel/xcrop/XcropProject";
 import XcropFeedback from "./admin-panel/xcrop/XcropFeedback";
 import { DarkModeProvider } from "./DarkModeContext";
+import Chat from "./components/Chat"; // Import the Chat component
 
 const App = () => {
   const location = useLocation();
@@ -52,10 +53,10 @@ const App = () => {
 
   return (
     <DarkModeProvider>
-      <div className="flex flex-col">
+      <div className="flex flex-col min-h-screen relative">
         {/* Conditionally render Navbar */}
         {!noNavbarPaths.includes(location.pathname) && !isAdminRoute && <Navbar />}
-        <div className="">
+        <div className="flex-grow">
           <Routes>
             {/* main pages */}
             <Route path="/" element={<Home />} />
@@ -106,6 +107,9 @@ const App = () => {
           </Routes>
         </div>
         {!noNavbarPaths.includes(location.pathname) && !isAdminRoute && <Footer />}
+
+        {/* Chat button */}
+        {!isAdminRoute && <Chat />}
       </div>
     </DarkModeProvider>
   );

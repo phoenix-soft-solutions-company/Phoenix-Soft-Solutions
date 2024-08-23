@@ -24,15 +24,15 @@ const EventPage = () => {
       </header>
 
       <div className="container mx-auto p-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-10">
           {events?.map((event) => (
             <div
               key={event._id}
-              className="bg-white border border-gray-300 rounded-lg overflow-hidden shadow-lg">
+              className="bg-white border border-gray-300 rounded-lg overflow-hidden shadow-lg ">
               <img
                 src={`https://drive.google.com/thumbnail?id=${event.image}&sz=w1200`}
                 alt={event.title}
-                className="w-full h-64 object-cover"
+                className="w-full h-auto object-cover"
               />
               <div className="p-6">
                 <h2 className="text-xl font-semibold">{event.title}</h2>
