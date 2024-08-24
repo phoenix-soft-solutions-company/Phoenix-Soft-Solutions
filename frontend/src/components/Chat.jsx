@@ -4,7 +4,7 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 function Chat() {
   const openWhatsAppChat = () => {
-    const phoneNumber = "94778443682"; 
+    const phoneNumber = "+94778443682"; 
     const url = `https://wa.me/${phoneNumber}`;
     window.open(url, "_blank");
   };
