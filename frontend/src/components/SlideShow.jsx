@@ -44,7 +44,7 @@ function SlideShow() {
             className={`slide-image ${index === currentImageIndex ? "slide-image-active" : ""}`}
           />
           <div
-            className={`slide-title font-mono text-2xl sm:text-4xl lg:text-6xl font-bold top-[40%] w-[80%] sm:w-[60%] lg:w-[40%] ${
+            className={`slide-title font-mono text-2xl sm:text-4xl lg:text-7xl font-bold top-[40%] w-[80%] sm:w-[60%] lg:w-[40%] ${
               index === currentImageIndex ? "slide-title-active" : ""
             }`}>
             {image.title}
