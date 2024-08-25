@@ -95,7 +95,7 @@ const Navbar = () => {
                 onMouseLeave={() => toggleDropdown(null)}>
                 <Link
                   to={link.path}
-                  className="flex flex-row items-center gap-1 hover:bg-red-700  hover:underline underline-offset-8 px-3 py-2 rounded">
+                  className="flex flex-row items-center gap-1 hover:bg-red-400  hover:underline underline-offset-8 px-3 py-2 rounded">
                   <span className="tracking-wide font-semibold font-mono uppercase text-md">{link.name}</span>
                   {link.subpages && (
                     <div className="flex items-center h-full">
@@ -110,7 +110,7 @@ const Navbar = () => {
                       <Link
                         key={subIndex}
                         to={subpage.path}
-                        className="block px-4 py-2 hover:bg-red-700"
+                        className="block px-4 py-2 hover:bg-red-400"
                         onClick={toggleNavbar}>
                         <span className="tracking-wide font-semibold hover:underline underline-offset-8 font-mono uppercase text-md">
                           {subpage.name}
@@ -127,7 +127,7 @@ const Navbar = () => {
                         <Link
                           key={subIndex}
                           to={subpage.path}
-                          className="block px-4 py-2 hover:bg-red-700"
+                          className="block px-4 py-2 hover:bg-red-400"
                           onClick={toggleNavbar}>
                           <span className="tracking-wide font-semibold hover:underline underline-offset-8 font-mono uppercase text-md">
                             {subpage.name}
@@ -141,7 +141,7 @@ const Navbar = () => {
                         <Link
                           key={subIndex}
                           to={subpage.path}
-                          className="block px-4 py-2 hover:bg-red-700"
+                          className="block px-4 py-2 hover:bg-red-400"
                           onClick={toggleNavbar}>
                           <span className="tracking-wide font-semibold hover:underline underline-offset-8 font-mono uppercase text-md">
                             {subpage.name}

@@ -133,7 +133,7 @@
 
 /* Swiper Slides  */
 .mySwiper .swiper-pagination-bullet {
-  background: gray !important; /* Default bullet color */
+  background: rgb(165, 164, 166) !important; /* Default bullet color */
   opacity: 0.7 !important;
 }
 

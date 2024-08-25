@@ -54,7 +54,7 @@ function Home() {
                   rel="noopener noreferrer"
                   className="bg-blue-600 text-white p-2 rounded-full"
                 >
-                  <FontAwesomeIcon icon={faFacebook} className="text-5xl" />
+                  <FontAwesomeIcon icon={faFacebook} className="text-4xl" />
                 </a>
                 <a
                   href="https://www.twitter.com"
@@ -62,7 +62,7 @@ function Home() {
                   rel="noopener noreferrer"
                   className="bg-blue-400 text-white p-2 rounded-full"
                 >
-                  <FontAwesomeIcon icon={faTwitter} className="text-5xl" />
+                  <FontAwesomeIcon icon={faTwitter} className="text-4xl" />
                 </a>
                 <a
                   href="https://www.linkedin.com"
@@ -70,7 +70,7 @@ function Home() {
                   rel="noopener noreferrer"
                   className="bg-blue-700 text-white p-2 rounded-full"
                 >
-                  <FontAwesomeIcon icon={faLinkedin} className="text-5xl" />
+                  <FontAwesomeIcon icon={faLinkedin} className="text-4xl" />
                 </a>
                 <a
                   href="https://www.instagram.com"
@@ -78,7 +78,7 @@ function Home() {
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-500 text-white p-3 rounded-full"
                 >
-                  <FontAwesomeIcon icon={faInstagram} className="text-5xl" />
+                  <FontAwesomeIcon icon={faInstagram} className="text-4xl" />
                 </a>
               </div>
               <div className="ballLeft absolute top-0 left-0 hidden sm:flex bg-green-500 w-16 h-16 rounded-full" />
