@@ -37,55 +37,55 @@ function Home() {
         <ImageCarousel />
       </div>
 
-     <div className="flex flex-col lg:flex-row md:py-10 xl:px-20">
-  <div className="w-full lg:w-1/2 xl:1/3 flex justify-center items-center relative">
-    <div className="p-4 border-l-2 border-t-2 border-red-600 rounded-full relative">
-      <div className="p-4 border-r-2 border-b-2 border-red-600 rounded-full relative">
-        <img
-          src={Logo}
-          alt="Description"
-          className="w-64 h-64 sm:w-96 sm:h-96 rounded-full"
-        />
-        <div className="z-[100] py- rounded-sm absolute top-[380px] left-[50px] items-center space-x-4 hidden sm:flex">
-          {/* Social Media Icons */}
-          <a
-            href="https://www.facebook.com/phoenixsoftsolutionsnz?mibextid=ZbWKwL"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-blue-600 text-white p-2 rounded-full"
-          >
-            <FontAwesomeIcon icon={faFacebook} className="text-5xl" />
-          </a>
-          <a
-            href="https://www.twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-blue-400 text-white p-2 rounded-full"
-          >
-            <FontAwesomeIcon icon={faTwitter} className="text-5xl" />
-          </a>
-          <a
-            href="https://www.linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-blue-700 text-white p-2 rounded-full"
-          >
-            <FontAwesomeIcon icon={faLinkedin} className="text-5xl" />
-          </a>
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-500 text-white p-3 rounded-full"
-          >
-            <FontAwesomeIcon icon={faInstagram} className="text-5xl" />
-          </a>
+      <div className="flex flex-col lg:flex-row md:py-10 xl:px-20">
+        <div className="w-full lg:w-1/2 xl:1/3 flex justify-center items-center relative">
+          <div className="p-4 border-l-2 border-t-2 border-red-600 rounded-full relative">
+            <div className="p-4 border-r-2 border-b-2 border-red-600 rounded-full relative">
+              <img
+                src={Logo}
+                alt="Description"
+                className="w-64 h-64 sm:w-96 sm:h-96 rounded-full"
+              />
+              <div className="z-[100] py- rounded-sm absolute top-[380px] left-[50px] items-center space-x-4 hidden sm:flex">
+                {/* Social Media Icons */}
+                <a
+                  href="https://www.facebook.com/phoenixsoftsolutionsnz?mibextid=ZbWKwL"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-600 text-white p-2 rounded-full"
+                >
+                  <FontAwesomeIcon icon={faFacebook} className="text-5xl" />
+                </a>
+                <a
+                  href="https://www.twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-400 text-white p-2 rounded-full"
+                >
+                  <FontAwesomeIcon icon={faTwitter} className="text-5xl" />
+                </a>
+                <a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-700 text-white p-2 rounded-full"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} className="text-5xl" />
+                </a>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-500 text-white p-3 rounded-full"
+                >
+                  <FontAwesomeIcon icon={faInstagram} className="text-5xl" />
+                </a>
+              </div>
+              <div className="ballLeft absolute top-0 left-0 hidden sm:flex bg-green-500 w-16 h-16 rounded-full" />
+            </div>
+            <div className="ballRight absolute top-0 right-0 hidden sm:flex bg-yellow-500 w-16 h-16 rounded-full" />
+          </div>
         </div>
-        <div className="ballLeft absolute top-0 left-0 hidden sm:flex bg-green-500 w-16 h-16 rounded-full" />
-      </div>
-      <div className="ballRight absolute top-0 right-0 hidden sm:flex bg-yellow-500 w-16 h-16 rounded-full" />
-    </div>
-  </div>
 
         <div className="w-full lg:w-1/2 xl:2/3 flex flex-col justify-center items-center p-4">
           <div className="cursor-defalt">
@@ -188,7 +188,7 @@ function Home() {
               className="mx-auto mb-3 w-16"
             />
             <h2 className="text-2xl mb-2">Web Application Development</h2>
-            <p className="text-lg">
+            <p className="text-lg text-justify">
               To help businesses successfully communicate with their intended
               demographic, Phoenix Soft Solutions provides services that include
               the complete spectrum of the software development life cycle.
@@ -202,7 +202,7 @@ function Home() {
               className="mx-auto mb-3 w-16"
             />
             <h2 className="text-2xl mb-2">Mobile App Development</h2>
-            <p className="text-lg">
+            <p className="text-lg text-justify">
               To achieve our client's business objectives, we design and build
               feature-rich handheld apps for a wide range of mobile platforms,
               with a particular emphasis on delivering superior user experience
@@ -217,7 +217,7 @@ function Home() {
               className="mx-auto mb-3 w-16"
             />
             <h2 className="text-2xl mb-2">Custom Software Development</h2>
-            <p className="text-lg">
+            <p className="text-lg text-justify">
               Our expertise is in building scalable and effective software
               solutions for businesses of all sizes, with a focus on meeting
               their unique needs to encourage expansion and innovative concepts.
@@ -231,7 +231,7 @@ function Home() {
               className="mx-auto mb-3 w-16"
             />
             <h2 className="text-2xl mb-2">DevOps Services</h2>
-            <p className="text-lg">
+            <p className="text-lg text-justify">
               We provide appropriate services to facilitate communication and
               coordination between software development and IT operations.
               Experience the power of seamless coordination as we accelerate
@@ -246,7 +246,7 @@ function Home() {
               className="mx-auto mb-3 w-16"
             />
             <h2 className="text-2xl mb-2">Software Development Outsourcing</h2>
-            <p className="text-lg">
+            <p className="text-lg text-justify">
               By utilizing Phoenix Soft Solutions's services, businesses can
               leverage our expertise and infrastructure for the smooth
               completion of their projects at accelerated lower overall costs.
@@ -260,7 +260,7 @@ function Home() {
               className="mx-auto mb-3 w-16"
             />
             <h2 className="text-2xl mb-2">Software QA Testing</h2>
-            <p className="text-lg">
+            <p className="text-lg text-justify">
               Phoenix Soft Solutions offers thorough testing and bug-fixing to
               improve overall performance and guarantee the quality, stability,
               and functioning of software programs as part of our services.
@@ -274,7 +274,7 @@ function Home() {
               className="mx-auto mb-3 w-16"
             />
             <h2 className="text-2xl  mb-2">Cloud Migration Services</h2>
-            <p className="text-lg">
+            <p className="text-lg text-justify">
               Experience a seamless transition to the cloud with our exceptional
               services. We empower businesses to effortlessly move their
               software and infrastructure, unlocking the incredible benefits of
@@ -289,7 +289,7 @@ function Home() {
               className="mx-auto mb-3 w-16"
             />
             <h2 className="text-2xl mb-2">PoC Development Services</h2>
-            <p className="text-lg">
+            <p className="text-lg text-justify">
               With our exceptional expertise, we empower you to embark on a
               journey of innovation, ensuring that your concepts are thoroughly
               tested and validated before embarking on full-scale development.
@@ -303,7 +303,7 @@ function Home() {
               className="mx-auto mb-3 w-16"
             />
             <h2 className="text-2xl mb-2">AI Development Services</h2>
-            <p className="text-lg">
+            <p className="text-lg text-justify">
               By combining cutting-edge AI with machine learning, we can create
               smart software that can streamline business operations and enhance
               decision-making. Let us transform your business into a realm of

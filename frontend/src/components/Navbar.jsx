@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { LINKS } from "../constants/Links";
 import { Link } from "react-router-dom";
 import { Bars3Icon, ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import Logo from "../constants/images/logo.png";
+import Logo from "../constants/images/logo1.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faTwitter, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
@@ -42,8 +42,8 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed left-0 top-0 right-0 z-[1000] transition-colors duration-300 ${
-        navbarBg ? "bg-red-600" : "bg-transparent"
-      } text-white`}>
+        navbarBg ? "bg-white" : "bg-transparent"
+      } text-red-600`}>
       <div className="relative">
         <div className="absolute top-[10px] xl:top-[8px] left-4 flex items-center z-[900]">
           <img src={Logo} alt="Company Logo" className="h-12 md:h-20 xl:h-24 mr-6" />
@@ -105,7 +105,7 @@ const Navbar = () => {
                 </Link>
 
                 {link.subpages && link.subpages.length < 5 && dropdownOpen === index && (
-                  <div className="absolute left-0 z-[999] w-48 bg-red-600 border border-red-700 rounded shadow-lg group-hover:block">
+                  <div className="absolute left-0 z-[999] w-48 bg-white border border-red-700 rounded shadow-lg group-hover:block">
                     {link.subpages.map((subpage, subIndex) => (
                       <Link
                         key={subIndex}
@@ -121,7 +121,7 @@ const Navbar = () => {
                 )}
 
                 {link.subpages && link.subpages.length > 5 && dropdownOpen === index && (
-                  <div className="flex flex-row absolute left-0 z-[1001] w-96 bg-red-600 border border-red-700 rounded shadow-lg">
+                  <div className="flex flex-row absolute left-0 z-[1001] w-96 bg-white border border-red-700 rounded shadow-lg">
                     <div className="w-48 group-hover:block border-r border-red-700">
                       {link.subpages.slice(0, 9).map((subpage, subIndex) => (
                         <Link
