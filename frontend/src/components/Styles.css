@@ -86,7 +86,7 @@
 }
 
 .slide-title-active {
-  left: 20%; /* Animate into view */
+  left: 3%; /* Animate into view */
 }
 
 .slide-text {
