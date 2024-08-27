@@ -42,23 +42,21 @@ import XcropEvent from "./admin-panel/xcrop/XcropEvent";
 import XcropProject from "./admin-panel/xcrop/XcropProject";
 import XcropFeedback from "./admin-panel/xcrop/XcropFeedback";
 import { DarkModeProvider } from "./DarkModeContext";
-import Chat from "./components/Chat"; // Import the Chat component
+import Chat from "./components/Chat";
+import PrivateRoute from "./components/PrivateRoute"; // Import PrivateRoute
 
 const App = () => {
   const location = useLocation();
 
-  // Paths where Navbar should not be displayed
   const noNavbarPaths = ["/login"];
   const isAdminRoute = location.pathname.startsWith("/admin");
 
   return (
     <DarkModeProvider>
       <div className="flex flex-col min-h-screen relative">
-        {/* Conditionally render Navbar */}
         {!noNavbarPaths.includes(location.pathname) && !isAdminRoute && <Navbar />}
         <div className="flex-grow">
           <Routes>
-            {/* main pages */}
             <Route path="/" element={<Home />} />
             <Route path="/company" element={<Company />} />
             <Route path="/service" element={<Service />} />
@@ -69,10 +67,8 @@ const App = () => {
             <Route path="/domain" element={<Domain />} />
             <Route path="/hosting" element={<Hosting />} />
             <Route path="/login" element={<Login />} />
-            {/* company sub pages */}
             <Route path="/company/Aboutus" element={<Aboutus />} />
             <Route path="/company/Contactus" element={<Contactus />} />
-            {/* service sub pages */}
             <Route path="/service/web" element={<WebService />} />
             <Route path="/service/mobile" element={<MobileService />} />
             <Route path="/service/custom" element={<CustomService />} />
@@ -89,16 +85,20 @@ const App = () => {
             <Route path="/service/marketing" element={<MarketingService />} />
             <Route path="/service/cyber" element={<CyberService />} />
             <Route path="/service/software" element={<SoftwareService />} />
-            {/* domain sub pages */}
             <Route path="/domain/lk" element={<LkDomain />} />
             <Route path="/domain/international" element={<InternationalDomain />} />
-            {/* hosting sub pages */}
             <Route path="/hosting/web" element={<WebHosting />} />
             <Route path="/hosting/cloud" element={<CloudHosting />} />
             <Route path="/hosting/vps" element={<VPSHosting />} />
             <Route path="/hosting/business-email" element={<BusinessEmail />} />
-            {/* admin routes */}
-            <Route path="/admin/phoenix-soft" element={<Admin />}>
+            {/* Admin routes wrapped in PrivateRoute */}
+            <Route
+              path="/admin/phoenix-soft"
+              element={
+                <PrivateRoute>
+                  <Admin />
+                </PrivateRoute>
+              }>
               <Route path="counter" element={<XcropCounter />} />
               <Route path="project" element={<XcropProject />} />
               <Route path="event" element={<XcropEvent />} />
@@ -107,8 +107,6 @@ const App = () => {
           </Routes>
         </div>
         {!noNavbarPaths.includes(location.pathname) && !isAdminRoute && <Footer />}
-
-        {/* Chat button */}
         {!isAdminRoute && <Chat />}
       </div>
     </DarkModeProvider>
