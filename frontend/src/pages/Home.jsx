@@ -25,6 +25,7 @@ import LeatestProjects from "../components/LeatestProjects";
 import "./Styles.css";
 import { faFacebook, faTwitter, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Logo from "../constants/images/logo1.png";
+import map from "../constants/images/map.jpg";
 
 function Home() {
   return (
@@ -460,8 +461,8 @@ function Home() {
             mission.
           </p>
         </div>
-        <div className="p-4 lg:px-10 xl:px-12">
-          <CompanyMap />
+        <div className="flex justify-center items-center p-4 lg:px-10 xl:px-12">
+          <img src={map} alt="Map" className="max-w-full max-h-full h-auto" />
         </div>
       </div>
     </div>

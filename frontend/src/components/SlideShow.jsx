@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Styles.css";
 import slide1 from "../constants/images/slides/slide1.jpg";
-import slide2 from "../constants/images/services/backend.jpg";
+import slide2 from "../constants/images/slides/slide2.jpg";
 import slide3 from "../constants/images/slides/slide3.jpg";
 import slide4 from "../constants/images/slides/slide4.png";
 

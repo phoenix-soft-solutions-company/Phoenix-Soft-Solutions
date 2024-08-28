@@ -83,6 +83,7 @@
   padding-right: 60px;
   color: white;
   transition: left 2s ease-in-out;
+ font-family: "Abril Fatface", serif;
 }
 
 .slide-title-active {
