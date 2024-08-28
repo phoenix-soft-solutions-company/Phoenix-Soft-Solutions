@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import CompanyMap from "../components/CompanyMap";
+
 import SlideShow from "../components/SlideShow";
 import ImageCarousel from "../components/ImageCarousel";
 import CounterExp from "../components/CounterExp";
