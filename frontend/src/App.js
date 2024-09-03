@@ -49,7 +49,7 @@ const App = () => {
   const location = useLocation();
 
   const noNavbarPaths = ["/login"];
-  const isAdminRoute = location.pathname.startsWith("/admin");
+  const isAdminRoute = location.pathname.includes("phoenix-soft-admin");
 
   return (
     <DarkModeProvider>
@@ -101,17 +101,15 @@ const App = () => {
             <Route path="/business-email-hosting" element={<BusinessEmail />} />
             {/* Admin routes wrapped in PrivateRoute */}
             <Route
-              path="/admin/phoenix-soft"
               element={
                 <PrivateRoute>
                   <Admin />
                 </PrivateRoute>
-              }
-            >
-              <Route path="counter" element={<XcropCounter />} />
-              <Route path="project" element={<XcropProject />} />
-              <Route path="event" element={<XcropEvent />} />
-              <Route path="feedback" element={<XcropFeedback />} />
+              }>
+              <Route path="phoenix-soft-admin-counter" element={<XcropCounter />} />
+              <Route path="phoenix-soft-admin-project" element={<XcropProject />} />
+              <Route path="phoenix-soft-admin-event" element={<XcropEvent />} />
+              <Route path="phoenix-soft-admin-feedback" element={<XcropFeedback />} />
             </Route>
           </Routes>
         </div>
