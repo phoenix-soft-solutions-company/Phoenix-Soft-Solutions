@@ -4,15 +4,15 @@ export const LINKS = [
     name: "Company",
     path: "/company",
     subpages: [
-      { name: "About Us", path: "/company/Aboutus" },
-      { name: "Contact Us", path: "/company/Contactus" },
+      { name: "About Us", path: "/aboutus" },
+      { name: "Contact Us", path: "/contactus" },
     ],
   },
   {
     name: "Service",
     path: "/service",
     subpages: [
-      { name: "Web Application Development", path: "/service/web" },
+      { name: "Web Application Development", path: "/web-service" },
       { name: "Mobile App Development", path: "/service/mobile" },
       { name: "Custom Software Development", path: "/service/custom" },
       { name: "DevOps Service", path: "/service/devops" },

@@ -67,9 +67,9 @@ const App = () => {
             <Route path="/domain" element={<Domain />} />
             <Route path="/hosting" element={<Hosting />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/company/Aboutus" element={<Aboutus />} />
-            <Route path="/company/Contactus" element={<Contactus />} />
-            <Route path="/service/web" element={<WebService />} />
+            <Route path="/aboutus" element={<Aboutus />} />
+            <Route path="/contactus" element={<Contactus />} />
+            <Route path="/web-service" element={<WebService />} />
             <Route path="/service/mobile" element={<MobileService />} />
             <Route path="/service/custom" element={<CustomService />} />
             <Route path="/service/devops" element={<DevopsService />} />
