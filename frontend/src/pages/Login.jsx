@@ -61,7 +61,7 @@ function Login() {
           localStorage.removeItem("Password");
         }
 
-        navigate("/admin/phoenix-soft/counter"); // window.open("/admin/xcrop/counter", "_blank");
+        window.open("/admin/phoenix-soft/counter", "_blank");
       })
       .catch((error) => {
         setError(identifyError(error.response?.data?.code));
