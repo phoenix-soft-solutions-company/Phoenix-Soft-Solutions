@@ -164,12 +164,12 @@ const Navbar = () => {
 
       {/* Side bar */}
       <div
-        className={`fixed top-0 right-0 h-full overflow-y-auto bg-white text-red-600 transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full overflow-y-auto bg-red-600 text-white transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } xl:hidden w-60 sm:w-96 p-4 z-[1000]`}>
         <div className="flex justify-between items-center mb-4">
           <button onClick={toggleNavbar}>
-            <XMarkIcon className="w-6 h-6 text-red-600" />
+            <XMarkIcon className="w-6 h-6 text-white" />
           </button>
         </div>
 
@@ -217,7 +217,7 @@ const Navbar = () => {
         {/* Navigation Links */}
         {LINKS.map((link, index) => (
           <div key={index} className="relative mb-2">
-            <div className="flex flex-row justify-between items-center cursor-pointer px-4 py-2 hover:bg-red-300">
+            <div className="flex flex-row justify-between items-center cursor-pointer px-4 py-2 hover:bg-red-700">
               <Link to={link.path} className="block px-4 py-2" onClick={toggleNavbar}>
                 <span className="tracking-wide font-semibold hover:underline underline-offset-8 font-mono uppercase text-md">
                   {link.name}
@@ -227,7 +227,7 @@ const Navbar = () => {
               {link.subpages && (
                 <ChevronDownIcon
                   onClick={() => toggleMobileDropdown(index)}
-                  className="w-5 h-5 text-red-600"
+                  className="w-5 h-5 text-white"
                 />
               )}
             </div>
@@ -238,7 +238,7 @@ const Navbar = () => {
                   <Link
                     key={subIndex}
                     to={subpage.path}
-                    className="block px-4 py-2 hover:bg-red-200"
+                    className="block px-4 py-2 hover:bg-red-700"
                     onClick={toggleNavbar}>
                     <span className="tracking-wide font-semibold hover:underline underline-offset-8 font-mono uppercase text-md">
                       {subpage.name}

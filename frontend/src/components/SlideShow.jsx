@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Styles.css";
 import slide1 from "../constants/images/slides/slide1.jpg";
-import slide2 from "../constants/images/services/backend.jpg";
+import slide2 from "../constants/images/slides/slide2.jpg";
 import slide3 from "../constants/images/slides/slide3.jpg";
 import slide4 from "../constants/images/slides/slide4.png";
 
@@ -44,7 +44,7 @@ function SlideShow() {
             className={`slide-image ${index === currentImageIndex ? "slide-image-active" : ""}`}
           />
           <div
-            className={`slide-title font-mono text-2xl sm:text-4xl lg:text-6xl font-bold top-[40%] w-[80%] sm:w-[60%] lg:w-[40%] ${
+            className={`slide-title font-mono text-2xl sm:text-4xl lg:text-7xl font-bold top-[40%] w-[80%] sm:w-[60%] lg:w-[40%] ${
               index === currentImageIndex ? "slide-title-active" : ""
             }`}>
             {image.title}

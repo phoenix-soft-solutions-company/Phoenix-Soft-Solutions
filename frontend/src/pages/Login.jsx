@@ -52,6 +52,7 @@ function Login() {
       .post(`${process.env.REACT_APP_BASE_URL}/auth/login`, { token })
       .then((response) => {
         // Save or remove the username and password from local storage
+        localStorage.setItem("EmailAuth", email);
         if (remember) {
           localStorage.setItem("Email", email);
           localStorage.setItem("Password", btoa(password));
@@ -60,7 +61,7 @@ function Login() {
           localStorage.removeItem("Password");
         }
 
-        navigate("/admin/phoenix-soft/counter"); // window.open("/admin/xcrop/counter", "_blank");
+        navigate("/admin/phoenix-soft/counter"); //window.open("/admin/phoenix-soft/counter", "_blank");
       })
       .catch((error) => {
         setError(identifyError(error.response?.data?.code));

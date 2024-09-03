@@ -174,6 +174,7 @@ function XcropProject() {
             id="description"
             name="description"
             required
+            maxLength={300}
             value={formData.description}
             onChange={handleChange}
             className={`min-h-40 p-2 mt-1 block w-full border border-gray-500 rounded-md text-sm focus:border-blue-500 outline-none ${

@@ -26,7 +26,7 @@
   transform: translateX(-50%);
   width: 200px; /* Adjust width as needed */
   height: 0.25rem;
-  background-color: #9f2911; /* Change color as needed */
+  background-color: #dd3513; /* Change color as needed */
   border-radius: 0.125rem; /* Adjust if needed */
   z-index: 1;
 }
@@ -104,7 +104,7 @@
   width: 20px; /* Adjust ball size */
   height: 20px;
   border-radius: 50%;
-  background-color: rgb(0, 0, 0); /* Ball color */
+  background-color: rgb(211, 11, 11); /* Ball color */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -129,7 +129,7 @@
   width: 20px; /* Adjust ball size */
   height: 20px;
   border-radius: 50%;
-  background-color: rgb(0, 0, 0); /* Ball color */
+  background-color: rgb(213, 20, 20); /* Ball color */
   position: absolute;
   top: 50%;
   left: 50%;
