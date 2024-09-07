@@ -1,6 +1,6 @@
 export const xCropLinks = [
-  { name: "Counter", path: "/admin/phoenix-soft/counter" },
-  { name: "Project", path: "/admin/phoenix-soft/project" },
-  { name: "Event", path: "/admin/phoenix-soft/event" },
-  { name: "Feedback", path: "/admin/phoenix-soft/feedback" },
+  { name: "Counter", path: "/phoenix-soft-admin-counter" },
+  { name: "Project", path: "/phoenix-soft-admin-project" },
+  { name: "Event", path: "/phoenix-soft-admin-event" },
+  { name: "Feedback", path: "/phoenix-soft-admin-feedback" },
 ];
