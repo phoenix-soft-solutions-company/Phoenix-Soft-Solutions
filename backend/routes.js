@@ -16,7 +16,7 @@ router.use("/feedback", feedbackController);
 router.use("/event", eventController);
 
 router.get("/", (req, res) => {
-  res.status(statusCodes.success).json("Welcome Xcrop");
+  res.status(statusCodes.success).json("Welcome to Phoenix Soft Solutions");
 });
 
 module.exports = router;
