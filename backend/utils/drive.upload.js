@@ -28,7 +28,7 @@ const uploadImageToDrive = async (file) => {
   try {
     const fileMetadata = {
       name: `${Date.now()}-${file.originalname}`,
-      parents: googleDriveCredetials.GOOGLE_DRIVE_FOLDER_ID,
+      parents: [googleDriveCredetials.GOOGLE_DRIVE_FOLDER_ID],
     };
 
     const bufferStream = new PassThrough();
