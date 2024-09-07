@@ -21,7 +21,7 @@ function XcropCounter() {
     const fetchCounterData = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_BASE_URL}/counter/66c21af52a7dd94e2cd73e8c`
+          `${process.env.REACT_APP_BASE_URL}/counter/66d76d7834028264faf6acaf`
         );
         setFormData(response.data);
       } catch (error) {
@@ -47,7 +47,7 @@ function XcropCounter() {
     e.preventDefault();
 
     try {
-      await axios.put(`${process.env.REACT_APP_BASE_URL}/counter/66c21af52a7dd94e2cd73e8c`, formData);
+      await axios.put(`${process.env.REACT_APP_BASE_URL}/counter/66d76d7834028264faf6acaf`, formData);
       setAlertMessage(messages.counterUpdated);
       setShowAlert(true);
     } catch (error) {

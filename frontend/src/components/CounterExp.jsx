@@ -18,7 +18,7 @@ function CounterExp() {
     const fetchCounters = async () => {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_BASE_URL}/counter/66c21af52a7dd94e2cd73e8c`
+          `${process.env.REACT_APP_BASE_URL}/counter/66d76d7834028264faf6acaf`
         );
         setCounters(response.data);
       } catch (error) {
