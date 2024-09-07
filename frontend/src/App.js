@@ -49,12 +49,14 @@ const App = () => {
   const location = useLocation();
 
   const noNavbarPaths = ["/login"];
-  const isAdminRoute = location.pathname.startsWith("/admin");
+  const isAdminRoute = location.pathname.includes("phoenix-soft-admin");
 
   return (
     <DarkModeProvider>
       <div className="flex flex-col min-h-screen relative">
-        {!noNavbarPaths.includes(location.pathname) && !isAdminRoute && <Navbar />}
+        {!noNavbarPaths.includes(location.pathname) && !isAdminRoute && (
+          <Navbar />
+        )}
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -67,46 +69,53 @@ const App = () => {
             <Route path="/domain" element={<Domain />} />
             <Route path="/hosting" element={<Hosting />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/company/Aboutus" element={<Aboutus />} />
-            <Route path="/company/Contactus" element={<Contactus />} />
-            <Route path="/service/web" element={<WebService />} />
-            <Route path="/service/mobile" element={<MobileService />} />
-            <Route path="/service/custom" element={<CustomService />} />
-            <Route path="/service/devops" element={<DevopsService />} />
-            <Route path="/service/cloud" element={<CloudService />} />
-            <Route path="/service/ai" element={<AiService />} />
-            <Route path="/service/outsourcing" element={<OutsourcingService />} />
-            <Route path="/service/poc" element={<PocService />} />
-            <Route path="/service/qa" element={<QAService />} />
-            <Route path="/service/graphic" element={<GraphicService />} />
-            <Route path="/service/business" element={<BusinessService />} />
-            <Route path="/service/backend" element={<BackendService />} />
-            <Route path="/service/frontend" element={<FrontendService />} />
-            <Route path="/service/marketing" element={<MarketingService />} />
-            <Route path="/service/cyber" element={<CyberService />} />
-            <Route path="/service/software" element={<SoftwareService />} />
-            <Route path="/domain/lk" element={<LkDomain />} />
-            <Route path="/domain/international" element={<InternationalDomain />} />
-            <Route path="/hosting/web" element={<WebHosting />} />
-            <Route path="/hosting/cloud" element={<CloudHosting />} />
-            <Route path="/hosting/vps" element={<VPSHosting />} />
-            <Route path="/hosting/business-email" element={<BusinessEmail />} />
+            <Route path="/aboutus" element={<Aboutus />} />
+            <Route path="/contactus" element={<Contactus />} />
+            <Route path="/web-service" element={<WebService />} />
+            <Route path="/mobile-service" element={<MobileService />} />
+            <Route path="/custom-service" element={<CustomService />} />
+            <Route path="/devops-service" element={<DevopsService />} />
+            <Route path="/cloud-service" element={<CloudService />} />
+            <Route path="/ai-service" element={<AiService />} />
+            <Route
+              path="/outsourcing-service"
+              element={<OutsourcingService />}
+            />
+            <Route path="/poc-service" element={<PocService />} />
+            <Route path="/qa-service" element={<QAService />} />
+            <Route path="/graphic-service" element={<GraphicService />} />
+            <Route path="/business-service" element={<BusinessService />} />
+            <Route path="/backend-service" element={<BackendService />} />
+            <Route path="/frontend-service" element={<FrontendService />} />
+            <Route path="/marketing-service" element={<MarketingService />} />
+            <Route path="/cyber-service" element={<CyberService />} />
+            <Route path="/software-service" element={<SoftwareService />} />
+            <Route path="/lk-domain" element={<LkDomain />} />
+            <Route
+              path="/international-domain"
+              element={<InternationalDomain />}
+            />
+            <Route path="/web-hosting" element={<WebHosting />} />
+            <Route path="/cloud-hosting" element={<CloudHosting />} />
+            <Route path="/vps-hosting" element={<VPSHosting />} />
+            <Route path="/business-email-hosting" element={<BusinessEmail />} />
             {/* Admin routes wrapped in PrivateRoute */}
             <Route
-              path="/admin/phoenix-soft"
               element={
                 <PrivateRoute>
                   <Admin />
                 </PrivateRoute>
               }>
-              <Route path="counter" element={<XcropCounter />} />
-              <Route path="project" element={<XcropProject />} />
-              <Route path="event" element={<XcropEvent />} />
-              <Route path="feedback" element={<XcropFeedback />} />
+              <Route path="phoenix-soft-admin-counter" element={<XcropCounter />} />
+              <Route path="phoenix-soft-admin-project" element={<XcropProject />} />
+              <Route path="phoenix-soft-admin-event" element={<XcropEvent />} />
+              <Route path="phoenix-soft-admin-feedback" element={<XcropFeedback />} />
             </Route>
           </Routes>
         </div>
-        {!noNavbarPaths.includes(location.pathname) && !isAdminRoute && <Footer />}
+        {!noNavbarPaths.includes(location.pathname) && !isAdminRoute && (
+          <Footer />
+        )}
         {!isAdminRoute && <Chat />}
       </div>
     </DarkModeProvider>
